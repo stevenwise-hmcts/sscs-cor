@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mental health
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list">Back to questions</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Mental health
+            </h1>
+            <p class="body-text">
+            You said you have difficulties caused by migraines. </p>
+            <p>During 2017, can you tell us: </p>
+            <ul class="list list-bullet">
+              <li>How often you had migraines </li>
+              <li>How long they lasted </li>
+              <li>How you deal with them </li>
+            </ul>
+          </legend>
+          <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'></textarea> 
+        </fieldset>
+        <div class="form-group">
+          <a href="questions-submitted-confirm" class="button">Submit answer</a>
+          <!-- <input class="button" type="submit" value="Submit answer"> -->
+          <a href="task-list-q3-draft" class="save-for-later">Save for later</a>
+          <br/><br/>
+          <a class="link-back" href="task-list">Back to questions</a>        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

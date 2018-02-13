@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block page_title %}
+COR prototype
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-full">
+			<h1 class="heading-xlarge">Continuous Online Resolution
+				<span class="heading-secondary">Prototype</span></h1>
+				
+				<h2 class="heading-medium">User journeys</h2>
+				
+			</div>
+		</div>
+
+<!--<h3 class="heading-small">Full journeys</h3>
+<ol class="list list-number">
+	 <li><a href="email-questions-r1">Full journey through to negative decision and request for a hearing</a></li>
+</ol>
+
+<h3 class="heading-small">Sub journeys</h3> -->
+<ol class="list list-number">
+	<li><a href="email-questions-r1">Questions - 1st round</a></li>
+<li><a href="email-questions-r2">Questions - 2nd round</a></li>
+<li><a href="submit-evidence">Submit additional evidence</a></li>
+  <li><a href="email-hearing-required">Hearing required - not attending</a></li>
+  <li><a href="email-decision-not-improving">Preliminary decision</a></li>
+    <li><a href="email-hearing-request-denied">Hearing request denied</a></li>
+        <li><a href="email-hearing-request-approved">Hearing request approved</a></li>
+
+ <!-- <li><a href="email-decision-positive">Final decision</a></li>-->
+</ol>
+	</main>
+	{% endblock %}

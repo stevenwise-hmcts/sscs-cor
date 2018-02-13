@@ -17,11 +17,33 @@ Submit evidence - Statement
           <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
         </legend>
         <br/>
-        <div class="drag-drop-upload">
-          <br/>
-          <p class="bold">Drag and drop files here to upload</p>
-        </div>
-        <p>Or,  <a href="#">browse files on your computer</a></p>
+        <div class="dropzone" tabindex="0">
+
+  <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
+
+    <div class="dz-message">          
+      <div class="dz-message-icon"></div>      
+      <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+    </div>    
+
+   
+
+  </form>
+
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uploaded files</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No files uploaded</td>
+    </tr>
+  </tbody>
+</table>
         <br/>
         <div class="form-group">
           <a href="evidence-confirm" class="button">Submit evidence</a>

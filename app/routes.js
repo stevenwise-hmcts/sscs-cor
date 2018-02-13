@@ -7,6 +7,7 @@ router.get('/', function (req, res) {
 })
 
 router.get('/evidence-options', function (req, res) {
+	console.log(req.query);
 	res.render('evidence-options');
 })
 
@@ -29,6 +30,17 @@ router.get('/question-walking', function (req, res) {
 router.post('/question-walking', function (req, res) {
 	res.redirect('task-list-q2-draft');
 })
+
+
+router.get('/task-list', function (req, res) {
+	console.log(req.query.walkingCompletedOrDraft);
+
+	const icons = {
+		walking: req.query.walkingCompletedOrDraft
+	};
+
+	res.render('task-list', icons);
+});
 
 // add your routes here
 

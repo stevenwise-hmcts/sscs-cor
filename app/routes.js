@@ -22,6 +22,14 @@ router.post('/evidence-options', function (req, res) {
 
 })
 
+router.get('/question-walking', function (req, res) {
+	res.render('question-walking');
+})
+
+router.post('/question-walking', function (req, res) {
+	res.redirect('task-list-q2-draft');
+})
+
 // add your routes here
 
 module.exports = router

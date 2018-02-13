@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="evidence-options">Back</a>
+      <form class="form">
+        <legend>
+          <h1 class="heading-large">
+            Upload additional evidence
+          </h1>
+          <p class="body-text">Useful evidence describes or shows how your condition affects your life. <br/><a href="about-evidence">Read more about what evidence the tribunal finds useful</a>.</p>
+          <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
+        </legend>
+        <br/>
+        <div class="drag-drop-upload">
+          <br/>
+          <p class="bold">Drag and drop files here to upload</p>
+        </div>
+        <p>Or,  <a href="#">browse files on your computer</a></p>
+        <br/>
+        <div class="form-group">
+          <a href="evidence-confirm" class="button">Submit evidence</a>
+          <!-- <input class="button" type="submit" value="Submit statement"> -->
+        </div>
+        <a class="link-back" href="evidence-options">Back</a>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

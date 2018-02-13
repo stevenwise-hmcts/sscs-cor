@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="evidence-options">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Write a statement
+            </h1>
+            <p class="body-text">A useful statement describe how your condition affects your life. Try to relate it to your ability to do <a href="#">common activities set out in the PIP assessment</a>.</p>
+            <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
+          </legend>
+          <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'></textarea>
+        </fieldset>
+        <div class="form-group">
+          <div class="form-group">
+            <a href="evidence-confirm" class="button">Submit statement</a>
+            <!-- <input class="button" type="submit" value="Submit statement"> -->
+
+          </div>
+          <a class="link-back" href="evidence-options">Back</a>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

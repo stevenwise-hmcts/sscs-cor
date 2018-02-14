@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing requirements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="hearing-explain-why">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              You need to provide your hearing requirements 
+            </h1>
+            <p>You need to provide some information so your hearing can be booked. </p>
+          </legend>
+          
+        </fieldset>
+        <div class="form-group">
+          <a href="#" class="button">Continue</a>
+          <!-- <input class="button" type="submit" value="Submit answer"> -->
+        
+          <br/><br/>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

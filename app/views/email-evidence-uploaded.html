@@ -1,11 +1,19 @@
-{% extends "layout.html" %}
-{% block page_title %}
-Email - Evidence uploaded
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block content %}
-<main id="content" class="prototype-8" role="main">
-	<p style="padding-top: 30px;"><strong class="bold-small">Subject: </strong>Your PIP benefit appeal: you have submitted additional evidence</p>
+<main id="content" role="main" >
+	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal<br/>
+		<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p>
 	<div class="email-border">
+		
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
 		<div class="email-margin">
 			<div style="margin-bottom: 20px;"> <img src="/public/images/hmcts-logo.png"></div>
 			<div class="panel panel-border-wide">

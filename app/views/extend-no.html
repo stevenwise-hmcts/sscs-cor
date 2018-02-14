@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list">Back to questions</a> 
+      <h1 class="heading-large">
+      You have not extended the deadline
+      </h1>
+      <p class="body-text">You still have until [date] to answer the questions. 
+</p>
+
+<p>The tribunal will review your answers if you submit them all before then.
+</p>
+      <a href="task-list-q3-comp">Return to questions</a>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

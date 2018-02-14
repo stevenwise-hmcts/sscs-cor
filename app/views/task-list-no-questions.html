@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <h1 class="heading-large">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference number:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <h3 class="heading-small">Questions from the tribunal </h3>
+      <ul class="task-list-items">
+        <li class="task-list-item">
+          No questions from the tribunal currently
+        </li>
+      </ul>
+    </li>
+    <h2 class="heading-small">Additional evidence</h2> 
+    <p>If you have any additional information that is relevant to your appeal, you can submit it to the tribunal. You do not have to submit anything if you don’t have it. </p>
+    <a  href="evidence-options">Submit evidence to the tribunal</a>
+    <!--<a class="button" href="#">Provide evidence</a>-->
+  </div>
+</div>
+</main>
+{% endblock %}

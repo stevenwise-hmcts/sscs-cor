@@ -74,8 +74,8 @@ outline: 3px solid $focus-colour;
 // Save for later link
 
 .save-for-later {
-vertical-align: middle;
 padding-left: 30px;
+padding-top: 8px;
 }
 
 
@@ -106,17 +106,6 @@ padding: 0px;
 padding:  0px 20px 30px 20px;
 }
 
-
-//File upload
-
-.drag-drop-upload {
- background-color: $grey-3;
- padding: 10px;
- vertical-align:middle;
- text-align: center;
- min-height: 100px;
-
-}
 
 
 // File upload

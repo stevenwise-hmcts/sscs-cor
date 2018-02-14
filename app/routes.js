@@ -2,9 +2,14 @@ var express = require('express')
 var router = express.Router()
 
 // Route index page
+
 router.get('/', function (req, res) {
   res.render('index')
 })
+
+
+
+// Evidence options
 
 router.get('/evidence-options', function (req, res) {
 	console.log(req.query);
@@ -41,6 +46,27 @@ router.get('/task-list', function (req, res) {
 
 	res.render('task-list', icons);
 });
+
+
+
+// Extend a deadline
+
+router.get('/extend-are-sure', function (req, res) {
+	console.log(req.query);
+	res.render('extend-are-sure');
+})
+
+router.post('/extend-are-sure', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes') {
+		res.redirect('/extend-confirm')
+	} else if (req.body['radio-group'] === 'No') {
+		res.redirect('/extend-no')
+	}
+
+})
+
+
 
 // add your routes here
 

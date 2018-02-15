@@ -25,14 +25,42 @@ Question - Mental health
           </legend>
           <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'></textarea> 
         </fieldset>
-        <div class="form-group">
-          <a href="questions-submitted-confirm" class="button">Submit answer</a>
-          <!-- <input class="button" type="submit" value="Submit answer"> -->
-          <a href="task-list-q3-draft" class="save-for-later">Save for later</a>
-          <br/><br/>
-          <a class="link-back" href="task-list">Back to questions</a>        </div>
-      </form>
+
+        <!-- RADIO BUTTONS 
+        <h2 class="heading-small"> Provide evidence</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <fieldset >
+          <div class="multiple-choice">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+            <label for="radio-inline-1">Upload it</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+            <label for="radio-inline-2">Post it</label>
+          </div>
+        </fieldset>
+        <br/><br/>-->
+
+        <!-- CHECKBOX
+
+<div class="multiple-choice" data-target="example-different-country">
+        <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+        <label for="nationalities-other">I want to provide evidence</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+        You will be able to upload or post evidence after you've submitted your answer
+      </div>
+</fieldset>
+          <br/><br/><br/> -->
+          <div class="form-group">
+            <a href="questions-submitted-confirm" class="button">Submit answer</a>
+            <!-- <input class="button" type="submit" value="Submit answer"> -->
+            <a href="task-list-q3-draft" class="save-for-later">Save for later</a>
+            <br/><br/>
+            <a class="link-back" href="task-list">Back to questions</a>        
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</main>
-{% endblock %}
+  </main>
+  {% endblock %}

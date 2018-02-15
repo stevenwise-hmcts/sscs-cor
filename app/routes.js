@@ -85,6 +85,24 @@ router.post('/hearing-required', function (req, res) {
 })
 
 
+// Decicion accept or hearing
+
+router.get('/decision-positive', function (req, res) {
+	console.log(req.query);
+	res.render('decision-positive');
+})
+
+router.post('/decision-positive', function (req, res) {
+
+	if (req.body['radio-group'] === 'accept the decision') {
+		res.redirect('/decision-accepted')
+	} else if (req.body['radio-group'] === 'want a hearing') {
+		res.redirect('/hearing-explain-why')
+	}
+
+})
+
+
 // add your routes here
 
 module.exports = router

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Decision not improving
+Decision positive
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -30,7 +30,7 @@ Decision not improving
       <h2 class="heading-medium">What happens next </h2>
       <p>You can accept the decision or if you feel that this decision is wrong, you can request a hearing where you can explain your appeal in person to the tribunal.</p>
       <br/>
-      <form>
+      <form action="/decision-positive" method="post" class="form">
         <div class="form-group">
           <fieldset>
             <legend>
@@ -38,11 +38,11 @@ Decision not improving
             </legend>
              <br/>
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="radio-group" value="I accept the decision">
+              <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
               <label for="radio-1">I accept the decision</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="radio-group" value="I want to request a hearing">
+              <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
               <label for="radio-2">I want to request a hearing</label>
             </div>
           </fieldset>
@@ -50,8 +50,8 @@ Decision not improving
         <div class="form-group">
           <p>You have to respond to this question by [date + 2 weeks]. If you don’t respond we will assume you are accepting the decision and it will be sent to you. 
           </p>
-          <a href="hearing-explain-why" class="button">Continue</a>
-          <!-- <input class="button" type="submit" value="Submit answer"> -->
+          <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+          <input class="button" type="submit" value="Submit answer">
         </div>
       </form>
     </div>

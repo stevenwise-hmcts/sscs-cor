@@ -67,6 +67,23 @@ router.post('/extend-are-sure', function (req, res) {
 })
 
 
+// Hearing required
+
+router.get('/hearing-required', function (req, res) {
+	console.log(req.query);
+	res.render('hearing-required');
+})
+
+router.post('/hearing-required', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes I want a hearing') {
+		res.redirect('/hearing-requirements-start')
+	} else if (req.body['radio-group'] === 'No I don’t want a hearing') {
+		res.redirect('/hearing-required-why-not-attending')
+	}
+
+})
+
 
 // add your routes here
 

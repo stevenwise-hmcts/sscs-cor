@@ -7,7 +7,6 @@ Decision positive
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="task-list">Back</a>
       <h1 class="heading-large">
         Your decision
       </h1>
@@ -24,37 +23,119 @@ Decision positive
         <li>letter from your carer </li>
         <li>written statement from yourself </li>
       </ul>
-
       <p>After considering the above evidence we acknowledge that you experience pain in your lower back when doing some tasks around the house. Specifically washing yourself and preparing food. We consider that this pain does not hinder you enough to be awarded the enhanced rate of the daily living component of PIP.</p>
-      <a href="#"> See the full list of PIP activities and the descriptors we consider apply </a>
-      <h2 class="heading-medium">What happens next </h2>
-      <p>You can accept the decision or if you feel that this decision is wrong, you can request a hearing where you can explain your appeal in person to the tribunal.</p>
-      <br/>
-      <form action="/decision-positive" method="post" class="form">
-        <div class="form-group">
-          <fieldset>
-            <legend>
-              <h1 class="bold-medium">Do you accept the tribunal’s decision?</h1>
-            </legend>
-             <br/>
-            <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
-              <label for="radio-1">I accept the decision</label>
-            </div>
-            <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
-              <label for="radio-2">I want to request a hearing</label>
-            </div>
-          </fieldset>
-        </div>
-        <div class="form-group">
-          <p>You have to respond to this question by [date + 2 weeks]. If you don’t respond we will assume you are accepting the decision and it will be sent to you. 
-          </p>
-          <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
-          <input class="button" type="submit" value="Submit answer">
-        </div>
-      </form>
+      <!--<a href="#"> See the full list of PIP activities and the descriptors we consider apply </a> -->
     </div>
   </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <details>
+        <summary><span class="summary">PIP activities and the descriptors we consider apply</span></summary>
+        <!-- <h2 class="heading-medium">PIP activities and the descriptors we consider apply</h2> -->
+        <!-- Table option 1 -->
+        <table>
+         <!-- <caption class="heading-small">Preparing food</caption> -->
+         <thead>
+          <tr>
+            <th scope="col">Preparing food</th>
+            <th></th>
+            <th scope="col">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Needs to use an aid or appliance to be able to prepare or cook a simple meal</td>
+            <td></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Cannot cook a simple meal using a conventional cooker but is able to do so using a microwave</td>
+            <td></td>
+            <td>2</td>
+          </tr>
+        </table>
+        <br/>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Washing and bathing</th>
+              <th></th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Needs to use an aid or appliance to be able to wash or bathe</td>
+              <td></td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Needs assistance to be able to wash either their hair or body below the waist</td>
+              <td></td>
+              <td>2</td>
+            </tr>    
+          </tbody>
+        </table>
+      </details>
+  <!-- Table option 2 
+  <table>
+   <thead>
+    <tr>
+      <th scope="col">Activity</th>
+      <th scope="col">Descriptor</th>
+      <th scope="col">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2" VALIGN=TOP>Preparing food</td>
+      <td>Needs to use an aid or appliance to be able to prepare or cook a simple meal</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Cannot cook a simple meal using a conventional cooker but is able to do so using a microwave</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Washing and bathing</td>
+      <td>Needs to use an aid or appliance to be able to wash or bathe</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table> -->
+</div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-medium">What happens next </h2>
+    <p>You can accept the decision or if you feel that this decision is wrong, you can request a hearing where you can explain your appeal in person to the tribunal.</p>
+    <br/>
+
+    <form action="/decision-positive" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-large">Do you accept the tribunal’s decision?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
+            <label for="radio-1">I accept the decision</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
+            <label for="radio-2">I want to request a hearing</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>You have to respond to this question by [date + 2 weeks]. If you don’t respond we will assume you are accepting the decision and it will be sent to you. 
+        </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
+  </div>
+</div>
 </main>
 {% endblock %}

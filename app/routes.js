@@ -33,8 +33,8 @@ router.get('/question-walking', function (req, res) {
 })
 
 router.post('/question-walking', function (req, res) {
-	res.redirect('task-list-q2-draft');
-})
+	res.redirect('/task-list?walkingCompletedOrDraft=draft');
+});
 
 
 router.get('/task-list', function (req, res) {

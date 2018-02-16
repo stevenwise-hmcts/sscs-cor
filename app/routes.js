@@ -29,12 +29,12 @@ router.post('/evidence-options', function (req, res) {
 })
 
 router.get('/question-walking', function (req, res) {
-	res.render('question-walking');
+	res.render('question-walking', { completed: req.query.completed });
 })
 
 router.post('/question-walking', function (req, res) {
-	res.redirect('task-list-q2-draft');
-})
+	res.redirect('/task-list?walkingCompletedOrDraft=draft');
+});
 
 
 router.get('/task-list', function (req, res) {

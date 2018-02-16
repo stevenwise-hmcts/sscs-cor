@@ -28,6 +28,10 @@ router.post('/evidence-options', function (req, res) {
 
 })
 
+
+
+// Question - Walking
+
 router.get('/question-walking', function (req, res) {
 	res.render('question-walking', { completed: req.query.completed });
 })
@@ -46,6 +50,53 @@ router.get('/task-list', function (req, res) {
 
 	res.render('task-list', icons);
 });
+
+
+
+// Question - interacting
+
+router.get('/question-interacting', function (req, res) {
+	res.render('question-interacting', { completed: req.query.completed });
+})
+
+router.post('/question-interacting', function (req, res) {
+	res.redirect('/task-list?interactingCompletedOrDraft=draft');
+});
+
+
+router.get('/task-list', function (req, res) {
+	console.log(req.query.interactingCompletedOrDraft);
+
+	const icons = {
+		walking: req.query.interactingCompletedOrDraft
+	};
+
+	res.render('task-list', icons);
+});
+
+
+
+// Question - Migraine
+
+router.get('/question-migraine', function (req, res) {
+	res.render('question-migraine', { completed: req.query.completed });
+})
+
+router.post('/question-migraine', function (req, res) {
+	res.redirect('/task-list?walkingCompletedOrDraft=draft');
+});
+
+
+router.get('/task-list', function (req, res) {
+	console.log(req.query.migraineCompletedOrDraft);
+
+	const icons = {
+		walking: req.query.migraineCompletedOrDraft
+	};
+
+	res.render('task-list', icons);
+});
+
 
 
 

@@ -26,7 +26,7 @@ Task list - Round 1
               </a>
             </li>
             <li class="task-list-item">
-              <a class="task-name" href="question-walking" aria-describedby="walking-respond">
+              <a class="task-name" href="/question-walking{% if walking === 'completed' %}?completed=true{% endif %}" aria-describedby="walking-respond">
                 Your journey to the doctors
               </a>
                 {% if walking === 'completed' %}

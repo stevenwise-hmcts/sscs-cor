@@ -18,7 +18,20 @@ Question - Walking
             The DWP healthcare professional who assessed you noted that you walk to the GP’s surgery and it takes you 30 minutes.</p>
             <p>Please can you describe the journey and tell us how often you made it in 2017. </p>
           </legend>
-          <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6' value="{{ data['textarea'] }}">{{ data['textarea'] }}</textarea>
+
+            {% if completed === 'true' %}
+                <div class="appellants-answer">
+                    <h2 class="bold-small">Your answer</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="font-small">Submitted: 14 February 2017</p>
+                </div>
+            {% else %}
+                <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6'
+                      data-min-rows='6' value="{{ data['textarea'] }}">
+                    {{ data['textarea'] }}
+                </textarea>
+            {% endif %}
         </fieldset>
         <div class="form-group">
           <a class="button" href="/task-list?walkingCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>

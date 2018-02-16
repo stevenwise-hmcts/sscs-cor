@@ -29,7 +29,7 @@ router.post('/evidence-options', function (req, res) {
 })
 
 router.get('/question-walking', function (req, res) {
-	res.render('question-walking');
+	res.render('question-walking', { completed: req.query.completed });
 })
 
 router.post('/question-walking', function (req, res) {

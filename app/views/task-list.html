@@ -24,12 +24,12 @@ Task list - Round 1
 <!-- Interacting -->
 
             <li class="task-list-item">
-               <a class="task-name" href="/question-interacting{% if interacting === 'completed' %}?completed=true{% endif %}" aria-describedby="interacting-respond">
+               <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
                 Interacting with people
               </a>
-              {% if interacting === 'completed' %}
+              {% if data['interactingCompletedOrDraft'] === 'completed' %}
                   <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif interacting === 'draft' %}
+                {% elif data['interactingCompletedOrDraft'] === 'draft' %}
                   <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
                 {% endif %}
             </li>
@@ -38,12 +38,12 @@ Task list - Round 1
 <!-- Walking -->
 
             <li class="task-list-item">
-              <a class="task-name" href="/question-walking{% if walking === 'completed' %}?completed=true{% endif %}" aria-describedby="walking-respond">
+              <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
                 Your journey to the doctors
               </a>
-                {% if walking === 'completed' %}
+                {% if data['walkingCompletedOrDraft'] === 'completed' %}
                   <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif walking === 'draft' %}
+                {% elif data['walkingCompletedOrDraft'] === 'draft' %}
                   <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
                 {% endif %}
             </li>
@@ -52,12 +52,12 @@ Task list - Round 1
 <!-- migraine -->
 
             <li class="task-list-item">
-               <a class="task-name" href="/question-migraine{% if migraine === 'completed' %}?completed=true{% endif %}" aria-describedby="migraine-respond">
+               <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
                 Your migraine
               </a>
-                 {% if migraine === 'completed' %}
+                 {% if data['migraineCompletedOrDraft'] === 'completed' %}
                   <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif migraine === 'draft' %}
+                {% elif data['migraineCompletedOrDraft'] === 'draft' %}
                   <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
                 {% endif %}
             </li>

@@ -83,7 +83,7 @@ router.get('/question-migraine', function (req, res) {
 })
 
 router.post('/question-migraine', function (req, res) {
-	res.redirect('/task-list?walkingCompletedOrDraft=draft');
+	res.redirect('/task-list?migraineCompletedOrDraft=draft');
 });
 
 
@@ -96,6 +96,26 @@ router.get('/task-list', function (req, res) {
 
 	res.render('task-list', icons);
 });
+
+
+// Question - Medical records
+
+router.get('/question-medical-records', function (req, res) {
+	console.log(req.query);
+	res.render('question-medical-records');
+})
+
+router.post('/question-medical-records', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes I give permission') {
+		res.redirect('/medical-records-yes')
+	} else if (req.body['radio-group'] === 'No I don’t give permission') {
+		res.redirect('/medical-records-no')
+	}
+
+})
+
+
 
 
 

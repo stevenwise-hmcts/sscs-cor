@@ -1,17 +1,11 @@
 var express = require('express')
 var router = express.Router()
 
-var icons = {
-    walking: undefined
-};
-
 // Route index page
 
 router.get('/', function (req, res) {
   res.render('index')
 })
-
-
 
 // Evidence options
 

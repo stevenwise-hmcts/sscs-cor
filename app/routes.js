@@ -61,6 +61,50 @@ router.post('/question-migraine', function (req, res) {
 	res.redirect('/task-list?migraineCompletedOrDraft=draft');
 });
 
+
+// Question - Mobility - Round 2
+
+router.get('/question-mobility', function (req, res) {
+	res.render('question-mobility');
+})
+
+router.post('/question-mobility', function (req, res) {
+	res.redirect('/task-list-r2?mobilityCompletedOrDraft=draft');
+});
+
+
+
+
+// Question - Medical records
+
+router.get('/question-medical-records', function (req, res) {
+	console.log(req.query);
+	res.render('question-medical-records');
+})
+
+router.post('/question-medical-records', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes I give permission') {
+		res.redirect('/medical-records-yes')
+	} else if (req.body['radio-group'] === 'No I don’t give permission') {
+		res.redirect('/medical-records-no')
+	}
+
+})
+
+
+// Question - Medical records - Round 2
+
+router.get('/medical-records-yes', function (req, res) {
+	res.render('medical-records-yes');
+})
+
+router.post('/medical-records-yes', function (req, res) {
+	res.redirect('/task-list-r2?medicalCompletedOrDraft=draft');
+});
+
+
+
 // Extend a deadline
 
 router.get('/extend-are-sure', function (req, res) {
@@ -79,25 +123,8 @@ router.post('/extend-are-sure', function (req, res) {
 })
 
 
-// Hearing required
 
-router.get('/hearing-required', function (req, res) {
-	console.log(req.query);
-	res.render('hearing-required');
-})
-
-router.post('/hearing-required', function (req, res) {
-
-	if (req.body['radio-group'] === 'Yes I want a hearing') {
-		res.redirect('/hearing-requirements-start')
-	} else if (req.body['radio-group'] === 'No I don’t want a hearing') {
-		res.redirect('/hearing-required-why-not-attending')
-	}
-
-})
-
-
-// Decicion accept or hearing
+// Decision accept or hearing
 
 router.get('/decision-positive', function (req, res) {
 	console.log(req.query);
@@ -114,6 +141,42 @@ router.post('/decision-positive', function (req, res) {
 
 })
 
+
+// Hearing required
+
+router.get('/hearing-required', function (req, res) {
+	console.log(req.query);
+	res.render('hearing-required');
+})
+
+router.post('/hearing-required', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes I want a hearing') {
+		res.redirect('/hearing-requirements-start')
+	} else if (req.body['radio-group'] === 'No I don’t want a hearing') {
+		res.redirect('/hearing-telephone')
+	}
+
+})
+
+
+
+// Telephone hearing
+
+router.get('/hearing-telephone', function (req, res) {
+	console.log(req.query);
+	res.render('hearing-telephone');
+})
+
+router.post('/hearing-telephone', function (req, res) {
+
+	if (req.body['radio-group'] === 'yes telephone hearing') {
+		res.redirect('/hearing-telephone-yes')
+	} else if (req.body['radio-group'] === 'no telephone hearing') {
+		res.redirect('/hearing-telephone-no')
+	}
+
+})
 
 // add your routes here
 

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mobility - Round 2
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list-r2">Back to questions</a>
+      <form class="form" action="/question-mobility" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Walking to the GP surgery
+            </h1>
+            <p class="body-text">
+            You said in your previous answer that you occasionally walked to the GP’s surgery.</p>
+            <p> Please describe the journey, including:</p>
+            <ul class="list list-bullet">
+              <li>how long it took,</li>
+              <li>whether you needed to stop on the way</li>
+              <li>if so, for how long</li>
+              <li>if you used any aids to help you walk </li>
+              <li>if you did, what aids did you use? </li>    
+            </ul>
+          </legend>
+ {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+            <div class="appellants-answer">
+              <h2 class="bold-small">Your answer</h2>
+                {% if data['textareamobility'] %}
+                  <p>{{ data['textareamobility'] }}</p>
+                {% else %}
+                  <p>[ANSWER GOES HERE]</p>
+                {% endif %}
+              <p class="font-small">Submitted: 14 February 2017</p>
+            </div>
+            {% else %}
+              <textarea class="form-control form-control-3-4 autoExpand" name="textareamobility" id="textarea" rows='6'
+            data-min-rows='6'>{{ data['textareamobility'] }}</textarea>
+          {% endif %}
+
+
+
+
+        </fieldset>
+        <div class="form-group">
+          {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
+          <a class="button" href="/task-list-r2?mobilityCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>
+          <input class="" type="submit" value="Save for later" style="padding-left:30px;
+          padding-top: 8px;background:none!important;
+          color:#005ea5;
+          border:none; 
+          font: inherit;
+          /*border is optional*/ 
+          cursor: pointer;
+          text-decoration: underline">
+          <br/><br/>
+          {% endif %}
+      <a class="link-back" href="task-list-r2">Back to your questions</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -8,7 +8,7 @@ Question - Socialising
   <div class="grid-row">
     <div class="column-two-thirds">
        <a class="link-back" href="/task-list">Back to questions</a>
-      <form class="form" target="/question-interacting" method="POST">
+      <form class="form" action="/question-interacting" method="POST">
         <fieldset class="form-group">
           <legend>
             <h1 class="heading-large">
@@ -33,7 +33,7 @@ Question - Socialising
                 {% if data['textareainteracting'] %}
                   <p>{{ data['textareainteracting'] }}</p>
                 {% else %}
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p>[ANSWER GOES HERE]</p>
                 {% endif %}
               <p class="font-small">Submitted: 14 February 2017</p>
             </div>

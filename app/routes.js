@@ -7,8 +7,6 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
-
-
 // Evidence options
 
 router.get('/evidence-options', function (req, res) {
@@ -28,35 +26,24 @@ router.post('/evidence-options', function (req, res) {
 
 })
 
-
+router.get('/task-list', function (req, res) {
+    res.render('task-list');
+});
 
 // Question - Walking
 
 router.get('/question-walking', function (req, res) {
-	res.render('question-walking', { completed: req.query.completed });
+	res.render('question-walking');
 })
 
 router.post('/question-walking', function (req, res) {
 	res.redirect('/task-list?walkingCompletedOrDraft=draft');
 });
 
-
-router.get('/task-list', function (req, res) {
-	console.log(req.query.walkingCompletedOrDraft);
-
-	const icons = {
-		walking: req.query.walkingCompletedOrDraft
-	};
-
-	res.render('task-list', icons);
-});
-
-
-
 // Question - interacting
 
 router.get('/question-interacting', function (req, res) {
-	res.render('question-interacting', { completed: req.query.completed });
+	res.render('question-interacting');
 })
 
 router.post('/question-interacting', function (req, res) {
@@ -64,61 +51,15 @@ router.post('/question-interacting', function (req, res) {
 });
 
 
-router.get('/task-list', function (req, res) {
-	console.log(req.query.interactingCompletedOrDraft);
-
-	const icons = {
-		walking: req.query.interactingCompletedOrDraft
-	};
-
-	res.render('task-list', icons);
-});
-
-
-
 // Question - Migraine
 
 router.get('/question-migraine', function (req, res) {
-	res.render('question-migraine', { completed: req.query.completed });
+	res.render('question-migraine');
 })
 
 router.post('/question-migraine', function (req, res) {
 	res.redirect('/task-list?migraineCompletedOrDraft=draft');
 });
-
-
-router.get('/task-list', function (req, res) {
-	console.log(req.query.migraineCompletedOrDraft);
-
-	const icons = {
-		walking: req.query.migraineCompletedOrDraft
-	};
-
-	res.render('task-list', icons);
-});
-
-
-// Question - Medical records
-
-router.get('/question-medical-records', function (req, res) {
-	console.log(req.query);
-	res.render('question-medical-records');
-})
-
-router.post('/question-medical-records', function (req, res) {
-
-	if (req.body['radio-group'] === 'Yes I give permission') {
-		res.redirect('/medical-records-yes')
-	} else if (req.body['radio-group'] === 'No I don’t give permission') {
-		res.redirect('/medical-records-no')
-	}
-
-})
-
-
-
-
-
 
 // Extend a deadline
 

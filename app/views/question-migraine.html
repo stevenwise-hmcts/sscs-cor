@@ -7,7 +7,7 @@ Question - Migraine
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="/task-list{% if completed === 'true' %}?migraineCompletedOrDraft=completed{% endif %}">Back to questions</a>
+      <a class="link-back" href="/task-list">Back to questions</a>
       <form class="form" target="/question-migraine" method="POST">
         <fieldset class="form-group">
           <legend>
@@ -23,24 +23,29 @@ Question - Migraine
               <li>how you deal with them </li>
             </ul>
           </legend>
-          {% if completed === 'true' %}
-          <div class="appellants-answer">
-            <h2 class="bold-small">Your answer</h2>
-            {% if data['textareamigraine'] %}
-            <p>{{ data['textareamigraine'] }}</p>
-            {% else %}
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            {% endif %}
-            <p class="font-small">Submitted: 14 February 2017</p>
-          </div>
+
+
+          {% if data['migraineCompletedOrDraft'] === 'completed' %}
+            <div class="appellants-answer">
+              <h2 class="bold-small">Your answer</h2>
+                {% if data['textareamigraine'] %}
+                  <p>{{ data['textareamigraine'] }}</p>
+                {% else %}
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                {% endif %}
+              <p class="font-small">Submitted: 14 February 2017</p>
+            </div>
           {% else %}
-          <textarea class="form-control form-control-3-4 autoExpand" name="textareamigraine" id="textarea" rows='6'
-          data-min-rows='6'>{{ data['textareamigraine'] }}</textarea>
+            <textarea class="form-control form-control-3-4 autoExpand" name="textareamigraine" id="textarea" rows='6'
+            data-min-rows='6'>{{ data['textareamigraine'] }}</textarea>
           {% endif %}
+
+
+
         </fieldset>
         <div class="form-group">
-          {% if completed !== 'true' %}
-          <a class="button" href="questions-submitted-confirm" type="submit" value="Submit answer">Submit answer</a>
+          {% if data['migraineCompletedOrDraft'] !== 'completed' %}
+          <a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>
           <input class="" type="submit" value="Save for later" style="padding-left:30px;
           padding-top: 8px;background:none!important;
           color:#005ea5;
@@ -51,7 +56,7 @@ Question - Migraine
           text-decoration: underline">
           <br/><br/>
           {% endif %}
-          <a class="link-back" href="/task-list{% if completed === 'true' %}?migraineCompletedOrDraft=completed{% endif %}">Back to questions</a>        </div>
+          <a class="link-back" href="/task-list">Back to questions</a>        </div>
         </form>
       </div>
     </div>

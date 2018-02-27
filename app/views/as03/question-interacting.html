@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Socialising
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+       <a class="link-back" href="/task-list">Back to questions</a>
+      <form class="form" action="/question-interacting" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Interacting with people
+            </h1>
+            <p class="body-text">
+            You said you avoid interacting with people if possible. We’d like to know more about the times when you see friends and family.</p>
+            <p>Can you tell us about three separate occasions in 2017 that you have met with friends and family. </p>
+            <p>Tell us: </p>
+            <ul class="list list-bullet">
+              <li>who you met</li>
+              <li>when</li>
+              <li>where</li>
+              <li>how it made you feel</li>
+            </ul>
+          </legend>
+
+
+          {% if data['interactingCompletedOrDraft'] === 'completed' %}
+            <div class="appellants-answer">
+              <h2 class="bold-small">Your answer</h2>
+                {% if data['textareainteracting'] %}
+                  <p>{{ data['textareainteracting'] }}</p>
+                {% else %}
+                  <p>[ANSWER GOES HERE]</p>
+                {% endif %}
+              <p class="font-small">Submitted: 14 February 2017</p>
+            </div>
+            {% else %}
+              <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" rows='6'
+            data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
+          {% endif %}
+
+
+
+
+        </fieldset>
+        <div class="form-group">
+          {% if data['interactingCompletedOrDraft'] !== 'completed' %}
+          <a class="button" href="/task-list?interactingCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>
+          <input class="" type="submit" value="Save for later" style="padding-left:30px;
+          padding-top: 8px;background:none!important;
+          color:#005ea5;
+          border:none; 
+          font: inherit;
+          /*border is optional*/ 
+          cursor: pointer;
+          text-decoration: underline">
+          <br/><br/>
+          {% endif %}
+          <a class="link-back" href="task-list">Back to questions</a>        </div>
+        </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

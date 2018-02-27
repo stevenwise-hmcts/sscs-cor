@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="evidence-options">Back</a>
+      <form class="form">
+        <legend>
+          <h1 class="heading-large">
+            Upload additional evidence
+          </h1>
+          <p>You can upload documents, photos or videos.</p>
+          <p>Useful evidence describes or shows how your condition affects your life.<br/><a href="about-evidence">Read more about what evidence the tribunal finds useful</a>.</p>
+          <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
+        </legend>
+        <br/>
+        <div class="dropzone" tabindex="0">
+          <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
+            <div class="dz-message">          
+              <div class="dz-message-icon"></div>      
+              <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+              </div>    
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Uploaded files</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No files uploaded</td>
+              </tr>
+            </tbody>
+          </table>
+          <br/>
+          <div class="form-group">
+            <a href="evidence-confirm" class="button">Submit evidence</a>
+            <!-- <input class="button" type="submit" value="Submit statement"> -->
+          </div>
+          <a class="link-back" href="evidence-options">Back</a>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

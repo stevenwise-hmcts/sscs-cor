@@ -451,8 +451,25 @@ text-align:left;vertical-align:middle}
 }
 
 
+// Updates
+
+ .updates-border {
+    background: $govuk-blue;
+    height: 6px;
+    margin-top: 60px;
+  }
+
+  .updates-border-thin {
+    background: $govuk-blue;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
 
 // Icon and link
 
 img { float: left; }
 .follow { line-height: 45px; }
+
+

@@ -4,7 +4,7 @@ Task list - Round 1
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
-    {% include "includes/phase_banner_alpha.html" %}
+  {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds column-minimum">
       <h1 class="heading-large">
@@ -16,63 +16,60 @@ Task list - Round 1
       </div>
       <div class="divider"></div>
       <br/>
-         <h3 class="heading-small">Questions from the tribunal</h3>
-          <p>You need to respond by 28 February 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
-       
-          <ul class="task-list-items">
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You need to respond by 28 February 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
+      <ul class="task-list-items">
+        <!-- Interacting -->
+        <li class="task-list-item">
+         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+          Tell us about interacting with people
+        </a>
+        {% if data['interactingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['interactingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- Walking -->
+      <li class="task-list-item">
+        <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
+          How do you walk to the doctors?
+        </a>
+        {% if data['walkingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- migraine -->
+      <li class="task-list-item">
+       <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
+        Tell us about your migraines 
+      </a>
+      {% if data['migraineCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
+      <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+  </ul>
+</li>
+<h2 class="heading-small">Additional evidence</h2> 
+<p>If you have any additional information that is relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
+<a  href="evidence-options">Submit additional evidence</a>
+<!--<a class="button" href="#">Provide evidence</a>-->
+<!--
+<div class="updates-border"></div>
 
-<!-- Interacting -->
-
-            <li class="task-list-item">
-               <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
-                Tell us about interacting with people
-              </a>
-              {% if data['interactingCompletedOrDraft'] === 'completed' %}
-                  <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-                  <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
-                {% endif %}
-            </li>
-
-
-<!-- Walking -->
-
-            <li class="task-list-item">
-              <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
-                How do you walk to the doctors?
-              </a>
-                {% if data['walkingCompletedOrDraft'] === 'completed' %}
-                  <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif data['walkingCompletedOrDraft'] === 'draft' %}
-                  <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
-                {% endif %}
-            </li>
-
-
-<!-- migraine -->
-
-            <li class="task-list-item">
-               <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
-                Tell us about your migraines 
-              </a>
-                 {% if data['migraineCompletedOrDraft'] === 'completed' %}
-                  <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif data['migraineCompletedOrDraft'] === 'draft' %}
-                  <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
-                {% endif %}
-            </li>
-          </ul>
-        </li>
+<h4 class="heading-small">About your appeal</h4>
+<ul class="list">
+  <li><a href="about-hearing">Appeal history</a></li>
+  <li><a href="contact-us">Contact us</a></li>   
+</ul> 
+</div> -->
 
 
 
-
-      <h2 class="heading-small">Additional evidence</h2> 
-      <p>If you have any additional information that is relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
-        <a  href="evidence-options">Submit additional evidence</a>
-        <!--<a class="button" href="#">Provide evidence</a>-->
-      </div>
-    </div>
-    
-  </main>
-  {% endblock %}
+</div> 
+</main>
+{% endblock %}

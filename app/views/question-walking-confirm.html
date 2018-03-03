@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Interacting - Confirm
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-medium">
+        You will not be able to change your answer once you have submitted it to the tribunal. 
+      </h1><br/>
+     <a class="button" href="/task-list-extend?walkingCompletedOrDraft=completed" type="submit" value="Submit answer">Submit to the tribunal</a>
+      <a href="question-walking" style="padding-left:30px;">Cancel</a>
+      <br/><br/>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

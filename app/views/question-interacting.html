@@ -12,11 +12,11 @@ Question - Socialising
       <fieldset class="form-group">
         <legend>
           <h1 class="heading-large">
-           Tell us about interacting with people  
+           How do you interact with people?  
          </h1>
          <p class="body-text">
          You said you avoid interacting with people if possible. We’d like to know more about the times when you see friends and family.</p>
-         <p>Can you tell us about three separate occasions in 2017 that you have met with friends and family. </p>
+         <p>Tell us about three separate occasions in 2017 that you have met with friends and family. </p>
          <p>Tell us: </p>
          <ul class="list list-bullet">
           <li>who you met</li>
@@ -38,11 +38,15 @@ Question - Socialising
       {% else %}
       <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" rows='6'
       data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
+
+          <p style="padding-top: 20px; "><a href="">You can answer this question by video, if you prefer</a> </p>
+</fieldset>
       {% endif %}
     </fieldset>
+
     <div class="form-group">
       {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-      <a class="button" href="/task-list?interactingCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+      <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit</a>
       <input class="" type="submit" value="Save for later" style="padding-left:30px;
       padding-top: 8px;background:none!important;
       color:#005ea5;
@@ -53,7 +57,8 @@ Question - Socialising
       text-decoration: underline">
       <br/><br/>
       {% endif %}
-      <a class="link-back" href="task-list">Back to questions</a>        </div>
+      <a class="link-back" href="task-list">Back to questions</a>        
+    </div>
     </form>
   </div>
 </div>

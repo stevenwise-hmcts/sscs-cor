@@ -13,53 +13,54 @@ Question - Migraine
           <legend>
             <h1 class="heading-large">
              Tell us about your migraines 
-            </h1>
-            <p class="body-text">
-            You said you have difficulties caused by migraines. </p>
-            <p>During 2017, can you tell us: </p>
-            <ul class="list list-bullet">
-              <li>how often you had migraines </li>
-              <li>how long they lasted </li>
-              <li>how you deal with them </li>
-            </ul>
-          </legend>
+           </h1>
+           <p class="body-text">
+           You said you have difficulties caused by migraines. </p>
+           <p>During 2017, can you tell us: </p>
+           <ul class="list list-bullet">
+            <li>how often you had migraines </li>
+            <li>how long they lasted </li>
+            <li>how you deal with them </li>
+          </ul>
+        </legend>
 
 
-          {% if data['migraineCompletedOrDraft'] === 'completed' %}
-            <div class="appellants-answer">
-              <h2 class="bold-small">Your answer</h2>
-                {% if data['textareamigraine'] %}
-                  <p>{{ data['textareamigraine'] }}</p>
-                {% else %}
-                  <p>[ANSWER GOES HERE]</p>
-                {% endif %}
-              <p class="font-small">Submitted: 14 February 2017</p>
-            </div>
+        {% if data['migraineCompletedOrDraft'] === 'completed' %}
+        <div class="appellants-answer">
+          <h2 class="bold-small">Your answer</h2>
+          {% if data['textareamigraine'] %}
+          <p>{{ data['textareamigraine'] }}</p>
           {% else %}
-            <textarea class="form-control form-control-3-4 autoExpand" name="textareamigraine" id="textarea" rows='6'
-            data-min-rows='6'>{{ data['textareamigraine'] }}</textarea>
+          <p>[ANSWER GOES HERE]</p>
           {% endif %}
+          <p class="font-small">Submitted: 14 February 2017</p>
+        </div>
+        {% else %}
+        <textarea class="form-control form-control-3-4 autoExpand" name="textareamigraine" id="textarea" rows='6'
+        data-min-rows='6'>{{ data['textareamigraine'] }}</textarea>
+         <p style="padding-top: 20px; "><a href="">You can answer this question by video, if you prefer</a> </p>
+        {% endif %}
+
+      </fieldset>
 
 
-
-        </fieldset>
-        <div class="form-group">
-          {% if data['migraineCompletedOrDraft'] !== 'completed' %}
-          <a class="button" href="/questions-submitted-confirm?migraineCompletedOrDraft=completed" type="submit" value="Submit answer to the tribunal">Submit answer to the tribunal</a>
-          <!--<a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>-->
-          <input class="" type="submit" value="Save for later" style="padding-left:30px;
-          padding-top: 8px;background:none!important;
-          color:#005ea5;
-          border:none; 
-          font: inherit;
-          /*border is optional*/ 
-          cursor: pointer;
-          text-decoration: underline">
-          <br/><br/>
-          {% endif %}
-          <a class="link-back" href="/task-list">Back to questions</a>        </div>
-        </form>
-      </div>
+      <div class="form-group">
+        {% if data['migraineCompletedOrDraft'] !== 'completed' %}
+        <a class="button" href="/question-migraine-confirm" type="submit" value="Submit to the tribunal">Submit</a>
+        <!--<a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>-->
+        <input class="" type="submit" value="Save for later" style="padding-left:30px;
+        padding-top: 8px;background:none!important;
+        color:#005ea5;
+        border:none; 
+        font: inherit;
+        /*border is optional*/ 
+        cursor: pointer;
+        text-decoration: underline">
+        <br/><br/>
+        {% endif %}
+        <a class="link-back" href="/task-list">Back to questions</a>        </div>
+      </form>
     </div>
-  </main>
-  {% endblock %}
+  </div>
+</main>
+{% endblock %}

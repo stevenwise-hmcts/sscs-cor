@@ -126,20 +126,39 @@ router.post('/extend-are-sure', function (req, res) {
 
 // Decision accept or hearing
 
-router.get('/decision-positive', function (req, res) {
+router.get('/decision-view', function (req, res) {
 	console.log(req.query);
-	res.render('decision-positive');
+	res.render('decision-view');
 })
 
-router.post('/decision-positive', function (req, res) {
+router.post('/decision-view', function (req, res) {
 
 	if (req.body['radio-group'] === 'accept the decision') {
-		res.redirect('/decision-accepted')
+		res.redirect('/decision-view-accepted')
 	} else if (req.body['radio-group'] === 'want a hearing') {
-		res.redirect('/hearing-explain-why')
+		res.redirect('/hearing-confirm')
 	}
 
 })
+
+
+// Hearing confirm
+
+router.get('/hearing-confirm', function (req, res) {
+	console.log(req.query);
+	res.render('hearing-confirm');
+})
+
+router.post('/hearing-confirm', function (req, res) {
+
+	if (req.body['radio-group'] === 'yes') {
+		res.redirect('/hearing-explain-why')
+	} else if (req.body['radio-group'] === 'no') {
+		res.redirect('/decision-view')
+	}
+	
+})
+
 
 
 // Hearing required
@@ -158,6 +177,8 @@ router.post('/hearing-required', function (req, res) {
 	}
 
 })
+
+
 
 
 

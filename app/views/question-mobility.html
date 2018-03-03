@@ -33,7 +33,7 @@ Question - Mobility - Round 2
                 {% else %}
                   <p>[ANSWER GOES HERE]</p>
                 {% endif %}
-              <p class="font-small">Submitted: 14 February 2017</p>
+              <p class="font-small">Submitted: 7 March 2018</p>
             </div>
             {% else %}
               <textarea class="form-control form-control-3-4 autoExpand" name="textareamobility" id="textarea" rows='6'
@@ -41,13 +41,11 @@ Question - Mobility - Round 2
              <p style="padding-top: 20px; "><a href="">You can answer this question by video, if you prefer</a> </p>
           {% endif %}
 
-
-
-
         </fieldset>
+        
         <div class="form-group">
           {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
-          <a class="button" href="/task-list-r2?mobilityCompletedOrDraft=completed" type="submit" value="Submit answer">Submitl</a>
+          <a class="button" href="question-mobility-confirm" type="submit" value="Submit answer">Submit</a>
           <input class="" type="submit" value="Save for later" style="padding-left:30px;
           padding-top: 8px;background:none!important;
           color:#005ea5;

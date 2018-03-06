@@ -14,10 +14,21 @@ Question - Walking
             <h1 class="heading-large">
               How do you walk to the doctors?
             </h1>
+               </legend>
             <p class="body-text">
-            The DWP healthcare professional who assessed you noted that you walk to the GP’s surgery and it takes you 30 minutes.</p>
-            <p>Please can you describe the journey and tell us how often you made it in 2017. </p>
-          </legend>
+            The DWP healthcare professional noted that you occasionally walk to the GP’s surgery. </p>
+
+            <p>In 2017, please describe the journey, including:
+            </p>
+
+            <ul class="list list-bullet">
+              <li>how long it took,</li>
+              <li>whether you needed to stop on the way</li>
+              <li>if so, for how long</li>
+              <li>if you used any aids to help you walk </li>
+              <li>if you did, what aids did you use? </li>    
+            </ul>
+       
 
           {% if data['walkingCompletedOrDraft'] === 'completed' %}
           <div class="appellants-answer">
@@ -33,13 +44,15 @@ Question - Walking
           {% else %}
           <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6'
           data-min-rows='6'>{{ data['textarea'] }}</textarea>
+
+          <br/>
+          <p>You can record your answer by video or audio and <a href="">upload it</a> </p>
           {% endif %}
         </fieldset>
 
-        <p>You can record your answer by video or audio and <a href="">upload it</a> </p>
         <div class="form-group">
           {% if data['walkingCompletedOrDraft'] !== 'completed' %}
-          <a class="button" href="/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit</a>
+          <a class="button" href="/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit to the tribunal</a>
           <input class="" type="submit" value="Save for later" style="padding-left:30px;
           padding-top: 8px;background:none!important;
           color:#005ea5;

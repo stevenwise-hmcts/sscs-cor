@@ -12,54 +12,49 @@ Question - Mobility - Round 2
         <fieldset class="form-group">
           <legend>
             <h1 class="heading-large">
-              Walking to the GP surgery
+              Your walking aid
             </h1>
-            <p class="body-text">
-            You said in your previous answer that you occasionally walked to the GP’s surgery.</p>
-            <p> Please describe the journey, including:</p>
-            <ul class="list list-bullet">
-              <li>how long it took,</li>
-              <li>whether you needed to stop on the way</li>
-              <li>if so, for how long</li>
-              <li>if you used any aids to help you walk </li>
-              <li>if you did, what aids did you use? </li>    
-            </ul>
           </legend>
- {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+          <p class="body-text">
+            You said in your previous answer that you use use a walking stick. Please could you say:
+            <ul class="list list-bullet">
+              <li>where you got the stick from</li>
+              <li>how long you can walk with it</li>
+            </ul>
+           <!-- <p>You can upload a picture of the walking stick, if you think it will help. </p> -->
+            {% if data['mobilityCompletedOrDraft'] === 'completed' %}
             <div class="appellants-answer">
               <h2 class="bold-small">Your answer</h2>
-                {% if data['textareamobility'] %}
-                  <p>{{ data['textareamobility'] }}</p>
-                {% else %}
-                  <p>[ANSWER GOES HERE]</p>
-                {% endif %}
+              {% if data['textareamobility'] %}
+              <p>{{ data['textareamobility'] }}</p>
+              {% else %}
+              <p>[ANSWER GOES HERE]</p>
+              {% endif %}
               <p class="font-small">Submitted: 7 March 2018</p>
             </div>
             {% else %}
-              <textarea class="form-control form-control-3-4 autoExpand" name="textareamobility" id="textarea" rows='6'
+            <textarea class="form-control form-control-3-4 autoExpand" name="textareamobility" id="textarea" rows='6'
             data-min-rows='6'>{{ data['textareamobility'] }}</textarea>
-             <p style="padding-top: 20px; ">You can record your answer by video or audio and <a href="">upload it</a> </p>
-          {% endif %}
-
-        </fieldset>
-        
-        <div class="form-group">
-          {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
-          <a class="button" href="question-mobility-confirm" type="submit" value="Submit to the tribunal">Submit</a>
-          <input class="" type="submit" value="Save for later" style="padding-left:30px;
-          padding-top: 8px;background:none!important;
-          color:#005ea5;
-          border:none; 
-          font: inherit;
-          /*border is optional*/ 
-          cursor: pointer;
-          text-decoration: underline">
-          <br/><br/>
-          {% endif %}
-      <a class="link-back" href="task-list-r2">Back to your questions</a>
-        </div>
-      </form>
+            <p style="padding-top: 20px; ">You can record your answer by video or audio and <a href="">upload it</a> </p>
+            {% endif %}
+          </fieldset>
+          <div class="form-group">
+            {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
+            <a class="button" href="question-mobility-confirm" type="submit" value="Submit to the tribunal">Submit</a>
+            <input class="" type="submit" value="Save for later" style="padding-left:30px;
+            padding-top: 8px;background:none!important;
+            color:#005ea5;
+            border:none; 
+            font: inherit;
+            /*border is optional*/ 
+            cursor: pointer;
+            text-decoration: underline">
+            <br/><br/>
+            {% endif %}
+            <a class="link-back" href="task-list-r2">Back to your questions</a>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</main>
-{% endblock %}
+  </main>
+  {% endblock %}

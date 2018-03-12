@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="591px" height="58px" viewBox="0 0 591 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 25</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M27,32 C35.836556,32 43,24.836556 43,16 C43,7.163444 35.836556,0 27,0 C18.163444,0 11,7.163444 11,16 C11,24.836556 18.163444,32 27,32 Z" id="path-1"></path>
+        <path d="M205.333333,32 C214.169889,32 221.333333,24.836556 221.333333,16 C221.333333,7.163444 214.169889,0 205.333333,0 C196.496777,0 189.333333,7.163444 189.333333,16 C189.333333,24.836556 196.496777,32 205.333333,32 Z" id="path-2"></path>
+        <path d="M383.666667,32 C392.503223,32 399.666667,24.836556 399.666667,16 C399.666667,7.163444 392.503223,1.13686838e-13 383.666667,1.13686838e-13 C374.830111,1.13686838e-13 367.666667,7.163444 367.666667,16 C367.666667,24.836556 374.830111,32 383.666667,32 Z" id="path-3"></path>
+        <path d="M562,32 C570.836556,32 578,24.836556 578,16 C578,7.163444 570.836556,1.13686838e-13 562,1.13686838e-13 C553.163444,1.13686838e-13 546,7.163444 546,16 C546,24.836556 553.163444,32 562,32 Z" id="path-4"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Progress-bar-states" transform="translate(-218.000000, -19.000000)">
+            <g id="Group-25" transform="translate(216.000000, 19.000000)">
+                <g id="Group-24">
+                    <g id="Group-23">
+                        <text id="Appeal" font-family="GDSTransportWebsite, GDS Transport Website" font-size="16" font-weight="300" line-spacing="22" fill="#0B0C0C">
+                            <tspan x="1.71875" y="54">Appeal</tspan>
+                        </text>
+                        <text id="DWP-response" font-family="GDSTransportWebsite, GDS Transport Website" font-size="16" font-weight="300" fill="#231F20">
+                            <tspan x="154.484375" y="54">DWP response</tspan>
+                        </text>
+                        <text id="Tribunal-questions" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="16" font-weight="bold" fill="#231F20">
+                            <tspan x="316.785156" y="55">Tribunal questions</tspan>
+                        </text>
+                        <text id="Decision" font-family="GDSTransportWebsite, GDS Transport Website" font-size="16" font-weight="300" fill="#231F20">
+                            <tspan x="534" y="55">Decision</tspan>
+                        </text>
+                        <path d="M464.175913,-71.0469847 L464.175913,102.955887" id="Path-2-Copy" stroke="#006435" stroke-width="6" transform="translate(465.000000, 15.500000) rotate(-90.000000) translate(-465.000000, -15.500000) "></path>
+                        <path d="M290.175913,-71.0469847 L290.175913,102.955887" id="Path-2" stroke="#006435" stroke-width="6" transform="translate(291.000000, 15.500000) rotate(-90.000000) translate(-291.000000, -15.500000) "></path>
+                        <path d="M120.175913,-67.0000234 L120.175913,98.9558868" id="Path-2" stroke="#006435" stroke-width="6" transform="translate(121.000000, 15.500000) rotate(-90.000000) translate(-121.000000, -15.500000) "></path>
+                        <g id="Oval">
+                            <use fill="#006435" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <path stroke="#006435" stroke-width="6" d="M27,29 C34.1797017,29 40,23.1797017 40,16 C40,8.82029825 34.1797017,3 27,3 C19.8202983,3 14,8.82029825 14,16 C14,23.1797017 19.8202983,29 27,29 Z"></path>
+                        </g>
+                        <g id="Oval">
+                            <use fill="#006435" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <path stroke="#006435" stroke-width="6" d="M205.333333,29 C212.513035,29 218.333333,23.1797017 218.333333,16 C218.333333,8.82029825 212.513035,3 205.333333,3 C198.153632,3 192.333333,8.82029825 192.333333,16 C192.333333,23.1797017 198.153632,29 205.333333,29 Z"></path>
+                        </g>
+                        <g id="Oval" transform="translate(383.666667, 16.000000) rotate(-90.000000) translate(-383.666667, -16.000000) ">
+                            <use fill="#006435" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <path stroke="#006435" stroke-width="6" d="M383.666667,29 C390.846368,29 396.666667,23.1797017 396.666667,16 C396.666667,8.82029825 390.846368,3 383.666667,3 C376.486965,3 370.666667,8.82029825 370.666667,16 C370.666667,23.1797017 376.486965,29 383.666667,29 Z"></path>
+                        </g>
+                        <g id="Oval" transform="translate(562.000000, 16.000000) rotate(-90.000000) translate(-562.000000, -16.000000) ">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <path stroke="#006435" stroke-width="6" d="M562,29 C569.179702,29 575,23.1797017 575,16 C575,8.82029825 569.179702,3 562,3 C554.820298,3 549,8.82029825 549,16 C549,23.1797017 554.820298,29 562,29 Z"></path>
+                        </g>
+                        <polygon id="Shape" fill="#FFFFFF" points="23.94 18.36 20.52 14.94 18 17.46 23.94 23.5799999 35.9999999 11.52 33.4799999 9"></polygon>
+                    </g>
+                </g>
+                <polygon id="Shape" fill="#FFFFFF" points="201.94 18.36 198.52 14.94 196 17.46 201.94 23.5799999 214 11.52 211.48 9"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

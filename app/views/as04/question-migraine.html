@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Migraine
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list">Back to questions</a>
+      <form class="form" action="/question-migraine" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+             Tell us about your migraines 
+           </h1>
+           <p class="body-text">
+           You said you have difficulties caused by migraines. </p>
+           <p>During 2017, can you tell us: </p>
+           <ul class="list list-bullet">
+            <li>how often you had migraines </li>
+            <li>how long they lasted </li>
+            <li>how you deal with them </li>
+          </ul>
+        </legend>
+
+
+        {% if data['migraineCompletedOrDraft'] === 'completed' %}
+        <div class="appellants-answer">
+          <h2 class="bold-small">Your answer</h2>
+          {% if data['textareamigraine'] %}
+          <p>{{ data['textareamigraine'] }}</p>
+          {% else %}
+          <p>[ANSWER GOES HERE]</p>
+          {% endif %}
+          <p class="font-small">Submitted: 7 March 2018</p>
+        </div>
+        {% else %}
+        <textarea class="form-control form-control-3-4 autoExpand" name="textareamigraine" id="textarea" placeholder="You can write as much as you want here" rows='6'
+        data-min-rows='6'>{{ data['textareamigraine'] }}</textarea>
+         <p style="padding-top: 20px; ">You can record your answer by video or audio and <a href="">upload it</a>  </p>
+        {% endif %}
+
+      </fieldset>
+
+
+      <div class="form-group">
+        {% if data['migraineCompletedOrDraft'] !== 'completed' %}
+        <a class="button" href="/question-migraine-confirm" type="submit" value="Submit to the tribunal">Submit to the tribunal</a>
+        <!--<a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>-->
+        <input class="" type="submit" value="Save for later" style="padding-left:30px;
+        padding-top: 8px;background:none!important;
+        color:#005ea5;
+        border:none; 
+        font: inherit;
+        /*border is optional*/ 
+        cursor: pointer;
+        text-decoration: underline">
+        <br/><br/>
+        {% endif %}
+        <a class="link-back" href="/task-list">Back to questions</a>        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

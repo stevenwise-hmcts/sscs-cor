@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <a href="task-list"><img src="/public/images/tabs_status.png" width=630px></a>
+          <br/><br/>
+          <br/>
+          <div class="panel-blue">
+           <!-- <h2 class="heading-small">Status</h2> -->
+           <h2 class="heading-small"><a href="task-list"> Questions from the tribunal</a></h2>
+           <p>The tribunal need some more information from you to help them make a decision  on your PIP benefit appeal. </p> 
+           <p>You need to respond by 14 March 2018.</p>
+         </div>
+         <div class="panel-clear">
+          <table>
+           <caption class="heading-small">Timeline</caption>
+           <tr>
+            <td><a href="">DWP reply to tribunal questions</a></td>
+            <td class="date">6 March 2018</td>
+          </tr>
+           <!--  <tr>
+              <td><a href="">Directions from the tribunal</a></td>
+              <td class="numeric">xx February 2018</td>
+            </tr> -->
+            <tr>
+              <td><a href="evidence-uploaded-you">Evidence recevied</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-dwp-response">DWP response received</a></td>
+              <td class="date">21 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="appeal-summary">Appeal submitted</a></td>
+              <td class="date">17 January 2018</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/><br/>
+        <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+        <a href="#" class="follow">Download all activity and documents relating to your appeal</a>
+      </div>
+    
+  </main>
+  {% endblock %}

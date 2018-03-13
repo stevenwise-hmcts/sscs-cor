@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mobility - Round 2
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list">Back to questions</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Walking to the GP surgery
+            </h1>
+            <p class="body-text">
+            You said in your previous answer that you occasionally walked to the GP’s surgery. Please describe the journey, including:</p>
+            <ul class="list list-bullet">
+              <li>how long it took,</li>
+              <li>whether you needed to stop on the way</li>
+              <li>if so, for how long</li>
+              <li>if you used any aids to help you walk </li>
+              <li>if you did, what aids did you use? </li>    
+            </ul>
+          </legend>
+                    <div class="appellants-answer">
+            <h2 class="bold-small">Your answer</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="font-xsmall">Submitted: 7 March 2018</p>
+          </div>
+      <a class="link-back" href="task-list-r2">Back to your questions</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

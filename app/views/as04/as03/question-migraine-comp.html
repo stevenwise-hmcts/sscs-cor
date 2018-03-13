@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mental health
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list-q3-comp">Back to questions</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Your migraines
+            </h1>
+            <p class="body-text">
+            You said you have difficulties caused by migraines. </p>
+            <p>During 2017, can you tell us: </p>
+            <ul class="list list-bullet">
+              <li>how often you had migraines </li>
+              <li>how long they lasted </li>
+              <li>how you deal with them </li>
+            </ul>
+          </legend>
+          <div class="appellants-answer">
+            <h2 class="bold-small">Your answer</h2>
+
+            <p>                  <p>[ANSWER GOES HERE]</p>
+            <p class="font-xsmall">Submitted: 7 March 2018</p>
+          </div>
+          <br/>
+      <a class="link-back" href="task-list-q3-comp">Back to questions</a>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

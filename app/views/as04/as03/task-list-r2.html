@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 2
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <h1 class="heading-large">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference: SC242/16/03435</h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You need to respond by 21 March 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
+
+      <ul class="task-list-items">
+
+
+        <!-- Mobility -->
+
+        <li class="task-list-item">
+          <a class="task-name" href="/question-mobility" aria-describedby="mobility-respond">
+            Walking to the GP surgery
+          </a>
+          {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+          {% elif data['mobilityCompletedOrDraft'] === 'draft' %}
+          <a href="/question-mobility"><strong class="task-draft">Draft</strong></a>
+          {% endif %}
+        </li>
+
+<!-- Medical records -->
+
+
+        <li class="task-list-item">
+          <a class="task-name" href="/question-medical-records" aria-describedby="medical-records-respond">
+            Permission to access your medical information
+          </a>
+          {% if data['medicalCompletedOrDraft'] === 'completed' %}
+          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+          {% elif data['medicalCompletedOrDraft'] === 'draft' %}
+          <a href="/question-medical-records"><strong class="task-draft">Draft</strong></a>
+          {% endif %}
+        </li>
+      </ul>
+
+      <h2 class="heading-small">Additional evidence</h2> 
+      <p>If you have any additional information that is relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
+      <a  href="evidence-options">Submit additional evidence</a>
+      <!--<a class="button" href="#">Provide evidence</a>-->
+    </div>
+  </div>
+
+</main>
+{% endblock %}

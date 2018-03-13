@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mobility - Round 2
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="task-list-r2">Back to questions</a>
+      <form class="form" action="/question-mobility" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Your walking stick
+            </h1>
+          </legend>
+          <p class="body-text">
+            You said in your previous answer that you use a walking stick. </p>
+            <p>Please could you say:</p>
+            <ul class="list list-bullet">
+              <li>where you got the stick from</li>
+              <li>how often you use it </li>
+              <li>how far you can walk without it </li>
+            </ul>
+           <!-- <p>You can upload a picture of the walking stick, if you think it will help. </p> -->
+            {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+            <div class="appellants-answer">
+              <h2 class="bold-small">Your answer</h2>
+              {% if data['textareamobility'] %}
+              <p>{{ data['textareamobility'] }}</p>
+              {% else %}
+              <p>[ANSWER GOES HERE]</p>
+              {% endif %}
+              <p class="font-small">Submitted: 7 March 2018</p>
+            </div>
+            {% else %}
+            <textarea class="form-control form-control-3-4 autoExpand" name="textareamobility" id="textarea" placeholder="You can write as much as you want here" rows='6'
+            data-min-rows='6'>{{ data['textareamobility'] }}</textarea>
+            <p style="padding-top: 20px; ">You can record your answer by video or audio and <a href="">upload it</a> </p>
+            {% endif %}
+          </fieldset>
+          <div class="form-group">
+            {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
+            <a class="button" href="question-mobility-confirm" type="submit" value="Submit to the tribunal">Submit to the tribunal</a>
+            <input class="" type="submit" value="Save for later" style="padding-left:30px;
+            padding-top: 8px;background:none!important;
+            color:#005ea5;
+            border:none; 
+            font: inherit;
+            /*border is optional*/ 
+            cursor: pointer;
+            text-decoration: underline">
+            <br/><br/>
+            {% endif %}
+            <a class="link-back" href="task-list-r2">Back to questions</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

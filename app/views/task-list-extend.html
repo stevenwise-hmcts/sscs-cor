@@ -61,6 +61,21 @@ Task list - Round 1
                   <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
                 {% endif %}
             </li>
+    <!-- Medical records -->
+
+
+    <li class="task-list-item">
+      <a class="task-name" href="/question-medical-records" aria-describedby="medical-records-respond">
+        Permission to access your medical information
+      </a>
+      {% if data['medicalCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['medicalCompletedOrDraft'] === 'draft' %}
+      <a href="/question-medical-records"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+
+            
           </ul>
         </li>
 

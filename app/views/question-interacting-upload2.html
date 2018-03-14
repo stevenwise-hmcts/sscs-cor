@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Question - Socialising
+Question - Interacting - Upload1
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -38,12 +38,46 @@ Question - Socialising
       {% else %}
       <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
       data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
-         
-          <p style="padding-top: 20px; "><a href="">Record your answer by video or audio and <a href="">upload it</a> </p> 
-
+      <p style="padding-top: 20px; "><a href="">You can record your answer by video or audio and <a href="">upload it</a> </p> 
       {% endif %}
+      <br/>
+     <div class="multiple-choice" data-target="example-different-country">
+        <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+        <label for="nationalities-other">I want to provide evidence to support my answer</label>
+      </div>
+      <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+        <p>You can upload letters, documents, photos or videos.</p>
+          
+        </legend>
+        
+        <div class="dropzone" tabindex="0">
+          <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
+            <div class="dz-message">          
+              <div class="dz-message-icon"></div>      
+              <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+              </div>    
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Uploaded files</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No files uploaded</td>
+              </tr>
+            </tbody>
+          </table>
+<br/><br/>
+          <a href="">You can also post evidence to the tribunal</a>
+          <br/>
+      </div> 
 
+    </fieldset>
 
+    <br/>
     <div class="form-group">
       {% if data['interactingCompletedOrDraft'] !== 'completed' %}
       <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
@@ -59,8 +93,8 @@ Question - Socialising
       {% endif %}
       <a class="link-back" href="task-list">Back to questions</a>        
     </div>
-    </form>
-  </div>
+  </form>
+</div>
 </div>
 </main>
 {% endblock %}

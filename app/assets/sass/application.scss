@@ -46,13 +46,15 @@ margin-top: 20px;
 
 
 
-// Seconday button
+// Secondary button
 
 .button-secondary {
 @include button ($grey-3);
 @include box-sizing (border-box);
 vertical-align: top;
-margin-left: 30px;
+
+
+
 
 @include media (mobile) {
 width: 100%;

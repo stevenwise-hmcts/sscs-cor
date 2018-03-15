@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="question-interacting">Back to question</a>
+      <form class="form">
+        <legend>
+          <h1 class="heading-large">
+            Add evidence to your answer
+          </h1>
+          <p>You can upload letters, documents, photos or videos.</p>
+          <!--<p>Useful evidence describes or shows how your condition affects your life.<br/><a href="about-evidence">Read more about what evidence the tribunal finds useful</a></p>-->
+          <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
+        </legend>
+        <details>
+          <summary><span class="summary">Help providing video or audio evidence</span></summary>
+          <div class="panel panel-border-narrow">
+           <p> If you find it easier, you can record yourself speaking the answer. For example, by making a video or audio recording on a mobile phone.</p> 
+           <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk. </p>
+         </div>
+       </details>
+       <br/>
+       <br/>
+       <label class="form-label" for="full-name-f1">Enter a title for your evidence<span class="form-hint"></span>
+       </label>
+       <input class="form-control form-control-3-4"  type="text" >
+       <br/> <br/>
+       <div class="dropzone" tabindex="0">
+        <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
+          <div class="dz-message">          
+            <div class="dz-message-icon"></div>      
+            <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+            </div>    
+          </form>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Uploaded files</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No files uploaded</td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+          <!--
+          <details>
+            <summary><span class="summary">Switch to another device to upload</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>To upload using another device like your mobile phone, got to: </p>
+              <p><a href="">http://evidence.upload@hmcts.net</a></p>
+              <p>You will be asked to enter this code</p>
+              <p class="bold-small">730506</p>
+            </div>
+          </details>
+        -->
+        <br/>
+        <div class="form-group">
+          <a href="question-interacting-upload" class="button">Add evidence</a>
+          <!-- <input class="button" type="submit" value="Submit statement"> -->
+        </div>
+        <a class="link-back" href="question-interacting">Back to question</a>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

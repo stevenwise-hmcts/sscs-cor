@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Submit evidence - Statement
+Submit evidence - Upload
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -15,10 +15,10 @@ Submit evidence - Statement
           <p>Useful evidence helps prove what you have said in your answers. For example letters, medical reports or photos.</p> 
           <p>You can also upload a video or audio recording of you speaking the answer.</p>
        
-        <br/>
-        <label class="heading-small" for="full-name-f1">Evidence title<span class="form-hint"></span>
+        <label class="heading-small" for="upload-description">Describe the evidence you want to upload<span class="form-hint">Briefly explain what you are uploading and why it’s relevant 
+</span>
         </label>
-        <input class="form-control form-control-3-4"  type="text" >
+        <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea"  rows='3' data-min-rows='3'></textarea>
         <br/> <br/>
         <div class="dropzone" tabindex="0">
           <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
@@ -40,7 +40,6 @@ Submit evidence - Statement
               </tr>
             </tbody>
           </table>
-          <br/><br/>
           <!--
           <details>
             <summary><span class="summary">Switch to another device to upload</span></summary>
@@ -52,6 +51,14 @@ Submit evidence - Statement
             </div>
           </details>
         -->
+        
+        <br/><br/>
+        <div class="form-group">
+          <a href="question-interacting-upload" class="button">Add evidence to your answer</a>
+          <!-- <input class="button" type="submit" value="Submit statement"> -->
+        </div>
+
+
         <details>
           <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
           <h2 class="heading-small">
@@ -68,11 +75,7 @@ Submit evidence - Statement
           <p><a href="#">Download and print address </a></p>
           <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
         </details>
-        <br/><br/>
-        <div class="form-group">
-          <a href="question-interacting-upload" class="button">Continue</a>
-          <!-- <input class="button" type="submit" value="Submit statement"> -->
-        </div>
+        <br/>
         <a class="link-back" href="question-interacting">Back to question</a>
       </form>
     </div>

@@ -43,10 +43,8 @@ Question - Interacting - Upload1
         <summary><span class="summary">You can record your answer by video or audio</span></summary>
         <div class="panel panel-border-narrow">
          <p>You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
-
-<p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
-
-<p>You can upload the recording by clicking ‘upload evidence’ below.   </p>
+         <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
+         <p>You can upload the recording by clicking ‘upload evidence’ below.   </p>
        </div>
      </details>
    </fieldset>
@@ -59,33 +57,60 @@ Question - Interacting - Upload1
     </thead>
     <tbody>
       <tr>
-        <td>[Evidence title goes here]</td>
-        <td><a href="">Remove</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <br/>
-  <a href="evidence-upload-interact" class="button-secondary">Upload more evidence</a>
-  <br/><br/><br/>
-        {% endif %} 
-
-  <div class="form-group">
-    {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-    <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
-    <input class="" type="submit" value="Save for later" style="padding-left:30px;
-    padding-top: 8px;background:none!important;
-    color:#005ea5;
-    border:none; 
-    font: inherit;
-    /*border is optional*/ 
-    cursor: pointer;
-    text-decoration: underline">
-    {% endif %}
-        <br/>
-
-    <a class="link-back" href="task-list">Back to questions</a>        
-  </div>
-</form>
+        <td>[Evidence description goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]</p>
+          </td>
+          <td><a href="evidence-upload-interact">Change</a><br/><br/><br/><br/><br/><br/><br/></td>
+        </tr>
+        <tr>
+          <td>IMG_8529.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8530.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8531.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8532.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8533.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8534.jpg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IMG_8535.m4v</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <br/>
+    {% endif %} 
+    <div class="form-group">
+      {% if data['interactingCompletedOrDraft'] !== 'completed' %}
+      <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
+      <input class="" type="submit" value="Save for later" style="padding-left:30px;
+      padding-top: 8px;background:none!important;
+      color:#005ea5;
+      border:none; 
+      font: inherit;
+      /*border is optional*/ 
+      cursor: pointer;
+      text-decoration: underline">
+      {% endif %}
+      <br/>  <br/>
+      <a class="link-back" href="task-list">Back to questions</a>        
+    </div>
+  </form>
 </div>
 </div>
 </main>

@@ -118,8 +118,26 @@ router.post('/extend-are-sure', function (req, res) {
 		res.redirect('/extend-confirm')
 	} else if (req.body['radio-group'] === 'No') {
 		res.redirect('/extend-no')
-	}
+	}  else if (req.body['radio-group'] === 'Longer') {
+		res.redirect('/extend-longer')
+}
+})
 
+
+// Extend a deadline3
+
+router.get('/extend-are-sure3', function (req, res) {
+	console.log(req.query);
+	res.render('extend-are-sure3');
+})
+
+router.post('/extend-are-sure3', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes') {
+		res.redirect('/extend-longer2')
+	} else if (req.body['radio-group'] === 'No') {
+		res.redirect('/extend-no')
+}
 })
 
 

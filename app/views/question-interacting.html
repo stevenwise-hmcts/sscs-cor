@@ -58,24 +58,19 @@ Question - Interacting - Upload1
         <summary><span class="summary">You can record your answer by video or audio</span></summary>
         <div class="panel panel-border-narrow">
          <p>If you find it easier, you can record yourself speaking the answer. For example, by making a video or audio recording on a mobile phone. </p>
-
-<p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk. </p>
-
-<p>You can upload the recording by selecting ‘I want to submit additional evidence to support my answer’ below, and clicking add evidence. </p>
-
+         <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk. </p>
+         <p>You can upload the recording by selecting ‘I want to submit additional evidence to support my answer’ below, and clicking add evidence. </p>
        </div>
      </details>
    </fieldset>
-
-<h3 class="heading-small">Your evidence</h3>
+   <h3 class="heading-small">Your evidence</h3>
    <p>You can submit additional evidence to support my answer.<br/>
-    For example letters, photos, video or audio.</p>
-  <a href="evidence-upload-interact" class="button-secondary">Add evidence</a>
-  {% endif %}    
-  <div class="form-group">
+   For example letters, photos, video or audio.</p>
+   <a href="evidence-upload-interact" class="button-secondary">Add evidence</a>
+   {% endif %}    
+   <div class="form-group">
     {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-      <br/><br/>
-
+    <br/><br/>
     <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
     <input class="" type="submit" value="Save for later" style="padding-left:30px;
     padding-top: 8px;background:none!important;
@@ -86,8 +81,7 @@ Question - Interacting - Upload1
     cursor: pointer;
     text-decoration: underline">
     {% endif %}
-        <br/><br/><br/>
-
+    <br/><br/><br/>
     <a class="link-back" href="task-list">Back to questions</a>        
   </div>
 </form>

@@ -32,21 +32,20 @@ Question - Interacting - Upload1
         <p>{{ data['textareainteracting'] }}</p>
         {% else %}
         <p>[ANSWER GOES HERE]</p>
-
         <table>
-      <thead>
-        <tr>
-          <th>Your evidence</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>[Evidence title goes here]</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+          <thead>
+            <tr>
+              <th>Your evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[Evidence title goes here]</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
         {% endif %}
         <br/>
         <p class="font-small">Submitted: 7 March 2018</p>
@@ -54,47 +53,44 @@ Question - Interacting - Upload1
       {% else %}
       <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
       data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
-      
       <br/>
       <details>
         <summary><span class="summary">You can record your answer by video or audio</span></summary>
         <div class="panel panel-border-narrow">
-        
-         <p>You can upload the recording by selecting ‘I want to submit additional evidence to support my answer’ below, and clicking continue.</p>
+         <p>If you find it easier, you can record yourself speaking the answer. For example, by making a video or audio recording on a mobile phone. </p>
+
+<p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk. </p>
+
+<p>You can upload the recording by selecting ‘I want to submit additional evidence to support my answer’ below, and clicking add evidence. </p>
+
        </div>
      </details>
    </fieldset>
-   <fieldset class="form-group">
-    <div style="padding-top: 20px;">
-      <div class="multiple-choice" data-target="example-different-country">
-        <input id="upload" name="nationalities" type="checkbox" value="upload">
-        <label for="upload">I want to submit additional evidence to support my answer<br/>
-          <span class="form-hint">For example letters, photos, video or audio</span>
-        </label>
-      </div>
-      <div class="panel panel-border-narrow js-hidden" id="example-different-country">
-        <p>[Content for upload journey then return to question page]</p>
-        <a href="evidence-upload-interact" class="button-secondary">Add evidence</a>
-        <br/><br/>
-      </div>
-      {% endif %} 
-    </fieldset>    
-    <div class="form-group">
-      {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-      <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
-      <input class="" type="submit" value="Save for later" style="padding-left:30px;
-      padding-top: 8px;background:none!important;
-      color:#005ea5;
-      border:none; 
-      font: inherit;
-      /*border is optional*/ 
-      cursor: pointer;
-      text-decoration: underline">
+
+<h3 class="heading-small">Your evidence</h3>
+   <p>You can submit additional evidence to support my answer.<br/>
+    For example letters, photos, video or audio.</p>
+  <a href="evidence-upload-interact" class="button-secondary">Add evidence</a>
+  {% endif %}    
+  <div class="form-group">
+    {% if data['interactingCompletedOrDraft'] !== 'completed' %}
       <br/><br/>
-      {% endif %}
-      <a class="link-back" href="task-list">Back to questions</a>        
-    </div>
-  </form>
+
+    <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
+    <input class="" type="submit" value="Save for later" style="padding-left:30px;
+    padding-top: 8px;background:none!important;
+    color:#005ea5;
+    border:none; 
+    font: inherit;
+    /*border is optional*/ 
+    cursor: pointer;
+    text-decoration: underline">
+    {% endif %}
+        <br/><br/><br/>
+
+    <a class="link-back" href="task-list">Back to questions</a>        
+  </div>
+</form>
 </div>
 </div>
 </main>

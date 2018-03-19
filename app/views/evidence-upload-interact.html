@@ -8,7 +8,7 @@ Submit evidence - Upload
   <div class="grid-row">
     <div class="column-two-thirds">
       <a class="link-back" href="question-interacting">Back to question</a>
-      <form class="form">
+      
           <h1 class="heading-large">
             Upload evidence
           </h1>
@@ -18,28 +18,34 @@ Submit evidence - Upload
         <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly explain what you are uploading and why it’s relevant 
 </span>
         </label>
-        <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea"  rows='3' data-min-rows='3'></textarea>
+        <textarea class="form-control form-control-3-4 " name="textareainteracting" id="textarea"  rows='3'></textarea>
         <br/>
-        <div class="dropzone" tabindex="0">
-          <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
-            <div class="dz-message">          
-              <div class="dz-message-icon"></div>      
-              <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
-              </div>    
-            </form>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Uploaded files</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>No files uploaded</td>
-              </tr>
-            </tbody>
-          </table>
+         
+        <form class="dropzone" method="post" action="/upload" id="upload-widget" tabindex="0">
+    
+    <div class="dz-message">          
+      <div class="dz-message-icon"></div>      
+      <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
+    </div>    
+    
+    <div class="form-group">
+      <label class="form-label" for="file-input">Upload a file</label>
+      <input type="file" id="file-input" multiple>
+    </div>
+    
+  </form>
+
+   <h2 class="heading-small" id="uploads">Uploaded files</h2>
+  
+  <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+
+    <div class="c-uploads-item">
+      <p class="c-uploads-empty">No files uploaded</p>
+    </div>
+  
+  </div>
+
+
           <!--
           <details>
             <summary><span class="summary">Switch to another device to upload</span></summary>
@@ -75,7 +81,7 @@ Submit evidence - Upload
         </details>
         <br/>
         <a class="link-back" href="question-interacting">Back to question</a>
-      </form>
+     
     </div>
   </div>
 </main>

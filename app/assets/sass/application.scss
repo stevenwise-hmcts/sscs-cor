@@ -277,7 +277,7 @@ img { float: left;
   color: $link-colour;
   cursor: pointer;
   font-size: inherit;
-  padding: 0; 
+  padding: 0;
   text-decoration: underline;
 
   &:hover {
@@ -291,7 +291,7 @@ img { float: left;
   border-bottom: 1px solid $border-colour;
   display: flex;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   justify-content: space-between;
   width: 100%;
 }
@@ -835,4 +835,20 @@ img { float: left;
 // Don't show standard form input if JavaScript is available
 .js-enabled .dropzone .form-group {
   display: none;
+}
+
+
+.question-interacting-describe-evidence-table {
+  width:100%;
+  display: table;
+  padding: 10px 0;
+  border-top: 1px solid $grey-1;
+
+  dd {
+    display: table-cell;
+
+    &.change-answer {
+      float: right;
+    }
+  }
 }

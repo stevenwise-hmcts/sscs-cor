@@ -8,44 +8,33 @@ Submit evidence - Upload
   <div class="grid-row">
     <div class="column-two-thirds">
       <a class="link-back" href="question-interacting">Back to question</a>
-      
-          <h1 class="heading-large">
-            Upload evidence
-          </h1>
-          <p>Useful evidence helps prove what you have said in your answers. For example letters, medical reports or photos.</p> 
-          <p>You can also upload a video or audio recording of you speaking the answer.</p>
-       
-        <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly explain what you are uploading and why it’s relevant 
-</span>
+      <form id="buldUploadForm" class="form" action="/evidence-upload-interact" method="POST" enctype="multipart/form-data">
+        <h1 class="heading-large">
+          Upload evidence
+        </h1>
+        <p>Useful evidence helps prove what you have said in your answer. For example letters, medical reports or photos. You can also upload a video or audio recording of you speaking the answer. </p>
+        <p>If the file is on your mobile phone, you can sign in and upload it from there.  
+        </p>
+        <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly describe what you are uploading and why it’s relevant </span>
         </label>
-        <textarea class="form-control form-control-3-4 " name="textareainteracting" id="textarea"  rows='3'></textarea>
+        <textarea class="form-control form-control-3-4 " name="describeTheEvidence" id="describeTheEvidence"  rows='3'>{{ data['describeTheEvidence'] }}</textarea>
         <br/>
-         
-        <form class="dropzone" method="post" action="/upload" id="upload-widget" tabindex="0">
-    
-    <div class="dz-message">          
-      <div class="dz-message-icon"></div>      
-      <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="link">click to choose a file</div>
-    </div>    
-    
-    <div class="form-group">
-      <label class="form-label" for="file-input">Upload a file</label>
-      <input type="file" id="file-input" multiple>
-    </div>
-    
-  </form>
-
-   <h2 class="heading-small" id="uploads">Uploaded files</h2>
-  
-  <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
-
-    <div class="c-uploads-item">
-      <p class="c-uploads-empty">No files uploaded</p>
-    </div>
-  
-  </div>
-
-
+        <div class="dropzone" id="upload-widget" tabindex="0">
+          <div class="dz-message">
+            <div class="dz-message-icon"></div>      
+            <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="button-secondary">Choose a file</div>
+            </div>    
+            <div id="something" class="form-group">
+              <label class="form-label" for="file-input">Upload a file</label>
+              <input name="fileUploaded" type="file" id="file-input" multiple>
+            </div>
+          </div>
+          <h2 class="heading-small" id="uploads">Uploaded files</h2>
+          <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+            <div class="c-uploads-item">
+              <p class="c-uploads-empty">No files uploaded</p>
+            </div>
+          </div>
           <!--
           <details>
             <summary><span class="summary">Switch to another device to upload</span></summary>
@@ -57,17 +46,13 @@ Submit evidence - Upload
             </div>
           </details>
         -->
-        
-        <br/><br/>
+        <br/>
         <div class="form-group">
-          <a href="question-interacting-upload" class="button">Add evidence to your answer</a>
-          <!-- <input class="button" type="submit" value="Submit statement"> -->
+          <!--<a href="question-interacting-upload" class="button">Add evidence to your answer</a>-->
+          <input id="submitAll" name="fileUpload" class="button" type="submit" value="Add evidence to your answer">
         </div>
-
-
         <details>
           <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
-        
           <p class="body-text">Post evidence to the address below.</p>
           <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
           <p>Birmingham ASC<br/>
@@ -81,7 +66,7 @@ Submit evidence - Upload
         </details>
         <br/>
         <a class="link-back" href="question-interacting">Back to question</a>
-     
+      </form>
     </div>
   </div>
 </main>

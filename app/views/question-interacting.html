@@ -31,17 +31,17 @@ Question - Interacting - Upload1
         {% if data['textareainteracting'] %}
         <p>{{ data['textareainteracting'] }}</p>
         {% else %}
-        <p>[ANSWER GOES HERE]</p>
+        <p>[Answer goes here ]</p>
         <table>
           <thead>
             <tr>
-              <th>Your evidence</th>
+              <th>Evidence</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>[Evidence title goes here]</td>
+              <td>[Evidence description goes here]</td>
               <td></td>
             </tr>
           </tbody>
@@ -66,9 +66,24 @@ Question - Interacting - Upload1
        </div>
      </details>
    </fieldset>
-   <h3 class="heading-small">You can submit evidence to support your answer </h3>
-   <p>For example letters, photos, video or audio.</p>
-   <a href="evidence-upload-interact" class="button-secondary">Upload evidence</a>
+
+    {% if data['describeTheEvidence'] %}
+         <h3 class="heading-small">Evidence</h3>
+         <dl class="question-interacting-describe-evidence-table">
+            <dd>{{ data['describeTheEvidence'] }}</dd>
+            <dd class="change-answer"><a href="/evidence-upload-interact">View/edit</a></dd>
+         </dl>
+     {% else %}
+         <h3 class="heading-small">Evidence</h3>
+         <p>You can submit evidence to support your answer, if you have any. <br/>For example, letters, photos, video or audio.</p>
+         <a href="evidence-upload-interact" class="button-secondary">Upload evidence</a>
+     {% endif %}
+
+
+
+
+
+
    {% endif %}    
    <div class="form-group">
     {% if data['interactingCompletedOrDraft'] !== 'completed' %}

@@ -26,9 +26,6 @@ var useHttps = process.env.USE_HTTPS || config.useHttps
 var useBrowserSync = config.useBrowserSync
 var analyticsId = process.env.ANALYTICS_TRACKING_ID
 
-const multer      = require("multer")
-const upload      = multer({dest:'uploads/'})
-
 env = env.toLowerCase()
 useAuth = useAuth.toLowerCase()
 useHttps = useHttps.toLowerCase()

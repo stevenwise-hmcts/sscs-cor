@@ -1,8 +1,5 @@
-var express = require('express');
-var router = express.Router();
-
-const multer      = require("multer")
-const upload      = multer({dest:'uploads/'})
+var express = require('express')
+var router = express.Router()
 
 // Route index page
 
@@ -106,20 +103,6 @@ router.post('/medical-records-yes', function (req, res) {
 	res.redirect('/task-list-r2?medicalCompletedOrDraft=draft');
 });
 
-
-router.get('/evidence-upload-interact', function (req, res) {
-	res.render('evidence-upload-interact');
-});
-
-router.get('/question-interacting-upload', function (req, res) {
-    res.render('question-interacting-upload');
-});
-
-router.post('/evidence-upload-interact', upload.array('fileUpload'), function (req, res) {
-    req.session.data['filesUploaded'] = req.files ? req.files : '';
-    req.session.data['describeTheEvidence'] = req.body.describeTheEvidence ? req.body.describeTheEvidence : '';
-    res.status(201).end()
-});
 
 
 // Extend a deadline

@@ -59,33 +59,30 @@ Question - Interacting - Upload1
         <div class="panel panel-border-narrow">
          <p>You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
 
-<p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
+         <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
 
-<p>You can upload the recording by clicking ‘upload evidence’ below.   
-</p>
+         <p>You can upload the recording by clicking ‘upload evidence’ below.   
+         </p>
        </div>
      </details>
    </fieldset>
 
-    {% if data['describeTheEvidence'] %}
-         <h3 class="heading-small">Evidence</h3>
-         <dl class="question-interacting-describe-evidence-table">
-            <dd>{{ data['describeTheEvidence'] }}</dd>
-            <dd class="change-answer"><a href="/evidence-upload-interact">View/edit</a></dd>
-         </dl>
-     {% else %}
-         <h3 class="heading-small">Evidence</h3>
-         <p>You can submit evidence to support your answer, if you have any. <br/>For example, letters, photos, video or audio.</p>
-         <a href="evidence-upload-interact" class="button-secondary">Upload evidence</a>
-     {% endif %}
+   {% if data['describeTheEvidence'] %}
+   <h3 class="heading-small">Evidence</h3>
+   <dl class="question-interacting-describe-evidence-table">
+    <dd>{{ data['describeTheEvidence'] }} <br/><br/><a href="/evidence-upload-interact">View/edit/add more</a></dd>
+  </dl>
+
+  
+  {% else %}
+  <h3 class="heading-small">Evidence</h3>
+  <p>You can submit evidence to support your answer, if you have any. <br/>For example, letters, photos, video or audio.</p>
+  <a href="evidence-upload-interact" class="button-secondary">Upload evidence</a>
+  {% endif %}
 
 
-
-
-
-
-   {% endif %}    
-   <div class="form-group">
+  {% endif %}    
+  <div class="form-group">
     {% if data['interactingCompletedOrDraft'] !== 'completed' %}
     <br/><br/>
     <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>

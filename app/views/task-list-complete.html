@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference:  SC242/16/03435  </h2>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <br/>
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You have answered all the questions and submitted them to the tribunal.</p>
+      <ul class="task-list-items">
+        <!-- Interacting -->
+        <li class="task-list-item">
+         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+          How do you interact with people?
+        </a>
+        {% if data['interactingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['interactingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- Walking -->
+      <li class="task-list-item">
+        <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
+          How do you walk to the doctors?
+        </a>
+        {% if data['walkingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- migraine -->
+      <li class="task-list-item">
+       <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
+        Tell us about your migraines 
+      </a>
+      {% if data['migraineCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
+      <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+
+    <!-- Medical records -->
+
+
+    <li class="task-list-item">
+      <a class="task-name" href="/question-medical-records" aria-describedby="medical-records-respond">
+        Permission to access your medical information
+      </a>
+      {% if data['medicalCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['medicalCompletedOrDraft'] === 'draft' %}
+      <a href="/question-medical-records"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+
+    
+  </ul>
+</li>
+<h2 class="heading-small">Additional evidence</h2> 
+<p>If you have any additional information that's relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
+<a  href="evidence-options">Submit additional evidence</a>
+<!--<a class="button" href="#">Provide evidence</a>-->
+<!--
+<div class="updates-border"></div>
+
+<h4 class="heading-small">About your appeal</h4>
+<ul class="list">
+  <li><a href="about-hearing">Appeal history</a></li>
+  <li><a href="contact-us">Contact us</a></li>   
+</ul> 
+</div> -->
+
+
+
+</div> 
+</main>
+{% endblock %}

@@ -42,63 +42,64 @@ Question - Interacting - Upload1
       <details>
         <summary><span class="summary">You can record your answer by video or audio</span></summary>
         <div class="panel panel-border-narrow">
-        You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
+          <p>You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
 
-        <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
+         <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
 
-        <p>You can upload the recording by selecting ‘I want to provide additional evidence to support my answer’ below. </p>
-        <br/><br/>
-      </div>
-    </details>
-    <br/>
-    {% endif %}
-  
-    <div class="multiple-choice" data-target="example-different-country">
-      <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
-      <label for="nationalities-other">I want to provide evidence to support my answer</label>
-    </div>
-
-    <div class="panel panel-border-narrow js-hidden" id="example-different-country">
-       <p>You can upload evidence to support your answer such as letters, photos, video or audio. Include a brief description of what you’ve uploaded with your answer. </p>
-      <div class="dropzone" id="upload-widget" tabindex="0">
-        <div class="dz-message">
-
-          <div class="dz-message-text"> <span class="button-secondary">Choose a file</span></div>
-        </div>    
-        <div id="something" class="form-group">
-          <label class="form-label" for="file-input">Upload a file</label>
-          <input name="fileUploaded" type="file" id="file-input" multiple>
+         <p>You can upload the recording by clicking ‘upload evidence’ below.</p>
         </div>
+      </details>
+       <br/>
+      {% endif %}
+      <br/>
+      <div class="multiple-choice" data-target="example-different-country">
+        <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+        <label for="nationalities-other">I want to provide evidence to support my answer</label>
       </div>
-      <h2 class="heading-small" id="uploads">Uploaded files</h2>
-      <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
-        <div class="c-uploads-item">
-          <p class="c-uploads-empty">No files uploaded</p>
-        </div>
-      </div>
+      <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+        <h2 class="heading-medium">Upload evidence</h2>
+        <p>You can upload letters, documents, photos or videos.</p>
+      </legend>
+     <div class="dropzone" id="upload-widget" tabindex="0">
+          <div class="dz-message">
+                  
+            <div class="dz-message-text"><span class="button-secondary">Choose a file</span></div>
+            </div>    
+            <div id="something" class="form-group">
+              <label class="form-label" for="file-input">Upload a file</label>
+              <input name="fileUploaded" type="file" id="file-input" multiple>
+            </div>
+          </div>
+          <h2 class="heading-small" id="uploads">Uploaded files</h2>
+          <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+            <div class="c-uploads-item">
+              <p class="c-uploads-empty">No files uploaded</p>
+            </div>
+          </div>
       <br/> <br/>
       <details>
         <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
         <div class="panel panel-border-narrow">
           <p class="body-text">You can post evidence to the address below.</p><p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
-          <p>Birmingham ASC<br/>
-            HM Courts and Tribunals Service<br/>
-            Administrative Support Centre (ASC)<br/>
-            P O Box 14620<br/>
-            Birmingham<br/>
-          B16 6FR</p>
-          <p><a href="#">Download and print address </a></p>
-          <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+            <p>Birmingham ASC<br/>
+              HM Courts and Tribunals Service<br/>
+              Administrative Support Centre (ASC)<br/>
+              P O Box 14620<br/>
+              Birmingham<br/>
+            B16 6FR</p>
+            <p><a href="#">Download and print address </a></p>
+            <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
         </div>
       </details>
     </div> 
   </fieldset>
 
 
+      <br/>
 
   <div class="form-group">
     {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-    <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+    <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
     <input class="" type="submit" value="Save for later" style="padding-left:30px;
     padding-top: 8px;background:none!important;
     color:#005ea5;
@@ -110,10 +111,10 @@ Question - Interacting - Upload1
     <br/><br/>
     {% endif %}
 
-    <br/>
+<br/>
 
-
-    <!-- <a class="link-back" href="task-list">Back to questions</a> -->      
+  
+   <!-- <a class="link-back" href="task-list">Back to questions</a> -->      
   </div>
 </form>
 </div>

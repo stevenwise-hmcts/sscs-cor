@@ -50,7 +50,7 @@ router.get('/question-interacting', function (req, res) {
 })
 
 router.post('/question-interacting', function (req, res) {
-	res.redirect('/task-list?interactingCompletedOrDraft=draft');
+	res.redirect('/task-list-upload?interactingCompletedOrDraft=draft');
 });
 
 

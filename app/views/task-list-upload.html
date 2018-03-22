@@ -25,13 +25,13 @@ Task list - Round 1
       <ul class="task-list-items">
         <!-- Interacting -->
         <li class="task-list-item">
-         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+         <a class="task-name" href="/question-interacting-upload" aria-describedby="interacting-respond">
           How do you interact with people?
         </a>
         {% if data['interactingCompletedOrDraft'] === 'completed' %}
         <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
         {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+        <a href="/question-interacting-upload"><strong class="task-draft">Draft</strong></a>
         {% endif %}
       </li>
       <!-- Walking -->
@@ -45,7 +45,7 @@ Task list - Round 1
         <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
         {% endif %}
       </li>
-      <!-- migraine -->
+      <!-- Migraine -->
       <li class="task-list-item">
        <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
         Tell us about your migraines 

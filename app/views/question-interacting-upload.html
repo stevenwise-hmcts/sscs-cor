@@ -30,10 +30,44 @@ Question - Interacting - Upload1
         <h2 class="bold-small">Your answer</h2>
         {% if data['textareainteracting'] %}
         <p>{{ data['textareainteracting'] }}</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+           
+          </tbody>
+        </table>
+        <br/>
         {% else %}
-        <p>[ANSWER GOES HERE]</p>
+        <p>[Answer goes here]</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+        <br/>
         {% endif %}
-        <p class="font-small">Submitted: 7 March 2018</p>
+        <p class="font-small">Submitted: 22 March 2018</p>
       </div>
       {% else %}
       <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
@@ -42,48 +76,81 @@ Question - Interacting - Upload1
       <details>
         <summary><span class="summary">You can record your answer by video or audio</span></summary>
         <div class="panel panel-border-narrow">
-         <p>You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
-         <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
-         <p>You can upload the recording by clicking ‘upload evidence’ below.   </p>
-       </div>
-     </details>
-   </fieldset>
-   <table>
-    <thead>
-      <tr>
-        <th>Evidence</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>[Evidence description entered on evidence upload page goes here]</p>
-          
-          <a href="evidence-upload-interact">View/edit/add more</a>
-          </td>
-        </tr>
-</tbody>
-</table>
+        You can record yourself speaking the answer on a mobile phone or other recording device.</p> 
 
-    <br/>
-  
-    {% endif %} 
-    <div class="form-group">
-      {% if data['interactingCompletedOrDraft'] !== 'completed' %}
-      <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit to the tribunal</a>
-      <input class="" type="submit" value="Save for later" style="padding-left:30px;
-      padding-top: 8px;background:none!important;
-      color:#005ea5;
-      border:none; 
-      font: inherit;
-      /*border is optional*/ 
-      cursor: pointer;
-      text-decoration: underline">
-      {% endif %}
-      <br/>  <br/>
-      <a class="link-back" href="task-list">Back to questions</a>        
+        <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
+
+        <p>You can upload the recording by selecting ‘I want to provide additional evidence to support my answer’ below. </p>
+        
+      </div>
+    </details>
+   
+  </fieldset>
+  <fieldset class="form-group">
+    <div class="multiple-choice" data-target="evidence-upload">
+      <input id="evidence" name="nationalities" type="checkbox" value="provide-evidence" checked>
+      <label for="evidence">I want to provide evidence to support my answer</label>
     </div>
-  </form>
+    <div style="padding-top: 60px:"
+    <div class="panel panel-border-narrow js-hidden" id="evidence-upload">
+     <p>You can upload evidence to support your answer such as letters, photos, video or audio. Include a brief description of what you’ve uploaded with your answer. </p>
+     <div class="dropzone" id="upload-widget" tabindex="0">
+      <div class="dz-message">
+
+        <div class="dz-message-text"> <span class="button-secondary">Choose a file/s</span></div>
+      </div>    
+      <div id="something" class="form-group">
+        <label class="form-label" for="file-input">Upload a file</label>
+        <input name="fileUploaded" type="file" id="file-input" multiple>
+      </div>
+    </div>
+    <h2 class="heading-small" id="uploads">Uploaded files</h2>
+    <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+      <div class="c-uploads-item">
+        <p class="c-uploads-empty">[filenameone.jpg]</p>
+      </div>
+    </div>
+    <br/> <br/>
+    <details>
+      <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
+      
+        <p class="body-text">You can post evidence to the address below.</p>
+        <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+        <p>Birmingham ASC<br/>
+          HM Courts and Tribunals Service<br/>
+          Administrative Support Centre (ASC)<br/>
+          P O Box 14620<br/>
+          Birmingham<br/>
+        B16 6FR</p>
+        <p><a href="#">Download and print address </a></p>
+        <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+      
+    </details>
+  </div> 
+</fieldset>
+
+{% endif %}
+
+<div class="form-group">
+  {% if data['interactingCompletedOrDraft'] !== 'completed' %}
+  <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+  <input class="" type="submit" value="Save for later" style="padding-left:30px;
+  padding-top: 8px;background:none!important;
+  color:#005ea5;
+  border:none; 
+  font: inherit;
+  /*border is optional*/ 
+  cursor: pointer;
+  text-decoration: underline">
+  <br/><br/>
+  {% endif %}
+
+  <br/>
+
+
+  <!-- <a class="link-back" href="task-list">Back to questions</a> -->      
+</div>
+</form>
 </div>
 </div>
 </main>

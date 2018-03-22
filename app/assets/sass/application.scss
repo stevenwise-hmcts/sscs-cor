@@ -113,9 +113,9 @@ padding:  0px 20px 30px 20px;
 // Appellants answer
 
 .appellants-answer{
-	margin-top: 20px;
-	padding: 20px;
-	background-color: $grey-4;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $grey-4;
 }
 
 
@@ -515,7 +515,7 @@ img { float: left;
 }
 
 .dropzone {
-  min-height: 150px;
+  min-height: 0px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   background: white;
   padding: 20px 20px;
@@ -774,17 +774,17 @@ img { float: left;
 }
 
 .dropzone {
-  border: 2px dashed #6f777b;
+  border: 0px dashed #6f777b;
   clear: both;
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 40px;
+  padding: 0px;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 
   @include media(tablet) {
-    padding: 30px;
+    padding: 0px;
   }
 
   &:focus {
@@ -795,7 +795,7 @@ img { float: left;
 .dropzone .dz-message {
   text-align: center;
 
-  padding: 31px;
+  padding: 0px;
   margin: 0;
 }
 

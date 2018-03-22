@@ -112,7 +112,9 @@ Question - Walking
         <div class="form-group">
           {% if data['walkingCompletedOrDraft'] !== 'completed' %}
           <a class="button" href="/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
-          <input class="" type="submit" value="Save for later" style="padding-left:30px;
+          <br/><br/>
+  <input class="" type="submit" value="Save for later" 
+    style="padding-left:0px;
           padding-top: 8px;background:none!important;
           color:#005ea5;
           border:none; 
@@ -122,7 +124,6 @@ Question - Walking
           text-decoration: underline">
           <br/><br/>
           {% endif %}
-          <a class="link-back" href="/task-list">Back to questions</a>        </div>
         </form>
       </div>
     </div>

@@ -177,6 +177,45 @@ router.post('/decision-view', function (req, res) {
 })
 
 
+
+// Decision now or hearing
+
+router.get('/decision-or-hearing', function (req, res) {
+	console.log(req.query);
+	res.render('decision-or-hearing');
+})
+
+router.post('/decision-or-hearing', function (req, res) {
+
+	if (req.body['radio-group'] === 'decision') {
+		res.redirect('/decision-now-confirm')
+	} else if (req.body['radio-group'] === 'hearing') {
+		res.redirect('/hearing-requirements-start')
+	}
+
+})
+
+
+
+// Decision now confirm
+
+router.get('/decision-now-confirm', function (req, res) {
+	console.log(req.query);
+	res.render('decision-now-confirm');
+})
+
+router.post('/decision-now-confirm', function (req, res) {
+
+	if (req.body['radio-group'] === 'yes') {
+		res.redirect('/decision-final')
+	} else if (req.body['radio-group'] === 'no') {
+		res.redirect('/decision-or-hearing')
+	}
+
+})
+
+
+
 // Hearing confirm
 
 router.get('/hearing-confirm', function (req, res) {

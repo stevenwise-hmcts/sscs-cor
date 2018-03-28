@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Independent tribunal - Appeal a benefit decision - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+ <div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="banner-blue">
+     <h1 class="bold-large">An independent tribunal have reviewed your appeal </h1>
+   </div>
+ </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+   <p>Your appeal has been reviewed by a judge, a doctor and a disability expert. They are separate to DWP.</p>
+   <p>They have reviewed all the information you and DWP have provided. They now have some questions to help them make a decision.</p> 
+   <p >The questions will be straightforward and may mean your appeal can be resolved online.</p>
+   <form>
+    <a class="button" href="task-list">Continue</a>
+  </form>
+</div>
+</div>
+
+<div style="margin-top: 80px; font-size: 14px;">
+   <p><a href="independence2">Option 2</a></p>
+ </main>
+{% endblock %}

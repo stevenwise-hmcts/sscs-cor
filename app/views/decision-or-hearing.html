@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Decision or hearing
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+       The tribunal are ready to make a decision on your appeal
+     </h1>
+     <p>They have considered all the information you and DWP sent them.</p>
+               <br/>
+
+     <form action="/decision-or-hearing" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-medium">What do you want to do?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="decision">
+            <label for="radio-1"><span class="bold-small">I want my decision now online</span><br/>If you take your decision now you will not be able to choose a hearing afterwards</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="hearing">
+            <label  for="radio-2"><span class="bold-small">I want to have a hearing with the tribunal</span><br/>Please note, you may have to wait upto three months to get a hearing date</label>
+          </div>
+        </fieldset>
+      </div>
+
+        <input class="button" type="submit" value="Continue">
+      
+    </form>
+  </div>
+</div>
+</main>
+{% endblock %}

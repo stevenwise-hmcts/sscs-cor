@@ -1,8 +1,21 @@
 var express = require('express');
 var router = express.Router();
+var _ = require('lodash');
 
-const multer      = require("multer")
-const upload      = multer({dest:'uploads/'})
+const crypto = require('crypto');
+const path = require('path');
+const multer      = require("multer");
+const storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, path.join(__dirname, '../uploads'));
+	},
+	filename: (req, file, cb) => {
+    crypto.pseudoRandomBytes(16, function (err, raw) {
+        cb(null, raw.toString('hex') + Date.now() + path.extname(file.originalname));
+    });
+	}
+})
+const upload      = multer({ storage });
 
 // Route index page
 
@@ -45,12 +58,48 @@ router.post('/question-walking', function (req, res) {
 
 // Question - interacting
 
+router.get('/question-interacting-files', function (req, res) {
+    console.log('get files');
+    var files = req.session.data.interactingFileUploads || [];
+    res.send(files);
+});
+
+router.post('/delete-question-interacting-files', function (req, res) {
+    console.log('delete file');
+	var fileName = req.body.name;
+    var fileList = req.session.data.interactingFileUploads;
+
+    fileList.forEach(file => {
+		if (file.originalname === fileName) {
+			_.pull(fileList, file);
+		}
+    });
+
+    req.session.data.interactingFileUploads = fileList;
+
+    res.status(200).send(fileList);
+});
+
 router.get('/question-interacting', function (req, res) {
 	res.render('question-interacting');
 })
 
 router.post('/question-interacting', function (req, res) {
 	res.redirect('/task-list-upload?interactingCompletedOrDraft=draft');
+});
+
+router.post('/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
+    console.log('add file');
+	// Add file data to session
+    if (req.session.data.interactingFileUploads) {
+        req.session.data.interactingFileUploads.push(req.file)
+    } else {
+        req.session.data.interactingFileUploads = [req.file];
+    }
+
+    console.log(req.session.data.interactingFileUploads);
+
+    res.send(req.file);
 });
 
 
@@ -114,13 +163,6 @@ router.get('/evidence-upload-interact', function (req, res) {
 router.get('/question-interacting-upload', function (req, res) {
     res.render('question-interacting-upload');
 });
-
-router.post('/evidence-upload-interact', upload.array('fileUpload'), function (req, res) {
-    req.session.data['filesUploaded'] = req.files ? req.files : '';
-    req.session.data['describeTheEvidence'] = req.body.describeTheEvidence ? req.body.describeTheEvidence : '';
-    res.status(201).end()
-});
-
 
 // Extend a deadline
 

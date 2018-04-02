@@ -52,18 +52,11 @@ $(document).ready(function () {
     });
 
     myDropzone.on("addedfile", function (file) {
-
         files++;
-        console.log('addedfile');
         document.querySelector("#upload-documents").innerHTML = '';
-
     });
 
     myDropzone.on("success", function (file, response) {
-
-        console.log(file)
-
-        console.log('success')
 
         $(file.previewElement).find('#file-size').remove();
         $(file.previewElement).find('.preview-file').show();
@@ -74,13 +67,11 @@ $(document).ready(function () {
         var dataAtt = response === undefined ? file : response;
         $(deleteLink).attr('data-file', JSON.stringify(dataAtt));
 
-        console.log(response)
+        /* Delete click event */
 
         $(deleteLink).click(function(e) {
 
             var fileData = $(e.currentTarget).attr('data-file');
-
-            console.log(fileData)
 
             $.ajax({
                 type: 'POST',
@@ -94,6 +85,7 @@ $(document).ready(function () {
             });
         });
 
+        /* Preview click event */
 
         $(previewLink).click(function(e) {
 
@@ -128,6 +120,8 @@ $(document).ready(function () {
         document.querySelector("#total-progress").style.opacity = "0";
     });
 
+    /* close the preview */
+
     $('.close').click(function() {
         var modal = $('#imageModal');
         if (modal.hasClass('active')) {
@@ -136,18 +130,5 @@ $(document).ready(function () {
             modal.removeClass().hide();
         }
     });
-
-// Setup the buttons for all transfers
-// The "add files" button doesn't need to be setup because the config
-// `clickable` has already been specified.
-//     document.querySelector("#actions .start").onclick = function () {
-//         myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
-//     };
-//     document.querySelector("#actions .cancel").onclick = function () {
-//         myDropzone.removeAllFiles(true);
-//     };
-
-
-    // blah on click display file
 
 });

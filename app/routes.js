@@ -66,7 +66,7 @@ router.get('/question-interacting-files', function (req, res) {
 
 router.post('/delete-question-interacting-files', function (req, res) {
     console.log('delete file');
-	var fileName = req.body.name;
+	var fileName = req.body.name || req.body.originalname;
     var fileList = req.session.data.interactingFileUploads;
 
     fileList.forEach(file => {

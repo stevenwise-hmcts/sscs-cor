@@ -7,7 +7,7 @@ Question - Interacting - Upload1
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-     <a class="link-back" href="/task-list">Back to questions</a>
+     <a id="back-to-tasks" class="link-back" href="/task-list">Back to questions</a>
      <form class="form" action="/question-interacting" method="POST">
 
       <!-- Question and answer -->
@@ -40,10 +40,19 @@ Question - Interacting - Upload1
             </tr>
           </thead>
           <tbody>
+            {% if data['interactingFileUploads'] %}
+                {% for file in data['interactingFileUploads'] %}
+                    <tr>
+                        <td>{{ file.originalname }}</td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+            {% else %}
             <tr>
               <td>[filenameone.jpg]</td>
               <td></td>
             </tr>
+            {% endif %}
           </tbody>
         </table>
         <br/>

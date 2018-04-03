@@ -47,12 +47,14 @@ $(document).ready(function () {
     myDropzone.on("removedfile", function(file) {
         files--;
         if (files <= 0) {
+            $('#back-to-tasks').attr('href', '/task-list');
             document.querySelector("#upload-documents").innerHTML = '<div class="c-uploads-item"><p class="c-uploads-empty">No files uploaded</p></div>';
         }
     });
 
     myDropzone.on("addedfile", function (file) {
         files++;
+        $('#back-to-tasks').attr('href', '/task-list-upload?interactingCompletedOrDraft=draft');
         document.querySelector("#upload-documents").innerHTML = '';
     });
 

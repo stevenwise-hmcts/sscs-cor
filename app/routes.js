@@ -230,7 +230,7 @@ router.get('/decision-or-hearing', function (req, res) {
 router.post('/decision-or-hearing', function (req, res) {
 
 	if (req.body['radio-group'] === 'decision') {
-		res.redirect('/decision-now-confirm')
+		res.redirect('/decision-final')
 	} else if (req.body['radio-group'] === 'hearing') {
 		res.redirect('/hearing-requirements-start')
 	}

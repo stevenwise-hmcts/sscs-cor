@@ -20,16 +20,16 @@ Submit evidence - Statement
         <br/>
         <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly describe what you are uploading and why it’s relevant </span>
         </label>
-        <textarea class="form-control autoExpand form-control-3-4" id="textarea"  rows='3' data-min-rows='3' width="100%" ></textarea>
+        <textarea class="form-control autoExpand form-control-3-4" id="textarea"  rows='4' data-min-rows='4' width="100%" ></textarea>
         <br/>
         <div class="dropzone" tabindex="0">
           <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
             <div class="dz-message">          
-              <div class="dz-message-icon"></div>      
-              <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="button-secondary">click to choose a file</div>
+                
+              <div class="dz-message-text"><span class="button-secondary">Choose a file</div>
               </div>    
-            </form>
-          </div>
+           <br/><br/>
+         
           <table>
             <thead>
               <tr>
@@ -42,7 +42,9 @@ Submit evidence - Statement
               </tr>
             </tbody>
           </table>
-          <br/>
+          
+           </form>
+            </div>
           <!--
           <details>
             <summary><span class="summary">Switch to another device to upload</span></summary>
@@ -54,7 +56,7 @@ Submit evidence - Statement
             </div>
           </details>
         -->
-      
+   
         <div class="form-group">
           <a href="evidence-confirm" class="button">Submit evidence to the tribunal</a>
           <!-- <input class="button" type="submit" value="Submit statement"> -->

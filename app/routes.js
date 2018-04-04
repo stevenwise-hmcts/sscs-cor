@@ -53,7 +53,7 @@ router.get('/question-walking', function (req, res) {
 })
 
 router.post('/question-walking', function (req, res) {
-	res.redirect('/task-list-extend?walkingCompletedOrDraft=draft');
+	res.redirect('/task-list?walkingCompletedOrDraft=draft');
 });
 
 // Question - interacting

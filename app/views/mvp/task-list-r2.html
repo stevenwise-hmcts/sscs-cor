@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 2
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <h1 class="heading-large">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference: SC242/16/03435</h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You need to respond by 5 September 2018. <span class="font-xsmall"><a href="extend-are-sure2">Extend the deadline</a></span></p>
+      <ul class="task-list-items">
+        <!-- Mobility -->
+        <li class="task-list-item">
+          <a class="task-name" href="/mvp/question-mobility" aria-describedby="mobility-respond">
+            Your walking stick
+          </a>
+          {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+          {% elif data['mobilityCompletedOrDraft'] === 'draft' %}
+          <a href="/mvp/question-mobility"><strong class="task-draft">Draft</strong></a>
+          {% endif %}
+        </li>
+      </ul>
+     <h2 class="heading-small">Sending additional evidence</h2> 
+<p>You can provide additional information that’s relevant to your appeal. You don’t have to provide anything if you don’t have it.  </p>
+<details>
+      <summary><span class="summary">How to send additional evidence </span></summary>
+      <p>Send any additional evidence to the address below. </p>
+      <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+     
+    </details>
+    </div>
+  </div>
+</main>
+{% endblock %}

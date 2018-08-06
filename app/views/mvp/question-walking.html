@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Walking
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="/task-list">Back to questions</a>
+      <form class="form" action="/mvp/question-walking" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              How do you walk to the doctors?
+            </h1>
+          </legend>
+          <p class="body-text">
+          The DWP healthcare professional noted that you occasionally walk to the GP’s surgery. </p>
+
+          <p>In 2017, please describe the journey, including:
+          </p>
+
+          <ul class="list list-bullet">
+            <li>how long it took</li>
+            <li>whether you needed to stop on the way</li>
+            <li>if so, for how long</li>
+            <li>if you used any aids to help you walk </li>
+            <li>if you did, what aids did you use </li>    
+          </ul>
+
+
+          {% if data['walkingCompletedOrDraft'] === 'completed' %}
+          <div class="appellants-answer">
+            <h2 class="bold-small">Your answer</h2>
+            {% if data['textareawalking'] %}
+            <p>{{ data['textareawalking'] }}</p>
+            {% else %}
+            <p>[Answer goes here ]</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Evidence</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[Evidence description goes here]</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            {% endif %}
+            <br/>
+            <p class="font-small">Submitted: 22 August 2018</p>
+          </div>
+          {% else %}
+          <textarea class="form-control form-control-3-4 autoExpand" name="textareawalking" id="textarea" placeholder="You can write as much as you want " rows='6'
+          data-min-rows='6'>{{ data['textareawalking'] }}</textarea>
+ 
+        </fieldset>
+
+
+      
+<details>
+      <summary><span class="summary">Sending evidence to support your answer</span></summary>
+      <p>If you have any evidence to support your answer, you should send it to the address below.</p> 
+        <p>Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+     
+      <p>Useful evidence helps prove what you have said in your answer such as a letter from a doctor or someone who knows you well. You do not have to send in evidence if you don’t have any.</p>
+    </details>
+          {% endif %}
+        {% if data['walkingCompletedOrDraft'] !== 'completed' %}
+        <div style="padding-top: 30px; padding-bottom: 20px;">
+          <a class="button" href="/mvp/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
+          <br/><br/>
+          <input class="" type="submit" value="Save for later" 
+          style="padding-left:0px;
+          padding-top: 4px;background:none!important;
+          color:#005ea5;
+          border:none; 
+          font: inherit;
+          /*border is optional*/ 
+          cursor: pointer;
+          text-decoration: underline">
+          <br/><br/>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

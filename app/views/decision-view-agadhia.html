@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Tribunal view - A. Ghadhia
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+       The tribunal’s view on your appeal
+     </h1>
+   <br/>
+
+ <div class="panel-blue">
+  <p >The tribunal have considered all the information submitted by you and DWP. </p>
+  <p>Their view is that you’re entitled to PIP at the rate below from 18 April 2018.
+  </p>
+  <table>
+    <!-- <caption class="heading-small">Component </caption> -->
+    <tbody>
+      <tr>
+        <td class="bold-small">Daily living</td>
+        <td>Enhanced</td>
+      </tr>
+      <tr>
+        <td class="bold-small">Mobility</td>
+        <td>Enhanced</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <p>This is more than DWP awarded you and is for an indefinite period. </p>
+  <p>If both you and DWP accept this view, you’ll be awarded PIP at the above rate.</p>
+</div>
+
+
+<h2 class="heading-medium">The reasons for the tribunal’s view</h2>
+
+
+<p>1. Mr Gadhia has:</p>
+
+<ul class="list list-bullet">
+<li>Ankylosing spondylitis</li>
+<li>Depressive disorder</li>
+<li>Osteoporosis</li>
+<li>Endocrine diseases</li>
+<li>Anaemia B12</li>
+<li>Vitamin D efficiency</li>
+<li>Asthma</li>
+</li>
+</ul>
+
+
+<p>2. When considering this appeal, we stand in the shoes of the Secretary of State for Work and Pensions (DWP) and we can make any decision which the DWP could have made.</p>
+
+<p>3. We are not and have not limited our consideration of the appeal just to the issue of when a review is to be conducted.</p>
+
+<p>4. Having considered the comprehensive report of the Health Care Professional (HCP), Ms Guyon, we have concluded Mr Gadhia was underscored in respect of two daily living activities.</p>
+
+<p>5. On his claim form (page 15), he indicated he had difficulty getting his medications out of the packaging. On page 97, although this is what he told Ms. Guyon, she does not address this issue other than referring to the fact he can administer injections himself.  The process of removing tablets from packing is very different to self injecting. We accept it would be difficult for Mr. Gadhia to open blister packs because of the limited movement in his right hand.  Self-injecting would only require a simple press of a button which he can self-administer. For this reason and although we accept he is able to manage his medication, we found it was reasonable for him to use a dossette box.</p>
+
+<p>6. Mr. Gadhia had been awarded 2 points for needing to use an aid or appliance to be able to dress or undress. In his claim form (page 21) he claimed he could not raise his right arm on his own to dress his upper garments and needed his wife’s assistance. Ms. Guyon’s clinical findings (page 95) found "he was able to put left hand behind his head but unable to put his right to ear" this was consistent with his condition.</p>
+
+<p>7. We found an aid would not assist him to dress his upper body because of the lack of the movement in his right arm due to shoulder problems we concluded he needed assistance to dress.</p>
+
+<p>8. Mr. Gadhia’s medical conditions are long standing and there is no evidence that there will be any improvement. He has, had several combinations of DMARDS (Disease modifying anti-rheumatic drugs) with little in the way of improvement. His sub-acromial decompression in 2014 was not entirely successful and there was still evidence in 2016 of continued pain and muscle wasting for which he is under the pain clinic.</p>
+
+<p>9. As we have set out above, we found he meets the criteria for the enhanced rate for both components. Having considered the PIP assessment guide as updated in July 2018 (page 28 of that document) we find Ms. Guyon only limited the award because she thought his condition could worsen (page 103).</p>
+
+<p>10.  We have concluded an indefinite award is appropriate as Mr. Gadhia’ meets the criteria of the enhanced rate of both component, he has progressive conditions and has high levels of functional impairment.</p>
+
+</div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <details>
+      <summary><span class="summary">PIP activities and the descriptors we consider apply to your appeal</span></summary>
+      <table>
+       <thead>
+        <tr>
+          <th scope="col">Activity</th>
+          <th scope="col">Descriptor</th>
+          <th scope="col">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Preparing food</td>
+          <td>Needs to use an aid or appliance to either prepare or cook a simple meal</td>
+          <td>2</td>
+        </tr>
+                   <tr>
+          <td>Managing therapy or monitoring a health condition</td>
+          <td>Needs an aid or appliance to be able tomanage medication</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Washing and bathing</td>
+          <td>Needs assistance to be able to get in or out of a bath or shower</td>
+          <td>3</td>
+        </tr>
+
+                <tr>
+          <td>Managing toilet needs or incontinence</td>
+          <td>Needs to use an aid or appliance to be able to manage toilet needs or incontinence</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Dressing and undressing</td>
+          <td>Needs assistance to be able to dress or undress their upper body</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>Mobility</td>
+          <td>Can stand and then more than 1 metre but no more than 20 metres either aided or unaided</td>
+          <td>12</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-medium">What happens next </h2>
+    <p>You can accept the view or if you feel the view is wrong you can have a face to face hearing.</p>
+    <br/>
+    <form action="/decision-view" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-medium">Do you accept this view?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
+            <label for="radio-1">I accept the tribunal’s view</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
+            <label for="radio-2">I want a hearing</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>You have to respond to this question by 2 May 2018. If you don’t respond we will assume you are accepting the view and it will be sent to you. 
+        </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+{% endblock %}

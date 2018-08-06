@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Interacting - Upload1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+     <a id="back-to-tasks" class="link-back" href="/task-list">Back to questions</a>
+     <form class="form" action="/mvp/question-interacting" method="POST">
+      <!-- Question and answer -->
+      <fieldset class="form-group">
+        <legend>
+          <h1 class="heading-large">
+           How do you interact with people?  
+         </h1>
+         <p class="body-text">
+         You said you avoid interacting with people if possible. We’d like to know more about the times when you see friends and family.</p>
+         <p>Tell us about three separate occasions in 2017 that you have met with friends and family. </p>
+         <p>Tell us: </p>
+         <ul class="list list-bullet">
+          <li>who you met</li>
+          <li>when</li>
+          <li>where</li>
+          <li>how it made you feel</li>
+        </ul>
+      </legend>
+      {% if data['interactingCompletedOrDraft'] === 'completed' %}
+      <div class="appellants-answer">
+        <h2 class="bold-small">Your answer</h2>
+        {% if data['textareainteracting'] %}
+        <p>{{ data['textareainteracting'] }}</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if data['interactingFileUploads'] %}
+            {% for file in data['interactingFileUploads'] %}
+            <tr>
+              <td>{{ file.originalname }}</td>
+              <td></td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+        <br/>
+        {% else %}
+        <p>[Answer goes here]</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        {% endif %}
+        <p class="font-small">Submitted: 22 August 2018</p>
+      </div>
+      {% else %}
+      <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
+      data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
+      <br/>
+
+
+
+<details>
+      <summary><span class="summary">Sending evidence to support your answer</span></summary>
+      <p>If you have any evidence to support your answer, you should send it to the address below.</p> 
+        <p>Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+     
+      <p>Useful evidence helps prove what you have said in your answer such as a letter from a doctor or someone who knows you well. You do not have to send in evidence if you don’t have any.</p>
+    </details>
+{% endif %}
+<!-- Submit -->
+{% if data['interactingCompletedOrDraft'] !== 'completed' %}
+<div style="padding-top: 30px; padding-bottom: 20px;">
+  <a class="button" href="/mvp/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a></div>
+  <input class="" type="submit" value="Save for later" style="padding-left:0px;
+  padding-top: 5px;background:none!important;
+  color:#005ea5;
+  border:none; 
+  font: inherit;
+  /*border is optional*/ 
+  cursor: pointer;
+  text-decoration: underline">
+  {% endif %}
+</form>
+
+
+</div>
+</div>
+</main>
+{% endblock %}

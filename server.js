@@ -5,6 +5,8 @@ var express = require('express')
 var session = require('express-session')
 var nunjucks = require('nunjucks')
 var routes = require('./app/routes.js')
+var routesMvp = require('./app/routes-mvp.js')
+
 var documentationRoutes = require('./docs/documentation_routes.js')
 var favicon = require('serve-favicon')
 var app = express()
@@ -58,7 +60,10 @@ if (env === 'production' && useAuth === 'true') {
 }
 
 // Set up App
-var appViews = [path.join(__dirname, '/app/views/'), path.join(__dirname, '/lib/')]
+var appViews = [
+  path.join(__dirname, '/app/views/'), 
+  path.join(__dirname, '/lib/')
+]
 
 var nunjucksAppEnv = nunjucks.configure(appViews, {
   autoescape: true,
@@ -221,6 +226,7 @@ if (typeof (routes) !== 'function') {
   routes.bind(app)
 } else {
   app.use('/', routes)
+  app.use('/', routesMvp)
 }
 
 // Returns a url to the zip of the latest release on github

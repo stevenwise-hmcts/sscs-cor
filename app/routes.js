@@ -183,6 +183,23 @@ router.post('/extend-are-sure', function (req, res) {
 })
 
 
+// Extend a deadline2
+
+router.get('/extend-are-sure2', function (req, res) {
+	console.log(req.query);
+	res.render('extend-are-sure2');
+})
+
+router.post('/extend-are-sure2', function (req, res) {
+
+	if (req.body['radio-group'] === 'Yes') {
+		res.redirect('/mvp/extend-rejected')
+	} else if (req.body['radio-group'] === 'No') {
+		res.redirect('/extend-no')
+}
+})
+
+
 // Extend a deadline3
 
 router.get('/extend-are-sure3', function (req, res) {

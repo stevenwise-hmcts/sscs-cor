@@ -1,0 +1,40 @@
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal: DWP responded<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+		<!--<strong style="font-weight: bold;">Date: </strong>4 April 2018<br/>
+		</p>-->
+		<div class="email-border">
+			
+			<div class="email-margin">
+				<div style="padding: 20px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png"></div>
+
+				<div class="panel panel-border-wide">
+					<p>Appeal reference number: SC242/16/03435</p>
+				</div>
+				<br/>
+				<p>Dear [First name] [Last name]</p> 
+				<p>DWP has responded to your [benefit type] benefit appeal. You should have received a copy in the post. </p>
+
+				<p>Please read their response. It explains how they made their decision on your entitlement to the [benefit type] benefit. It’s also useful to</p>
+
+				<h2 class="heading-medium">What happens next </h2>
+				<p>The tribunal will review the information you and DWP have provided. You will receive an email by [date +1 weeks] which will tell you how they want to proceed. They might need some more information from you so please keep monitoring your emails. </p> 
+
+				<br/>
+				<p>PIP Benefit Appeals<br/>
+					HMCTS<br/>
+					Telephone: 0300 123 1142<br/>
+				</p>
+				<p>This message is automatically generated; please do not reply to this email.</p>
+				<p>Change your email address:  <a href="../manage/manage-email-notifications">https://appeal-a-benefit-decision.service.<br/>gov.uk/fzpqcy/manage-email-notifications</a></p>
+			</div>
+		</main>
+		{% endblock %}

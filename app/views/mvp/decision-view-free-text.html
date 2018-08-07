@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Decision positive
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+       The tribunal’s view on your appeal
+     </h1>
+   <br/>
+
+ 
+  <p>The tribunal have considered all the information submitted by you and DWP. </p>
+  <p>Their view is that you’re entitled to PIP at the rate below from 3 October 2017 until 3 March 2020.<p>
+  
+  
+<p>Daily living: Standard rate</p>
+ <p>Mobility: No award</p>
+   
+ 
+<p>This is the same DWP initially awarded you. </p>
+If both you and DWP accept this view, you’ll be awarded PIP at the above rate.  </p>
+
+<p>The reasons for the tribunal’s view </p>
+We considered all the evidence you and DWP submitted in relation to your appeal. This includes any additional evidence you submitted. </p>
+
+<p>After considering this evidence we acknowledge that you experience pain in your lower back when doing some tasks around the house. Specifically washing yourself and preparing food. We consider that this pain does not hinder you enough to be awarded the enhanced rate of the daily living component of PIP.  </p>
+
+<p>You claim that suffer pain while walking and you find it hard to plan a route, but in your written submission you also said you were going regularly to the GPs at the time of DWP’s decision. You also stated that you made your own way there without the assistance of aids. It is therefore our view that you are not eligible for the Mobility aspect of PIP at any rate. </p>
+
+<p>PIP activities and the descriptors we consider apply to your appeal </p>
+
+<p>Preparing food </p>
+<p>Needs to use an aid or appliance to be able to prepare or cook a simple meal: Points 2 </p>
+
+<p>Washing and bathing </p>
+<p>Needs to use an aid or appliance to be able to wash or bathe: Points 2 </p>
+
+<p>Managing toilet needs or incontinence </p>
+<p>Needs to use an aid or appliance to be able to manage my toilet needs or incontinence: Points 2 </p>
+
+<p>Dressing and undressing </p>
+<p>Needs to use an aid or appliance to be able to dress or undress: Points 2</p>
+
+
+</div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-medium">What happens next </h2>
+    <p>You can accept the view or if you feel the view is wrong you can have a face to face hearing.</p>
+    <br/>
+    <form action="/mvp/decision-view" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-medium">Do you accept this view?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
+            <label for="radio-1">I accept the tribunal’s view</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
+            <label for="radio-2">I want a hearing</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>You have to respond to this question by 19 September 2018. If you don’t respond we will assume you are accepting the view and it will be sent to you. 
+        </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+{% endblock %}

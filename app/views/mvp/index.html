@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-COR prototype
+COR MVP prototype
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -8,51 +8,76 @@ COR prototype
 		<div class="column-full">
 			<h1 class="heading-xlarge">Continuous Online Resolution
 				<span class="heading-secondary">Prototype</span></h1>
-				<h2 class="heading-medium">Proposed MVP for 'Pilot Beta' </h2>
-
-<p>Usability testing 8 August 2018, South London Law Centre.</p>
-
-				<h2 class="heading-medium">User journeys</h2>
+				<h2 class="heading-large">Proposed MVP for 'Pilot Beta' </h2>
+				<!--<p>Usability testing 8 August 2018, South London Law Centre.</p>-->
 			</div>
 		</div>
+		<h2 class="heading-medium">User journeys</h2>
+		<h3 class="heading-small">Key user journeys</h3>
 		<ol class="list list-number">
 			<li><a href="/mvp/email-questions-r1">Questions - 1st round</a></li>
-			<li><a href="/mvp/extend-are-sure">Extend deadline - 1st time</a></li>
-			<li><a href="/mvp/extend-are-sure2">Extend deadline - 2nd time</a></li>
-			<!--<li><a href="extend-request">Extend deadline request</a></li>-->
-			<!--<li><a href=" index-notifications">Deadline reminders</a></li>-->
 			<li><a href="/mvp/email-questions-r2">Questions - 2nd round</a></li>
-			<!--<li><a href="evidence-options">Submit additional evidence</a></li>-->
 			<li><a href="/mvp/email-hearing-required">Hearing required</a></li>
-			<!--<li><a href="email-decision-or-hearing">Decision or hearing</a></li>-->
-		<!--	<li><a href="email-hearing-request-denied">Hearing request denied</a> (required?)</li>
-			<li><a href="email-hearing-request-approved">Hearing request approved</a> (required?)</li> -->
-			<!--<li><a href="task-list-no-questions">No questions</a></li>-->
-			<!-- <li><a href="email-decision-positive">Final decision</a></li>-->
 			<li><a href="/mvp/email-decision-view">Tribunals view</a></li>
-			<li><a href="/mvp/email-decision-dwp-accepted">Final decision (DWP accepted)</a></li>
+			<li><a href="/mvp/email-decision-dwp-accepted">Final decision (DWP accepted preliminary view)</a></li>
+			<li>Final decision (no preliminary view)</li>
 		</ol>
-		
-
-<h2 class="heading-medium">Notifications</h2>
+	</div>
 </div>
-</div>
+<h3 class="heading-small">Time extensions and deadlines</h3>
 <ol class="list list-number">
-	<li><a href="/mvp/email-questions-r1">Questions - 1st round</a></li>
-	<!--<li><a href="email-questions-submitted-confirm">Questions answered confirmation - 1st round</a></li> -->
-	<!--<li><a href="email-extension-1week">Deadline extended by 1 week</a></li>-->
-	<li><a href="/mvp/email-deadline-expire-1day">Deadline reminder - 1 day</a> (MVP?)</li>
-	<li><a href="/mvp/email-deadline-expired">Deadline expired</a> (MVP?)</li>	
-	<!--<li><a href="email-extension-granted">Extension granted</a></li>-->	
-	<!--<li><a href="email-extension-rejected">Extension rejected</a></li>-->	
-	<li><a href="/mvp/email-questions-r2">Questions - 2nd round</a></li>
-	<!--<li><a href="email-questions-submitted-confirm-r2">Questions answered confirmation - 2nd round</a></li>-->
-	<!--<li><a href="email-evidence-uploaded">Additional evidence uploaded</a></li>-->
-	<li><a href="/mvp/email-hearing-required">Hearing required</a></li>
-	<li><a href="/mvp/email-decision-view">Tribunals view</a></li>
-	<li><a href="/mvp/email-decision-dwp-accepted">DWP accepted</a></li>
-	<li>DWP not accepted</li>
-	<li>Decsion (no view)</li>
+	<li><a href="/mvp/extend-are-sure">Extend deadline - 1st time</a></li>
+	<li><a href="/mvp/extend-are-sure2">Extend deadline - 2nd time</a></li>
+	<li><a href="#">Deadline reminder</a></li>
+	<li><a href="#">Deadline expired</a></li>
 </ol>
+<h3 class="heading-small">Exception status screens</h3>
+<ol class="list list-number">
+	<li>DWP lapsed / revised (DLPS-S)</li>
+	<li>Appellant withdrawn (APWN-S)</li>
+	<li>Appeal closed (APCD-S)</li>
+</ol>
+<hr>
+		<h2 class="heading-medium">Notifications</h2>
+<h3 class="heading-small"> Appellant notifications</h3>
+<ol class="list list-number">
+	<li>COR invitation (INVTT-E)</li>
+	<li>Invitation accepted (INVTA-E)</li>
+	<li>Invitation rejected (INVTR-R)</li>
+	<li>DWP response (PHRRC-E)</li>
+	<li><a href="/mvp/email-questions-r1">Questions - 1st round (QUSTF-E)</a></li>
+	<li><a href="/mvp/email-deadline-expire-1day">Deadline reminder - 1 day (QUSTR-E)</a></li>
+	<li><a href="/mvp/email-deadline-expired">Deadline expired (DEQE-E)</a></li>
+	<li>Questions deadline extension request granted - TBC (DERG-E)</li>
+	<li>Questions deadline extension request rejected - TBC (DERR-E)</li> 
+	<li>Evidence received (PHED1-E)</li> 
+	<li>Other party has sent information (PAIS-E)</li>
+	<li>Tribunal requests info from other party (PAIR-E)</li>
+		
+	<li><a href="/mvp/email-questions-r2">Questions - 2nd round (QUSTSS-E)</a></li>
+	<li><a href="/mvp/email-hearing-required">Hearing required (HRCR-E)</a></li>
+	<li><a href="/mvp/email-decision-view">Preliminary view offered to both parties (PVOF-E)</a></li>
+	<li><a href="/mvp/email-decision-dwp-accepted">DWP accepted preliminary view (PVAB-E)</a></li>
+	<li>DWP rejected preliminary view (PVRP-E)</li>
+	<li>Hearing required (HRCRD-E)</li>
+	<li>Preliminary view accepted by both parties (PVAB-E)</li>
+	<li>Decision as panel has enough information (DEIS-E)</li>
+</ol>
+
+<h3 class="heading-small">DWP notifications</h3>
+<ol class="list list-number">
+	<li>Evidence received (PHED1D-E)</li>
+	<li>Preliminary view - Offered both parties (PVOFD-E)</li>
+	<li>Other party has sent information (PAISD-E)</li>
+	<li>Tribunal requests info from other party (PAIRD-E)</li>
+</ol>
+
+
+		<h2 class="heading-medium">Useful documents</h2>
+<ol class="list list-number">
+	<li><a href="https://tools.hmcts.net/confluence/x/KAMIKg">COR appellant user journey diagram</li>
+	<li><a href="https://docs.google.com/spreadsheets/d/1jzsg2RFQPBMD3bZWGMNQzvJ8SRsBMWGLQHv7O9QT3ss/edit?usp=sharing">COR notifications log</li>
+</ol>
+
 </main>
 {% endblock %}

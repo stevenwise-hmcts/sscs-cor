@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Account activated - GOV.UK
+{% endblock %}
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+    <div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+    <div class="grid-row">
+        <div class="column-full col0">
+            <h1 class="heading-large">
+                Account created
+            </h1>
+        </div>
+        <div class="column-two-thirds">
+
+        <p class="lede">You can now sign into your account</p>
+
+        <p> </p>
+        <form  action="/" method="get">
+            <div class='form-group'>
+               <a class="button" href="idam-sign-in-return">Continue</a>
+            </div>
+
+        </form>
+        
+
+        </div>
+    </div><!-- class="grid-row" -->
+</main>
+
+{% endblock %}

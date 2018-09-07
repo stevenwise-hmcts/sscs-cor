@@ -1,0 +1,40 @@
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block page_title %}
+Invitation rejected (INVTR-E)
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal: thank you for responding <br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+	<!--	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
+		<div class="email-margin">
+			<div style="padding: 60px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png"></div>
+
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
+			<p>Thank you for responding to the invitation to help test the new way to resolve a benefit appeal online. You have told us you do not want to take part and so your appeal will be resolved in the usual way.</p>
+
+<p>You do not have to do anything - the next email you get will explain what happens next. 
+</p> 
+
+			<p>PIP Benefit Appeals<br/>
+				HMCTS<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			
+		</div>
+		
+	</main>
+	{% endblock %}

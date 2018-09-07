@@ -1,0 +1,44 @@
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block page_title %}
+COR invitation (INVTT-E)
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal: Invitation<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+	<!--	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
+		<div class="email-margin">
+			<div style="padding: 60px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png"></div>
+
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
+			<p>You have submitted your appeal using the new ‘Appeal a benefit decision’ online service. This is one part of the work being done to improve the overall benefit appeal service. </p>
+
+<p>Next we want to create a way for appeals to be resolved online, potentially avoiding the need for a face to face hearing. We are in the early stages of developing this and are looking for people who are in the appeals process to help us test it. </p>
+
+<p>If you agree to take part in the test, your appeal would be reviewed early by a tribunal panel made up of a judge, doctor and disability expert. They will then decide how to proceed. You might have to answer some questions online about your appeal. You will not lose your right to go to a hearing, if you still want one.</p>
+
+<p>Please respond to this email stating whether you want to take part in this test. You will then be given further information on what happens next.  
+</p> 
+
+			<p>PIP Benefit Appeals<br/>
+				HMCTS<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			
+		</div>
+		
+	</main>
+	{% endblock %}

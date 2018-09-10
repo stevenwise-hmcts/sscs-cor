@@ -1,34 +1,31 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Question - Mobility - Round 2
+Question - DWP response - Round 1
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="/mvp/task-list-r2">Back to questions</a>
-      <form class="form" action="/mvp/question-mobility" method="POST">
+      <a class="link-back" href="/mvp/task-list">Back to questions</a>
+      <form class="form" action="/mvp/question-dwp-response" method="POST">
         <fieldset class="form-group">
           <legend>
             <h1 class="heading-large">
-              Your walking stick
+              Any comment on DWP’s response?
             </h1>
           </legend>
           <p class="body-text">
-          You said in your previous answer that you use a walking stick. </p>
-          <p>Please could you say:</p>
-         
-            <p>• where you got the stick from</p>
-           <p>• how often you use it </p>
-            <p>• how far you can walk without it </p>
-         
-          <!-- <p>You can upload a picture of the walking stick, if you think it will help. </p> -->
-          {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+          DWP should have sent you their response to your appeal. This contains some information you may not have seen before, like the healthcare professional's report and the descriptors they think apply to your appeal. </p>
+
+<p>Please add any comments you have below. If you don’t have a comment then write ‘I have nothing to add’.</p>
+
+  
+          {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
           <div class="appellants-answer">
             <h2 class="bold-small">Your answer</h2>
-            {% if data['textareamobility'] %}
-            <p>{{ data['textareamobility'] }}</p>
+            {% if data['textareadwpresponse'] %}
+            <p>{{ data['textareadwpresponse'] }}</p>
             {% else %}
             <p>[Answer goes here ]</p>
             <table>
@@ -80,8 +77,8 @@ Question - Mobility - Round 2
         <div class="form-group">
           <div style="padding-top: 30px; padding-bottom: 20px;">
 
-            {% if data['mobilityCompletedOrDraft'] !== 'completed' %}
-            <a class="button" href="/mvp/question-mobility-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a><br/><br/>
+            {% if data['dwpresponseCompletedOrDraft'] !== 'completed' %}
+            <a class="button" href="/mvp/question-dwp-response-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a><br/><br/>
             <input class="" type="submit" value="Save for later" 
             style="padding-left:0px;
             padding-top: 4px;background:none!important;

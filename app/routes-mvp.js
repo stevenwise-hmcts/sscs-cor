@@ -114,6 +114,18 @@ router.post('/mvp/question-migraine', function (req, res) {
 });
 
 
+
+// Question - DWP response
+
+router.get('/mvp/question-dwp-response', function (req, res) {
+	res.render('mvp/question-dwp-response');
+})
+
+router.post('/mvp/question-dwp-response', function (req, res) {
+	res.redirect('/mvp/task-list-extend?dwpresponseCompletedOrDraft=draft');
+});
+
+
 // Question - Mobility - Round 2
 
 router.get('/mvp/question-mobility', function (req, res) {

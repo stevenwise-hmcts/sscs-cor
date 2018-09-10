@@ -61,7 +61,7 @@ Question - Walking
 
       
 <details>
-        <summary><span class="summary">Sending evidence to support your answer</span></summary>
+        <summary><span class="summary">Sending evidence to support your answer</span></summary><div class="panel panel-border-narrow">
         <p>If you have any evidence to support your answer, you can either email it or send it by post.</p> 
         <p>Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
 
@@ -78,7 +78,7 @@ Question - Walking
         <p>Useful evidence helps prove what you have said in your answer such as a letter from a doctor or someone who knows you well. You do not have to send in evidence if you don’t have any.</p>
 
          <p>If you are posting it in, send the tribunal an email briefly describing what you are posting and when you think it will arrive. Use the email address above.</p>
-      </details>
+      </div></details>
           {% endif %}
         {% if data['walkingCompletedOrDraft'] !== 'completed' %}
         <div style="padding-top: 30px; padding-bottom: 20px;">
@@ -96,6 +96,7 @@ Question - Walking
           <br/><br/>
           {% endif %}
         </form>
+        {% include "includes/help-contact.html" %}
       </div>
     </div>
   </main>

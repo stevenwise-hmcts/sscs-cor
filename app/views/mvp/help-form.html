@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - DWP response - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+          
+
+  <div class="grid-row">
+    <div class="grid-column-two-thirds">
+    
+
+      <h1 class="heading-large">What do you need help with?
+      </h1>
+<span id="more-detail-hint" class="form-hint" style="letter-spacing: -.3px">If you are having a problem with the page, include any error messages you saw.</span>
+      <form class="form" action="/thanks-plain" method="get">
+
+        
+         
+          <div class="form-group">
+            <label class="form-label" for="more-detail"><!--<span id="email-hint" class="govuk-hint">
+        If you are having a problem with the page, include any error messages you saw.</span>-->
+            </label>
+            <textarea class="form-control form-control-3-4 autoExpand" id="more-detail" name="more-detail" rows="5" cols="" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="more-detail">
+            Your telephone number or email address
+            </label>
+            <span id="more-detail-hint" class="form-hint">We’ll use this to reply to you. (Responses can take up to 2 working days)</span>
+            <input class="form-control form-control-3-4" id="form-control-1-4" type="text">
+          </div>
+         
+
+          <button class="button">Send message</button>
+</form>
+
+
+    </div>
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

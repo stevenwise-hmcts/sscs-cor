@@ -1,40 +1,50 @@
 {% extends "layout.html" %}
-{% block service_name %}   
-{% endblock %}
 {% block page_title %}
-Sign in - Round 1 questions
+Sign in - GOV.UK
+{% endblock %}
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
 {% endblock %}
 {% block content %}
-<main id="content" role="main">
-  {% include "includes/phase_banner_alpha.html" %}
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <form class="form">
-        <fieldset class="form-group">
-          <legend>
+<main id="content" class="prototype-8" role="main">
+     <div class="grid-row">
+
+        <div class="column-full col0">
             <h1 class="heading-large">
-              Sign in
+                Sign in or create an account
             </h1>
-          </legend>
-          <!--<p>Sign in or <a href="">create an account</a></p>-->
-          <!-- Use .form-group to create spacing when wrapping label and input pairs -->
-          <div class="form-group">
-            <label class="form-label" for="first-name-2">Email address</label>
-            <input class="form-control" id="first-name-2" name="first-name-2" type="text">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="last-name-2">Password</label>
-            <input class="form-control" id="last-name-2" name="last-name-2" type="text">
-            </div>
-             <p><a href="forgotten-password-enter-email">Forgotten password?</a></p>
-            <div class="form-group">
-              <a href="task-list" class="button">Sign in</a>
-              <!-- <input class="button" type="submit" value="Submit answer"> -->
-            </div>        
-          </div>
-        </form>
-      </div>
-    </div>
- 
-  </main>
-  {% endblock %}
+        </div>
+        <div class="column-half col1">
+            <h1 class="heading-medium">
+                Sign in
+            </h1>
+
+            <form action="/exit-page" method="post">
+                <input type="hidden" name="make_claim" value="true">
+                <input type="hidden" name="respond" value="false">
+
+                <div class='form-group'>
+                    <label class=" form-label" for="user_email">Email address</label>
+                    <input class="optional form-control form-control-3-4" name="emailaddy" type="email" />
+                </div>  
+                <div class='form-group'>
+                    <label class="password optional form-label" for="user_password">Password</label>
+                    <input autocomplete="off" class="password optional form-control form-control-3-4" name="pword" type="password"/>
+                </div>
+
+                <p><a href="forgotten-password-enter-email">Forgotten password?</a></p>
+                <div class='form-group'>
+                      <a href="task-list" class="button">Sign in</a>
+                </div>
+
+            </form>
+        </div><!-- class="column-half col1" -->
+        <div class="column-half col2">
+                <p class="form-title heading-medium">Create an account</p>
+                <p>You need to <a href="idam-create-account" role="button">create an account</a> to use this service.</p>
+                <p></p>
+        </div><!-- class="column-half col2" -->
+    </div><!-- class="grid-row" -->
+</main>
+
+{% endblock %}

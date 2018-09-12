@@ -122,7 +122,7 @@ router.get('/mvp/question-dwp-response', function (req, res) {
 })
 
 router.post('/mvp/question-dwp-response', function (req, res) {
-	res.redirect('/mvp/task-list-extend?dwpresponseCompletedOrDraft=draft');
+	res.redirect('/mvp/task-list?dwpresponseCompletedOrDraft=draft');
 });
 
 

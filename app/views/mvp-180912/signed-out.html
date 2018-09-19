@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Signed out - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+ <div class="grid-row">
+    <div class="column-two-thirds">
+            
+        <h1 class="heading-large">
+            You’ve signed out
+        </h1>
+        
+
+        <p>To return to your appeal, <a href="/mvp/sign-in-2">sign back in</a></p>
+
+{% include "includes/help-contact.html" %}
+
+</div>
+
+</main>
+{% endblock %}

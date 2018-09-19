@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Q3 draft
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <h1 class="heading-large">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+         <h3 class="heading-small">Questions from the tribunal</h3>
+          <p>You need to respond by 1 March 2018 <span class="font-xsmall"> (<a href="extend-are-sure">Extend deadline</a>)</span></p>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="question-interacting" aria-describedby="eligibility-completed">
+                Interacting with people
+              </a>
+               <a href="question-interacting"><strong class="task-draft">Draft</strong></a>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="question-walking" aria-describedby="eligibility-completed">
+                Your journey to the doctors
+              </a>
+               <a href="question-walking"><strong class="task-draft">Draft</strong></a>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="question-mental-health" aria-describedby="read-declaration-respond">
+                Your migraines
+              </a>
+                           <a href="question-mental-health"><strong class="task-draft">Draft</strong></a>
+
+            </li>
+          </ul>
+<h2 class="heading-small">Sending additional evidence</h2> 
+<p>You can send additional information to support your appeal and the tribunal will consider it. You don’t have to provide anything if you don’t have it.
+  </p>
+<details>
+      <summary><span class="summary">How to send additional evidence </span></summary><div class="panel panel-border-narrow">
+
+        <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+
+        <p>If you think there will be a delay in getting your evidence to the tribunal then send an email to the address below briefly describing what you are sending and when you think it will arrive.</p>
+
+        <h3 class="heading-small">Send evidence by email</h3> 
+        <p><a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a></p>
+        <h3 class="heading-small">Send evidence by post</h3>
+     
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+      
+
+    </div></details>
+    {% include "includes/help-contact.html" %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}

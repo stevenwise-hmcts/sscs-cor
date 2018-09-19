@@ -1,0 +1,44 @@
+{% extends "govuk_template_unbranded.html" %}
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block page_title %}
+Preliminary view other party accepted (PVAB-E)
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your decision on your PIP benefit appeal<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+				<!--<strong style="font-weight: bold;">Date: </strong>26 September 2018<br/>
+
+	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png"></div>
+		<div class="email-margin">
+			<div style="padding: 60px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png"></div>
+
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
+			<p> DWP has also accepted the tribunal’s view so the decision has been issued and the appeal is closed. </p>		
+			
+			<p>You can sign in and view the decision here:</p>
+			<p><a href="sign-in-5">https://hmcts-access.service.gov.uk/login?response_type=<br/>code&redirect_uri=https%3A%2F%2Fwww.appeal-benefit-decision.<br/>service.gov.uk%2Fauthenticated&client_id=appeal-benefit-decision<br/>&state=f4b7e73a-cece-4fba-848f-d345ba0cdf33</a></p>
+
+			<p>A formal decision notice has also been sent to your registered postal address.</p>
+
+		<p>DWP is responsible for administering the PIP benefit. If you have any questions about the benefit or payment of the benefit please contact them. Their contact details are on any correspondence you’ve received from them. </p>
+
+
+			<p>PIP Benefit Appeals<br/>
+				HM Courts & Tribunals Service<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			
+		</div>
+	</main>
+	{% endblock %}

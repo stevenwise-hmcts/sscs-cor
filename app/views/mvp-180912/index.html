@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block page_title %}
+COR MVP prototype
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-full">
+			<h1 class="heading-xlarge">Continuous Online Resolution
+				<span class="heading-secondary">Prototype</span></h1>
+				<h2 class="heading-large">'Pilot Beta' - MVP</h2>
+</div>
+
+			</div>
+		</div>
+		<h2 class="heading-medium">User journeys</h2>
+		<h3 class="heading-small">Key user journeys</h3>
+		<ol class="list list-number">
+			<li><a href="/mvp/email-cor-invitation-invtt-e">Invitation to join the pilot beta</a></li>
+			<li><a href="/mvp/email-questions-r1-qustf-e">Questions - 1st round</a></li>
+			<li><a href="/mvp/email-questions-r2-qustss-e">Questions - 2nd round</a></li>
+			<li><a href="/mvp/email-hearing-required-hrcr-e">Hearing required</a></li>
+			<li><a href="/mvp/email-decision-view-pvof-e">Tribunals view</a></li>
+			<li><a href="/mvp/email-decision-dwp-accepted-pvab-e">Final decision (DWP accepted preliminary view)</a></li>
+			<li><a href="/mvp/email-decision-final-deis-e">Final decision (no preliminary view)</a></li>
+		</ol>
+	</div>
+</div>
+<h3 class="heading-small">Time extensions and deadlines</h3>
+<ol class="list list-number">
+	<li><a href="/mvp/extend-are-sure">Extend deadline - 1st time</a></li>
+	<li><a href="/mvp/extend-are-sure2">Extend deadline - 2nd time</a></li>
+	<li><a href="/mvp/email-deadline-reminder-1day-qustr-e">Deadline reminder</a></li>
+	<li><a href="/mvp/email-deadline-expired-deqe-e">Deadline expired</a></li>
+</ol>
+<h3 class="heading-small">Exception status screens</h3>
+<ol class="list list-number">
+	<li>DWP lapsed / revised (DLPS-S)</li>
+	<li>Appellant withdrawn (APWN-S)</li>
+	<li>Appeal closed (APCD-S)</li>
+</ol>
+<hr>
+		<h2 class="heading-medium">Notifications</h2>
+<h3 class="heading-small"> Appellant notifications</h3>
+<ol class="list list-number">
+	<li><a href="/mvp/email-cor-invitation-invtt-e">COR invitation (INVTT-E) </a> - Sent manually by admin</a></li>
+	<li><a href="/mvp/email-cor-invitation-accepted-invta-e">Invitation accepted (INVTA-E)</a> - Sent manually by admin</li>
+	<li><a href="/mvp/email-cor-invitation-rejected-invtr-e">Invitation rejected (INVTR-E)</a>  - Sent manually by admin</li>
+	<li><a href="/mvp/email-dwp-response-phrrc-e">DWP response (PHRRC-E) </a></li>
+	<li><a href="/mvp/email-questions-r1-qustf-e">Questions - 1st round (QUSTF-E)</a></li>
+	<li><a href="/mvp/email-deadline-reminder-1day-qustr-e">Deadline reminder - 1 day (QUSTR-E)</a></li>
+	<li><a href="/mvp/email-deadline-expired-deqe-e">Deadline expired (DEQE-E)</a></li>
+	<li><a href="/mvp/email-extension-granted-derg-e">Questions deadline extension request granted (DERG-E)</a> - TBC for MVP</li>
+	<li><a href="/mvp/email-extension-rejected-derr-e">Questions deadline extension request rejected (DERR-E)</a> - TBC for MVP</li> 
+	<li><a href="/mvp/email-evidence-received-phed1-e">Evidence received (PHED1-E)</a>  - TBC for MVP</li> 
+		<li><a href="/mvp/email-evidence-request-other-party-pair-e">Tribunal requests info from other party (PAIR-E) </a>  - TBC for MVP</li>
+
+	<li><a href="/mvp/email-evidence-other-party-pais-e.html">Other party has sent information (PAIS-E)</a> - TBC for MVP</li>
+
+		
+	<li><a href="/mvp/email-questions-r2-qustss-e">Questions additional round email (QUSTSS-E)</a></li>
+
+	<li><a href="/mvp/email-decision-view-pvof-e">Preliminary view offered to both parties (PVOF-E)</a></li>
+	<li><a href="/mvp/email-view-accepted">Preliminary view accepted by appellant (????)</a></li>
+	
+	<li><a href="/mvp/email-decision-dwp-accepted-pvab-e">Preliminary view other party accepted (PVAB-E)</a></li>
+	<li><a href="/mvp/email-decision-other-rejected-pvrp-e"> Preliminary view other party rejected (PVRP-E)</a></li>
+	<li><a href="/mvp/email-hearing-required-hrcr-e">Hearing required (HRCRD-E)</a></li>
+	
+	<li><a href="/mvp/email-decision-final-deis-e">Decision as panel has enough information (DEIS-E)</a></li>
+</ol>
+
+<h3 class="heading-small">DWP notifications (sent manually by admin)</h3>
+<ol class="list list-number">
+	<li>Evidence received from DWP (PHED1D-E) - TBC for MVP</li>
+	<li>Preliminary view - Offered both parties (PVOFD-E)</li>
+	<li>Other party has sent information (PAISD-E)</li>
+	<li>Tribunal requests info from other party (PAIRD-E)</li>
+</ol>
+
+
+		<h2 class="heading-medium">Useful documents</h2>
+<ol class="list list-number">
+	<li><a href="https://tools.hmcts.net/confluence/x/KAMIKg">COR appellant user journey diagram</li>
+	<li><a href="https://docs.google.com/spreadsheets/d/1jzsg2RFQPBMD3bZWGMNQzvJ8SRsBMWGLQHv7O9QT3ss/edit?usp=sharing">COR notifications log</li>
+</ol>
+<!-- -->
+
+</main>
+{% endblock %}

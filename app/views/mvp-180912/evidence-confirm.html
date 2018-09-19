@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-large">
+        You have submitted additional evidence
+      </h1>
+      <p class="body-text">
+        It will be reviewed by the tribunal and considered as part of your appeal. 
+      </p>
+      <br/>
+      <p> <a href="evidence-options">Provide more evidence</a>
+        <p>   <a href="task-list-extend">Return to questions</a></p>
+{% include "includes/help-contact.html" %}
+
+
+        <div style="margin-top: 80px; font-size: 14px;">
+          <p><a href="email-evidence-uploaded">Evidence uploaded email</a></p>
+        </div>  
+      </div>
+    </div>
+  </main>
+  {% endblock %}

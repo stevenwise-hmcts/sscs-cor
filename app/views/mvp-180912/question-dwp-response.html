@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - DWP response - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="/mvp/task-list">Back to questions</a>
+      <form class="form" action="/mvp/question-dwp-response" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Any comments on DWP’s response?
+            </h1>
+          </legend>
+          <p class="body-text">
+          DWP should have sent you their response to your appeal. This contains some information you may not have seen before, like the healthcare professional's report and the descriptors they think apply to your appeal. </p>
+
+<p>Please add any comments you have below. If you don’t have a comment then write ‘I have nothing to add’.</p>
+
+  
+          {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
+          <div class="appellants-answer">
+            <h2 class="bold-small">Your answer</h2>
+            {% if data['textareadwpresponse'] %}
+            <p>{{ data['textareadwpresponse'] }}</p>
+            {% else %}
+            <p>[Answer goes here ]</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Evidence</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[Evidence description goes here]</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            {% endif %}
+            <br/>
+            <p class="font-small">Submitted: 5 September 2018</p>
+          </div>
+          {% else %}
+          <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
+          data-min-rows='6'>{{ data['textareamobility'] }}</textarea>
+
+        </fieldset>
+
+       
+<details>
+        <summary><span class="summary">Sending evidence to support your answer</span></summary><div class="panel panel-border-narrow">
+        <p>You can send additional information to support your answer and the tribunal will consider it. You don’t have to provide anything if you don’t have it.</p> 
+        <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+
+                <!-- <p>Try to send it as soon as possible to avoid delaying your appeal.</p> -->
+<p>If you think there will be a delay in getting your evidence to the tribunal then send an email to the address below briefly describing what you are sending and when you think it will arrive.</p>
+
+        <h3 class="heading-small">Send evidence by email</h3> 
+        <p><a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a></p>
+        <h3 class="heading-small">Send evidence by post</h3>
+        <p>Birmingham ASC<br/>
+          HM Courts and Tribunals Service<br/>
+          Administrative Support Centre (ASC)<br/>
+          P O Box 14620<br/>
+          Birmingham<br/>
+        B16 6FR</p>
+        
+
+      </div></details>
+ {% endif %}
+        
+        <div class="form-group">
+          <div style="padding-top: 30px; padding-bottom: 20px;">
+
+            {% if data['dwpresponseCompletedOrDraft'] !== 'completed' %}
+            <a class="button" href="/mvp/question-dwp-response-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a><br/><br/>
+            <input class="" type="submit" value="Save for later" 
+            style="padding-left:0px;
+            padding-top: 4px;background:none!important;
+            color:#005ea5;
+            border:none; 
+            font: inherit;
+            /*border is optional*/ 
+            cursor: pointer;
+            text-decoration: underline">
+            <br/><br/>
+            {% endif %}
+          </div>
+        </form>
+        {% include "includes/help-contact.html" %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}

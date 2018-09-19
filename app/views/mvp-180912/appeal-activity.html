@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<link href="/public/kit-icons/icons.css" media="screen" rel="stylesheet" type="text/css" />
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 class="form-hint">Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <div class="js-tabs"> <!-- JS will add .tabs class -->
+            <ul class="list list-bullet">
+              <li><a class="tabs__link" href="#activity">Status</a></li>
+              <li><a class="tabs__link" href="#questions">Actions</a></li>
+            </ul>
+            <!-- Tab 1 -->
+            <div id="activity" class="tab-content">
+              <h2 class="heading-medium">Status</h2>
+              <br/>
+              <img src="/public/images/cor-progress-bar.svg" width="100%">
+              <br/> <br/><br/> <br/>
+              <div class="panel-blue">
+               <!-- <h2 class="heading-small">Status</h2> -->
+               <h2 class="heading-small">Latest update</a></h2>
+               <p>The tribunal need some more information from you to help them make a decision  on your PIP benefit appeal. </p> 
+               <p>You need to respond by 14 March 2018.</p>
+               <a href="task-list">Respond to questions from the tribunal</a>
+             </div>
+
+
+
+             <div class="panel-clear">
+              <h3 class="heading-small">Previous updates</h3>
+              <table>
+   <!--  <tr>
+      <td><a href="">Questions from the tribunal</a></td>
+      <td class="date">7 March 2018</td>
+    </tr> -->
+    <tr>
+      <td><a href="">DWP reply to tribunal questions</a></td>
+      <td class="date">6 March 2018</td>
+    </tr>
+           <!--  <tr>
+              <td><a href="">Directions from the tribunal</a></td>
+              <td class="numeric">xx February 2018</td>
+            </tr> -->
+            <tr>
+              <td><a href="evidence-uploaded-you">Evidence uploaded</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-dwp-response">DWP response received</a></td>
+              <td class="date">21 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="appeal-summary">Appeal received</a></td>
+              <td class="date">17 January 2018</td>
+            </tr>
+          </tbody>
+        </table>
+       <!-- <br/><br/>
+        <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+        <a href="#" class="follow">Download all activity and documents relating to your appeal</a>-->
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="questions" class="tab-content">
+      <h2 class="heading-medium">Actions</h2>
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You need to respond by 14 March 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
+      <ul class="task-list-items">
+        <!-- Interacting -->
+        <li class="task-list-item">
+         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+          How do you interact with people?
+        </a>
+        {% if data['interactingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['interactingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- Walking -->
+      <li class="task-list-item">
+        <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
+          How do you walk to the doctors?
+        </a>
+        {% if data['walkingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- migraine -->
+      <li class="task-list-item">
+       <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
+        Tell us about your migraines 
+      </a>
+      {% if data['migraineCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
+      <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+  </ul>
+</li>
+<h2 class="heading-small">Provide additional evidence</h2>
+<p>If you have any additional information that's relevant to your appeal, you can submit it to the tribunal. You don’t have to submit anything if you don’t want to. </p>
+<a  href="/evidence-options">Submit additional evidence</a>
+</div>
+</div>
+<div class="updates-border"></div>
+
+   <h4 class="heading-small">Help with your appeal</h4>
+   <ul class="list">
+   <!--  <li><a href="about-hearing">What to expect at your hearing</a></li>
+     <li><a href="claiming-hearing-expenses">Claiming hearing expenses</a></li>-->
+     <li><a href="about-evidence">Providing evidence to support your appeal</a></li>
+     <li><a href="contact-us">Contact us</a></li>   
+ </ul> 
+</div>
+{% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

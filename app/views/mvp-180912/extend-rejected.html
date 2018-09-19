@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Contact the tribunal to request more time
+      </h1>
+      <p>You need to contact the tribunal and explain why you need more time.</p> 
+
+<p>You can contact the tribunal by phone or email. </p>
+
+ <h3 class="heading-small">Phone</h3> 
+ <p>0300 1131142</p>
+
+  <h3 class="heading-small">Email</h3> 
+<p><a href="mailto:benefitappeals@hmcts.net?subject=Extend deadline: SC242/16/03435">benefitappeals@hmcts.net</a></p>
+      <p>You’ll receive an email when the tribunal have reviewed your reasons.</p>
+
+
+      <a href="task-list-extend">Return to questions</a>
+
+      {% include "includes/help-contact.html" %}
+    </div>
+  </div>
+</main>
+{% endblock %}

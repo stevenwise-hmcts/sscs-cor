@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2>Appeal reference:  SC242/16/03435  </h2>
+        <div class="divider"></div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-row">
+    <div class="column-two-thirds column-minimum">
+      <br/>
+      <h3 class="heading-small">Questions from the tribunal</h3>
+      <p>You have answered all the questions and submitted them to the tribunal.</p>
+      <ul class="task-list-items">
+        <!-- Interacting -->
+        <li class="task-list-item">
+         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+          How do you interact with people?
+        </a>
+        {% if data['interactingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['interactingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- Walking -->
+      <li class="task-list-item">
+        <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
+          How do you walk to the doctors?
+        </a>
+        {% if data['walkingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+        <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+ <!-- DWP response -->
+    <li class="task-list-item">
+     <a class="task-name" href="/mvp/question-dwp-response" aria-describedby="dwp-response">
+      Any comments on DWP’s response? 
+    </a>
+    {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
+    <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+    {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
+    <a href="/mvp/question-dwp-response"><strong class="task-draft">Draft</strong></a>
+    {% endif %}
+  </li>
+
+    <!-- Medical records 
+
+
+    <li class="task-list-item">
+      <a class="task-name" href="/question-medical-records" aria-describedby="medical-records-respond">
+        Permission to access your medical information
+      </a>
+      {% if data['medicalCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['medicalCompletedOrDraft'] === 'draft' %}
+      <a href="/question-medical-records"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>-->
+
+    
+  </ul>
+</li>
+<h2 class="heading-small">Sending additional evidence</h2> 
+<p>You can send additional information to support your appeal and the tribunal will consider it. You don’t have to provide anything if you don’t have it.
+  </p>
+<details>
+      <summary><span class="summary">How to send additional evidence </span></summary><div class="panel panel-border-narrow">
+
+        <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+
+        <p>If you think there will be a delay in getting your evidence to the tribunal then send an email to the address below briefly describing what you are sending and when you think it will arrive.</p>
+
+        <h3 class="heading-small">Send evidence by email</h3> 
+        <p><a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a></p>
+        <h3 class="heading-small">Send evidence by post</h3>
+     
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+      
+
+    </div></details>
+    {% include "includes/help-contact.html" %}
+
+
+</div> 
+</main>
+{% endblock %}

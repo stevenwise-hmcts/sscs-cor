@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing requirements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Booking your hearing  
+            </h1>
+            <p>You need to provide some information so your hearing can be booked.</p>
+          </legend>
+          
+        </fieldset>
+        <div class="form-group">
+          <a href="#" class="button">Continue</a>
+          <!-- <input class="button" type="submit" value="Submit answer"> -->
+          
+          
+        </form>
+        {% include "includes/help-contact.html" %}
+        <div style="margin-top: 80px; font-size: 14px;">
+      <p><a href="index">Index</a></p>
+    </div> 
+      </div>
+    </div>
+  </main>
+  {% endblock %}

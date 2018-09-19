@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main" ">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is a new service – your <a target="_black" href="http://www.smartsurvey.co.uk/s/FeedBackPagePrototype/">feedback</a> will help us to improve it. (opens in a new window)</span>
+    </p>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <header class="page-heading page-heading-with-context page-heading-without-breadcrumb">
+        <a href="#" class="link-back">Back</a>
+        <h1 class="heading-large">
+          <span class="heading-secondary">Claim number:</span>
+          352MC733
+        </h1>
+        <div id="tabs">
+          <div  class="nav-tabs">
+            <ul class="tabs-nav">
+              <li><a href="#tabs-1">Claim status</a></li>
+              <li><a href="#tabs-2">Claim history</a></li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div id="tabs-1" class="tab-pane">
+             
+              <h2 class="heading-medium">Your defence is being processed.</h2>
+              <p> We will email you to explain what to do next.</p>
+              
+              
+              <h2 class="heading-medium">More options </h2>
+              
+              
+              <h2 class="heading-small">Settle out of court</h2>
+              <p>
+                You can still <a href='offer-agreement/make-offer?defendant=defendant'>make an offer</a> to settle the claim out of court. If your offer is accepted you won’t have to a court hearing.
+              </p>
+              
+              
+              <h2 class="heading-small">Request mediation</h2>
+              <p>
+                You can <a href='#'>request free telephone mediation</a> to help resolve the claim without going to court.</a>
+              </p>
+              
+            </div>
+            <div id="tabs-2" class="tab-pane">
+              
+              <h2 class="heading-medium">Claim history </h2>
+              
+              <div class="history-timeline ">
+                <div class="history-statement"> <span > 1 October 2017</span>Jan Clark requested a default County Court Judgment (CCJ) against you.
+                </div>
+                <div class="history-statement"> <span > 16 September 2017</span>Claim sent by Jan Clark. You had until 30 Sept 2017 to respond. <a href="view-claim">View claim.</a></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column-one-third">
+        <div class="meta-data">
+         <p  class="heading-small" style="padding-top: 100px">About claim</p>
+         
+         <ul role="navigation" class="font-xsmall list" >
+          <li><strong class="bold">Claimant name:</strong><br> Jan Clark</li>
+          <li><strong class="bold">Claim amount:</strong><br>£1500</li>
+          <li><strong class="bold">Claim details:</strong><br><a href="view-claims/view-claim-def">View claim</a></li>
+        </ul>
+        
+      </div>
+      {% include "includes/help-contact.html" %}
+    </div>
+  </div>
+</main>
+{% endblock %}

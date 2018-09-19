@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Decision positive
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+       The tribunal’s view on your appeal
+     </h1>
+   <br/>
+<!--
+<h2 class="heading-medium">First-Tier Tribunal - Social Security</h2>
+      <p><span class="bold-small">Appellant:</span> Manish Sharma <br/>
+     <span class="bold-small">Respondent:</span> Secretary of State for Work and Pensions<br/>
+             <span class="bold-small">Appeal reference:</span> SC242/16/03435<br/></p>
+     <p>   <span class="bold-small">Tribunal judge:</span> Mrs S Evans<br/>
+     <span class="bold-small">Date of decision:</span> 20 Feburary 2018
+   </
+ -->
+ <div class="panel-blue">
+  <p >The tribunal have considered all the information submitted by you and DWP. </p>
+  <p>Their view is that you’re entitled to PIP at the rate below from 3 October 2017 until 3 March 2020.
+  </p>
+  <table>
+    <!-- <caption class="heading-small">Component </caption> -->
+    <tbody>
+      <tr>
+        <td class="bold-small">Daily living</td>
+        <td >Standard rate</td>
+      </tr>
+      <tr>
+        <td class="bold-small">Mobility</td>
+        <td>Standard rate</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <p>This is the same as DWP initially awarded you. </p>
+  <p>If both you and DWP accept this view, you’ll be awarded PIP at the above rate. </p>
+</div>
+<h2 class="heading-medium">The reasons for the tribunal’s view</h2>
+<p>We considered all the evidence you and DWP submitted in relation to your appeal. This includes any additional evidence you submitted.</p>
+
+<p>After considering this evidence we acknowledge that you experience pain in your lower back when doing some tasks around the house. Specifically washing yourself and preparing food. We consider that this pain does not hinder you enough to be awarded the enhanced rate of the daily living component of PIP. </p>
+
+<p>You claim that you suffer pain while walking and you find it hard to plan a route, but in your written submission you also said you were going regularly to the GPs at the time of DWP’s decision. You also stated that you made your own way there without the assistance of aids. </p>
+<p>It is therefore our view that you are eligible Daily living and Mobility at the standard rate. 
+</p>
+
+</div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <details>
+      <summary><span class="summary">PIP activities and the descriptors we consider apply to your appeal</span></summary><div class="panel panel-border-narrow">
+<h2 class="heading-medium">Daily living activities and descriptors the tribunal considers to apply</h2>
+<table>
+ <thead>
+  <tr>
+    <th scope="col">Activity</th>
+    <th scope="col">Descriptor</th>
+    <th scope="col">Points</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Preparing food</td>
+    <td>Needs to use an aid or appliance to be able to prepare or cook a simple meal</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>Washing and bathing</td>
+    <td>Needs to use an aid or appliance to be able to wash or bathe</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>Managing toilet needs or incontinence</td>
+    <td>Needs to use an aid or appliance to be able to manage my toilet needs or incontinence</td>
+    <td>2</td>
+  </tr>
+
+  <tr>
+    <td>Dressing and undressing</td>
+    <td>Needs to use an aid or appliance to be able to dress or undress</td>
+    <td>2</td>
+  </tr>
+
+</tbody>
+</table>
+<br/>
+
+<h2 class="heading-medium">Mobility activities and descriptors the tribunal considers to apply</h2>
+<table>
+ <thead>
+  <tr>
+    <th scope="col">Activity</th>
+    <th scope="col">Descriptor</th>
+    <th scope="col">Points</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Planning and following journeys</td>
+    <td>Needs prompting to be able to undertake any
+journey to avoid overwhelming psychological
+distress to the claimant. </td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <td>Moving around</td>
+    <td>Can stand and then move more than 50 metres
+but no more than 200 metres, either aided or
+unaided </td>
+    <td>4</td>
+  </tr>
+
+
+</tbody>
+</table>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-medium">What happens next </h2>
+    <p>You can accept the view or if you feel the view is wrong you can have a face to face hearing.</p>
+    <br/>
+    <form action="/mvp/decision-view" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-medium">Do you accept this view?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
+            <label for="radio-1">I accept the tribunal’s view</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
+            <label for="radio-2">I want a hearing</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>You have to respond to this question by 14 November 2018. If you don’t respond we will assume you are accepting the view and it will be sent to you. 
+        </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
+ {% include "includes/help-contact.html" %}
+  </div>
+</div>
+</main>
+{% endblock %}

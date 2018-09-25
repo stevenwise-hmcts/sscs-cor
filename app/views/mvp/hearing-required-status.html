@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing required
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="/mvp/task-list-complete">Back to questions</a>
+
+      <h1 class="heading-large">
+        A hearing needs to be booked for your appeal 
+      </h1>
+      <p class="body-text">
+      You’ll receive an email with the details of your hearing by [date plus 8 weeks] </p>
+
+<p>If you require a hearing room with disabled access or any other support then please email the tribunal at <a href="mailto:benefitappeals@hmcts.net?subject=Hearing: SC242/16/03435">benefitappeals@hmcts.net</a>    
+      </p>
+<p><a href="/mvp/sign-in-1">Exit service</a></p>
+               </div>
+  </div>
+
+  {% include "includes/help-contact.html" %}
+  
+
+ </main>
+ {% endblock %}

@@ -27,15 +27,23 @@ Task list - Round 1
             <!-- Tab 1 -->
             <div id="actions" class="tab-content">
               <h3 class="heading-medium">Your actions</h3>
-              <h3 class="heading-small">Welcome to your online appeal</h3>
+              <h3 class="heading-small">Questions from the tribunal</h3>
+              <p>You need to respond by 31 November 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
+              <ul class="task-list-items">
+                 <!-- DWP response -->
+    <li class="task-list-item">
+     <a class="task-name" href="question-dwp-response" aria-describedby="dwp-response">
+      Any comments on DWP’s response? 
+    </a>
+    {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
+    <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+    {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
+    <a href="question-dwp-response"><strong class="task-draft">Draft</strong></a>
+    {% endif %}
+  </li>
+          </ul>
 
-              <p>Watch the welcome video then continue to your actions</p>
-              
-<video controls="controls" width="800" height="600" 
-       name="Video Name" src="/public/images/appeal-welcome.mov"></video>
         </div>
-
-        <a  href="" class="button">Continue</a>
 
         <!-- Tab 2 -->
         <div id="evidence" class="tab-content">
@@ -91,7 +99,7 @@ Task list - Round 1
 
           <table>
 
-           
+  
             <tr>
               <td><a href="evidence-dwp-response">DWP response received</a></td>
               <td class="date">21 February 2018</td>

@@ -46,6 +46,20 @@ router.get('/task-list', function (req, res) {
     res.render('task-list');
 });
 
+
+
+// Question - DWP response
+
+router.get('/question-dwp-response', function (req, res) {
+	res.render('question-dwp-response');
+})
+
+router.post('/question-dwp-response', function (req, res) {
+	res.redirect('appeal-dwp-response?dwpresponseCompletedOrDraft=draft');
+});
+
+
+
 // Question - Walking
 
 router.get('/question-walking', function (req, res) {

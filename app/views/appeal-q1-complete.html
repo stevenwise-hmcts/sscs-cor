@@ -28,19 +28,42 @@ Task list - Round 1
             <div id="actions" class="tab-content">
               <h3 class="heading-medium">Your actions</h3>
               <h3 class="heading-small">Questions from the tribunal</h3>
-              <p>[Deadline?]</p>
+                <p>You have answered all the questions and submitted them to the tribunal.</p>
+
               <ul class="task-list-items">
-                 <!-- DWP response -->
-    <li class="task-list-item">
-     <a class="task-name" href="question-dwp-response" aria-describedby="dwp-response">
-      Any comments on DWP’s response? 
-    </a>
-    {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
-    <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-    {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
-    <a href="question-dwp-response"><strong class="task-draft">Draft</strong></a>
-    {% endif %}
-  </li>
+                <!-- Interacting -->
+                <li class="task-list-item">
+                 <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
+                  How do you interact with people?
+                </a>
+                {% if data['interactingCompletedOrDraft'] === 'completed' %}
+                <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+                {% elif data['interactingCompletedOrDraft'] === 'draft' %}
+                <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
+                {% endif %}
+              </li>
+              <!-- Walking -->
+              <li class="task-list-item">
+                <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
+                  How do you walk to the doctors?
+                </a>
+                {% if data['walkingCompletedOrDraft'] === 'completed' %}
+                <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+                {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+                <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
+                {% endif %}
+              </li>
+              <!-- migraine -->
+              <li class="task-list-item">
+               <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
+                Tell us about your migraines 
+              </a>
+              {% if data['migraineCompletedOrDraft'] === 'completed' %}
+              <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+              {% elif data['migraineCompletedOrDraft'] === 'draft' %}
+              <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
+              {% endif %}
+            </li>
           </ul>
 
         </div>
@@ -99,7 +122,22 @@ Task list - Round 1
 
           <table>
 
-  
+           <tr>
+            <td><a href="">DWP reply to tribunal questions</a></td>
+            <td class="date">6 March 2018</td>
+          </tr>
+           <!--  <tr>
+              <td><a href="">Directions from the tribunal</a></td>
+              <td class="numeric">xx February 2018</td>
+            </tr> -->
+            <tr>
+              <td><a href="evidence-uploaded-you">Evidence received</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+              <td class="date">24 February 2018</td>
+            </tr>
             <tr>
               <td><a href="evidence-dwp-response">DWP response received</a></td>
               <td class="date">21 February 2018</td>

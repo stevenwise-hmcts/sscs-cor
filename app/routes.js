@@ -67,7 +67,7 @@ router.get('/question-walking', function (req, res) {
 })
 
 router.post('/question-walking', function (req, res) {
-	res.redirect('/task-list?walkingCompletedOrDraft=draft');
+	res.redirect('/appeal-q1?walkingCompletedOrDraft=draft');
 });
 
 // Question - interacting
@@ -99,7 +99,7 @@ router.get('/question-interacting', function (req, res) {
 })
 
 router.post('/question-interacting', function (req, res) {
-	res.redirect('/task-list-upload?interactingCompletedOrDraft=draft');
+	res.redirect('/appeal-q1?interactingCompletedOrDraft=draft');
 });
 
 router.post('/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
@@ -124,7 +124,7 @@ router.get('/question-migraine', function (req, res) {
 })
 
 router.post('/question-migraine', function (req, res) {
-	res.redirect('/task-list-extend?migraineCompletedOrDraft=draft');
+	res.redirect('/appeal-q1-extend?migraineCompletedOrDraft=draft');
 });
 
 
@@ -135,7 +135,7 @@ router.get('/question-mobility', function (req, res) {
 })
 
 router.post('/question-mobility', function (req, res) {
-	res.redirect('/task-list-r2?mobilityCompletedOrDraft=draft');
+	res.redirect('/appeal-q2?mobilityCompletedOrDraft=draft');
 });
 
 

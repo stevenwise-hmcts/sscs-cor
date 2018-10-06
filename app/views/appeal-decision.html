@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Task list - Round 1
+Tribunals view tabs
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
       <div class="grid-row">
         <div class="column-two-thirds">
+          
       <h1 class="heading-xlarge">
         Your PIP benefit appeal
       </h1>
@@ -27,43 +28,9 @@ Task list - Round 1
             <!-- Tab 1 -->
             <div id="actions" class="tab-content">
               <h3 class="heading-medium">Your actions</h3>
-              <h3 class="heading-small">Questions from the tribunal</h3>
-              <p>You need to respond by 31 November 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
-              <ul class="task-list-items">
-                <!-- Interacting -->
-                <li class="task-list-item">
-                 <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
-                  How do you interact with people?
-                </a>
-                {% if data['interactingCompletedOrDraft'] === 'completed' %}
-                <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-                <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
-                {% endif %}
-              </li>
-              <!-- Walking -->
-              <li class="task-list-item">
-                <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
-                  How do you walk to the doctors?
-                </a>
-                {% if data['walkingCompletedOrDraft'] === 'completed' %}
-                <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-                {% elif data['walkingCompletedOrDraft'] === 'draft' %}
-                <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
-                {% endif %}
-              </li>
-              <!-- migraine -->
-              <li class="task-list-item">
-               <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
-                Tell us about your migraines 
-              </a>
-              {% if data['migraineCompletedOrDraft'] === 'completed' %}
-              <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-              {% elif data['migraineCompletedOrDraft'] === 'draft' %}
-              <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
-              {% endif %}
-            </li>
-          </ul>
+              <p>The tribunal have reached a decision on your appeal</p>
+
+      <p><a href="decision-final">View the tribunals decision</a></p>
 
         </div>
 
@@ -119,11 +86,30 @@ Task list - Round 1
           <h2 class="heading-medium">History of your appeal</h2>
 
 
+          <table>
 
-                    <table>
+                      <tr>
+              <td><a href="decision-final">Decision on your appeal issued</a></td>
+              <td class="date">00 Month 2018</td>
+            </tr> 
+           <tr>
+              <td><a href="decision-view-history">You accepted the tribunals view</a></td>
+              <td class="date">00 Month 2018</td>
+            </tr> 
 
-                  
+           <tr>
+              <td><a href="evidence-your-answers-q2">You replied to tribunal questions</a></td>
+              <td class="date">00 Month 2018</td>
+            </tr> 
+           <tr>
+            <td><a href="evidence-dwp-answers">DWP replied to tribunal questions</a></td>
+            <td class="date">00 Month 2018</td>
+          </tr>
 
+           <tr>
+              <td><a href="evidence-your-answers-q1">You replied to tribunal questions</a></td>
+              <td class="date">00 Month 2018</td>
+            </tr> 
             <tr>
               <td><a href="evidence-uploaded-you">Evidence received from you</a></td>
               <td class="date">00 Month 2018</td>

@@ -120,8 +120,6 @@ Question - Interacting - Upload1
   </div>
 </div>
 
-
-<!-- File upload -->
 <div>
   <h2 class="heading-small" id="uploads">Uploaded files</h2>
   <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
@@ -194,15 +192,8 @@ Question - Interacting - Upload1
 {% if data['interactingCompletedOrDraft'] !== 'completed' %}
 
 <div style="padding-top: 80px; padding-bottom: 20px;">
-  <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a></div>
-  <input class="" type="submit" value="Save for later" style="padding-left:0px;
-  padding-top: 8px;background:none!important;
-  color:#005ea5;
-  border:none; 
-  font: inherit;
-  /*border is optional*/ 
-  cursor: pointer;
-  text-decoration: underline">
+  <a class="button-secondary" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a></div>
+            <input class="button-secondary" type="submit" value="Save for later"> 
 
   {% endif %}
 

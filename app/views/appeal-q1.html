@@ -69,6 +69,7 @@ Task list - Round 1
 
         <!-- Tab 2 -->
         <div id="evidence" class="tab-content">
+          <form action="/evidence-options" method="post" class="form">
           <h3 class="heading-medium">How do you want to provide additional evidence?</h3>
         <div class="form-group">
           <fieldset>
@@ -80,18 +81,22 @@ Task list - Round 1
               <label for="radio-1">Write a statement online</label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-3" type="radio" name="radio-group" value="Upload it">
-              <label for="radio-3">Upload letters, documents or photos</label>
+              <input id="radio-2" type="radio" name="radio-group" value="Upload it">
+              <label for="radio-2">Upload letters, documents or photos</label>
+            </div>
+                        <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="Post it">
+              <label for="radio-3">Post evidence</label>
             </div>
           </fieldset>
         </div>
         <div class="form-group">
           <!-- <a href="/evidence-statement" class="button">Continue</a> -->
           <input class="button" type="submit" value="Continue">
+        </form>
           <br/>
           <br/>
-
-          <details>
+         <!-- <details>
             <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
             <h2 class="heading-medium">
               Posting evidence to the tribunal
@@ -106,11 +111,9 @@ Task list - Round 1
             B16 6FR</p>
             <p><a href="#">Download and print address </a></p>
             <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
-          </details>
-       
+          </details> -->
         </div>
       </form>
-
         </div>
 
         <!-- Tab 3 -->

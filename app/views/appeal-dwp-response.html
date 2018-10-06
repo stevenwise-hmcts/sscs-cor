@@ -16,14 +16,12 @@ Task list - Round 1
       </div>
       <div class="divider"></div>
       <br/>
-
           <div class="js-tabs"> <!-- JS will add .tabs class -->
             <ul class="list list-bullet">
               <li><a class="tabs__link" href="#actions">Actions</a></li>
               <li><a class="tabs__link" href="#evidence">Provide evidence</a></li>
               <li><a class="tabs__link" href="#history">History</a></li>
             </ul>
-
             <!-- Tab 1 -->
             <div id="actions" class="tab-content">
               <h3 class="heading-medium">Your actions</h3>
@@ -42,11 +40,10 @@ Task list - Round 1
     {% endif %}
   </li>
           </ul>
-
         </div>
-
         <!-- Tab 2 -->
         <div id="evidence" class="tab-content">
+          <form action="/evidence-options" method="post" class="form">
           <h3 class="heading-medium">How do you want to provide additional evidence?</h3>
         <div class="form-group">
           <fieldset>
@@ -62,7 +59,7 @@ Task list - Round 1
               <label for="radio-2">Upload letters, documents or photos</label>
             </div>
                         <div class="multiple-choice">
-              <input id="radio-3" type="radio" name="radio-group" value="Upload it">
+              <input id="radio-3" type="radio" name="radio-group" value="Post it">
               <label for="radio-3">Post evidence</label>
             </div>
           </fieldset>
@@ -70,9 +67,9 @@ Task list - Round 1
         <div class="form-group">
           <!-- <a href="/evidence-statement" class="button">Continue</a> -->
           <input class="button" type="submit" value="Continue">
+        </form>
           <br/>
           <br/>
-
          <!-- <details>
             <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
             <h2 class="heading-medium">
@@ -89,22 +86,13 @@ Task list - Round 1
             <p><a href="#">Download and print address </a></p>
             <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
           </details> -->
-       
         </div>
       </form>
-
         </div>
-
         <!-- Tab 3 -->
         <div id="history" class="tab-content">
-
           <h2 class="heading-medium">History of your appeal</h2>
-
-
-
           <table>
-
-     
             <tr>
               <td><a href="evidence-dwp-response">DWP response to your appeal received</a></td>
               <td class="date">00 Month 2018</td>
@@ -118,11 +106,6 @@ Task list - Round 1
         <br/><br/>
         <img src="/public/images/download_document_icon.png" width="50px" height="45px">
         <a href="#" class="follow">Download all documents relating to your appeal (PDF, 287kb)</a>
-
-
-
-
       </div>
-
     </main>
     {% endblock %}

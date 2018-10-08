@@ -56,9 +56,6 @@ margin-top: 20px;
 @include button ($grey-3);
 @include box-sizing (border-box);
 vertical-align: top;
-margin-left: 30px;
-
-
 
 
 @include media (mobile) {
@@ -72,6 +69,30 @@ text-align: center;
 border: 0;
 padding: 0;
 }
+
+
+
+// Save for later button
+
+.save-for-later {
+@include button ($grey-3);
+@include box-sizing (border-box);
+vertical-align: top;
+margin-left: 30px;
+
+
+@include media (mobile) {
+width: 100%;
+text-align: center;
+}
+}
+
+// Fix unwanted button padding in Firefox
+.button::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+
 
 .button:focus {
 outline: 3px solid $focus-colour;

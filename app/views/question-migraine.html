@@ -107,12 +107,16 @@ Question - Migraine
 
       <div class="form-group">
         {% if data['migraineCompletedOrDraft'] !== 'completed' %}
+        <div style=" padding-bottom: 20px;">
         <a class="button" href="/question-migraine-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
         <!--<a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>-->
-             <input class="button-secondary" type="submit" value="Save for later"> 
+             <input class="save-for-later" type="submit" value="Save for later"> 
 
         {% endif %}
       </form>
+      <br/><br/>
+              {% include "includes/help-contact.html" %}
+
     </div>
   </div>
 </main>

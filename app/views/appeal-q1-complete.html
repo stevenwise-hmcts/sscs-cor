@@ -53,6 +53,18 @@ Task list - Round 1
                 <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
                 {% endif %}
               </li>
+
+                            <!-- DWP response 
+    <li class="task-list-item">
+     <a class="task-name" href="question-dwp-response" aria-describedby="dwp-response">
+      Do you have any comments on DWP’s response? 
+    </a>
+    {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
+    <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+    {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
+    <a href="question-dwp-response"><strong class="task-draft">Draft</strong></a>
+    {% endif %}
+  </li> -->
               <!-- migraine -->
               <li class="task-list-item">
                <a class="task-name" href="/question-migraine" aria-describedby="migraine-respond">
@@ -63,7 +75,7 @@ Task list - Round 1
               {% elif data['migraineCompletedOrDraft'] === 'draft' %}
               <a href="/question-migraine"><strong class="task-draft">Draft</strong></a>
               {% endif %}
-            </li>
+            </li>-->
           </ul>
 
         </div>

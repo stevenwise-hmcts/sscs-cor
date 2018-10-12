@@ -46,7 +46,19 @@ Your questions - Appeal a PIP benefit
         <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
         {% endif %}
       </li>
- <!-- DWP response -->
+
+            <!-- migraine-->
+      <li class="task-list-item">
+       <a class="task-name" href="/mvp/question-migraine" aria-describedby="migraine-respond">
+        Tell us about your migraines 
+      </a>
+      {% if data['migraineCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-migraine"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li> 
+ <!-- DWP response 
     <li class="task-list-item">
      <a class="task-name" href="/mvp/question-dwp-response" aria-describedby="dwp-response">
       Any comments on DWP’s response? 
@@ -56,7 +68,7 @@ Your questions - Appeal a PIP benefit
     {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
     <a href="/mvp/question-dwp-response"><strong class="task-draft">Draft</strong></a>
     {% endif %}
-  </li>
+  </li>-->
 
     <!-- Medical records 
 

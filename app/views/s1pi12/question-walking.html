@@ -7,8 +7,8 @@ Question - Walking
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="appeal-q1">Back to Your PIP benefit appeal</a>
-      <form class="form" action="/question-walking" method="POST">
+      <a id="back-to-tasks" class="link-back" href="/s1pi12/appeal-q1">Back to Your PIP benefit appeal</a>
+      <form class="form" action="/s1pi12/question-walking" method="POST">
         <fieldset class="form-group">
           <legend>
             <h1 class="heading-large">
@@ -170,7 +170,7 @@ Question - Walking
         
           {% if data['walkingCompletedOrDraft'] !== 'completed' %}
           <div style="padding-top: 80px; padding-bottom: 20px;">
-          <a class="button" href="/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
+          <a class="button" href="/s1pi12/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
             <input class="save-for-later" type="submit" value="Save for later"> 
 
           {% endif %}

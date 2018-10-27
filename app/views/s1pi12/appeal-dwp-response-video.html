@@ -35,13 +35,13 @@ Task list - Round 1
               <ul class="task-list-items">
                  <!-- DWP response -->
     <li class="task-list-item">
-     <a class="task-name" href="question-dwp-response" aria-describedby="dwp-response">
+     <a class="task-name" href="/s1pi12/question-dwp-response" aria-describedby="dwp-response">
       Any comments on DWP’s response? 
     </a>
     {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
     <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
     {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
-    <a href="question-dwp-response"><strong class="task-draft">Draft</strong></a>
+    <a href="/s1pi12/question-dwp-response"><strong class="task-draft">Draft</strong></a>
     {% endif %}
   </li>
           </ul>
@@ -50,7 +50,7 @@ Task list - Round 1
 
         <!-- Tab 2 -->
         <div id="evidence" class="tab-content">
-          <form action="/evidence-options" method="post" class="form">
+          <form action="/s1pi12/evidence-options" method="post" class="form">
           <h3 class="heading-medium">How do you want to provide additional evidence?</h3>
         <div class="form-group">
           <fieldset>

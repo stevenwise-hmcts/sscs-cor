@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Question - Interacting - Upload1
+Question - Interacting
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-     <a id="back-to-tasks" class="link-back" href="/appeal-q1">Back to Your PIP benefit appeal</a>
-     <form class="form" action="/question-interacting" method="POST">
+     <a id="back-to-tasks" class="link-back" href="/s1pi12//appeal-q1">Back to Your PIP benefit appeal</a>
+     <form class="form" action="/s1pi12/question-interacting" method="POST">
 
       <!-- Question and answer -->
       <fieldset class="form-group">
@@ -192,7 +192,7 @@ Question - Interacting - Upload1
 {% if data['interactingCompletedOrDraft'] !== 'completed' %}
 
 <div style="padding-top: 80px; padding-bottom: 40px;">
-  <a class="button" href="/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+  <a class="button" href="/s1pi12/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
             <input class="save-for-later" type="submit" value="Save for later"> 
 
   {% endif %}

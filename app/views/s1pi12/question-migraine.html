@@ -7,15 +7,15 @@ Question - Migraine
   {% include "includes/phase_banner_alpha.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a class="link-back" href="appeal-q1">Back to Your PIP benefit appeal</a>
-      <form class="form" action="/question-migraine" method="POST">
+      <a id="back-to-tasks" class="link-back" href="/s1pi12/appeal-q1">Back to Your PIP benefit appeal</a>
+      <form class="form" action="/s1pi12/question-migraine" method="POST">
         <fieldset class="form-group">
           <legend>
             <h1 class="heading-large">
-             Tell us about your migraines 
+             Tell us about your migraines...
            </h1>
            <p class="body-text">
-           You said you have difficulties caused by migraines. </p>
+           You said you have difficulties caused by migraines... </p>
            <p>During 2017, can you tell us: </p>
            <ul class="list list-bullet">
             <li>how often you had migraines </li>
@@ -108,8 +108,8 @@ Question - Migraine
       <div class="form-group">
         {% if data['migraineCompletedOrDraft'] !== 'completed' %}
         <div style=" padding-bottom: 20px;">
-        <a class="button" href="/question-migraine-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
-        <!--<a class="button" href="/task-list?migraineCompletedOrDraft=completed" type="submit" value="Submit answer">Submit answer</a>-->
+        <a class="button" href="/s1pi12/question-migraine-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
+        
              <input class="save-for-later" type="submit" value="Save for later"> 
 
         {% endif %}

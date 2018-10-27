@@ -27,7 +27,7 @@ router.get('/', function (req, res) {
 
 router.get('/s1pi12/evidence-options', function (req, res) {
 	console.log(req.query);
-	res.render('/s1pi12/evidence-options');
+	res.render('s1pi12/evidence-options');
 })
 
 router.post('/s1pi12/evidence-options', function (req, res) {
@@ -42,9 +42,23 @@ router.post('/s1pi12/evidence-options', function (req, res) {
 
 })
 
-router.get('/s1pi12/task-list', function (req, res) {
-    res.render('s1pi12/task-list');
+router.get('/task-list', function (req, res) {
+    res.render('task-list');
 });
+
+
+
+// Question - DWP response
+
+router.get('/s1pi12/question-dwp-response', function (req, res) {
+	res.render('s1pi12/question-dwp-response');
+})
+
+router.post('/s1pi12/question-dwp-response', function (req, res) {
+	res.redirect('/s1pi12/appeal-dwp-response?dwpresponseCompletedOrDraft=draft');
+});
+
+
 
 // Question - Walking
 
@@ -53,7 +67,7 @@ router.get('/s1pi12/question-walking', function (req, res) {
 })
 
 router.post('/s1pi12/question-walking', function (req, res) {
-	res.redirect('/s1pi12/task-list?walkingCompletedOrDraft=draft');
+	res.redirect('/s1pi12/appeal-q1?walkingCompletedOrDraft=draft');
 });
 
 // Question - interacting
@@ -85,7 +99,7 @@ router.get('/s1pi12/question-interacting', function (req, res) {
 })
 
 router.post('/s1pi12/question-interacting', function (req, res) {
-	res.redirect('/s1pi12/task-list?interactingCompletedOrDraft=draft');
+	res.redirect('/s1pi12/appeal-q1?interactingCompletedOrDraft=draft');
 });
 
 router.post('/s1pi12/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
@@ -110,19 +124,7 @@ router.get('/s1pi12/question-migraine', function (req, res) {
 })
 
 router.post('/s1pi12/question-migraine', function (req, res) {
-	res.redirect('/s1pi12/task-list-extend?migraineCompletedOrDraft=draft');
-});
-
-
-
-// Question - DWP response
-
-router.get('/s1pi12/question-dwp-response', function (req, res) {
-	res.render('s1pi12/question-dwp-response');
-})
-
-router.post('/s1pi12/question-dwp-response', function (req, res) {
-	res.redirect('/s1pi12/task-list?dwpresponseCompletedOrDraft=draft');
+	res.redirect('/s1pi12/appeal-q1-extend?migraineCompletedOrDraft=draft');
 });
 
 
@@ -133,7 +135,7 @@ router.get('/s1pi12/question-mobility', function (req, res) {
 })
 
 router.post('/s1pi12/question-mobility', function (req, res) {
-	res.redirect('/s1pi12/task-list-r2?mobilityCompletedOrDraft=draft');
+	res.redirect('/s1pi12/appeal-q2?mobilityCompletedOrDraft=draft');
 });
 
 
@@ -159,12 +161,12 @@ router.post('/s1pi12/question-medical-records', function (req, res) {
 
 // Question - Medical records - Round 2
 
-router.get('/medical-records-yes', function (req, res) {
+router.get('/s1pi12/medical-records-yes', function (req, res) {
 	res.render('s1pi12/medical-records-yes');
 })
 
 router.post('/s1pi12/medical-records-yes', function (req, res) {
-	res.redirect('/s1pi12/task-list-r2?medicalCompletedOrDraft=draft');
+	res.redirect('s1pi12/task-list-r2?medicalCompletedOrDraft=draft');
 });
 
 
@@ -180,7 +182,6 @@ router.get('/s1pi12/question-interacting-upload', function (req, res) {
 
 router.get('/s1pi12/extend-are-sure', function (req, res) {
 	console.log(req.query);
-	console.log('s1pi12');
 	res.render('s1pi12/extend-are-sure');
 })
 
@@ -223,7 +224,7 @@ router.get('/s1pi12/extend-are-sure3', function (req, res) {
 router.post('/s1pi12/extend-are-sure3', function (req, res) {
 
 	if (req.body['radio-group'] === 'Yes') {
-		res.redirect('/s1pi12/extend-longer3')
+		res.redirect('/s1pi12/extend-longer2')
 	} else if (req.body['radio-group'] === 'No') {
 		res.redirect('/s1pi12/extend-no')
 }
@@ -298,7 +299,7 @@ router.get('/s1pi12/hearing-confirm', function (req, res) {
 router.post('/s1pi12/hearing-confirm', function (req, res) {
 
 	if (req.body['radio-group'] === 'yes') {
-		res.redirect('/hearing-explain-why')
+		res.redirect('/s1pi12/hearing-explain-why')
 	} else if (req.body['radio-group'] === 'no') {
 		res.redirect('/s1pi12/decision-view')
 	}

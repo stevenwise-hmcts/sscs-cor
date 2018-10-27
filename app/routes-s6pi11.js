@@ -120,7 +120,7 @@ router.post('/s6pi11/evidence-upload-interact', upload.single('fileUpload'), fun
 // Question - Migraine
 
 router.get('/s6pi11/question-migraine', function (req, res) {
-	res.render('question-migraine');
+	res.render('s6pi11/question-migraine');
 })
 
 router.post('/s6pi11/question-migraine', function (req, res) {

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="">Back to Your PIP benefit appeal</a>
+      <form class="form">
+        <legend>
+          <h1 class="heading-large">
+            Upload additional evidence
+          </h1>
+          <p>You can upload letters, documents or photos. For example, you could take a photo of a letter from your doctor and upload it. If you do take a photo, make sure the letter or document is on a flat surface and the photo is taken from above. </p>
+          <p>Useful evidence describes or shows how your condition affects your life.<br/><a href="about-evidence">Read more about what evidence the tribunal finds useful</a></p>
+          <!--<a href="about-evidence">Read more about what evidence the tribunal finds useful</a>--></p>
+        </legend>
+        <br/>
+        <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly describe what you’re uploading and why</span>
+        </label>
+        <textarea class="form-control autoExpand form-control-3-4" id="textarea"  rows='4' data-min-rows='4' width="100%" ></textarea>
+        <br/>
+        <div class="dropzone" tabindex="0">
+          <form  action="/file-upload" id="dropzone" data-js="drag-and-drop">
+            <div class="dz-message">          
+                
+              <div class="dz-message-text"><span class="button-secondary">Choose your files</div>
+              </div>    
+           <br/><br/>
+         
+          <table>
+            <thead>
+              <tr>
+                <th>Uploaded files</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No files uploaded</td>
+              </tr>
+            </tbody>
+          </table>
+          
+           </form>
+            </div>
+          <!--
+          <details>
+            <summary><span class="summary">Switch to another device to upload</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>To upload using another device like your mobile phone, got to: </p>
+              <p><a href="">http://evidence.upload@hmcts.net</a></p>
+              <p>You will be asked to enter this code</p>
+              <p class="bold-small">730506</p>
+            </div>
+          </details>
+        -->
+   
+        <div class="form-group">
+          <a href="evidence-confirm" class="button">Submit evidence to the tribunal</a>
+          <!-- <input class="button" type="submit" value="Submit statement"> -->
+        </div>
+      
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

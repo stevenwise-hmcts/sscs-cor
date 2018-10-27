@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Migraine - Confirm
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-medium">
+       You will not be able to change your answer after you submit it. 
+      </h1>
+     <a class="button" href="questions-dwp-response-submitted-confirm?dwpresponseCompletedOrDraft=completed" type="submit" value="Submit answer">Confirm</a><br/><br/>
+      <a href="/s6pi11/question-dwp-response" style="padding-left:0px;"> Return to question</a>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}
+
+

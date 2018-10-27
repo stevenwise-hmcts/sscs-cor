@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block page_title %}
+View - video
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+
+      <h2 class="heading-small">Tribunal's view on your appeal</h2>
+
+      <video controls="controls" width="600" 
+      name="Video Name" src="/public/images/movies/pre-view.mov"></video>
+      <br/><br/>
+
+
+    <a  href="appeal-view" class="button">Continue</a>
+  </div>
+
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+    <a class="link-back" href="">Back to Your PIP benefit appeal</a>
+      <h1 class="heading-large">
+        Posting evidence to the tribunal
+      </h1>
+      <p class="body-text">Post evidence to the address below. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+      <p>Birmingham ASC<br/>
+        HM Courts and Tribunals Service<br/>
+        Administrative Support Centre (ASC)<br/>
+        P O Box 14620<br/>
+        Birmingham<br/>
+      B16 6FR</p>
+     <p>You'll need to print an <a href="/public/images/evidence-cover-sheet.pdf">evidence cover sheet</a> and send it with your evidence.</p>
+
+    <br/>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

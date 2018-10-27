@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Enter your details - HMCTS access
+{% endblock %}
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+      <div class="grid-row">
+
+            <div class="column-full col0">
+                <h1 class="heading-large">Create an account or sign in</h1>
+                </div>
+          <div class="column-half col1">
+            <h1 class="heading-medium">
+             Create an account
+           </h1>
+           
+              <form method="get" name="registration" action="/verify-email" id="registration">
+                
+                <div class="form-group ">
+                  <label class="form-label" for="email">
+                    First name
+                  </label>
+                  <input name="email" id="email" class="form-control form-control-3-4" >
+                </div>
+               
+                <div class="form-group ">
+                  <label class="form-label" for="email">
+                    Last name
+                  </label>
+                  <input name="email" id="email" class="form-control form-control-3-4" >
+                </div>
+                <div class="form-group ">
+                  <label class="form-label bold" for="email">
+                    Email address
+                  </label>
+                  <input  name="idam_email_address" id="idam_email_address" class="form-control form-control-3-4" value="">
+                </div>
+                <p>Read our <a href="#">privacy policy</a> and <a href="#">terms and conditions</a>.</p>
+                <fieldset>
+                 <div class="form-group">
+                   <a class="button" href="idam-verify-email">Continue</a>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="column-half col2">
+            <p class="form-title heading-medium">Sign in</p>
+            <p><a href="/mvp/sign-in-1" role="button">Sign in to your account.</a></p>
+            <p></p>
+          </div>
+        </div>
+
+
+</main>
+
+{% endblock %}

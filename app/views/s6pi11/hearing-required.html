@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing required
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/s6pi11/task-list">Back</a>
+      <h1 class="heading-large">
+       Do you want to attend a hearing?  
+      </h1>
+      <p class="body-text">You can explain your appeal in person if you attend a hearing.</p>
+
+<p>Support can be arranged such as an interpreter, hearing loop or an accessible tribunal room. You can also brings friends and family. 
+</p>
+      <form action="/hearing-required" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="Yes I want a hearing">
+              <label for="radio-1">Yes, I want to attend a hearing</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="No I don’t want a hearing">
+              <label for="radio-2">No, I don’t want to attend a hearing</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <!-- <a href="hearing-required-why-not-attending" class="button">Continue</a>  -->
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

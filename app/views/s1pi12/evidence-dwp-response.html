@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Evidence - statement submitted
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+         <a class="link-back" href="">Back to the history of your appeal</a>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+     
+      <h1 class="heading-large">
+        The DWP's response to your appeal
+      </h1>
+
+      <p><span class="bold-small">Received:</span> 10 October 2018</p>
+      <br/>
+       <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">Download DWP's response to your appeal (PDF, 150kb)</a>
+<br/><br/>
+<p>The DWP's response to your appeal contains:</p>
+<ul class="list list-bullet">
+  <li> Your PIP benefit claim form </li>
+<li>Healthcare professional’s report after assessing you</li>
+<li>Decision on your benefit entitlement</li>
+<li>Your request for mandatory reconsideration </li>
+<li>Mandatory Reconsideration Notice (MRN)</li>
+<li>DWP statement to the tribunal </li>
+<li>Any evidence you have provided to DWP</li>
+</li>
+</ul>
+<br/>
+      </div>
+    </div>
+{% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

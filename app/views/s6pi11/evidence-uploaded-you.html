@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Evidence - statement submitted
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+         <a id="back-to-tasks" class="link-back" href="">Back to the history of your appeal</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+     
+      <h1 class="heading-large">
+        Evidence received from you
+      </h1>
+
+      <p><span class="bold-small">Received:</span> 00 Month 2018</p>
+      <br/>
+       <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">consultants-letter.pdf (125kb)</a>
+<br/><br/>
+<img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">careworker-letter.pdf (108kb)</a>
+
+<br/><br/>
+<img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">disabilty-aids.mov (1m 32s, 280mb)</a>
+
+
+      </div>
+    </div>
+{% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

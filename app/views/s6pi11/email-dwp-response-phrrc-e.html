@@ -1,0 +1,48 @@
+{% extends "govuk_template_unbranded.html" %}
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block page_title %}
+DWP response (PHRRC-E)
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal: DWP has responded<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipbenefitappeals@hmcts.net)<br/>
+		<!--<strong style="font-weight: bold;">Date: </strong>[Date]<br/>-->
+	</p>
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png" alt="GOV.UK"></div>
+		<div class="email-margin">
+			<div style="padding: 60px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png" alt="Her Majesty's Court and Tribunal Service logo"></div>
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
+			<p>DWP has responded to your PIP benefit appeal. They should have sent you a copy of their response in the post.
+
+<h2 class="heading-medium">What happens next</h2>
+<p>A tribunal panel has been assigned to your appeal. The panel is made up of a  judge, a doctor and a disability expert. They are separate to DWP. They will review your appeal and try to resolve it online.  </p>
+
+	<p>
+First you need to create an account. This is so you can access your appeal and provide information to the tribunal securely. </p>
+
+<p><a href="idam-create-account.html">https://hmcts-access.service.gov.uk/create-account</a></p> 
+
+<p>You will then be able to sign in and view a video which explains the online appeal process. 
+</p>
+
+
+ 
+			<p>PIP Benefit Appeals<br/>
+				HM Courts & Tribunals Service<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			
+		</div>
+		
+    
+	</main>
+	{% endblock %}

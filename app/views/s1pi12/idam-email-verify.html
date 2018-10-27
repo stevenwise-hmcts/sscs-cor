@@ -1,0 +1,27 @@
+{% extends "govuk_template_unbranded.html" %}
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block page_title %}
+Email - HMCTS account activation
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+	<p style="padding-top: 30px;"><strong class="bold-small">From:</strong> HM Courts and Tribunals Registrations<br/>
+	<strong class="bold-small">Subject:</strong> Finish creating your account</p>
+	<div class="email-border">
+		<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png" alt="GOV.UK"></div>
+		<div class="email-margin">
+			<br/><br/><br/>
+			<p>Dear Manish Sharma</p>
+			<p>Click on the link to finish creating your account:</p>
+			<!--<p><a href="idam-create-password">
+				https://hmcts-access.service.gov.uk/activate?jwt=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxcjhhYjZwMmZqcHVnZTZubm1tYTg2cHRrbiIsInN1YiI6IjEyMTYyMyIsImlhdCI6MTUzNjMzNjAyMCwiZXhwIjoxNTM4MDY0MDIwLCJkYXRhIjoiY2l0aXplbixjbGFpbWFudCxjaXRpemVuLWxvYTEsY2xhaW1hbnQtbG9hMSIsInR5cGUiOiJBQ1RJVkFURSIsImlkIjoiMTIxNjIzIiwiZm9yZW5hbWUiOiJTdGV2ZW4iLCJzdXJuYW1lIjoiV2lzZSIsImRlZmF1bHQtc2VydmljZSI6ImNtYyIsImxvYSI6MSwiZGVmYXVsdC11cmwiOiJodHRwczovL3d3dy5tb25leWNsYWltcy5zZXJ2aWNlLmdvdi51ay9yZWNlaXZlciIsImdyb3VwIjoiY2l0aXplbnMifQ.RSodzT4lKQ_CZb5L2LguszDb2evhNjQskHM1M8ijlcY</a></p>-->
+				<p><a href="idam-create-password">
+				https://hmcts-access.service.gov.uk/activate?jwt=eyJhbGciOiJIUzI1NiJ9.<br/>eyJqdGkiOiIxcjhhYjZwMmZqcHVnZTZubm1tYTg2cHRrbiIsInN1YiI6IjEyMT<br/>YyMyIsImlhdCI6MTUzNjMzNjAyMCwiZXhwIjoxNTM4MDY0MDIwLCJkYX<br/>RhIjoiY2l0aXplbixjbGFpbWFudCxjaXRpemVuLWxvYTEsY2xhaW1hbnQtbG<br/>9hMSIsInR5cGUiOiJBQ1RJVkFURSIsImlkIjoiMTIxNjIzIiwiZm9yZW5hbWU<br/>iOiJTdGV2ZW4iLCJzdXJuYW1lIjoiV2lzZSIsImRlZmF1bHQtc2VydmljZSI6Im<br/>NtYyIsImxvYSI6MSwiZGVmYXVsdC11cmwiOiJodHRwczovL3d3dy5tb25l<br/>eWNsYWltcy5zZXJ2aWNlLmdvdi51ay9yZWNlaXZlciIsImdyb3VwIjoiY2l0<br/>aXplbnMifQ.RSodzT4lKQ_CZb5L2LguszDb2evhNjQskHM1M8ijlcY</a></p>
+			<p>  <h3 class="heading-medium">Get help</h3>
+				<p style="margin:0 0 15px;font-size:19px; ">Contact us if you need help using an HMCTS service: <br> <a href="https://idam-hmcts.herokuapp.com/contact-us?type=generic#">https://hmcts-access.service.gov.uk/contact-us</a></p>
+				<p  class="dynamic-content default-content" style="font-size:19px;">HM Courts & Tribunals Service</p>
+				<p  class="dynamic-content default-content" style="font-size:19px; ;">This is an automated message, please don't reply to this email.</p>
+			</main>
+			{% endblock %}

@@ -242,7 +242,7 @@ router.get('/s1pi12/decision-view', function (req, res) {
 router.post('/s1pi12/decision-view', function (req, res) {
 
 	if (req.body['radio-group'] === 'accept the decision') {
-		res.redirect('/s1pi12/decision-view-accepted')
+		res.redirect('/s1pi12/decision-view-confirm')
 	} else if (req.body['radio-group'] === 'want a hearing') {
 		res.redirect('/s1pi12/hearing-confirm')
 	}

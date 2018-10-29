@@ -298,7 +298,7 @@ router.get('/mvp/hearing-confirm', function (req, res) {
 router.post('/mvp/hearing-confirm', function (req, res) {
 
 	if (req.body['radio-group'] === 'yes') {
-		res.redirect('/hearing-explain-why')
+		res.redirect('/mvp/hearing-explain-why')
 	} else if (req.body['radio-group'] === 'no') {
 		res.redirect('/mvp/decision-view')
 	}

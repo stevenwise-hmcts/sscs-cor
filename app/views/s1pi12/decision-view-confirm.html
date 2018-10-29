@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Confirm accept view
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        You will not be able to change your answer after you submit it  
+      </h1>
+
+
+<a class="button" href="/s1pi12/decision-view-accepted" type="submit" value="Submit answer">Confirm</a><br/><br/>
+      <a href="decision-view" style="padding-left:0px;">Back to the tribunals view</a>
+      <br/><br/>
+ </div>
+  </div>
+
+  {% include "includes/help-contact.html" %}
+  
+
+ </main>
+ {% endblock %}

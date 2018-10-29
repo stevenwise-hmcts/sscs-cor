@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Decision not improving
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/s5pi11/task-list">Back</a>
+      <h1 class="heading-large">
+        Your decision
+      </h1>
+      <p class="body-text">Based on the established facts of your appeal, it’s our decision that you are eligible for Personal Independence Payment (PIP) at the following rate: </p>
+      <ul class="list list-bullet">
+        <li>Daily living - Standard rate</li>
+        <li>Mobillity - No award </li>
+      </ul>
+      <p>Back Payments are due at the above rate from 3 March 2017 </p>
+      <h2 class="heading-medium">The reasons for our decision </h2>
+      <p>We reached the decision through considering the evidence submitted in relation to your back pain. Specifically the letter your doctor wrote about the painkillers he has prescribed you for your back pain. </p>
+      <p>While we acknowledge you suffer pain doing some activities, it’s our view that it does not hinder your ability to the degree necessary to change your entitlement to the enhanced rate of daily living. Likewise, we saw no evidence that you suffer pain while walking or that you avoid journeys so it’s our view you do not score any points in the Mobility component. </p>
+      <a href="#"> See full list of descriptors and points </a>
+      <h2 class="heading-medium">What happens next </h2>
+      <p>You can either accept the decision or if you feel that this decision is wrong, then you can request a hearing where you can explain your condition to the tribunal. To be granted a hearing you will need to show what additional information you would provide. </p>
+      <form>
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-medium">Do you accept the tribunal’s decision?</h1>
+            </legend>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="I accept the decision">
+              <label for="radio-1">I accept the decision</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="I want to request a hearing">
+              <label for="radio-2">I want to request a hearing</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <p>You have to respond to this question by [date + 2 weeks] </p>
+          <a href="hearing-explain-why" class="button">Continue</a>
+          <!-- <input class="button" type="submit" value="Submit answer"> -->
+        </div>
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

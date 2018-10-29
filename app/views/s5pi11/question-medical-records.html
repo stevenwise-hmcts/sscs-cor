@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Medical records
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/s5pi11/task-list-r2">Back to questions</a>
+      <fieldset class="form-group">
+        <legend>
+          <h1 class="heading-large">
+            Permission to access your medical information
+          </h1>
+          <p class="body-text">
+          The tribunal would like to contact your doctor and request access to your medical records between March 2016 and March 2017. This is to help them make a decision on your benefit appeal. </p>
+          <p class="bold-medium">Do you give permission to the tribunal to do this?</p>
+          <form action="/question-medical-records" method="post" class="form">
+            <div class="form-group">
+              <fieldset>
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Yes I give permission">
+                  <label for="radio-1">Yes, I give permission</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="radio-group" value="No I don’t give permission">
+                  <label for="radio-2">No, I don’t give permission</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-group">
+              <!-- <a href="hearing-required-why-not-attending" class="button">Continue</a>  -->
+              <input class="button" type="submit" value="Continue">
+            </div>
+          </form>
+          <br/>
+        </div>
+      </div>
+    </div>
+    {% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

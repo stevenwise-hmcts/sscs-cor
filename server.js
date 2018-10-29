@@ -6,7 +6,7 @@ var session = require('express-session')
 var nunjucks = require('nunjucks')
 var routes = require('./app/routes.js')
 var routesMvp = require('./app/routes-mvp.js')
-var routess6pi11 = require('./app/routes-s6pi11.js')
+var routess5pi11 = require('./app/routes-s5pi11.js')
 var routess1pi12 = require('./app/routes-s1pi12.js')
 
 var documentationRoutes = require('./docs/documentation_routes.js')
@@ -229,7 +229,7 @@ if (typeof (routes) !== 'function') {
 } else {
   app.use('/', routes)
   app.use('/', routesMvp)
-  app.use('/', routess6pi11)
+  app.use('/', routess5pi11)
   app.use('/', routess1pi12)
 }
 

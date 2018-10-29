@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing request approved denied
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/s5pi11/task-list">Back</a>
+      <h1 class="heading-large">
+        The tribunal’s response 
+      </h1>
+      <p class="body-text">
+      We have reviewed your reasons for not accepting the tribunal’s decision.</p> 
+      <p>You said you feel the decision is wrong because your leg is in pain and that you can’t walk. You also said the DWP assessor did not listen to you in the assessment.  </p>
+      <p>The tribunal have already considered this information as part of your appeal. It was included in your reasons for appealing, in your appeal form. We took that into account when making our decision. </p>
+      <p>For that reason, it is our view that a hearing will not uncover any new information and would therefore not be useful. Our original decision still stands. </p>
+      <a href="decision-not-improving-final" class="button">Continue</a>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

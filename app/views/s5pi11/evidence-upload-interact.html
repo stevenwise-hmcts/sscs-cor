@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Upload
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back to Your PIP benefit appeal</a>
+      <form id="buldUploadForm" class="form" action="/evidence-upload-interact" method="POST" enctype="multipart/form-data">
+        <h1 class="heading-large">
+          Upload evidence
+        </h1>
+        <p>Useful evidence helps prove what you have said in your answer. For example,  you could take a picture of a letter from your doctor and upload it. </p>
+
+<p>If the file is on your mobile phone, you can sign in and upload it from there.  </p>
+        <label class="heading-small" for="upload-description">Describe the evidence<span class="form-hint">Briefly describe what you are uploading and why it’s relevant </span>
+        </label>
+        <textarea class="form-control form-control-3-4 " name="describeTheEvidence" id="describeTheEvidence"  rows='3'>{{ data['describeTheEvidence'] }}</textarea>
+        <br/>
+        <div class="dropzone" id="upload-widget" tabindex="0">
+          <div class="dz-message">
+            <div class="dz-message-icon"></div>      
+            <div class="dz-message-text">Drag and drop files here <br>or<br> <span class="button-secondary">Choose a file</div>
+            </div>    
+            <div id="something" class="form-group">
+              <label class="form-label" for="file-input">Upload a file</label>
+              <input name="fileUploaded" type="file" id="file-input" multiple>
+            </div>
+          </div>
+          <h2 class="heading-small" id="uploads">Uploaded files</h2>
+          <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+            <div class="c-uploads-item">
+              <p class="c-uploads-empty">No files uploaded</p>
+            </div>
+          </div>
+          <!--
+          <details>
+            <summary><span class="summary">Switch to another device to upload</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>To upload using another device like your mobile phone, got to: </p>
+              <p><a href="">http://evidence.upload@hmcts.net</a></p>
+              <p>You will be asked to enter this code</p>
+              <p class="bold-small">730506</p>
+            </div>
+          </details>
+        -->
+        <br/>
+        <div class="form-group">
+          <a href="question-interacting-upload" class="button">Add evidence to question</a>
+         <!-- <input id="submitAll" name="fileUpload" class="button" type="submit" value="Add evidence to question">-->
+        </div>
+        <details>
+          <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
+          <p class="body-text">Post evidence to the address below.</p>
+          <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+          <p>Birmingham ASC<br/>
+            HM Courts and Tribunals Service<br/>
+            Administrative Support Centre (ASC)<br/>
+            P O Box 14620<br/>
+            Birmingham<br/>
+          B16 6FR</p>
+          <p><a href="#">Download and print address </a></p>
+          <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+        </details>
+        <br/>
+        <a id="back-to-tasks" class="link-back" href="/s5pi11/question-interacting">Back to question</a>
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

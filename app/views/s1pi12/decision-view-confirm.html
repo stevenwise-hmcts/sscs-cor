@@ -9,13 +9,34 @@ Confirm accept view
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        You will not be able to change your answer after you submit it  
+        Are you sure you want to accept the view?   
       </h1>
 
+<form action="decision-view-confirm" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <p>You will not be able to change your mind.</p>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="confirm accept the view">
+            <label for="radio-1">Yes, I want to accept the view </label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="back to view">
+            <label for="radio-2">No, I want to go back</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>If you need help deciding then you could talk to your representative or a friend or family member who knows about your condition. </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
 
-<a class="button" href="/s1pi12/decision-view-accepted" type="submit" value="Submit answer">Confirm</a><br/><br/>
-      <a href="decision-view" style="padding-left:0px;">Back to the tribunals view</a>
-      <br/><br/>
+
  </div>
   </div>
 
@@ -24,3 +45,11 @@ Confirm accept view
 
  </main>
  {% endblock %}
+
+
+
+ 
+ 
+
+
+

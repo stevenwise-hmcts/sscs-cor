@@ -250,6 +250,23 @@ router.post('/s1pi12/decision-view', function (req, res) {
 })
 
 
+// Confirm accept view
+
+router.get('/s1pi12/decision-view-confirm', function (req, res) {
+	console.log(req.query);
+	res.render('s1pi12/decision-view-confirm');
+})
+
+router.post('/s1pi12/decision-view', function (req, res) {
+
+	if (req.body['radio-group'] === 'confirm accept the view') {
+		res.redirect('/s1pi12/decision-view-accepted')
+	} else if (req.body['radio-group'] === 'back to view') {
+		res.redirect('/s1pi12/decision-view')
+	}
+
+})
+
 
 // Decision now or hearing
 
@@ -270,19 +287,19 @@ router.post('/s1pi12/decision-or-hearing', function (req, res) {
 
 
 
-// Decision now confirm
+// Decision view confirm
 
-router.get('/s1pi12/decision-now-confirm', function (req, res) {
+router.get('/s1pi12/decision-view-confirm', function (req, res) {
 	console.log(req.query);
-	res.render('s1pi12/decision-now-confirm');
+	res.render('s1pi12/decision-view-confirm');
 })
 
-router.post('/s1pi12/decision-now-confirm', function (req, res) {
+router.post('/s1pi12/decision-view-confirm', function (req, res) {
 
-	if (req.body['radio-group'] === 'yes') {
-		res.redirect('/s1pi12/decision-final')
-	} else if (req.body['radio-group'] === 'no') {
-		res.redirect('/s1pi12/decision-or-hearing')
+	if (req.body['radio-group'] === 'confirm accept the view') {
+		res.redirect('/s1pi12/decision-view-accepted')
+	} else if (req.body['radio-group'] === 'back to view') {
+		res.redirect('/s1pi12/decision-view')
 	}
 
 })

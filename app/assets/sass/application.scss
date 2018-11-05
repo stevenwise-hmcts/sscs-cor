@@ -10,6 +10,11 @@ $path: "/public/images/";
 @import 'patterns/check-your-answers';
 @import 'patterns/task-list';
 
+
+//Progress bar
+@import 'progress-bar/h-progress-bar';
+@import 'progress-bar/v-progress-bar';
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
@@ -153,6 +158,103 @@ padding:  0px 20px 30px 20px;
     margin-top: 40px;
     padding: 20px;    
     }
+
+
+.progress-bar {
+
+    &.one {
+      @include design-one;
+    }
+    &.four {
+      @include design-four;
+    }
+    &.seven {
+      @include design-seven;
+    }
+    &.ten {
+      @include design-ten;
+    }
+
+    @include wrap-progress-bar-text;
+  }
+
+  .progress-container {
+    height: 32px;
+    white-space: nowrap;
+    margin-top: 45px;
+    margin-bottom: 75px;
+    padding: 15px;
+
+    .ring {
+      border-radius: 50%;
+      border: 8px solid $grey-2;;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .leg {
+      width: calc((100% - 49px)/3);
+      height: 8px;
+      background-color: $grey-2;
+      margin: 12px -5px;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+    }
+
+    .leg.foot:after {
+      display: block;
+      content: " ";
+      background-color: $grey-2;
+      width: 8px;
+      height: 22px;
+      position: relative;
+      z-index: 1;
+      left: calc(100% - 8px);
+    }
+
+    .leg.active,
+    .leg.foot.active:after {
+      background-color: $button-colour;
+    }
+
+    .ring.active {
+      border: 8px solid $button-colour;
+    }
+
+    p {
+      position: absolute;
+      top: 30px;
+    }
+
+    .appeal-received {
+      left: -21px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .dwp-respond {
+      top: 26px;
+      font-size: 16px;
+      left: calc(100% - 60px);
+    }
+
+    .hearing-booked {
+      top: 26px;
+      font-size: 16px;
+      left: calc(100% - 70px);
+    }
+
+    .hearing {
+      font-weight: bold;
+      font-size: 16px;
+      left: calc(100% - 40px);
+    }
+  }
+
 
 
 
@@ -1074,3 +1176,5 @@ img { float: left;
     }
   }
 }
+
+

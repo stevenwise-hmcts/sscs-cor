@@ -44,39 +44,42 @@ Manage your appeal
         <h2 class="heading-medium">Questions from the tribunal</h2>
         <p>You need to respond by 7 November 2018. <span class="font-xsmall"><a href="/s1pi12/extend-are-sure">Extend the deadline</a></span></p>
         <ul class="task-list-items">
-          <!-- Interacting -->
-          <li class="task-list-item">
-           <a class="task-name" href="/s1pi12/question-interacting" aria-describedby="interacting-respond">
-            How do you interact with people?
-          </a>
-          {% if data['interactingCompletedOrDraft'] === 'completed' %}
-          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-          {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-          <a href="/ s1pi12/question-interacting"><strong class="task-draft">Draft</strong></a>
-          {% endif %}
-        </li>
-        <!-- Walking -->
-        <li class="task-list-item">
-          <a class="task-name" href="/s1pi12/question-walking" aria-describedby="walking-respond">
-            How do you walk to the doctors?
-          </a>
-          {% if data['walkingCompletedOrDraft'] === 'completed' %}
-          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-          {% elif data['walkingCompletedOrDraft'] === 'draft' %}
-          <a href="/s1pi12/question-walking"><strong class="task-draft">Draft</strong></a>
-          {% endif %}
-        </li>
-        <!-- migraine-->
-        <li class="task-list-item">
-         <a class="task-name" href="/s1pi12/question-migraine" aria-describedby="migraine-respond">
-          Tell us about your migraines 
-        </a>
-        {% if data['migraineCompletedOrDraft'] === 'completed' %}
-        <strong href="/s1pi12/question-migraine" class="task-completed" id="eligibility-respond">Completed</strong>
-        {% elif data['migraineCompletedOrDraft'] === 'draft' %}
-        <a href="/s1pi12/question-migraine"><strong class="task-draft">Draft</strong></a>
-        {% endif %}
-      </li> 
+               <!-- factory-->
+      <li class="task-list-item">
+       <a class="task-name" href="/s1pi12/question-factory" aria-describedby="factory-respond">
+        Your work in a factory? 
+      </a>
+      {% if data['factoryCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['factoryCompletedOrDraft'] === 'draft' %}
+      <a href="/s1pi12/question-factory"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li> 
+
+
+      <!-- journey -->
+      <li class="task-list-item">
+       <a class="task-name" href="/s1pi12/question-journey" aria-describedby="journey-respond">
+        Planning and following a journey?
+      </a>
+      {% if data['journeyCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['journeyCompletedOrDraft'] === 'draft' %}
+      <a href="/s1pi12/question-journey"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+    <!-- Walking -->
+    <li class="task-list-item">
+      <a class="task-name" href="/s1pi12/question-walking" aria-describedby="walking-respond">
+       Walking outside?
+      </a>
+      {% if data['walkingCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+      <a href="/s1pi12/question-walking"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+
 
   
  <!-- <details>

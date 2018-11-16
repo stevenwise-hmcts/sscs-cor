@@ -63,25 +63,25 @@ router.post('/s1pi12/question-dwp-response', function (req, res) {
 // Question - Walking
 
 router.get('/s1pi12/question-walking', function (req, res) {
-	res.render('s1pi12/question-walking');
+	res.render('mvp/question-walking');
 })
 
 router.post('/s1pi12/question-walking', function (req, res) {
-	res.redirect('/s1pi12/appeal-q1?walkingCompletedOrDraft=draft');
+	res.redirect('/s1pi12/task-list?walkingCompletedOrDraft=draft');
 });
 
-// Question - interacting
+// Question - journey
 
-router.get('/s1pi12/question-interacting-files', function (req, res) {
+router.get('/s1pi12/question-journey-files', function (req, res) {
     console.log('get files');
-    var files = req.session.data.interactingFileUploads || [];
+    var files = req.session.data.journeyFileUploads || [];
     res.send(files);
 });
 
-router.post('/s1pi12/delete-question-interacting-files', function (req, res) {
+router.post('/s1pi12/delete-question-journey-files', function (req, res) {
     console.log('delete file');
 	var fileName = req.body.name || req.body.originalname;
-    var fileList = req.session.data.interactingFileUploads;
+    var fileList = req.session.data.journeyFileUploads;
 
     fileList.forEach(file => {
 		if (file.originalname === fileName) {
@@ -89,32 +89,44 @@ router.post('/s1pi12/delete-question-interacting-files', function (req, res) {
 		}
     });
 
-    req.session.data.interactingFileUploads = fileList;
+    req.session.data.journeyFileUploads = fileList;
 
     res.status(200).send(fileList);
 });
 
-router.get('/s1pi12/question-interacting', function (req, res) {
-	res.render('s1pi12/question-interacting');
+router.get('/s1pi12/question-journey', function (req, res) {
+	res.render('mvp/question-journey');
 })
 
-router.post('/s1pi12/question-interacting', function (req, res) {
-	res.redirect('/s1pi12/appeal-q1?interactingCompletedOrDraft=draft');
+router.post('/s1pi12/question-journey', function (req, res) {
+	res.redirect('/s1pi12/task-list?journeyCompletedOrDraft=draft');
 });
 
 router.post('/s1pi12/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
     console.log('add file');
 	// Add file data to session
-    if (req.session.data.interactingFileUploads) {
-        req.session.data.interactingFileUploads.push(req.file)
+    if (req.session.data.journeyFileUploads) {
+        req.session.data.journeyFileUploads.push(req.file)
     } else {
-        req.session.data.interactingFileUploads = [req.file];
+        req.session.data.journeyFileUploads = [req.file];
     }
 
-    console.log(req.session.data.interactingFileUploads);
+    console.log(req.session.data.journeyFileUploads);
 
     res.send(req.file);
 });
+
+
+// Question - factory
+
+router.get('/s1pi12/question-factory', function (req, res) {
+	res.render('mvp/question-factory');
+})
+
+router.post('/s1pi12/question-factory', function (req, res) {
+	res.redirect('/s1pi12/task-list-extend?factoryCompletedOrDraft=draft');
+});
+
 
 
 // Question - Migraine

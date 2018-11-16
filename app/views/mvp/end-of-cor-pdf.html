@@ -65,9 +65,9 @@ The DWP healthcare professional noted that you occasionally walk to the GP’s s
 </ul>
 <p class="font-small">Issued: 10 October 2018</p>
 <div class="appellants-answer">
-  <h2 class="bold-medium">Answer</h2>
-  {% if data['textareawalking'] %}
-  <p>{{ data['textareawalking'] }}</p>
+  <h2 class="bold-small">Answer</h2>
+  {% if data['textareamedical'] %}
+  <p>{{ data['textareamedical'] }}</p>
   {% else %}
   <p>[Answer text goes here ]</p>
   <!--<table>
@@ -109,9 +109,9 @@ You said you avoid interacting with people if possible. We’d like to know more
 <p class="font-small">Issued: 10 October 2018</p>
 
 <div class="appellants-answer">
-  <h2 class="bold-medium">Answer</h2>
-  {% if data['textareawalking'] %}
-  <p>{{ data['textareawalking'] }}</p>
+  <h2 class="bold-small">Answer</h2>
+  {% if data['textareainteract'] %}
+  <p>{{ data['textareainteract'] }}</p>
   {% else %}
   <p>[Answer text goes here ]</p>
  <!-- <table>
@@ -151,9 +151,9 @@ You said in your previous answer that you use a walking stick. </p>
 <p class="font-small">Issued: 30 October 2018</p>
 
 <div class="appellants-answer">
-  <h2 class="bold-medium">Answer</h2>
-  {% if data['textareawalking'] %}
-  <p>{{ data['textareawalking'] }}</p>
+  <h2 class="bold-small">Answer</h2>
+  {% if data['textareamobility'] %}
+  <p>{{ data['textareamobility'] }}</p>
   {% else %}
   <p>[Answer text goes here ]</p>
   <!-- <table>
@@ -178,7 +178,14 @@ You said in your previous answer that you use a walking stick. </p>
   {% endif %}
   <br/>
   <p class="font-small">Submitted: 7 November 2018</p>
-</div>       
+</div>   
+
+<h2 class="heading-medium">
+  Hearing notes
+</h2> 
+<div class="appellants-answer">
+  [Text goes here]
+</div>   
 <br/><br/><br/>
 <span class="font-size: 12px">Mr Manish Sharma | SC242/16/03435</span>
 </div>

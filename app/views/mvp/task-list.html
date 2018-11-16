@@ -24,21 +24,34 @@ Your questions - Appeal a PIP benefit
     <h3 class="heading-small">Questions from the tribunal</h3>
     <p>You need to respond by 5 November 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
     <ul class="task-list-items">
-      <!-- Interacting -->
+      <!-- factory-->
       <li class="task-list-item">
-       <a class="task-name" href="/mvp/question-interacting" aria-describedby="interacting-respond">
-        How do you interact with people?
+       <a class="task-name" href="/mvp/question-factory" aria-describedby="factory-respond">
+        Your work in a factory? 
       </a>
-      {% if data['interactingCompletedOrDraft'] === 'completed' %}
+      {% if data['factoryCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-      <a href="/mvp/question-interacting"><strong class="task-draft">Draft</strong></a>
+      {% elif data['factoryCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-factory"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li> 
+
+
+      <!-- journey -->
+      <li class="task-list-item">
+       <a class="task-name" href="/mvp/question-journey" aria-describedby="journey-respond">
+        Planning and following a journey?
+      </a>
+      {% if data['journeyCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['journeyCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-journey"><strong class="task-draft">Draft</strong></a>
       {% endif %}
     </li>
     <!-- Walking -->
     <li class="task-list-item">
       <a class="task-name" href="/mvp/question-walking" aria-describedby="walking-respond">
-        How do you walk to the doctors?
+       Walking outside?
       </a>
       {% if data['walkingCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
@@ -46,17 +59,7 @@ Your questions - Appeal a PIP benefit
       <a href="/mvp/question-walking"><strong class="task-draft">Draft</strong></a>
       {% endif %}
     </li>
-      <!-- migraine-->
-      <li class="task-list-item">
-       <a class="task-name" href="/mvp/question-migraine" aria-describedby="migraine-respond">
-        Tell us about your migraines 
-      </a>
-      {% if data['migraineCompletedOrDraft'] === 'completed' %}
-      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
-      <a href="/mvp/question-migraine"><strong class="task-draft">Draft</strong></a>
-      {% endif %}
-    </li> 
+
 
     <!-- DWP response 
     <li class="task-list-item">
@@ -86,7 +89,7 @@ Your questions - Appeal a PIP benefit
 
     
   </ul>
-</li>
+
 
 <h2 class="heading-small">Sending additional evidence</h2> 
 <p>You can send additional information to support your appeal and the tribunal will consider it. You don’t have to provide anything if you don’t have it.
@@ -114,7 +117,7 @@ Your questions - Appeal a PIP benefit
 
 
 </div></details>
-<br/>
+
 
  <br/>{% include "includes/help-contact.html" %}
 </div>

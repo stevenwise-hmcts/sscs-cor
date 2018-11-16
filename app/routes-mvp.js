@@ -56,18 +56,18 @@ router.post('/mvp/question-walking', function (req, res) {
 	res.redirect('/mvp/task-list?walkingCompletedOrDraft=draft');
 });
 
-// Question - interacting
+// Question - journey
 
-router.get('/mvp/question-interacting-files', function (req, res) {
+router.get('/mvp/question-journey-files', function (req, res) {
     console.log('get files');
-    var files = req.session.data.interactingFileUploads || [];
+    var files = req.session.data.journeyFileUploads || [];
     res.send(files);
 });
 
-router.post('/mvp/delete-question-interacting-files', function (req, res) {
+router.post('/mvp/delete-question-journey-files', function (req, res) {
     console.log('delete file');
 	var fileName = req.body.name || req.body.originalname;
-    var fileList = req.session.data.interactingFileUploads;
+    var fileList = req.session.data.journeyFileUploads;
 
     fileList.forEach(file => {
 		if (file.originalname === fileName) {
@@ -75,42 +75,42 @@ router.post('/mvp/delete-question-interacting-files', function (req, res) {
 		}
     });
 
-    req.session.data.interactingFileUploads = fileList;
+    req.session.data.journeyFileUploads = fileList;
 
     res.status(200).send(fileList);
 });
 
-router.get('/mvp/question-interacting', function (req, res) {
-	res.render('mvp/question-interacting');
+router.get('/mvp/question-journey', function (req, res) {
+	res.render('mvp/question-journey');
 })
 
-router.post('/mvp/question-interacting', function (req, res) {
-	res.redirect('/mvp/task-list?interactingCompletedOrDraft=draft');
+router.post('/mvp/question-journey', function (req, res) {
+	res.redirect('/mvp/task-list?journeyCompletedOrDraft=draft');
 });
 
 router.post('/mvp/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
     console.log('add file');
 	// Add file data to session
-    if (req.session.data.interactingFileUploads) {
-        req.session.data.interactingFileUploads.push(req.file)
+    if (req.session.data.journeyFileUploads) {
+        req.session.data.journeyFileUploads.push(req.file)
     } else {
-        req.session.data.interactingFileUploads = [req.file];
+        req.session.data.journeyFileUploads = [req.file];
     }
 
-    console.log(req.session.data.interactingFileUploads);
+    console.log(req.session.data.journeyFileUploads);
 
     res.send(req.file);
 });
 
 
-// Question - Migraine
+// Question - factory
 
-router.get('/mvp/question-migraine', function (req, res) {
-	res.render('mvp/question-migraine');
+router.get('/mvp/question-factory', function (req, res) {
+	res.render('mvp/question-factory');
 })
 
-router.post('/mvp/question-migraine', function (req, res) {
-	res.redirect('/mvp/task-list-extend?migraineCompletedOrDraft=draft');
+router.post('/mvp/question-factory', function (req, res) {
+	res.redirect('/mvp/task-list-extend?factoryCompletedOrDraft=draft');
 });
 
 
@@ -172,8 +172,8 @@ router.get('/mvp/evidence-upload-interact', function (req, res) {
 	res.render('mvp/evidence-upload-interact');
 });
 
-router.get('/mvp/question-interacting-upload', function (req, res) {
-    res.render('mvp/question-interacting-upload');
+router.get('/mvp/question-journey-upload', function (req, res) {
+    res.render('mvp/question-journey-upload');
 });
 
 // Extend a deadline

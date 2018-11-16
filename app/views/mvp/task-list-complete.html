@@ -24,69 +24,45 @@ Your questions - Appeal a PIP benefit
       <h3 class="heading-small">Questions from the tribunal</h3>
       <p>You have answered all the questions and submitted them to the tribunal.</p>
       <ul class="task-list-items">
-        <!-- Interacting -->
-        <li class="task-list-item">
-         <a class="task-name" href="/question-interacting" aria-describedby="interacting-respond">
-          How do you interact with people?
-        </a>
-        {% if data['interactingCompletedOrDraft'] === 'completed' %}
-        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-        {% elif data['interactingCompletedOrDraft'] === 'draft' %}
-        <a href="/question-interacting"><strong class="task-draft">Draft</strong></a>
-        {% endif %}
-      </li>
-      <!-- Walking -->
+      <!-- factory-->
       <li class="task-list-item">
-        <a class="task-name" href="/question-walking" aria-describedby="walking-respond">
-          How do you walk to the doctors?
-        </a>
-        {% if data['walkingCompletedOrDraft'] === 'completed' %}
-        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
-        <a href="/question-walking"><strong class="task-draft">Draft</strong></a>
-        {% endif %}
-      </li>
-
-            <!-- migraine-->
-      <li class="task-list-item">
-       <a class="task-name" href="/mvp/question-migraine" aria-describedby="migraine-respond">
-        Tell us about your migraines 
+       <a class="task-name" href="/mvp/question-factory" aria-describedby="factory-respond">
+        Your work in a factory? 
       </a>
-      {% if data['migraineCompletedOrDraft'] === 'completed' %}
+      {% if data['factoryCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['migraineCompletedOrDraft'] === 'draft' %}
-      <a href="/mvp/question-migraine"><strong class="task-draft">Draft</strong></a>
+      {% elif data['factoryCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-factory"><strong class="task-draft">Draft</strong></a>
       {% endif %}
     </li> 
- <!-- DWP response 
-    <li class="task-list-item">
-     <a class="task-name" href="/mvp/question-dwp-response" aria-describedby="dwp-response">
-      Any comments on DWP’s response? 
-    </a>
-    {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
-    <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-    {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
-    <a href="/mvp/question-dwp-response"><strong class="task-draft">Draft</strong></a>
-    {% endif %}
-  </li>-->
-
-    <!-- Medical records 
 
 
-    <li class="task-list-item">
-      <a class="task-name" href="/question-medical-records" aria-describedby="medical-records-respond">
-        Permission to access your medical information
+      <!-- journey -->
+      <li class="task-list-item">
+       <a class="task-name" href="/mvp/question-journey" aria-describedby="journey-respond">
+        Planning and following a journey?
       </a>
-      {% if data['medicalCompletedOrDraft'] === 'completed' %}
+      {% if data['journeyCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['medicalCompletedOrDraft'] === 'draft' %}
-      <a href="/question-medical-records"><strong class="task-draft">Draft</strong></a>
+      {% elif data['journeyCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-journey"><strong class="task-draft">Draft</strong></a>
       {% endif %}
-    </li>-->
+    </li>
+    <!-- Walking -->
+    <li class="task-list-item">
+      <a class="task-name" href="/mvp/question-walking" aria-describedby="walking-respond">
+       Walking outside?
+      </a>
+      {% if data['walkingCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-walking"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
 
     
   </ul>
-</li>
+
 <h2 class="heading-small">Sending additional evidence</h2> 
 <p>You can send additional information to support your appeal and the tribunal will consider it. You don’t have to provide anything if you don’t have it.
   </p>

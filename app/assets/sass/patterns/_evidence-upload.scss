@@ -2,17 +2,6 @@
   .evidence-upload-js {
     display: none;
   }
-  .panel-indent {
-    border-left: 5px solid #bfc1c3;
-    padding-top: 15px;
-    padding-left: 15px;
-  }
-  [for=file-upload-1] {
-    margin-bottom: 0;
-  }
-  #file-upload-1-error {
-    margin-top: 15px;
-  }
 }
 
 #upload-spinner{
@@ -117,4 +106,94 @@
   vertical-align: middle;
   height: 64px;
   padding-left: 10px;
+}
+
+.first-button {
+  margin-left: 0px !important;
+}
+
+.govuk-checkboxes__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+}
+
+.govuk-checkboxes__item {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: block;
+  position: relative;
+  min-height: 40px;
+  margin-bottom: 10px;
+  padding: 0 0 0 40px;
+  clear: left;
+}
+
+.govuk-label {
+  font-size: 19px;
+  line-height: 1.31579;
+}
+
+.govuk-checkboxes__label {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
+  cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.govuk-checkboxes__input + .govuk-checkboxes__label::before {
+  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid currentColor;
+  background: transparent;
+}
+
+.govuk-checkboxes__label {
+  cursor: pointer;
+}
+
+.govuk-checkboxes__input:checked + .govuk-checkboxes__label::after {
+  opacity: 1;
+}
+
+.govuk-checkboxes__input + .govuk-checkboxes__label::after {
+
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 18px;
+  height: 7px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: solid;
+  border-top-color: currentcolor;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  opacity: 0;
+  background: transparent;
+
 }

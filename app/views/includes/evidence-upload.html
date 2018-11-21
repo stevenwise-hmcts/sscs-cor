@@ -9,12 +9,13 @@
             </div>
         </div>
     </div>
-    <div id="evidence-upload-reveal-container" style="display: none;" class="panel-indent">
+    <div id="evidence-upload-reveal-container" style="display: none;" class="panel panel-border-narrow">
         <h2 class="govuk-heading-m evidence-upload-nojs" style="display: none;">Provide evidence to support your answer</h2>
         <p>You can upload evidence to support your answer such as letters, photos, video or audio. If you are taking a picture of a letter, place it on a flat surface and take the picture from above.</p>
+        <p>
         <div id="uploadFileButton">
             <div class="govuk-form-group">
-                <label class="govuk-button secondary-button" for="file-upload-1" style="">
+                <label class="first-button button-secondary" for="file-upload-1">
                     Choose file
                 </label>
                 <input class="govuk-file-upload evidence-upload-js" id="file-upload-1" name="file-upload-1" type="file" accept=".jpg, .jpeg, .bmp, .tif, .tiff, .png, .pdf, .txt, .doc, .dot, .docx, .dotx, .xls, .xlt, .xla, .xlsx, .xltx, .xlsb, .ppt, .pot, .pps, .ppa, .pptx, .potx, .ppsx" style="display: none;">
@@ -24,6 +25,8 @@
             <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             <div class="govuk-heading-m spinner-text">File uploading</div>
         </div>
+        </p>
+        <p>
         <table class="govuk-table" id="files-uploaded">
             <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -38,9 +41,11 @@
             </tbody>
         </table>
         <input id="add-file" name="add-file" type="submit" value="Add file" class="govuk-button secondary-button evidence-upload-nojs" style="display: none;">
+        </p>
+        <p>
         <details id="sending-evidence-guide" class="govuk-details" role="group">
             <summary class="govuk-details__summary" role="button" aria-controls="details-content-fed0c208-5781-4c7e-8765-2ccfa006e17b" aria-expanded="false">
-                <span class="govuk-details__summary-text">
+                <span class="govuk-details__summary-text summary">
                   You can also post evidence to the tribunal
                 </span>
             </summary>
@@ -53,5 +58,6 @@
                 <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
             </div>
         </details>
+        </p>
     </div>
 </div>

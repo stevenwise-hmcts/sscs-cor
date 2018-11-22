@@ -267,7 +267,6 @@ router.post('/mvp/decision-view', function (req, res) {
 })
 
 
-
 // Decision now or hearing
 
 router.get('/mvp/decision-or-hearing', function (req, res) {
@@ -287,23 +286,22 @@ router.post('/mvp/decision-or-hearing', function (req, res) {
 
 
 
-// Decision now confirm
+// Decision view confirm
 
-router.get('/mvp/decision-now-confirm', function (req, res) {
+router.get('/mvp/decision-view-confirm', function (req, res) {
 	console.log(req.query);
-	res.render('mvp/decision-now-confirm');
+	res.render('mvp/decision-view-confirm');
 })
 
-router.post('/mvp/decision-now-confirm', function (req, res) {
+router.post('/mvp/decision-view-confirm', function (req, res) {
 
-	if (req.body['radio-group'] === 'yes') {
-		res.redirect('/mvp/decision-final')
-	} else if (req.body['radio-group'] === 'no') {
-		res.redirect('/mvp/decision-or-hearing')
+	if (req.body['radio-group'] === 'confirm accept the view') {
+		res.redirect('/mvp/decision-view-accepted')
+	} else if (req.body['radio-group'] === 'back to view') {
+		res.redirect('/mvp/decision-view')
 	}
 
 })
-
 
 
 // Hearing confirm

@@ -18,7 +18,7 @@ $(document).ready(function () {
       $('#row_no_files').hide();
       evidenceNameArray = $('#file-upload-1').val().split('\\');
       evidenceName = evidenceNameArray[evidenceNameArray.length - 1];
-      $('#evidence-list').append('<tr id="evidence_row' + uploadEvidenceCounter + '" class="govuk-table__row">\n' +
+      $('#evidence-list').prepend('<tr id="evidence_row' + uploadEvidenceCounter + '" class="govuk-table__row">\n' +
         '      <td class="govuk-table__cell">' + evidenceName + '</td>\n' +
         '      <td class="govuk-table__cell"><a id="deleteEvidence_' + uploadEvidenceCounter + '" href="/foo">Delete</a></td>\n' +
         '    </tr>');

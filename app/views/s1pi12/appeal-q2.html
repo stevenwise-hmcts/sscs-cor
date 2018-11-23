@@ -40,8 +40,8 @@ Task list - Round 1
           {% elif data['mobilityCompletedOrDraft'] === 'draft' %}
           <a href="/s1pi12/question-mobility"><strong class="task-draft">Draft</strong></a>
           {% endif %}
-        </li><br/>
-        <details>
+        </li>
+      <!--  <details>
     <summary><span class="summary">Answering the tribunal’s questions </span>
 
     </summary>
@@ -55,8 +55,11 @@ Task list - Round 1
 
     <p>If you need more time then you can extend the deadline. You will be given an extra week automatically. You’ll need to give reasons if you need longer than that. </p>
 
-  </details>
+  </details>-->
+  <br/> <br/>{% include "includes/help-contact.html" %}
       </ul>
+       
+
 
         </div>
 
@@ -87,8 +90,9 @@ Task list - Round 1
           <!-- <a href="/evidence-statement" class="button">Continue</a> -->
           <input class="button" type="submit" value="Continue">
         </form>
-          <br/>
-          <br/>
+        <br/><br/><br/>
+        {% include "includes/help-contact.html" %}
+
          <!-- <details>
             <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
             <h2 class="heading-medium">
@@ -107,6 +111,7 @@ Task list - Round 1
           </details> -->
         </div>
       </form>
+
         </div>
 
         <!-- Tab 3 -->
@@ -149,12 +154,12 @@ Task list - Round 1
         <br/><br/>
         <img src="/public/images/download_document_icon.png" width="50px" height="45px">
         <a href="#" class="follow">Download all documents relating to your appeal (PDF, 287kb)</a>
+<br/><br/><br/>
 
-
+  {% include "includes/help-contact.html" %}
 
 
       </div>
-  {% include "includes/help-contact.html" %}
 
     </main>
     {% endblock %}

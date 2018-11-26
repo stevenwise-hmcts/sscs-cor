@@ -24,7 +24,7 @@ Your questions - Appeal a PIP benefit
     <h3 class="heading-small">Questions from the tribunal</h3>
     <p>You need to respond by 5 November 2018. <span class="font-xsmall"><a href="extend-are-sure">Extend the deadline</a></span></p>
     <ul class="task-list-items">
-      <!-- factory-->
+      <!-- factory -->
       <li class="task-list-item">
        <a class="task-name" href="/mvp/question-factory" aria-describedby="factory-respond">Tell us more about your work in a factory 
       </a>
@@ -36,15 +36,15 @@ Your questions - Appeal a PIP benefit
     </li> 
 
 
-      <!-- journey -->
+      <!-- cooking -->
       <li class="task-list-item">
-       <a class="task-name" href="/mvp/question-journey" aria-describedby="journey-respond">
+       <a class="task-name" href="/mvp/question-cooking" aria-describedby="cooking-respond">
         What help do you need with cooking?
       </a>
-      {% if data['journeyCompletedOrDraft'] === 'completed' %}
+      {% if data['cookingCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['journeyCompletedOrDraft'] === 'draft' %}
-      <a href="/mvp/question-journey"><strong class="task-draft">Draft</strong></a>
+      {% elif data['cookingCompletedOrDraft'] === 'draft' %}
+      <a href="/mvp/question-cooking"><strong class="task-draft">Draft</strong></a>
       {% endif %}
     </li>
     <!-- Walking -->

@@ -56,18 +56,18 @@ router.post('/mvp/question-walking', function (req, res) {
 	res.redirect('/mvp/task-list?walkingCompletedOrDraft=draft');
 });
 
-// Question - journey
+// Question - cooking
 
-router.get('/mvp/question-journey-files', function (req, res) {
+router.get('/mvp/question-cooking-files', function (req, res) {
     console.log('get files');
-    var files = req.session.data.journeyFileUploads || [];
+    var files = req.session.data.cookingFileUploads || [];
     res.send(files);
 });
 
-router.post('/mvp/delete-question-journey-files', function (req, res) {
+router.post('/mvp/delete-question-cooking-files', function (req, res) {
     console.log('delete file');
 	var fileName = req.body.name || req.body.originalname;
-    var fileList = req.session.data.journeyFileUploads;
+    var fileList = req.session.data.cookingFileUploads;
 
     fileList.forEach(file => {
 		if (file.originalname === fileName) {
@@ -75,29 +75,29 @@ router.post('/mvp/delete-question-journey-files', function (req, res) {
 		}
     });
 
-    req.session.data.journeyFileUploads = fileList;
+    req.session.data.cookingFileUploads = fileList;
 
     res.status(200).send(fileList);
 });
 
-router.get('/mvp/question-journey', function (req, res) {
-	res.render('mvp/question-journey');
+router.get('/mvp/question-cooking', function (req, res) {
+	res.render('mvp/question-cooking');
 })
 
-router.post('/mvp/question-journey', function (req, res) {
-	res.redirect('/mvp/task-list?journeyCompletedOrDraft=draft');
+router.post('/mvp/question-cooking', function (req, res) {
+	res.redirect('/mvp/task-list?cookingCompletedOrDraft=draft');
 });
 
 router.post('/mvp/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
     console.log('add file');
 	// Add file data to session
-    if (req.session.data.journeyFileUploads) {
-        req.session.data.journeyFileUploads.push(req.file)
+    if (req.session.data.cookingFileUploads) {
+        req.session.data.cookingFileUploads.push(req.file)
     } else {
-        req.session.data.journeyFileUploads = [req.file];
+        req.session.data.cookingFileUploads = [req.file];
     }
 
-    console.log(req.session.data.journeyFileUploads);
+    console.log(req.session.data.cookingFileUploads);
 
     res.send(req.file);
 });
@@ -172,8 +172,8 @@ router.get('/mvp/evidence-upload-interact', function (req, res) {
 	res.render('mvp/evidence-upload-interact');
 });
 
-router.get('/mvp/question-journey-upload', function (req, res) {
-    res.render('mvp/question-journey-upload');
+router.get('/mvp/question-cooking-upload', function (req, res) {
+    res.render('mvp/question-cooking-upload');
 });
 
 // Extend a deadline

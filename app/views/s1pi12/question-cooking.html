@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Question - journey 
+Question - cooking 
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -8,7 +8,7 @@ Question - journey
   <div class="grid-row">
     <div class="column-two-thirds">
      <a id="back-to-tasks" class="link-back" href="/mvp/task-list">Back to questions</a>
-     <form class="form" action="/mvp/question-journey" method="POST">
+     <form class="form" action="/s1pi12/question-cooking" method="POST">
       <!-- Question and answer -->
       <fieldset class="form-group">
         <legend>
@@ -19,17 +19,17 @@ Question - journey
 
          <ul class="list list-bullet">
           <li>What aids or appliances do you use and why?</li>
-<li>How frequently do you need to use them?</li>
-<li>What help do you need and why?</li>
-<li>How frequently do you need this help?</li>
+          <li>How frequently do you need to use them?</li>
+          <li>What help do you need and why?</li>
+          <li>How frequently do you need this help?</li>
 
         </ul>
       </legend>
-      {% if data['journeyCompletedOrDraft'] === 'completed' %}
+      {% if data['cookingCompletedOrDraft'] === 'completed' %}
       <div class="appellants-answer">
         <h2 class="bold-small">Your answer</h2>
-        {% if data['textareajourney'] %}
-        <p>{{ data['textareajourney'] }}</p>
+        {% if data['textareacooking'] %}
+        <p>{{ data['textareacooking'] }}</p>
         <table>
           <thead>
             <tr>
@@ -38,8 +38,8 @@ Question - journey
             </tr>
           </thead>
           <tbody>
-            {% if data['journeyFileUploads'] %}
-            {% for file in data['journeyFileUploads'] %}
+            {% if data['cookingFileUploads'] %}
+            {% for file in data['cookingFileUploads'] %}
             <tr>
               <td>{{ file.originalname }}</td>
               <td></td>
@@ -75,17 +75,17 @@ Question - journey
         <p class="font-small">Submitted: 17 October 2018</p>
       </div>
       {% else %}
-      <textarea class="form-control form-control-3-4 autoExpand" name="textareajourney" id="textarea" placeholder="You can write as much as you want " rows='6'
-      data-min-rows='6'>{{ data['textareajourney'] }}</textarea>
+      <textarea class="form-control form-control-3-4 autoExpand" name="textareacooking" id="textarea" placeholder="You can write as much as you want " rows='6'
+      data-min-rows='6'>{{ data['textareacooking'] }}</textarea>
       <br/>
  {% include "includes/evidence-upload.html" %}
 
     </fieldset>     
 {% endif %}
 <!-- Submit -->
-{% if data['journeyCompletedOrDraft'] !== 'completed' %}
+{% if data['cookingCompletedOrDraft'] !== 'completed' %}
  <div class="form-group">
-  <a class="button" href="/mvp/question-journey-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+  <a class="button" href="/s1pi12/question-cooking-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
   <input class="button-secondary" type="submit" value="Save for later"></div>
   {% endif %}
 </form>

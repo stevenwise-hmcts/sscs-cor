@@ -44,10 +44,10 @@ Manage your appeal
         <h2 class="heading-medium">Questions from the tribunal</h2>
         <p>You need to respond by 7 November 2018. <span class="font-xsmall"><a href="/s1pi12/extend-are-sure">Extend the deadline</a></span></p>
         <ul class="task-list-items">
-               <!-- factory-->
+         <!-- factory-->
       <li class="task-list-item">
        <a class="task-name" href="/s1pi12/question-factory" aria-describedby="factory-respond">
-        Tell us about your work in a factory 
+        Tell us more about your work in a factory 
       </a>
       {% if data['factoryCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
@@ -57,15 +57,15 @@ Manage your appeal
     </li> 
 
 
-      <!-- journey -->
+      <!-- cooking -->
       <li class="task-list-item">
-       <a class="task-name" href="/s1pi12/question-journey" aria-describedby="journey-respond">
-        How do you travel to an unfamiliar location?
+       <a class="task-name" href="/s1pi12/question-cooking" aria-describedby="cooking-respond">
+        What help do you need with cooking?
       </a>
-      {% if data['journeyCompletedOrDraft'] === 'completed' %}
+      {% if data['cookingCompletedOrDraft'] === 'completed' %}
       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
-      {% elif data['journeyCompletedOrDraft'] === 'draft' %}
-      <a href="/s1pi12/question-journey"><strong class="task-draft">Draft</strong></a>
+      {% elif data['cookingCompletedOrDraft'] === 'draft' %}
+      <a href="/s1pi12/question-cooking"><strong class="task-draft">Draft</strong></a>
       {% endif %}
     </li>
     <!-- Walking -->

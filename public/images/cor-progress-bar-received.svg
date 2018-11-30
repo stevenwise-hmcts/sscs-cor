@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="619px" height="70px" viewBox="0 0 619 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Online-resolution" transform="translate(-8.000000, -15.000000)">
+            <g id="Group-4" transform="translate(7.000000, 15.000000)">
+                <g id="Group-3">
+                    <text id="Appeal" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="19" font-weight="bold" line-spacing="22" fill="#0B0C0C">
+                        <tspan x="0.184326172" y="66.6513672">Appeal</tspan>
+                    </text>
+                    <text id="DWP-response" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300" line-spacing="22" fill="#0B0C0C">
+                        <tspan x="159.030273" y="66.8740234">DWP response</tspan>
+                    </text>
+                    <text id="Tribunal-review" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300" line-spacing="22" fill="#0B0C0C">
+                        <tspan x="342.602539" y="66.8740234">Tribunal review</tspan>
+                    </text>
+                    <text id="Decision" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300" line-spacing="22" fill="#0B0C0C">
+                        <tspan x="549.392578" y="66.8740234">Decision</tspan>
+                    </text>
+                    <g id="Group-2" transform="translate(12.000000, 0.000000)">
+                        <g id="Group">
+                            <circle id="Oval-2" fill="#006435" cx="20.5" cy="20.5" r="20.5"></circle>
+                            <polygon id="Path" fill="#FFFFFF" points="16.3374074 23.5619753 12.1128395 19.3374074 9 22.4502469 16.3374074 30.01 31.2345679 15.1128395 28.1217284 12"></polygon>
+                        </g>
+                        <path d="M41.5,20.5 L559.000242,20.5" id="Line" stroke="#006435" stroke-width="6" stroke-linecap="square"></path>
+                        <g id="Group" transform="translate(553.000000, 0.000000)" fill="#FFFFFF" stroke="#006435" stroke-width="6">
+                            <circle id="Oval-2" cx="20.5" cy="20.5" r="17.5"></circle>
+                        </g>
+                    </g>
+                </g>
+                <circle id="Oval-2" stroke="#006435" stroke-width="6" fill="#FFFFFF" cx="217.5" cy="20.5" r="17.5"></circle>
+                <circle id="Oval-2" stroke="#006435" stroke-width="6" fill="#FFFFFF" cx="401.5" cy="20.5" r="17.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

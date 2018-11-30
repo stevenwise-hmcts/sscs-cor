@@ -42,8 +42,8 @@ router.post('/s1pi12/evidence-options', function (req, res) {
 
 })
 
-router.get('/task-list', function (req, res) {
-    res.render('task-list');
+router.get('/appeal-q1', function (req, res) {
+    res.render('appeal-q1');
 });
 
 
@@ -63,11 +63,11 @@ router.post('/s1pi12/question-dwp-response', function (req, res) {
 // Question - Walking
 
 router.get('/s1pi12/question-walking', function (req, res) {
-	res.render('mvp/question-walking');
+	res.render('s1pi12/question-walking');
 })
 
 router.post('/s1pi12/question-walking', function (req, res) {
-	res.redirect('/s1pi12/task-list?walkingCompletedOrDraft=draft');
+	res.redirect('/s1pi12/appeal-q1?walkingCompletedOrDraft=draft');
 });
 
 // Question - cooking
@@ -178,7 +178,7 @@ router.get('/s1pi12/medical-records-yes', function (req, res) {
 })
 
 router.post('/s1pi12/medical-records-yes', function (req, res) {
-	res.redirect('s1pi12/task-list-r2?medicalCompletedOrDraft=draft');
+	res.redirect('s1pi12/appeal-q1-r2?medicalCompletedOrDraft=draft');
 });
 
 
@@ -269,7 +269,7 @@ router.get('/s1pi12/decision-view-confirm', function (req, res) {
 	res.render('s1pi12/decision-view-confirm');
 })
 
-router.post('/s1pi12/decision-view', function (req, res) {
+router.post('/s1pi12/decision-view-confirm', function (req, res) {
 
 	if (req.body['radio-group'] === 'confirm accept the view') {
 		res.redirect('/s1pi12/decision-view-accepted')

@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Manage your appeal - Tribunal review
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+
+      <!-- JS will add .tabs class -->
+      <div class="js-tabs"> 
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#actions">Status</a></li>
+          <li><a class="tabs__link" href="#questions">Questions</a></li>
+          <li><a class="tabs__link" href="#evidence">Provide evidence</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
+          <h2 class="heading-medium">Status of your appeal</h2>
+          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/cor-progress-bar-tribunal-review.svg"></div>
+          <div class="panel-blue">
+           <h2 class="heading-small">Latest update</h2>
+
+
+
+<p class="body-text">
+      You’ve <a class="tabs__link" href="#questions">provided the information</a> the tribunal have asked for. They’ll review what you’ve sent and consider it as part of your appeal. </p>
+
+      <p>You’ll get another email by  23 January 2019 which will explain how the tribunal want to proceed with your appeal.    
+      </p>
+
+
+         </div>
+         <br/>
+       </div>
+
+
+<!-- Tab 2 -->
+       <div id="questions" class="tab-content">
+        <h2 class="heading-medium">Questions from the tribunal</h2>
+        <p>You have answered all the questions and submitted them to the tribunal.</p>
+        <ul class="appeal-manage-items">
+         <!-- factory-->
+      <li class="task-list-item">
+       <a class="task-name" href="/mya-001/question-factory" aria-describedby="factory-respond">
+        Tell us more about your work in a factory 
+      </a>
+      {% if data['factoryCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['factoryCompletedOrDraft'] === 'draft' %}
+      <a href="/mya-001/question-factory"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li> 
+
+
+      <!-- cooking -->
+      <li class="task-list-item">
+       <a class="task-name" href="/mya-001/question-cooking" aria-describedby="cooking-respond">
+        What help do you need with cooking?
+      </a>
+      {% if data['cookingCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['cookingCompletedOrDraft'] === 'draft' %}
+      <a href="/mya-001/question-cooking"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+    <!-- Walking -->
+    <li class="task-list-item">
+      <a class="task-name" href="/mya-001/question-walking" aria-describedby="walking-respond">
+       What pain do you have when walking?
+      </a>
+      {% if data['walkingCompletedOrDraft'] === 'completed' %}
+      <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+      {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+      <a href="/mya-001/question-walking"><strong class="task-draft">Draft</strong></a>
+      {% endif %}
+    </li>
+
+
+</ul>
+<br/>
+</div>
+
+<!-- Tab 3 -->
+<div id="evidence" class="tab-content">
+  <form action="/mya-001/evidence-options" method="post" class="form">
+    <h3 class="heading-medium">How do you want to provide additional evidence?</h3><p>Providing evidence is optional. Only send or upload evidence which shows how your condition affects your life at the time of the decision by DWP. <br/><a href="about-evidence">Find out what evidence the tribunal finds useful. </a></p>
+    <div class="form-group">
+      <fieldset>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Write a statement">
+          <label for="radio-1">Write a statement online</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="radio-group" value="Upload it">
+          <label for="radio-2">Upload letters, documents or photos</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="radio-group" value="Post it">
+          <label for="radio-3">Send by post</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="form-group">
+      <!-- <a href="/evidence-statement" class="button">Continue</a> -->
+      <input class="button" type="submit" value="Continue">
+    </form>
+    <br/>
+    <br/>
+  </div>
+</form>
+</div>
+
+<!-- Tab 4 -->
+<div id="history" class="tab-content">
+  <h2 class="heading-medium">History of your appeal</h2>
+  <table>
+      <tr>
+    <td><a class="tabs__link" href="#questions">Questions from the tribunal</a></td>
+    <td class="date">16 January 2019</td>
+  </tr>
+  <tr>
+    <td><a href="evidence-dwp-response">DWP response to your appeal received</a></td>
+    <td class="date">9 January 2019</td>
+  </tr>
+
+  <tr>
+    <td><a href="appeal-summary">Appeal submitted</a></td>
+    <td class="date">5 December 2018</td>
+  </tr>
+</tbody>
+</table>
+<br/>
+
+<br/>
+</div>
+</div>
+
+<div class="updates-border"></div>
+   </div>
+ </div>
+
+
+ <!-- Two thirds -->
+ <div class="grid-row">
+  <div class="column-one-third">
+    <h4 class="heading-small">Actions on your appeal</h4>
+    <ul class="list">
+      <li><a href="about-hearing">Register a representative</a></li>
+      <li><a href="about-hearing">Update your contact details</a></li>
+      <li><a href="#">Request a hearing</a></li>
+      <li><a href="#">Withdraw your appeal</a></li>
+
+    </ul> 
+  </div>
+
+  <div class="column-one-third">
+    <h4 class="heading-small">Support with your appeal</h4>
+    <ul class="list">
+      <li><a href="#">Link one</a></li>
+      <li><a href="#">Link two</a></li>
+      <li><a href="contact-us">Contact us</a></li>  
+    </ul> 
+  </div>
+</div>
+
+</main>
+{% endblock %}

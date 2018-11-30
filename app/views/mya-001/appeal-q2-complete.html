@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+
+      <div class="js-tabs"> <!-- JS will add .tabs class -->
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#actions">Questions</a></li>
+          <li><a class="tabs__link" href="#evidence">Provide evidence</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
+                  <h3 class="heading-medium">Questions from the tribunal</h3>
+
+          <p>You have answered all the questions and submitted them to the tribunal.</p>
+          <ul class="appeal-manage-items">
+            <!-- Mobility -->
+            <li class="task-list-item">
+              <a class="task-name" href="/question-mobility" aria-describedby="mobility-respond">
+                Your walking stick
+              </a>
+              {% if data['mobilityCompletedOrDraft'] === 'completed' %}
+              <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+              {% elif data['mobilityCompletedOrDraft'] === 'draft' %}
+              <a href="/question-mobility"><strong class="task-draft">Draft</strong></a>
+              {% endif %}
+            </li>
+          </ul>
+
+<details>
+    <summary><span class="summary">Answering the tribunal’s questions </span>
+
+    </summary>
+
+    <p>The tribunal need some additional information from you to help them make a decision on your appeal. The information you provide will be treated as evidence on your appeal. </p>
+
+    <p>Your representative has been sent access to your online appeal so they can log in and answer the question for you. What they write is treated as evidence so it’s important that you know what they are submitting. Ask them to save their answer and you can check it before they submit it. </p>  
+
+    <h3 class="heading-small">Deadline to answer the questions</h3> 
+    <p>You are given a deadline with which you have to answer the questions. This is usually a week but may be longer if the tribunal ask you to provide some additional evidence, such as a doctor’s letter. </p>
+
+    <p>If you need more time then you can extend the deadline. You will be given an extra week automatically. You’ll need to give reasons if you need longer than that. </p>
+
+  </details>
+
+        </div>
+
+        <!-- Tab 2 -->
+        <div id="evidence" class="tab-content">
+          <form action="/mya-001/evidence-options" method="post" class="form">
+            <h3 class="heading-medium">How do you want to provide additional evidence?</h3><p>Providing evidence is optional. Only send or upload evidence which shows how your condition affects your life at the time of the decision by DWP. <br/><a href="about-evidence">Find out what evidence the tribunal finds useful. </a></p>
+            <div class="form-group">
+              <fieldset>
+                <legend>
+                  <h3 class="heading-small"></h3>
+                </legend>
+                <div class="multiple-choice">
+                  <input id="radio-1" type="radio" name="radio-group" value="Write a statement">
+                  <label for="radio-1">Write a statement online</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-2" type="radio" name="radio-group" value="Upload it">
+                  <label for="radio-2">Upload letters, documents or photos</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-3" type="radio" name="radio-group" value="Post it">
+                  <label for="radio-3">Send by post</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-group">
+              <!-- <a href="/evidence-statement" class="button">Continue</a> -->
+              <input class="button" type="submit" value="Continue">
+            </form>
+            <br/>
+            <br/>
+         <!-- <details>
+            <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
+            <h2 class="heading-medium">
+              Posting evidence to the tribunal
+            </h2>
+            <p class="body-text">Post evidence to the address below.</p>
+            <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+            <p>Birmingham ASC<br/>
+              HM Courts and Tribunals Service<br/>
+              Administrative Support Centre (ASC)<br/>
+              P O Box 14620<br/>
+              Birmingham<br/>
+            B16 6FR</p>
+            <p><a href="#">Download and print address </a></p>
+            <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+          </details> -->
+        </div>
+      </form>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="history" class="tab-content">
+
+      <h2 class="heading-medium">History of your appeal</h2>
+
+      <table>
+
+           <tr>
+              <td><a href="evidence-your-answers-q1">You replied to tribunal questions</a></td>
+              <td class="date">31 October 2018</td>
+            </tr> 
+            <tr>
+              <td><a href="evidence-uploaded-you">Evidence received from you</a></td>
+              <td class="date">17 October 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+              <td class="date">17 October 2018</td>
+            </tr>
+                        <tr>
+              <td><a href="evidence-dwp-response-comments">Your comments on the DWP response</a></td>
+              <td class="date">17 October 2018</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-dwp-response">DWP response to your appeal received</a></td>
+              <td class="date">10 October 2018</td>
+            </tr>
+            <tr>
+              <td><a href="appeal-summary">Appeal submitted</a></td>
+              <td class="date">12 September 2018</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <br/><br/>
+        <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+        <a href="#" class="follow">Download all documents relating to your appeal (PDF, 287kb)</a>
+
+      </div>
+  {% include "includes/help-contact.html" %}
+
+    </main>
+    {% endblock %}

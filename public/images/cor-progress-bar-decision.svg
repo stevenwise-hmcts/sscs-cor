@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="623px" height="70px" viewBox="0 0 623 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Decision" transform="translate(-9.000000, -13.000000)">
+            <g id="Group-3" transform="translate(9.000000, 13.000000)">
+                <g id="Group-2">
+                    <text id="Appeal" fill="#0B0C0C" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300">
+                        <tspan x="0.184326172" y="66.6513672">Appeal</tspan>
+                    </text>
+                    <text id="DWP-response" fill="#0B0C0C" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300">
+                        <tspan x="159.030273" y="66.8740234">DWP response</tspan>
+                    </text>
+                    <text id="Tribunal-review" fill="#0B0C0C" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300">
+                        <tspan x="339" y="67">Tribunal review</tspan>
+                    </text>
+                    <text id="Decision" fill="#0B0C0C" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="19" font-weight="bold">
+                        <tspan x="549.392578" y="66.8740234">Decision</tspan>
+                    </text>
+                    <g id="Group" transform="translate(12.000000, -0.000000)">
+                        <circle id="Oval-2" fill="#006435" cx="20.5" cy="20.5" r="20.5"></circle>
+                        <polygon id="Path" fill="#FFFFFF" points="16.3374074 23.5619753 12.1128395 19.3374074 9 22.4502469 16.3374074 30.01 31.2345679 15.1128395 28.1217284 12"></polygon>
+                    </g>
+                    <path d="M53.5,20.5 L571.000242,20.5" id="Line" stroke="#006435" stroke-width="6" stroke-linecap="square"></path>
+                    <g id="Group" transform="translate(568.000000, 3.000000)" fill="#006435" stroke="#006435" stroke-width="6">
+                        <circle id="Oval-2" cx="17.5" cy="17.5" r="17.5"></circle>
+                    </g>
+                    <circle id="Oval-2" stroke="#006435" stroke-width="6" fill="#006435" cx="217.5" cy="20.5" r="17.5"></circle>
+                    <polygon id="Path" fill="#FFFFFF" points="213.337407 23.5619753 209.11284 19.3374074 206 22.4502469 213.337407 30.01 228.234568 15.1128395 225.121728 12"></polygon>
+                    <circle id="Oval-2" stroke="#006435" stroke-width="6" fill="#006435" cx="401.5" cy="20.5" r="17.5"></circle>
+                </g>
+                <polygon id="Path" fill="#FFFFFF" points="397.337407 23.5619753 393.11284 19.3374074 390 22.4502469 397.337407 30.01 412.234568 15.1128395 409.121728 12"></polygon>
+                <polygon id="Path" fill="#FFFFFF" points="581.337407 23.5619753 577.112839 19.3374074 574 22.4502469 581.337407 30.01 596.234568 15.1128395 593.121728 12"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Manage your appeal
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+
+      <!-- JS will add .tabs class -->
+      <div class="js-tabs"> 
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#actions">Status</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
+          <h2 class="heading-medium">Status of your appeal</h2>
+          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/cor-progress-bar-decision.svg"></div>
+          <div class="panel-blue">
+           <h2 class="heading-small">Latest update</h2>
+           
+
+ 
+
+      <p> DWP has also accepted the tribunal’s view so the decision has been issued and the appeal is closed. </p>  
+
+      <p><a href="decision-final">View the tribunals decision</a></p>  
+      
+
+      <p>A formal decision notice has also been sent to your registered postal address.</p>
+
+    <p>DWP is responsible for administering the PIP benefit. If you have any questions about the benefit or payment of the benefit please contact them. Their contact details are on any correspondence you’ve received from them. </p>
+         </div>
+         <br/>
+       </div>
+
+
+
+
+<!-- Tab 4 -->
+<div id="history" class="tab-content">
+  <h2 class="heading-medium">History of your appeal</h2>
+  <table>
+    <td><a href="evidence-uploaded-you">Evidence received from you</a></td>
+    <td class="date">17 October 2018</td>
+  </tr>
+  <tr>
+    <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+    <td class="date">17 October 2018</td>
+  </tr>
+  <tr>
+    <td><a href="evidence-dwp-response-comments">Your comments on the DWP response</a></td>
+    <td class="date">17 October 2018</td>
+  </tr>
+  <tr>
+    <td><a href="evidence-dwp-response">DWP response to your appeal received</a></td>
+    <td class="date">10 October 2018</td>
+  </tr>
+  <tr>
+    <td><a href="appeal-summary">Appeal submitted</a></td>
+    <td class="date">12 September 2018</td>
+  </tr>
+</tbody>
+</table>
+<br/><br/>
+<img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">Download all documents relating to your appeal (PDF, 287kb)</a>
+<br/>
+</div>
+</div>
+
+<div class="updates-border"></div>
+   </div>
+ </div>
+
+
+ <!-- Two thirds -->
+ <div class="grid-row">
+  <div class="column-one-third">
+    <h4 class="heading-small">Actions on your appeal</h4>
+    <ul class="list">
+      <li><a href="about-hearing">Register a representative</a></li>
+      <li><a href="about-hearing">Update your contact details</a></li>
+      <li><a href="#">Request a hearing</a></li>
+      <li><a href="#">Withdraw your appeal</a></li>
+
+    </ul> 
+  </div>
+
+  <div class="column-one-third">
+    <h4 class="heading-small">Support with your appeal</h4>
+    <ul class="list">
+      <li><a href="#">Link one</a></li>
+      <li><a href="#">Link two</a></li>
+      <li><a href="contact-us">Contact us</a></li>  
+    </ul> 
+  </div>
+</div>
+
+</main>
+{% endblock %}

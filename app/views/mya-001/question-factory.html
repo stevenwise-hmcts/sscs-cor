@@ -58,30 +58,9 @@ Question - Your work in a factory
      
   </fieldset>
 
+{% include "includes/evidence-upload.html" %}
 
 
-<details>
-        <summary><span class="summary">Sending evidence to support your answer</span></summary><div class="panel panel-border-narrow">
-        <p>You can send additional information to support your answer and the tribunal will consider it. You don’t have to provide anything if you don’t have it.</p> 
-        <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
-
-        <p>If you think there will be a delay in getting your evidence to the tribunal then send an email to the address below briefly describing what you are sending and when you think it will arrive.</p>
-
-        <h3 class="heading-small">Send evidence by email</h3> 
-        <p>You can send your evidence to <a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a>  </p>
-        <p>Include your appeal reference number and a short description of what you're sending. </p>
-        <p>Please note you can only send 10mb of files in one email.</p>
-        
-        <h3 class="heading-small">Send evidence by post</h3>
-        <p>Birmingham ASC<br/>
-          HM Courts and Tribunals Service<br/>
-          Administrative Support Centre (ASC)<br/>
-          P O Box 14620<br/>
-          Birmingham<br/>
-        B16 6FR</p>
-   <p>You'll need to print an <a href="/public/images/evidence-cover-sheet.pdf">evidence cover sheet</a> and send it with your evidence.</p>     
-
-      </div></details>
 {% endif %}
       <div class="form-group">
         {% if data['factoryCompletedOrDraft'] !== 'completed' %}

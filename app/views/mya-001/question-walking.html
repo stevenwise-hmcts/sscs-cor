@@ -19,10 +19,11 @@ Question - Walking
            You said in your appeal that you cannot walk more than 50 meters without experiencing severe pain. </p>
 
           <p>The tribunal would like to know:</p>
-         
-            <p>• Where do you go when this happens</p>
-<p>• Where do you go shopping and how do you manage</p>
-<p>• How do you manage walking around at work?</p>
+    <ul class="list list-bullet">     
+            <li>Where do you go when this happens</li>
+<li>Where do you go shopping and how do you manage</li>
+<li>How do you manage walking around at work?</li>
+</ul>
 
 
           {% if data['walkingCompletedOrDraft'] === 'completed' %}
@@ -57,8 +58,8 @@ Question - Walking
         </fieldset>
 
 
-      
-<details>
+      {% include "includes/evidence-upload.html" %}
+<!--<details>
         <summary><span class="summary">Sending evidence to support your answer</span></summary><div class="panel panel-border-narrow">
         <p>You can send additional information to support your answer and the tribunal will consider it. You don’t have to provide anything if you don’t have it.</p> 
         <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
@@ -77,7 +78,7 @@ Question - Walking
         B16 6FR</p>
   <p>You'll need to print an <a href="/public/images/evidence-cover-sheet.pdf">evidence cover sheet</a> and send it with your evidence.</p>      
         
-      </div></details>
+      </div></details>-->
           {% endif %}
         {% if data['walkingCompletedOrDraft'] !== 'completed' %}
         <div style="padding-top: 30px; padding-bottom: 20px;">

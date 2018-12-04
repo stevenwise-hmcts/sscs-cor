@@ -70,20 +70,51 @@ router.post('/mya-001/question-walking', function (req, res) {
 	res.redirect('/mya-001/appeal-q1?walkingCompletedOrDraft=draft');
 });
 
-
 // Question - cooking
+
+router.get('/mya-001/question-cooking-files', function (req, res) {
+    console.log('get files');
+    var files = req.session.data.cookingFileUploads || [];
+    res.send(files);
+});
+
+router.post('/mya-001/delete-question-cooking-files', function (req, res) {
+    console.log('delete file');
+	var fileName = req.body.name || req.body.originalname;
+    var fileList = req.session.data.cookingFileUploads;
+
+    fileList.forEach(file => {
+		if (file.originalname === fileName) {
+			_.pull(fileList, file);
+		}
+    });
+
+    req.session.data.cookingFileUploads = fileList;
+
+    res.status(200).send(fileList);
+});
 
 router.get('/mya-001/question-cooking', function (req, res) {
 	res.render('mya-001/question-cooking');
 })
 
 router.post('/mya-001/question-cooking', function (req, res) {
-	res.redirect('/mya-001/appeal-q1?cookingCompletedOrDraft=draft');
+	res.redirect('/mya-001/appeal-q1-extend?cookingCompletedOrDraft=draft');
 });
 
+router.post('/mya-001/evidence-upload-interact', upload.single('fileUpload'), function (req, res) {
+    console.log('add file');
+	// Add file data to session
+    if (req.session.data.cookingFileUploads) {
+        req.session.data.cookingFileUploads.push(req.file)
+    } else {
+        req.session.data.cookingFileUploads = [req.file];
+    }
 
+    console.log(req.session.data.cookingFileUploads);
 
-
+    res.send(req.file);
+});
 
 
 // Question - factory

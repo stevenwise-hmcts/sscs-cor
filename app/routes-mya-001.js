@@ -67,7 +67,7 @@ router.get('/mya-001/question-walking', function (req, res) {
 })
 
 router.post('/mya-001/question-walking', function (req, res) {
-	res.redirect('/mya-001/appeal-q1?walkingCompletedOrDraft=draft');
+	res.redirect('/mya-001/appeal-manage-questions-r1?walkingCompletedOrDraft=draft#questions');
 });
 
 
@@ -78,7 +78,7 @@ router.get('/mya-001/question-cooking', function (req, res) {
 })
 
 router.post('/mya-001/question-cooking', function (req, res) {
-	res.redirect('/mya-001/appeal-q1?cookingCompletedOrDraft=draft');
+	res.redirect('/mya-001/appeal-manage-questions-r1?cookingCompletedOrDraft=draft#questions');
 });
 
 
@@ -93,7 +93,7 @@ router.get('/mya-001/question-factory', function (req, res) {
 })
 
 router.post('/mya-001/question-factory', function (req, res) {
-	res.redirect('/mya-001/appeal-q1?factoryCompletedOrDraft=draft');
+	res.redirect('/mya-001/appeal-manage-questions-r1?factoryCompletedOrDraft=draft#questions');
 });
 
 

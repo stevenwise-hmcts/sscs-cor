@@ -25,12 +25,12 @@ router.get('/', function (req, res) {
 
 // Evidence options
 
-router.get('/mvp/evidence-options', function (req, res) {
+router.get('/evidence-additional', function (req, res) {
 	console.log(req.query);
-	res.render('/mvp/evidence-options');
+	res.render('evidence-additional');
 })
 
-router.post('/mvp/evidence-options', function (req, res) {
+router.post('/mvp/evidence-additional', function (req, res) {
 
 	if (req.body['radio-group'] === 'Post it') {
 		res.redirect('/mvp/evidence-post')

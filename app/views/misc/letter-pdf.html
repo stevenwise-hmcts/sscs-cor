@@ -1,0 +1,75 @@
+{% extends "layout_unbranded.html" %}
+{% block content %}
+<main id="content"  role="main">
+  <div style="margin: 0px 45px 0px 45px;">
+
+    <div class="grid-row">
+      <div class="column-full">
+        <div style="margin: 60px 0px 130px 0px;"> <img src="/public/images/hmcts-logo-black.png" height="100" ></div>
+      </div>
+    </div>
+<div style="padding-left: 40px;">
+    <div class="grid-row">
+      <div class="column-one-half">
+
+<div style="font-size: 14px; margin-top: 60px;">
+        <p>000_000_0000000_0000_00000<br/>
+          address line 1<br/>
+          address line 2<br/>
+          address line 3<br/>
+          address line 4<br/>
+          address line 5<br/>
+        address line 6</p>
+      </div>
+      </div>
+      <div class="column-one-half">
+        <aside style="margin-top: 180px; margin-left:120px;">
+         <div style="font-size: 16px">
+          <p>PIP Benefit Appeals<br/>
+            HMCTS<br/>
+            PO Box 14620<br/>
+            Birmingham<br/>
+            B16 6FR<br/>
+          </p>
+        </div>
+      </aside>
+    </div>  
+  </div>
+  <div class="grid-row">
+    <div class="column-full">
+    <div style="font-size: ">
+
+      <br/>
+
+      <p>14 October 2017</p>
+
+      <h1 class="heading-large">You have a message from the tribunal</h1>
+      <br/>
+      <p>Dear ((name))</p>
+
+      <p>A tribunal judge has reviewed your ((benefit_name_acronym)) benefit appeal. They have written some instructions which they would like you to follow. These instructions are written in a 'directions notice', which is attached to this letter. </p>
+
+      <p>Please read the 'directions notice' and follow any instructions which are directed towards the 'appellant'. You are the appellant as the person who is making the appeal. </p>
+
+      <h2 class="heading-medium">Sending the information to the tribunal </h2>
+      <p>The judge may have asked you to provide more information. You can either send it by post or provide it over the phone, by calling the number at the bottom of the letter. </p> 
+
+      <p>If you want to send it by post then send it to the address below.  Make sure it's clearly marked with ((name))'s National Insurance number. </p>
+
+      <p>((regional_office_name))<br/>
+        ((support_centre_name))<br/>
+        ((address_line))<br/>
+        ((town))<br/>
+        ((county))<br/>
+      ((postcode))</p>
+
+
+      <p>((benefit_name_acronym)) Benefit Appeals<br/>
+        HM Courts and Tribunals Service <br/>
+      Telephone: ((phone_number))</p>
+    </div>
+    </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

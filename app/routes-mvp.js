@@ -261,7 +261,7 @@ router.post('/mvp/decision-view', function (req, res) {
 	if (req.body['radio-group'] === 'confirm accept the view') {
 		res.redirect('/mvp/decision-view-accepted')
 	} else if (req.body['radio-group'] === 'back to view') {
-		res.redirect('/mvp/decision-view')
+		res.redirect('/mvp/decision-view-free-text')
 	}
 
 })

@@ -13,9 +13,9 @@ gulp.task('copy-toolkit', function () {
 })
 
 gulp.task('copy-template', function () {
-  return gulp.src(['node_modules/govuk_template_jinja/views/layouts/**'])
-  .pipe(gulp.dest(config.paths.govukModules + '/govuk_template/layouts/'))
-  .pipe(gulp.dest(config.paths.lib))
+  // return gulp.src(['node_modules/govuk_template_jinja/views/layouts/**'])
+  // .pipe(gulp.dest(config.paths.govukModules + '/govuk_template/layouts/'))
+  // .pipe(gulp.dest(config.paths.lib))
 })
 
 gulp.task('copy-template-assets', function () {

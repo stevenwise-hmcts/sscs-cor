@@ -122,6 +122,22 @@ app.locals.promoMode = promoMode
 app.locals.releaseVersion = 'v' + releaseVersion
 app.locals.serviceName = config.serviceName
 
+
+
+app.use(function (req, res, next) {
+  let isGovUK = false;
+  let govUKWhiteList = [
+  'sign-in',
+  'idam'
+  ];
+
+  if(new RegExp(govUKWhiteList.join("|")).test(req.originalUrl)) {
+    isGovUK = true;
+  }
+  res.locals.isGovUK = isGovUK;
+  next()
+})
+
 // Support session data
 app.use(session({
   cookie: {

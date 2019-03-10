@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Tribunal view - K. Smith
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+       The tribunal’s view on your appeal
+     </h1>
+   <br/>
+
+ <div class="panel-blue">
+  <p >The tribunal have considered all the information submitted by you and DWP. </p>
+  <p>Their view is that you’re entitled to PIP at the rate below from 13 February 2018 until 12 February 2020.
+  </p>
+  <table>
+    <!-- <caption class="heading-small">Component </caption> -->
+    <tbody>
+      <tr>
+        <td class="bold-small">Daily living</td>
+        <td >Standard rate</td>
+      </tr>
+      <tr>
+        <td class="bold-small">Mobility</td>
+        <td>No award</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <p>This is more than DWP initially awarded you. </p>
+  <p>If both you and DWP accept this view, you’ll be awarded PIP at the above rate.</p>
+</div>
+<h2 class="heading-medium">The reasons for the tribunal’s view</h2>
+<p>We considered all the evidence you and DWP submitted in relation to your appeal. </p>
+
+<p>We accept that you have more difficulties with daily living because of your shoulder pain. We have therefore increased the points you were awarded for the activity of preparing food.
+</p>
+
+</div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <details>
+      <summary><span class="summary">PIP activities and the descriptors we consider apply to your appeal</span></summary>
+      <table>
+       <thead>
+        <tr>
+          <th scope="col">Activity</th>
+          <th scope="col">Descriptor</th>
+          <th scope="col">Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preparing food</td>
+          <td>Needs supervision or assitance to either prepare or cook a simple meal</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Washing and bathing</td>
+          <td>Needs an aid or appliance to wash or bathe</td>
+          <td>2</td>
+        </tr>
+        
+                <tr>
+          <td>Dressing and undressing</td>
+          <td>Needs an aid or appliance for dressing or undressing</td>
+          <td>2</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h2 class="heading-medium">What happens next </h2>
+    <p>You can accept the view or if you feel the view is wrong you can have a face to face hearing.</p>
+    <br/>
+    <form action="/decision-view" method="post" class="form">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <h1 class="bold-medium">Do you accept this view?</h1>
+          </legend>
+          <br/>
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="radio-group" value="accept the decision">
+            <label for="radio-1">I accept the tribunal’s view</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="radio-group" value="want a hearing">
+            <label for="radio-2">I want a hearing</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <p>You have to respond to this question by 2 May 2018. If you don’t respond we will assume you are accepting the view and it will be sent to you. 
+        </p>
+        <!-- <a href="hearing-explain-why" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue">
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+{% endblock %}

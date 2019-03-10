@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Sure extended deadline 
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+<h1 class="heading-large">Extending the deadline will delay your appeal</h1>
+<p>You can have another week to answer the questions but your appeal will take longer.  </p>
+      <form action="/mya-001/extend-are-sure" method="post" class="form">
+        <div class="form-group">
+ <!--<details>
+    <summary><span class="summary">Deadline to answer the questions</span>
+    </summary>
+    
+    <p>You are given a deadline with which you have to answer the questions. This is usually a week but may be longer if the tribunal ask you to provide some additional evidence, such as a doctor’s letter. </p>
+    <p>If you need more time then you can extend the deadline. You will be given an extra week automatically. You’ll need to give reasons if you need longer than that. </p>
+  </details>
+  <br/>-->
+          <fieldset>
+            <legend>
+             
+              <h2 class="bold-medium">Do you still want to extend the deadline?</h2>
+            </legend>
+            <br/>
+
+           
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="No">
+              <label for="radio-1">No</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="Yes">
+              <label for="radio-2">Yes</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+         <!--    <a href="extend-confirm" class="button">Continue</a> -->
+        <input class="button" type="submit" value="Continue"> 
+          <br/>
+              </div>
+        </form>
+        {% include "includes/help-contact.html" %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}

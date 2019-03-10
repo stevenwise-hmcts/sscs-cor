@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Questions submitted - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      
+
+      <h1 class="heading-large">
+        You have answered the tribunal’s questions 
+      </h1>
+      <p class="body-text">
+      You’ve provided the information the tribunal have asked for. They’ll review what you’ve sent and consider it as part of your appeal. </p>
+      <p>You’ll get another email by  30 January 2019 which will explain how the tribunal want to proceed with your appeal.    
+      </p>
+
+<p><a href="appeal-manage-questions-r1-complete">Return to Your PIP benefit appeal</a></p>
+
+<p><a href="#">Exit service</a></p>
+
+
+               </div>
+  </div>
+
+  <br/>{% include "includes/help-contact.html" %}
+  <div style="margin-top: 80px; font-size: 14px;">
+  <!-- <p><a href="email-questions-submitted-confirm">Questions submitted confirmation email</a></p>-->
+
+ </main>
+ {% endblock %}

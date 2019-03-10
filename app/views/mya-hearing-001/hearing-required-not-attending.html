@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing required - not attending
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/mya-001/appeal-manage">Back</a>
+      <h1 class="heading-large">
+        The tribunal will make a decision on your appeal  
+      </h1>
+      <p class="body-text">The tribunal will make a decision based on the information you and DWP have already submitted.</p>
+      <p>You will get an email with the decision by 12 April 2018</p>
+      <a href="#">Exit service</a>
+    </div>
+  </div>
+  <div style="margin-top: 80px; font-size: 14px;">
+    <p><a href="index">Index</a></p>
+  </div> 
+  {% include "includes/help-contact.html" %} 
+</main>
+{% endblock %}

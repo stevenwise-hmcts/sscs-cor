@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Accepted the view
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	{% include "includes/phase_banner_beta.html" %}
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<h1 class="heading-large">
+				You have accepted the tribunal’s view 
+			</h1>
+			<p class="body-text">The tribunal’s view has also been sent to DWP and they have been asked to comment on it. DWP might request a hearing to explain their decision on your entitlement to benefits.</p>
+
+<p>You will get an email by 13 February 2019. This will tell you how the tribunal want to proceed after they have read DWP’s comments.</p>
+
+<p><a href="appeal-manage-view-accepted">Return to Your PIP benefit appeal</a></p>
+
+		<p>	<a href="#">Exit service</a></p>
+			<br/>
+
+			{% include "includes/help-contact.html" %}
+			
+
+
+		</div>
+	</div>
+	<div style="margin-top: 80px; font-size: 14px;">
+				<p><a href="email-decision-dwp-accepted-pvab-e">Decision</a></p>
+			<!--	<p><a href="email-view-accepted">View accepted email</a></p>-->
+			</div>  
+</main>
+{% endblock %}

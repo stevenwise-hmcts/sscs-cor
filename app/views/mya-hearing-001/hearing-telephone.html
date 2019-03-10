@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Telephone hearing?
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/mya-001/hearing-required">Back</a>
+      <h1 class="heading-large">
+       Do you want a telephone hearing instead? 
+      </h1>
+      <p class="body-text">If you don’t want to attend your hearing in person, you can have a telephone hearing. </p>
+
+<p>Otherwise the tribunal will make a decision based on the information they already have. </p>
+
+      <form action="/hearing-telephone" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="yes telephone hearing">
+              <label for="radio-1">Yes, I’d like a telephone hearing </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="no telephone hearing">
+              <label for="radio-2">No, I don’t want a telephone hearing </label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <!-- <a href="hearing-required-why-not-attending" class="button">Continue</a>  -->
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

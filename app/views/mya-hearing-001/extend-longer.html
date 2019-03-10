@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Extend - Longer - 3 weeks
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+          <a id="back-to-tasks" class="link-back" href="/mya-001/are-you-sure2">Back</a>        
+      <form>
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              How many weeks do you need to answer the questions? 
+            </h1>
+          </legend>
+          
+     <input class="form-control form-control-1-8" id="full-name-f1" type="text" name="full-name-f1">
+     <br/>
+   </fieldset>
+          <a class="button" href="extend-confirm-3weeks" type="submit" value="submit">Continue</a>
+          <br/><br/>
+          <a id="back-to-tasks" class="link-back" href="/mya-001/are-you-sure2">Back</a>        
+        </div>
+      </form>
+    </div>
+  </div>
+{% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

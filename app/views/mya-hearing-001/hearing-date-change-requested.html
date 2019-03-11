@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing date change requested
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <h1 class="heading-large">
+        You have submitted your hearing date change 
+        request 
+      </h1>
+      <p class="body-text">
+      The tribunal will review your request.</p> 
+            <a href="appeal-hearing-date-change-requested" class="button">Continue</a>
+
+
+    </div>
+  </div>
+
+
+    {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

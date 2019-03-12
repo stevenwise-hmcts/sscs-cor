@@ -347,3 +347,24 @@ router.post('/mya-001/hearing-telephone', function (req, res) {
 // add your routes here
 
 module.exports = router
+
+
+
+
+
+// Change hearing location
+
+router.get('/mya-001/hearing-location-change-sure', function (req, res) {
+	console.log(req.query);
+	res.render('mya-001/hearing-location-change-sure');
+})
+
+router.post('/mya-001/hearing-location-change-sure', function (req, res) {
+
+	if (req.body['radio-group'] === 'locationchange') {
+		res.redirect('/mya-001/hearing-location-change-reasons')
+	} else if (req.body['radio-group'] === 'locationkeep') {
+		res.redirect('/mya-001/appeal-hearing')
+	}
+
+})

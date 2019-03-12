@@ -9,6 +9,7 @@ var routesMvp = require('./app/routes-mvp.js')
 var routess5pi11 = require('./app/routes-s5pi11.js')
 var routess1pi12 = require('./app/routes-s1pi12.js')
 var routess1pi12 = require('./app/routes-mya-001.js')
+var routess1pi12 = require('./app/routes-mya-hearing-001.js')
 
 var documentationRoutes = require('./docs/documentation_routes.js')
 var favicon = require('serve-favicon')

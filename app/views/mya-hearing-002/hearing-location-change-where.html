@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Jearing location change reasons
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+         <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+             Where would you like your hearing to take place?
+            </h1>
+
+
+ <div class="form-group">
+          <label class="form-label">
+            Enter the nearest town, city or postcode
+          </label>
+         <!-- <textarea class="form-control form-control-3-4" id="textarea-a" cols="90" rows="4"></textarea>
+       </div> -->
+       <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+     </div>
+            <a href="hearing-location-change-requested" class="button">Continue</a>
+
+
+          </div>
+        </form>
+           
+
+      </div>
+    </div>
+     {% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

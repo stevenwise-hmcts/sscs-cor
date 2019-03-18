@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing location change reasons
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+         <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+             Explain why you want to change the date of your hearing
+            </h1>
+
+           
+
+          </legend>
+          <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'> </textarea>
+        </fieldset>
+        <div class="form-group">
+          <div class="form-group">
+            <a href="https://track-your-appeal.herokuapp.com/mya-hearing-02/hearing-type/006-hearing-dates-postponement" class="button">Continue</a>
+            <!-- <input class="button" type="submit" value="Submit statement"> -->
+
+          </div>
+        </form>
+            {% include "includes/help-contact.html" %}
+
+      </div>
+    </div>
+  </main>
+  {% endblock %}

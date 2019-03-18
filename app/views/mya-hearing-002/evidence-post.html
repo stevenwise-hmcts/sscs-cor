@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back to Your PIP benefit appeal</a>
+      <h1 class="heading-large">
+        Posting evidence to the tribunal
+      </h1>
+      <p class="body-text">Post evidence to the address below.</p>
+      <p <span class="bold">SSCS<br/>
+        HMCTS SSCS Tribunal<br/>
+        PO Box 12626<br/>
+        Harlow<br/>
+        CM20 9QF<br/>
+      </p> 
+
+      <p>You must include a copy of the ‘evidence cover sheet’ which was included in the first letter you received about your benefit appeal. You can <a href="/public/images/evidence-cover-sheet.pdf">download a new cover sheet here</a>, if you need one. </p>
+
+        <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+
+        <p>If you think there will be a delay in getting your evidence to the tribunal then send an email to <a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a> briefly describing what you are sending and when you think it will arrive.</p>
+
+        <br/>
+      </div>
+    </div>
+    {% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

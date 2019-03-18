@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Walking
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/mya-001/appeal-manage">Back to questions</a>      
+      <form class="form" target="/mya-001/question-walking" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              How do you walk to the doctors?
+            </h1>
+            <p class="body-text">
+            The DWP healthcare professional who assessed you noted that you walk to the GP’s surgery and it takes you 30 minutes.</p>
+            <p>Please can you describe the journey and tell us how often you made it in 2017. </p>
+          </legend>
+         <div class="appellants-answer">
+<h2 class="bold-small">Your answer</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p class="font-xsmall">Submitted: 7 March 2018</p>
+</div>
+<br/>
+      <a id="back-to-tasks" class="link-back" href="/mya-001/appeal-manage">Back to questions</a>        </div>
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

@@ -7,7 +7,7 @@
 
   > * {
     position: relative;
-    border-bottom: 1px solid $border-colour;
+    border-top: 1px solid $border-colour;
 
     @include media(desktop) {
       display: table-row;
@@ -19,7 +19,7 @@
 
       @include media(desktop) {
         display: table-cell;
-        border-bottom: 1px solid $border-colour;
+        border-top: 1px solid $border-colour;
         padding: em(12, 19) em(20, 19) em(9, 19) 0; // copied from Elements' td padding
         margin: 0;
       }

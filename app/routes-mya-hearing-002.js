@@ -362,9 +362,9 @@ router.get('/mya-hearing-002/hearing-location-change-sure', function (req, res) 
 router.post('/mya-hearing-002/hearing-location-change-sure', function (req, res) {
 
 	if (req.body['radio-group'] === 'locationchange') {
-		res.redirect('/mya-hearing-002/hearing-location-change-reasons')
+		res.redirect('/mya-hearing-002/hearing-location-change-address')
 	} else if (req.body['radio-group'] === 'locationkeep') {
-		res.redirect('/mya-hearing-002/appeal-hearing')
+		res.redirect('/mya-hearing-002/hearing-location-change-reasons')
 	}
 
 })

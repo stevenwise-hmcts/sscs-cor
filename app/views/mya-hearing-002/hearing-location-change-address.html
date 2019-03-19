@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Hearing location change address
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+         <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+             Update your address details
+            </h1>
+
+<p>Enter your new address below.</p>
+ <div class="form-group">
+          <label class="form-label" for="addressLine1">
+            Address line 1
+          </label>
+         <!-- <textarea class="form-control form-control-3-4" id="textarea-a" cols="90" rows="4"></textarea>
+       </div> -->
+       <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+     </div>
+     <!-- Address line 2--> 
+     <div class="form-group">
+      <label class="form-label" for="addressLine2">
+        Address line 2 (optional)
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+    <!-- Town --> 
+    <div class="form-group">
+      <label class="form-label" for="town">
+        Town/City
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+
+     <!-- County --> 
+    <div class="form-group">
+      <label class="form-label" for="county">
+        County
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+    <!-- Postcode --> 
+    <div class="form-group">
+      <label class="form-label" for="postcode">
+        Postcode
+      </label>
+      <input class="form-control form-control-1-4" id="form-control-1-4" type="text">
+    </div> 
+
+        <div class="panel panel-border-wide">
+Correspondence about your appeal will be sent to your new address.
+
+</div>
+<br/>
+            <a href="hearing-location-change-requested" class="button">Continue</a>
+ </form>
+
+          </div>
+       
+           
+
+      </div>
+    </div>
+     {% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block page_title %}
-Manage your appeal - Tribunal review
+Manage your appeal - Appeal received
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -8,36 +8,41 @@ Manage your appeal - Tribunal review
   {% include "includes/account-nav.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large">
+      <h1 class="heading-xlarge">
         Your PIP benefit appeal
       </h1>
       <div class="details">
         <h2 class="heading-medium">Manish Sharma</h2>
         <h2 class="font-xsmall">Appeal reference:  SC242/16/03435  </h2>
-        <!--<h2>Representative: <a href="">None registered</a></h2>-->
+        <h2 class="font-xsmall">Representative:  <a href="">David Smith</a></h2>
       </div>
       <div class="divider"></div>
       <br/>
+
       <!-- JS will add .tabs class -->
       <div class="js-tabs"> 
         <ul class="list list-bullet">
-          <li><a class="tabs__link" href="#status">Status</a></li>
+          <li><a class="tabs__link" href="#actions">Status</a></li>
           <li><a class="tabs__link" href="#questions">Provide information</a></li>
           <li><a class="tabs__link" href="#hearing">Hearing</a></li>
           <li><a class="tabs__link" href="#history">History</a></li>
         </ul>
-        <!-- Status -->
-        <div id="status" class="tab-content">
+
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
           <h2 class="heading-medium">Status of your appeal</h2>
-          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/progress-bar-hearing-booked.svg"></div>
+          <div style="padding: 20px 20px 120px 10px;"><img width =100% src="/public/images/progress-bar-received.svg"></div>
           <div class="panel-blue">
            <h2 class="heading-small">Latest update</h2>
-          <p>A hearing has been booked for your appeal.</p>
-            <p> <a href="https://sscs-cor.herokuapp.com/mya-002/appeal-hearing#hearing">Check the details of your hearing</a></p>
-           
+
+<p>Your Personal Independence Payment (PIP) benefit appeal has been lodged.</p> 
+<p>DWP has to respond to your appeal by 12 June 2019. You’ll get another email explaining what happens next, after they’ve responded.</p>
+
          </div>
          <br/>
        </div>
+
+
        <!-- Provide information -->
        <div id="questions" class="tab-content">
         <h2 class="heading-medium">Provide information to the tribunal</h2>
@@ -54,14 +59,15 @@ Manage your appeal - Tribunal review
        <br/>
      </div>
 
-     <!-- Hearing -->
+ <!-- Hearing -->
      <div id="hearing" class="tab-content">
       <h2 class="heading-medium">The hearing for your appeal</h2>
 
 
 <br/>
       <dl class="govuk-check-your-answers cya-questions-short">
-        <div>
+   
+     <!--   <div>
           <dt class="cya-question">
             Date<br/>
             Time
@@ -75,22 +81,25 @@ Manage your appeal - Tribunal review
           Request change<span class="visually-hidden"> date and time</span>
         </a>
       </dd>
-    </div>
+    </div> -->
 
     
 
     <div>
       <dt class="cya-question">
-        Location
+        <br/>Location
       </dt>
       <dd class="cya-answer">
-       Fox Court<br/>
+      <br/> Fox Court<br/>
        14 Gray’s Inn Road<br/>
        EC1N 7WS<br/>
        <a class="maps-and-directions" href="https://www.google.com/maps/dir/Current+Location/Fox+Court,115+14+Grays+Inn+Road,+London+EC1N+7WS,+UK">Maps and directions</a>
      </dd>
      <dd class="cya-change">
-        
+      <br/>
+      <a href="https://track-your-appeal.herokuapp.com/mya-02/hearing-type/004-hearing-arrangements-selected">
+                Request change<span class="visually-hidden"> dates you're not available</span>
+              </a>
       </dd>
     </div>
 
@@ -105,7 +114,8 @@ Manage your appeal - Tribunal review
             </dt>
             
             <dd class="cya-change">
-              <a href="https://track-your-appeal.herokuapp.com/mya-hearing-02/hearing-type/004-hearing-arrangements-selected">
+
+              <a href="https://track-your-appeal.herokuapp.com/mya-02/hearing-type/004-hearing-arrangements-selected">
                 Request change<span class="visually-hidden"> dates you're not available</span>
               </a>
             </dd>
@@ -116,13 +126,15 @@ Manage your appeal - Tribunal review
         <dl class="govuk-check-your-answers cya-questions-short">
           <div>
             <dt class="cya-question">
-              <p class="pbold">Language interpreter</p>
-              <p class="pbold">Sign interpreter</p>
-              <p class="pbold">Hearing loop</p>
-              <p class="pbold">Disabled access</p>
-              <p class="pbold">Any other arrangements</p>
+<br/>
+              <p >Language interpreter</p>
+              <p >Sign interpreter</p>
+              <p >Hearing loop</p>
+              <p >Disabled access</p>
+              <p >Any other arrangements</p>
             </dt>
             <dd class="cya-answer">
+              <br/>
               <p>Not required<br/><br/></p>
               <p>Not required</p>
               <p>Not required</p>
@@ -145,7 +157,7 @@ Manage your appeal - Tribunal review
   <h2 class="heading-medium">History of your appeal</h2>
   <table>
 
-    <tr>
+    <!--<tr>
       <td><a href="">Hearing booked</a></td>
       <td class="date">7 March 2019</td>
     </tr>
@@ -156,10 +168,10 @@ Manage your appeal - Tribunal review
         <tr>
         <td><a href="#">DWP responded</a></td>
       <td class="date">6 December 2018</td>
-    </tr>
+    </tr> -->
     <tr>
       <td><a href="appeal-summary">Appeal submitted</a></td>
-      <td class="date">1 November 2018</td>
+      <td class="date">8 May 2019</td>
     </tr>
   </tbody>
 </table>
@@ -177,7 +189,7 @@ Manage your appeal - Tribunal review
     <h4 class="heading-small">Help and support</h4>
     <ul class="list">
       <li><a href="#">Service guide</a></li>
-      <li><a href="#">Representatives</a></li>
+      <li><a href="service-guide#rep">Representatives</a></li>
       <li><a href="contact-us">Contact us</a></li>
     </ul> 
   </div>

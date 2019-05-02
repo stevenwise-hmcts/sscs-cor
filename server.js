@@ -11,6 +11,7 @@ var routess1pi12 = require('./app/routes-s1pi12.js')
 var routess1pi12 = require('./app/routes-mya-001.js')
 var routess1pi12 = require('./app/routes-mya-hearing-001.js')
 var routesmyahearing002 = require('./app/routes-mya-hearing-002.js')
+var routesmya002 = require('./app/routes-mya-002.js')
 
 var documentationRoutes = require('./docs/documentation_routes.js')
 var favicon = require('serve-favicon')

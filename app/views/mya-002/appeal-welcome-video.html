@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Task list - Round 1
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <h2 class="heading-small">Welcome to your online appeal</h2>
+      <video controls="controls" width="100%" 
+      name="Video Name" src="/public/images/movies/welcome.mov"></video>
+      <details>
+        <summary><span class="summary">Video transcript</span>
+        </summary>
+        <p>Welcome to your online benefit appeal.</p>
+        <p>My name is Verity Jones and I am a tribunal judge. 
+          <p>A tribunal panel made up of a judge, a doctor and a disability expert will decide your appeal. They are separate from DWP and will make an impartial decision on your entitlement to the benefit. </p>
+          <p>The tribunal panel have reviewed your appeal but they need some more information from you. They have some questions which will be straightforward, and answering them may mean your appeal can be decided online. </p>
+          <p>You can answer their questions after this video ends.</p>
+        </details>
+        <br/>
+        <a  href="appeal-manage#questions" class="button">Continue</a>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

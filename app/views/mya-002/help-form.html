@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block page_title %}
+What do you need help with? - Contact us
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+          
+
+  <div class="grid-row">
+    <div class="grid-column-two-thirds">
+    
+
+      <h1 class="heading-large">What do you need help with?
+      </h1>
+
+      <form class="form" action="/thanks-plain" method="get">
+
+        
+         
+          <div class="form-group">
+            <label class="form-label" for="more-detail">
+            </label>
+            <textarea class="form-control form-control-3-4 autoExpand" id="more-detail" name="more-detail" rows="5" cols="" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="more-detail">
+            Your email address
+            </label>
+            <input class="form-control form-control-3-4" id="form-control-1-4" type="text">
+          </div>
+                    <div class="form-group">
+            <label class="form-label" for="more-detail">
+            Your telephone number 
+            </label>
+            <input class="form-control form-control-3-4" id="form-control-1-4" type="text">
+          </div>
+          <p>Response can take up to 2 working days.</p>
+         <div class='form-group'>
+                      <a href="/mya-001/help-contact-thanks" class="button">Send message</a>
+                </div>
+
+        
+</form>
+
+
+    </div>
+  </div>
+
+
+        </main>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

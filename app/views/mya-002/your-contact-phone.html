@@ -1,0 +1,38 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your address - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+    <label>  <h1 class="heading-large">
+        Enter contact phone number
+      </h1>
+      <p>We will phone you on this number, if we need to speak to you.
+      </p></label>
+
+      <form>
+
+
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text" value="07972438178">
+       </div>
+
+    </form>
+  </div>
+</div>
+<br/>
+      <div class="grid-row">
+        <div class="column-one-quarter">
+          <a class="button" href="your-details-contact-phone">Update</a>
+        <a  href="your-details">Cancel</a>  
+        </div>
+      </div>
+
+        </div>            
+      </div>
+    </main>
+    {% endblock %}

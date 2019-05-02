@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your details - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+ {% include "includes/account-nav.html" %}    
+
+ <div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-xlarge">
+      Your details 
+    </h1>
+
+    <!-- Address -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <br/>Address
+        </dt>
+        <dd class="cya-answer">
+         <br/>31 Cambridge Street<br/>
+         Bethnal Green<br/>
+         London<br/>
+         EC1 7TW<br/>
+       </dd>
+       <dd class="cya-change">
+        <br/>
+        <a href="#">
+         Change<span class="visually-hidden"> your address</span></a>
+       </dd>
+     </div>
+   </dl>
+
+      <!-- Email address -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <br/>Email address
+        </dt>
+        <dd class="cya-answer">
+         <br/>manish.sharma1234@hotmail.com
+       </dd>
+       <dd class="cya-change">
+        <br/>
+        <a href="#">
+         Change<span class="visually-hidden"> your email address</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+     <!-- Contact phone number -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <br/>Contact phone number
+        </dt>
+        <dd class="cya-answer">
+         <br/>07799 521412
+       </dd>
+       <dd class="cya-change">
+        <br/>
+        <a href="#">
+         Change<span class="visually-hidden"> contact phone number</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+
+        <!-- Text message updates -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <br/>Text message updates
+        </dt>
+        <dd class="cya-answer">
+         <br/>07972 438178
+       </dd>
+       <dd class="cya-change">
+        <br/>
+        <a href="your-text-message-updates">
+         Change<span class="visually-hidden"> text message updates</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+     <!-- Empty -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+         
+        </dt>
+        <dd class="cya-answer">
+         
+       </dd>
+       <dd class="cya-change">
+        
+       </dd>
+     </div>
+   </dl> 
+
+ </div>
+</div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Manage your appeal - Appeal received
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 >Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <!-- JS will add .tabs class -->
+      <div class="js-tabs"> 
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#actions">Status</a></li>
+          <li><a class="tabs__link" href="#questions">Questions</a></li>
+          <li><a class="tabs__link" href="#evidence">Provide evidence</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
+          <h2 class="heading-medium">Status of your appeal</h2>
+          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/cor-progress-bar-dwp-response.svg"></div>
+          <div class="panel-blue">
+           <h2 class="heading-small">Latest update</h2>
+<p>DWP has responded to your PIP benefit appeal</a>.</p>
+<p>A tribunal panel will review the information you and DWP has submitted. The panel is made up of a judge, a doctor and a disability expert. They are separate to DWP. </p>
+<p>You will receive another email by 16 January 2019 telling you how they want to proceed. They may need some more information from you so check your emails regularly. 
+</p>
+<a class="tabs__link " href="evidence-dwp-response">Read DWP's response</a>
+         </div>
+         <br/>
+       </div>
+<!-- Tab 2 -->
+       <div id="questions" class="tab-content">
+        <h2 class="heading-medium">Questions from the tribunal</h2>
+        <ul class="appeal-manage-items">
+         <!-- factory-->
+      <li class="task-list-item">
+       You have no questions from the tribunal
+    </li>
+<br/><br/>
+ <!-- <details>
+    <summary><span class="summary">Answering the tribunal’s questions </span>
+    </summary>
+    <p>The tribunal need some additional information from you to help them make a decision on your appeal. The information you provide will be treated as evidence on your appeal. </p>
+    <p>Your representative has been sent access to your online appeal so they can log in and answer the question for you. What they write is treated as evidence so it’s important that you know what they are submitting. Ask them to save their answer and you can check it before they submit it. </p>  
+    <h3 class="heading-small">Deadline to answer the questions</h3> 
+    <p>You are given a deadline with which you have to answer the questions. This is usually a week but may be longer if the tribunal ask you to provide some additional evidence, such as a doctor’s letter. </p>
+    <p>If you need more time then you can extend the deadline. You will be given an extra week automatically. You’ll need to give reasons if you need longer than that. </p>
+  </details> -->
+</ul>
+</div>
+<!-- Tab 3 -->
+<div id="evidence" class="tab-content">
+  <form action="/mya-002/evidence-options" method="post" class="form">
+    <h3 class="heading-medium">How do you want to provide additional evidence?</h3><p>Providing evidence is optional. Only send or upload evidence which shows how your condition affects your life at the time of the decision by DWP. <br/><a href="about-evidence">Find out what evidence the tribunal finds useful. </a></p>
+    <div class="form-group">
+      <fieldset>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="radio-group" value="Write a statement">
+          <label for="radio-1">Write a statement online</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-2" type="radio" name="radio-group" value="Upload it">
+          <label for="radio-2">Upload letters, documents or photos</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-3" type="radio" name="radio-group" value="Post it">
+          <label for="radio-3">Send by post</label>
+        </div>
+      </fieldset>
+    </div>
+    <div class="form-group">
+      <!-- <a href="/evidence-statement" class="button">Continue</a> -->
+      <input class="button" type="submit" value="Continue">
+    </form>
+    <br/>
+    <br/>
+  </div>
+</form>
+</div>
+<!-- Tab 4 -->
+<div id="history" class="tab-content">
+  <h2 class="heading-medium">History of your appeal</h2>
+  <table>
+<tr>
+              <td><a href="evidence-dwp-response">DWP responded to your appeal</a></td>
+              <td class="date">19 January 2019</td>
+            </tr>
+            <tr>
+              <td><a href="appeal-summary">Appeal submitted</a></td>
+              <td class="date">5 December 2018</td>
+            </tr>
+</tbody>
+</table>
+<br/>
+<br/>
+</div>
+</div>
+<div class="updates-border"></div>
+   </div>
+ </div>
+ <!-- Two thirds -->
+ <div class="grid-row">
+ <!-- <div class="column-one-third">
+    <h4 class="heading-small">Account settings</h4>
+    <ul class="list">
+      <li><a href="#">Contact details</a></li>
+      <li><a href="#">Notification preferences</a></li>
+      <li><a href="#">Representative details</a></li>
+    </ul> 
+  </div>-->
+  <div class="column-two-thirds">
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="#">Service guide</a></li>
+      <li><a href="#">Representatives</a></li>
+      <li><a href="contact-us">Contact us</a></li>
+    </ul> 
+  </div>
+</div>
+</main>
+{% endblock %}

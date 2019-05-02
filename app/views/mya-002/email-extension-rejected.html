@@ -1,0 +1,41 @@
+{% extends "govuk_template_unbranded.html" %}
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal: deadline extension request rejected<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipappeals@justice.gov.uk)<br/>
+	<!--	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
+<div class="email-border">
+		<!--<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png" alt="GOV.UK"></div>-->
+		<div class="email-margin">
+			<div style="padding: 15px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png" alt="Her Majesty's Court and Tribunal Service logo"></div>
+
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
+
+<p>We’re sorry to say your request to have more time to answer the questions has been rejected. A judge reviewed the reasons you gave and decided not to give you any more time. </p>
+
+<p>You still have until 18 April 2018 to answer the questions. If this deadline has expired then the tribunal will consider the information already submitted and decide how to proceed.</p>
+
+<p><a href="appeal-manage-extend">https://appeal-benefit-decision.service.gov.uk/sign-in</a></p> 
+
+
+<p>If you do not answer the questions by that date, the tribunal panel will review the information you have provided so far and decide how to proceed. 
+</p> 
+			<br/>
+			<p>PIP Benefit Appeals<br/>
+				HM Courts & Tribunals Service<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			<p>This message is automatically generated; please do not reply to this email.</p>
+			<!--<p>Change your email address:  <a href="../manage/manage-email-notifications">https://www.sscs.reform.hmcts.net/progress/fzpqcy/manage-<br/>email-notifications</a></p>-->
+		</div>
+	</main>
+	{% endblock %}

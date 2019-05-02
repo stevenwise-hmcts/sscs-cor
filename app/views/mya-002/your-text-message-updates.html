@@ -11,54 +11,45 @@
     <div class="column-two-thirds">
 
       <div class="form-group">
-  <fieldset>
-    <legend>  <h1 class="heading-large">
-        Text message updates
-      </h1>
-      <p>You’ll only get them when something important happens on your appeal. You will not be charged to receive them.
-      </p></legend>
+        <fieldset>
+          <legend>  <h1 class="heading-large">
+            Text message updates
+          </h1>
+          <p>You’ll only get them when something important happens on your appeal. You will not be charged to receive them.
+          </p></legend>
 
-      <form>
-   
+          <form>
+           
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No" checked>
+              <label for="example-contact-by-text">On</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+              <label class="form-label" for="contact-text-message">Mobile phone number<span class="form-hint" >You will receive text messages about your appeal to this number </span>
+              </label>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message" value="07972 438178">
+            </div>
 
+            <div class="multiple-choice" data-target="contact-by-email">
+              <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+              <label for="example-contact-by-email">Off</label>
+            </div>
 
-
-    <div class="multiple-choice" data-target="contact-by-text">
-      <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No" checked>
-      <label for="example-contact-by-text">On</label>
-    </div>
-    <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
-      <label class="form-label" for="contact-text-message">Mobile phone number<span class="form-hint" >You will receive text messages about your appeal to this number </span>
- </label>
-      <input class="form-control" name="contact-text-message" type="text" id="contact-text-message" value="07972 438178">
-    </div>
-
-        <div class="multiple-choice" data-target="contact-by-email">
-      <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
-      <label for="example-contact-by-email">Off</label>
-    </div>
-
-  </fieldset>
-</div>
-
-
-
-
-
-
-
-    </form>
-  </div>
-</div>
-<br/>
-      <div class="grid-row">
-        <div class="column-one-quarter">
-          <a class="button" href="your-details-text-message-updates">Update</a>
-        <a  href="your-details-text-message-updates">Cancel</a>  
+          </fieldset>
         </div>
-      </div>
 
-        </div>            
-      </div>
-    </main>
-    {% endblock %}
+      </form>
+    </div>
+  </div>
+  <br/>
+  <div class="grid-row">
+    <div class="column-one-quarter">
+      <a class="button" href="your-details-text-message-updates">Update</a>
+      <a  href="your-details-text-message-updates">Cancel</a>  
+    </div>
+  </div>
+
+</div>            
+</div>
+</main>
+{% endblock %}

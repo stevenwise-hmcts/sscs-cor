@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Register a representative - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+ {% include "includes/account-nav.html" %}    
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">
+      Enter your representative's details 
+    </h1>
+    <p>If you have a professional representative, you can find their contact details on any letter you have received from them.</p>
+    <form>
+      <fieldset>
+
+                <div class="form-group">
+          <label class="form-label" for="first-name">
+            Title
+          </label>
+          <input class="form-control form-control-1-8" id="form-control-1-8" type="text">
+        </div>
+        <div class="form-group">
+          <!-- Firstname, Lastname -->
+          <label class="form-label" for="first-name">
+            First name
+          </label>
+          <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lastname">
+            Last name
+          </label>
+          <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+        </div>
+        <!-- Name of the organisation --> 
+        <div class="form-group">
+          <label class="form-label" for="organisation">
+            Organisation (if they work for one)
+          </label>
+          <input class="form-control form-control-3-4" id="form-control-3-4" type="text">  
+        </div>
+        <!-- Address line 1--> 
+        <div class="form-group">
+          <label class="form-label" for="addressLine1">
+            Address line 1<span class="form-hint">If they work for a national organisation then enter the address of your local branch.</span>
+          </label>
+         <!-- <textarea class="form-control form-control-3-4" id="textarea-a" cols="90" rows="4"></textarea>
+       </div> -->
+       <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+     </div>
+     <!-- Address line 2--> 
+     <div class="form-group">
+      <label class="form-label" for="addressLine2">
+        Address line 2 (optional)
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+    <!-- Town --> 
+    <div class="form-group">
+      <label class="form-label" for="town">
+        Town/City
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+
+     <!-- County --> 
+    <div class="form-group">
+      <label class="form-label" for="county">
+        County
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+    </div>
+    <!-- Postcode --> 
+    <div class="form-group">
+      <label class="form-label" for="postcode">
+        Postcode
+      </label>
+      <input class="form-control form-control-1-4" id="form-control-3-4" type="text">
+    </div> 
+    <!-- Phone number --> 
+    <div class="form-group">
+      <label class="form-label" for="phone-number">
+        Phone number (optional)<span class="form-hint">This may be used to contact them about your appeal. </span>
+      </label>
+      <input class="form-control form-control-2-4" id="form-control-3-4" type="text"> 
+    </div>
+    <!-- Email address --> 
+    <div class="form-group">
+      <label class="form-label" for="form-control-1-4">
+        Email address (optional)<span class="form-hint">They will receive email updates about your appeal and a link so they can access your appeal online. 
+</span> 
+      </label>
+      <input class="form-control form-control-3-4" id="form-control-3-4" type="text"> 
+    </div>
+
+
+      <div class="grid-row">
+        <div class="column-one-quarter">
+         <p> <a class="button" href="your-representative">Continue</a>
+        <a  href="#">Cancel</a>  </p>
+        </div>
+      </div>
+
+</form>
+
+         <!--<p class="timeout-note">If you do not do anything for 20 minutes then this service will time out.</p> -->
+       
+         {% include "includes/help-contact.html" %}
+<!--<p> <a href="saved-signed-out">Save and come back later</a></p>-->
+        
+
+    </div>
+</div>
+
+</main>
+
+{% endblock %}

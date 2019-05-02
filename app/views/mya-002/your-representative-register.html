@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Register a representative - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+ {% include "includes/account-nav.html" %}    
+
+ <div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-xlarge">
+      Registering a representative  
+    </h1>
+
+   <p> Registering someone as your representative means they can: </p>
+
+<ul class="list list-bullet">
+<li>receive information about your appeal</li>
+<li>submit evidence (and see any that’s submitted)</li>
+<li>act on your behalf during your appeal</li>
+</ul>
+<br/>
+      <div class="grid-row">
+        <div class="column-one-quarter">
+          <a class="button" href="your-representatives-details">Continue</a>
+        <a  href="#">Cancel</a>  
+        </div>
+      </div>
+ </div>
+</div>
+
+</main>
+
+{% endblock %}

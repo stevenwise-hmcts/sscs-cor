@@ -1,0 +1,59 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your address - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="form-group">
+  <fieldset>
+    <legend>  <h1 class="heading-large">
+        Text message updates
+      </h1>
+      </legend>
+
+
+<div>You should check with your representative to make sure they are happy to receive text messages about your appeal.</div>
+<br/><br/>
+
+      <form>
+ 
+    <div class="multiple-choice" data-target="contact-by-text">
+      <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="On" d>
+      <label for="example-contact-by-text">On</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+      <label class="form-label" for="contact-text-message">Mobile phone number<span class="form-hint" >They will receive text messages about your appeal to this number.  </span>
+ </label>
+      <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+    </div>
+
+        <div class="multiple-choice" data-target="contact-by-email">
+      <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+      <label for="example-contact-by-email">Off</label>
+    </div>
+
+  </fieldset>
+</div>
+
+
+    </form>
+  </div>
+</div>
+<br/>
+      <div class="grid-row">
+        <div class="column-one-quarter">
+          <a class="button" href="your-representative-text-message-updates">Update</a>
+        <a  href="">Cancel</a>  
+        </div>
+      </div>
+
+        </div>            
+      </div>
+    </main>
+    {% endblock %}

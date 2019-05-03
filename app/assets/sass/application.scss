@@ -1087,3 +1087,23 @@ img { float: left;
 }
 
 
+// Account navigation
+
+.account-navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.account-navigation__home {
+  flex-basis: 65%;
+}
+
+.account-navigation__links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.account-navigation__links a:not(:last-child) {
+  padding-right: 16px;
+}

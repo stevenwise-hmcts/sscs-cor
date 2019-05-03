@@ -1,24 +1,26 @@
-{% extends "layout_unbranded.html" %}
-{% block page_title %}
-Email - Hearing booked
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
 {% block content %}
-
-
-<main id="content" class="prototype-8" role="main">
-	<p style="padding-top: 30px;"><strong class="bold-small">Subject:</strong> Your 
-	PIP benefit  appeal : check the details of your hearing</p>
+<main id="content" role="main" >
 	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Check details of your hearing<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipappeals@justice.gov.uk)<br/>
+	<!--	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
 	<div class="email-border">
-		
-		
-		<div style="margin-bottom: 30px;"> <img src="/public/images/hmcts-logo.png"></div>
+		<!--<div style="margin-bottom: 15px;"> <img src="/public/images/notify-email-header.png" alt="GOV.UK"></div>-->
+		<div class="email-margin">
+			<div style="padding: 15px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png" alt="Her Majesty's Court and Tribunal Service logo"></div>
 
-		<div class="panel panel-border-wide">
-			<p>Appeal reference number: SC242/16/03435</p>
-		</div>
-		<br/>
-		<p>Dear Manish Sharma</p>
+			<div class="panel panel-border-wide">
+				<p>Appeal reference number: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p> 
 		<p>A hearing for your PIP benefit appeal has been booked: </p> 
 		<h2 class="heading-medium">Hearing details</h2>
 		<p>Date: Monday, 17 June 2019</p>
@@ -43,7 +45,7 @@ Email - Hearing booked
 			<p>Children are allowed in the waiting area but not in the hearing room. You’ll need to bring someone to supervise them while you’re in the hearing. </p>
 			<p>Bring all documents relating to your appeal to the hearing. For example letters or evidence we or DWP  have sent you.</p>
 
-			<p>Find out what your hearing is going to be like: <a href="service-guide#hearing">https://track-appeal.platform.hmcts.net/what-hearing-like/vUXyPb17L2
+			<p>Find out what your hearing is going to be like: <a href="service-guide-signed-out#hearing">https://appeal-benefit-decision.service.gov.uk/service-guide#hearing
 			</a></p>
 
 			<p>Sign in to track and manage your appeal: <br/>
@@ -53,7 +55,7 @@ Email - Hearing booked
 			<h2 class="heading-medium">Claiming expenses</h2>
 			<p>You might be able to claim back some of the money you spend on attending your hearing. 
 
-				<p>Find out more about how to claim: <a href="../enter-lastname-expenses">https://track-appeal.platform.hmcts.net/expenses/vUXyPb17L2</a></p>
+				<p>Find out more about how to claim: <a href="service-guide-signed-out#expenses">https://appeal-benefit-decision.service.gov.uk/service-guide#expenses</a></p>
 				<br/>
 				<p>PIP Benefit Appeals<br/>
 					HMCTS<br/>
@@ -63,5 +65,5 @@ Email - Hearing booked
 				
 			</div>
 
-		</main>
-		{% endblock %}
+	</main>
+			{% endblock %}

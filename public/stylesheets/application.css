@@ -2010,6 +2010,24 @@ input[type=number] {
   color: #0b0c0c;
 }
 
+.account-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-navigation__home {
+  flex-basis: 65%;
+}
+
+.account-navigation__links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.account-navigation__links a:not(:last-child) {
+  padding-right: 16px;
+}
+
 .phase-banner {
   padding: 10px 0 8px;
   border-bottom: 1px solid #bfc1c3;

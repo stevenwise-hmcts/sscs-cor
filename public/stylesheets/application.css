@@ -2013,6 +2013,7 @@ input[type=number] {
 .account-navigation {
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
 }
 
 .account-navigation__home {

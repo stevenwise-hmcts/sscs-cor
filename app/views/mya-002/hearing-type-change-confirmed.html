@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Explain why you want a hearing - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="#">Back</a>
+        <fieldset class="form-group">
+            <h1 class="heading-large">
+              You have chosen not to attend your hearing
+            </h1>
+       <p>You will receive a letter with the tribunal’s decision on your appeal, after your hearing has taken place. If you already had a hearing booked then it will not necessarily happen on that day.</p>
+               <a href="appeal-hearing-not-attending#hearing" class="button">Continue</a>
+
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

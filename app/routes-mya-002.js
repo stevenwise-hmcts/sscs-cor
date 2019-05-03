@@ -42,6 +42,25 @@ router.post('/mya-002/evidence-options', function (req, res) {
 
 })
 
+// Change hearing type 
+
+
+
+router.get('/mya-002/hearing-type-change-sure', function (req, res) {
+	console.log(req.query);
+	res.render('mya-002/hearing-type-change-sure');
+})
+
+router.post('/mya-002/hearing-type-change-sure', function (req, res) {
+
+	if (req.body['radio-group'] === 'stillattend') {
+		res.redirect('/mya-002/appeal-hearing')
+	} else if (req.body['radio-group'] === 'notattend') {
+		res.redirect('/mya-002/hearing-type-change-confirmed')
+	} 
+
+})
+
 router.get('/appeal-q1', function (req, res) {
     res.render('appeal-q1');
 });

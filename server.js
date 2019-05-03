@@ -252,6 +252,7 @@ if (typeof (routes) !== 'function') {
   app.use('/', routess5pi11)
   app.use('/', routess1pi12)
   app.use('/', routesmyahearing002)
+  app.use('/', routesmya002)
 }
 
 // Returns a url to the zip of the latest release on github

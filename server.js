@@ -130,8 +130,8 @@ app.locals.serviceName = config.serviceName
 app.use(function (req, res, next) {
   let isGovUK = false;
   let govUKWhiteList = [
-  '',
-  ''
+  'sign-in',
+  'idam'
   ];
 
   if(new RegExp(govUKWhiteList.join("|")).test(req.originalUrl)) {

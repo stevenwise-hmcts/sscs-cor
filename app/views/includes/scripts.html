@@ -14,3 +14,101 @@
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
+
+
+<script type="text/javascript">
+    window.__8x8Chat = {
+        uuid: "script_2564970475c5c433ab52c08.45062085",
+        tenant: "aG1jdHNzdGFnaW5nMDE",
+        channel: "SSCS",
+        domain: "https://vcc-eu4.8x8.com",
+        path: "/.",
+        buttonContainerId: "chat-button-container",
+        align: "right",
+        stylesheetURL: location.protocol === 'https' ? window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/assets/hmcts-webchat.css' : 'https://cdn.jsdelivr.net/gh/hmcts/ctsc-web-chat/assets/css/hmcts-webchat.css',
+ 
+        linkText: 'Start web chat (opens in a new window)',
+ 
+        additionalText: '(Monday to Friday, 9.00am to 5.00pm)',
+ 
+        onInit: function(bus) {
+ 
+            window.bus=bus;
+ 
+ 
+            // Send optional additional data
+ 
+            // bus.publish('customer:set-info', {
+ 
+                // 'Logged In Id': sLoginId,
+ 
+              //   'Case Id': sCaseId
+ 
+          //   });
+ 
+ 
+            const chatContainer = document.querySelector('#' + window.__8x8Chat.buttonContainerId);
+ 
+            const replaceChatLink = function() {
+ 
+                const chatImg = document.querySelector('#' + window.__8x8Chat.buttonContainerId + ' img');
+ 
+                if (chatImg) {
+ 
+                    const chatLink = document.querySelector('#' + window.__8x8Chat.buttonContainerId + ' a');
+ 
+                    const br = document.createElement('br');
+ 
+                    const additionalText = document.createTextNode(window.__8x8Chat.additionalText);
+ 
+                    chatLink.innerHTML = null;
+ 
+                    chatLink.innerText = window.__8x8Chat.linkText;
+ 
+                    chatContainer.appendChild(br);
+ 
+                    chatContainer.appendChild(additionalText);
+ 
+                }
+ 
+            };
+ 
+            if (chatContainer) {
+ 
+                replaceChatLink();
+ 
+                const mutationObserver = new MutationObserver(replaceChatLink);
+ 
+                mutationObserver.observe(chatContainer, {
+ 
+                    childList: true,
+ 
+                });
+ 
+            }
+ 
+        }
+ 
+    };
+ 
+ 
+    (function() {
+ 
+        const se = document.createElement('script');
+ 
+        se.type = 'text/javascript';
+ 
+        se.async = true;
+ 
+        se.src = window.__8x8Chat.domain + window.__8x8Chat.path + '/CHAT/common/js/chat.js';
+ 
+ 
+        const os = document.getElementsByTagName('script')[0];
+ 
+        os.parentNode.insertBefore(se, os);
+ 
+    })();
+   
+
+</SCRIPT>
+

@@ -5,7 +5,7 @@ Register a representative - Your benefit appeal
 {% block content %}
 <main id="content"  role="main">
  {% include "includes/phase_banner_beta.html" %}
- {% include "includes/account-nav.html" %}    
+ <a id="back-to-tasks" class="link-back" href="#">Back</a>  
 
  <div class="grid-row">
   <div class="column-full">
@@ -24,12 +24,22 @@ Register a representative - Your benefit appeal
       <div class="grid-row">
         <div class="column-one-quarter">
           <a class="button" href="your-representatives-details">Continue</a>
-        <a  href="#">Cancel</a>  
+          
         </div>
       </div>
- </div>
+      <br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="#">Service guide</a></li>
+      <li><a href="service-guide#rep">Representatives</a></li>
+      <li><a href="contact-us">Contact us</a></li>
+    </ul> 
+  </div>
 </div>
-
 </main>
 
 {% endblock %}

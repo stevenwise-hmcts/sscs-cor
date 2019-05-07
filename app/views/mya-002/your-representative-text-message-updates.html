@@ -5,11 +5,8 @@ Your representative - Your benefit appeal
 {% block content %}
 <main id="content"  role="main">
  {% include "includes/phase_banner_beta.html" %}
- <div class="phase-banner">
-  <p> <img src="/public/images/home.png">
-   <a href="appeal-manage-received-rep-registered">Your benefit appeal</a> | <a href="your-details">Your details</a> | <a href="idam-sign-in">Sign out</a>
-  </p>
-</div>   
+  {% include "includes/account-nav.html" %}    
+  
 
  <div class="grid-row">
   <div class="column-full">
@@ -71,7 +68,7 @@ Your representative - Your benefit appeal
        </dt>
        <dd class="cya-answer">
 
-        07972 438178
+        07796 443321
       </dd>
       <dd class="cya-change"><a href=""> Change<span class="visually-hidden"> text message updates</span></a>
 
@@ -88,9 +85,18 @@ Your representative - Your benefit appeal
     </div>
   </dl> 
 
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="#">Service guide</a></li>
+      <li><a href="service-guide#rep">Representatives</a></li>
+      <li><a href="contact-us">Contact us</a></li>
+    </ul> 
+      </div>
 </div>
-</div>
-
 </main>
 
 {% endblock %}

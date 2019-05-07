@@ -56,7 +56,7 @@ router.post('/mya-002/hearing-type-change-sure', function (req, res) {
 	if (req.body['radio-group'] === 'stillattend') {
 		res.redirect('/mya-002/appeal-hearing')
 	} else if (req.body['radio-group'] === 'notattend') {
-		res.redirect('/mya-002/hearing-type-change-confirmed')
+		res.redirect('/mya-002/hearing-type-change-confirm')
 	} 
 
 })

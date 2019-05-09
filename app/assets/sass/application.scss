@@ -1107,3 +1107,30 @@ img { float: left;
 .account-navigation__links a:not(:last-child) {
   padding-right: 16px;
 }
+
+
+.link-secondary {
+  
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: .526315em .789473em .263157em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  
+  
+  
+  
+  font-size: 1em;
+  line-height: 1.25;
+ 
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-left: 30px;
+}

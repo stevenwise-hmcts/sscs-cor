@@ -1,0 +1,318 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-xlarge">Your PIP benefit appeal</h1>
+      <!-- <img src="/public/images/hmcts-logo-black.png" height="100" > -->
+      <p><span class=bold-small>Appeal submitted:</span> 8 May 2019</p>
+      <!-- Benefit type -->
+      <h2 class="heading-medium">Benefit</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Benefit name
+          </dt>
+          <dd class="cya-answer">
+            Personal Independence Payment (PIP)
+          </dd>
+        </div>
+      </dl>
+      <!-- Mandatory Reconsideration Notice (MRN) -->
+      <h2 class="heading-medium">Mandatory Reconsideration Notice (MRN)</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Number from MRN address
+          </dt>
+          <dd class="cya-answer">
+            6
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Date of MRN
+          </dt>
+          <dd class="cya-answer">
+            23 April 2019
+          </dd>
+        </div>
+      </dl>
+      <!-- Claimant -->
+      <h2 class="heading-medium">Your details</h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+           Name
+         </dt>
+         <dd class="cya-answer">
+          Manish Sharma
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Date of birth
+        </dt>
+        <dd class="cya-answer">
+          12 March 1971
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          National Insurance number
+        </dt>
+        <dd class="cya-answer">
+          NP 27 28 67
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Address
+        </dt>
+        <dd class="cya-answer">
+         <p>122 Breach Street<br/>
+          London<br/>
+          E17 2HB<br/></p>
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+    </dl>
+    <!-- Appointee 
+    <h2 class="heading-medium">4. Appointee</h2>
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          Appointee
+        </dt>
+        <dd class="cya-answer">
+          Yes
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Name
+        </dt>
+        <dd class="cya-answer">
+          Jamie Smith 
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Date of birth
+        </dt>
+        <dd class="cya-answer">
+          12.03.1971
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          National Insurance number
+        </dt>
+        <dd class="cya-answer">
+          NP 27 28 67
+        </dd>
+        <dd class="cya-change">
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          <p class="pbold">Address<br/><br/><br/></p>
+          <p class="pbold">Email<br/></p>
+          <p class="pbold">Phone number</p>
+        </dt>
+        <dd class="cya-answer">
+         <p>122 Breach Street<br/>
+          Wolverhampton<br/>
+          WV1 2HB<br/></p>
+          <p>appointee.name@gmail.com</p>
+          <p>0797 243 8179</p>
+        </p>
+      </dd>
+      <dd class="cya-change">
+      </dd>
+    </div>
+  </dl>-->
+  <!-- Text reminders -->
+  <h2 class="heading-medium">Text message reminders</h2>
+  <dl class="govuk-check-your-answers cya-questions-short">
+    <div>
+      <dt class="cya-question">
+        Receive text message reminders
+      </dt>
+      <dd class="cya-answer">
+        Yes
+      </dd>
+      <dd class="cya-change">
+      </dd>
+    </div>
+    <div>
+      <dt class="cya-question">
+        Mobile number
+      </dt>
+      <dd class="cya-answer">
+        0797 243 8179
+      </dd>
+      <dd class="cya-change">
+      </dd>
+    </div>
+  </dl>
+  <!-- Representative -->
+  <h2 class="heading-medium">Representative</h2>
+  <dl class="govuk-check-your-answers cya-questions-short">
+    <div>
+      <dt class="cya-question">
+        Have a representative
+      </dt>
+      <dd class="cya-answer">
+        Yes
+      </dd>
+      <dd class="cya-change">
+      </dd>
+    </div>
+    <div>
+      <dt class="cya-question">
+        <p class="pbold">Name</p>
+        <p class="pbold">Organisation</p>
+        <p class="pbold">Address<br/><br/><br/></p>
+        <p class="pbold">Email</p>
+        <p class="pbold">Phone number</p>
+      </dt>
+      <dd class="cya-answer">
+      Peter Smith</p>
+      <p>Ground Floor<br/>
+Gazette Buildings<br/>
+168 Rupert Street<br/>
+London<br/>
+E17 6TF<br/></p>
+      <p>peter.smith@cab.org.uk</p>
+      <p>03444 77 1010</p>
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+</dl>
+<!-- Reasons for appealing -->
+<h2 class="heading-medium">Reasons for appealing</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <p class="pbold"> What you disagree with</p>
+      <p class="pbold"> Why you disagree with it</p>
+    </dt>
+    <dd class="cya-answer">
+      <p>I cannot use a computer for long periods of time</p>
+      <p>Since my stroke I have had trouble focussing. Using a computer gives me headaches and i need to take regular breaks and my consultant told me i should not use one. I cannot do a job which needs me to use a computer. </p>
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+     <p class="pbold"> What you disagree with</p>
+     <p class="pbold">Why you disagree with it</p>
+   </dt>
+   <dd class="cya-answer">
+    <p>That i am able to cope with social situations</p>
+    <p>I have trouble remembering people’s names. I get very anxious before social situations. I try to avoid them because i don't want to offend people by forgetting their name. </p>
+  </dd>
+  <dd class="cya-change">
+  </dd>
+</div>
+<div>
+  <dt class="cya-question">
+    <p class="pbold">Anything else you want to tell the tribunal</p>
+  </dt>
+  <dd class="cya-answer">
+    I told the assessor about my condition but he did not listen to me.  
+  </dd>
+  <dd class="cya-change">
+  </dd>
+</div>
+</dl>
+<!-- The hearing -->
+<h2 class="heading-medium">The hearing</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Attending the hearing
+    </dt>
+    <dd class="cya-answer">
+      Yes
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Dates you're not available
+    </dt>
+    <dd class="cya-answer">
+      <p> 14 June 2019 to 15 June 2019</p>
+      <p>18 December 2019</p>
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+</dl>
+<!-- The hearing arrangements -->
+<h2 class="heading-medium">Hearing arrangements</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      <p class="pbold">Language interpreter</p>
+      <p class="pbold">Sign interpreter</p>
+      <p class="pbold">Hearing loop</p>
+      <p class="pbold">Disabled access</p>
+      <p class="pbold">Any other arrangements</p>
+    </dt>
+    <dd class="cya-answer">
+      <p>Not required</p>
+      <p>Not required</p>
+      <p>Not required</p>
+      <p>Required</p>
+      <p>Not required</p>
+    </dd>
+    <dd class="cya-change">
+    </dd>
+  </div>
+</dl>
+<br/>
+<!-- <h2 class="heading-medium">Sign and submit </h2> -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <br/>
+    <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
+    <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
+    <p>I agree to the terms and conditions of using the ‘Appeal a benefit decision’ service.</p>
+    <h3 class="heading-small">
+      Signed: <span style="font-weight: normal;">Manish Sharma</span></h3>
+<br/>
+         <a id="back-to-tasks" class="link-back" href="">Back to your PIP benefit appeal</a>
+         <br/>
+
+    </div>
+  </div>
+  <br/>
+  {% include "includes/help-contact.html" %}
+
+</main>
+{% endblock %}

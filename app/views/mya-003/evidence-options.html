@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Evidence - options
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+    {% include "includes/account-nav.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back</a>        
+      <form action="/mya-002/evidence-options" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-large">How do you want to provide additional evidence?</h1>
+            </legend>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="Write a statement">
+              <label for="radio-1">Write a statement online</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="Upload it">
+              <label for="radio-2">Upload letters, documents or photos</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="Post it">
+              <label for="radio-3">Send by post</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          
+         
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

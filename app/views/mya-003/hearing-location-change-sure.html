@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Location change check
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back to Your benefit appeal</a>        
+      <form action="/mya-002/hearing-location-change-sure" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-large">Why do you want to change hearing venue?</h1>
+            </legend>
+            <p>You can usually only change hearing venue if you have moved to a different area. Your reason will be reviewed by the tribunal. 
+</p>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="locationchange">
+              <label for="radio-1">I have moved to a different area  </label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="locationkeep">
+              <label for="radio-2">I have a different reason for wanting to change hearing venue</label>
+            </div>
+            
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          
+         
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

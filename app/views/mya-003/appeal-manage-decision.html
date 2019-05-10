@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Manage your appeal
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 class="font-xsmall">Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+      <br/>
+
+      <!-- JS will add .tabs class -->
+      <div class="js-tabs"> 
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#actions">Status</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+
+        <!-- Tab 1 -->
+        <div id="actions" class="tab-content">
+          <h2 class="heading-medium">Status of your appeal</h2>
+          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/cor-progress-bar-decision.svg"></div>
+          <div class="panel-blue">
+           <h2 class="heading-small">Latest update</h2>
+           
+
+ 
+
+      <p> DWP has also accepted the tribunal’s view so the decision has been issued and the appeal is closed. </p>  
+
+      <p><a href="decision-final">View the tribunals decision</a></p>  
+      
+
+      <p>A formal decision notice has also been sent to your registered postal address.</p>
+
+    <p>DWP is responsible for administering the PIP benefit. If you have any questions about the benefit or payment of the benefit please contact them. Their contact details are on any correspondence you’ve received from them. </p>
+         </div>
+         <br/>
+       </div>
+
+
+<!-- Tab 4 -->
+<div id="history" class="tab-content">
+  <h2 class="heading-medium">History of your appeal</h2>
+  <table>
+            <tr>
+              <td><a href="decision-final">Decision on your appeal issued</a></td>
+              <td class="date">13 February 2019</td>
+            </tr> 
+                        <tr>
+              <td>DWP accepted the tribunals view</td>
+              <td class="date">13 February 2019</td>
+            </tr> 
+            <tr>
+              <td><a href="evidence-decision-view">You accepted the tribunals view</a></td>
+              <td class="date">6 February 2019</td>
+            </tr> 
+           <td><a href="evidence-decision-view">The tribunal issued their view on your appeal</a></td>
+              <td class="date">6 February 2019</td>
+            </tr> 
+
+            <tr>
+              <td><a href="">DWP comments on your answers to the tribunal questions</a></td>
+              <td class="date">30 January 2019</td>
+            </tr>
+
+            <tr>
+              <td><a href="evidence-your-answers-q1">You replied to tribunal questions</a></td>
+              <td class="date">23 January 2019</td>
+            </tr> 
+            <tr>
+              <td><a href="evidence-uploaded-you">Evidence received from you</a></td>
+              <td class="date">12 January 2019</td>
+            </tr>
+            <tr>
+              <td><a href="evidence-statement-submitted">Statement submitted by you</a></td>
+              <td class="date">12 January 2019</td>
+            </tr>
+
+            <tr>
+              <td><a href="evidence-dwp-response">DWP responded to your appeal</a></td>
+              <td class="date">19 January 2019</td>
+            </tr>
+            <tr>
+              <td><a href="appeal-summary">Appeal submitted</a></td>
+              <td class="date">5 December 2018</td>
+            </tr>
+          </tbody>
+        </table>
+
+<br/><br/>
+<img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow">Download all documents relating to your appeal (PDF, 287kb)</a>
+<br/>
+</div>
+</div>
+
+<div class="updates-border"></div>
+   </div>
+ </div>
+
+
+ <!-- Two thirds -->
+ <div class="grid-row">
+ <!-- <div class="column-one-third">
+    <h4 class="heading-small">Account settings</h4>
+    <ul class="list">
+      <li><a href="#">Contact details</a></li>
+      <li><a href="#">Notification preferences</a></li>
+      <li><a href="#">Representative details</a></li>
+    </ul> 
+  </div>-->
+  <div class="column-two-thirds">
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="#">Representatives</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+
+</main>
+{% endblock %}

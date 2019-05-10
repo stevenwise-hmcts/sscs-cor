@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Walking
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="/mya-003/appeal-manage-questions-r1#questions">Back to questions</a>
+      <form class="form" action="/mya-003/question-walking" method="POST">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              What pain do you have when walking?
+            </h1>
+          </legend>
+          <p class="body-text">
+           You said in your appeal that you cannot walk more than 50 meters without experiencing severe pain. </p>
+
+          <p>The tribunal would like to know:</p>
+    <ul class="list list-bullet">     
+            <li>Where do you go when this happens</li>
+<li>Where do you go shopping and how do you manage</li>
+<li>How do you manage walking around at work?</li>
+</ul>
+
+
+          {% if data['walkingCompletedOrDraft'] === 'completed' %}
+          <div class="appellants-answer">
+            <h2 class="bold-small">Your answer</h2>
+            {% if data['textareawalking'] %}
+            <p>{{ data['textareawalking'] }}</p>
+            {% else %}
+            <p>[Answer goes here ]</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Evidence</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[Evidence description goes here]</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            {% endif %}
+            <br/>
+            <p class="font-xsmall">Submitted: 17 October 2018</p>
+          </div>
+          {% else %}
+          <textarea class="form-control form-control-3-4 autoExpand" name="textareawalking" id="textarea" placeholder="You can write as much as you want " rows='6'
+          data-min-rows='6'>{{ data['textareawalking'] }}</textarea>
+ 
+        </fieldset>
+
+
+      {% include "includes/evidence-upload.html" %}
+<!--<details>
+        <summary><span class="summary">Sending evidence to support your answer</span></summary><div class="panel panel-border-narrow">
+        <p>You can send additional information to support your answer and the tribunal will consider it. You don’t have to provide anything if you don’t have it.</p> 
+        <p>You can either email the additional information or send it by post. Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+        <p>If you think there will be a delay in getting your evidence to the tribunal then send an email to the address below briefly describing what you are sending and when you think it will arrive.</p>
+
+        <h3 class="heading-small">Send evidence by email</h3> 
+        <p>You can send your evidence to <a href="mailto:benefitappeals@hmcts.net?subject=Evidence: SC242/16/03435">benefitappeals@hmcts.net</a>  </p>
+        <p>Include your appeal reference number and a short description of what you're sending. </p>
+        <p>Please note you can only send 10mb of files in one email.</p>
+        <h3 class="heading-small">Send evidence by post</h3>
+        <p>Birmingham ASC<br/>
+          HM Courts and Tribunals Service<br/>
+          Administrative Support Centre (ASC)<br/>
+          P O Box 14620<br/>
+          Birmingham<br/>
+        B16 6FR</p>
+  <p>You'll need to print an <a href="/public/images/evidence-cover-sheet.pdf">evidence cover sheet</a> and send it with your evidence.</p>      
+        
+      </div></details>-->
+          {% endif %}
+        {% if data['walkingCompletedOrDraft'] !== 'completed' %}
+        <div style="padding-top: 30px; padding-bottom: 20px;">
+          <a class="button" href="/mya-003/question-walking-confirm" type="submit" value="Submit to the tribunal">Submit answer to the tribunal</a>
+          <input class="button-secondary" type="submit" value="Save for later">
+          <br/><br/>
+          {% endif %}
+        </form>
+        <br/>{% include "includes/help-contact.html" %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}

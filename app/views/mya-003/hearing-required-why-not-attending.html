@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Explain why not attending a hearing - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="/mya-003/hearing-required">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+              Explain why you don’t want to attend
+            </h1>
+            <p class="body-text">
+            The tribunal would like to know why you don’t want to attend the hearing. This will help them decide how to progress your appeal. </p>
+          </legend>
+          <textarea class="form-control form-control-3-4 autoExpand" name="textarea" id="textarea" rows='6' data-min-rows='6'></textarea> 
+        </fieldset>
+        <div class="form-group">
+          <a href="hearing-required-not-attending-confirm" class="button">Continue</a>
+          <!-- <input class="button" type="submit" value="Submit answer"> -->
+        </div>
+      </form>
+    </div>
+  </div>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

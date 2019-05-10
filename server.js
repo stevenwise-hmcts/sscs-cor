@@ -12,6 +12,7 @@ var routess1pi12 = require('./app/routes-mya-001.js')
 var routess1pi12 = require('./app/routes-mya-hearing-001.js')
 var routesmyahearing002 = require('./app/routes-mya-hearing-002.js')
 var routesmya002 = require('./app/routes-mya-002.js')
+var routesmya003 = require('./app/routes-mya-003.js')
 
 var documentationRoutes = require('./docs/documentation_routes.js')
 var favicon = require('serve-favicon')
@@ -253,6 +254,7 @@ if (typeof (routes) !== 'function') {
   app.use('/', routess1pi12)
   app.use('/', routesmyahearing002)
   app.use('/', routesmya002)
+app.use('/', routesmya003)
 }
 
 // Returns a url to the zip of the latest release on github

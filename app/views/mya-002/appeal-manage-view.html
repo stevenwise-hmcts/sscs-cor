@@ -43,33 +43,33 @@ Manage your appeal
         <p>You have answered all the questions and submitted them to the tribunal.</p>
         <ul class="appeal-manage-items">
           <li class="task-list-item">
-           <a class="task-name" href="/mya-001/question-factory" aria-describedby="factory-respond">
+           <a class="task-name" href="/mya-002/question-factory" aria-describedby="factory-respond">
             Tell us more about your work in a factory 
           </a>
           {% if data['factoryCompletedOrDraft'] === 'completed' %}
           <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
           {% elif data['factoryCompletedOrDraft'] === 'draft' %}
-          <a href="/mya-001/question-factory"><strong class="task-draft">Draft</strong></a>
+          <a href="/mya-002/question-factory"><strong class="task-draft">Draft</strong></a>
           {% endif %}
         </li> 
         <li class="task-list-item">
-         <a class="task-name" href="/mya-001/question-cooking" aria-describedby="cooking-respond">
+         <a class="task-name" href="/mya-002/question-cooking" aria-describedby="cooking-respond">
           What help do you need with cooking?
         </a>
         {% if data['cookingCompletedOrDraft'] === 'completed' %}
         <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
         {% elif data['cookingCompletedOrDraft'] === 'draft' %}
-        <a href="/mya-001/question-cooking"><strong class="task-draft">Draft</strong></a>
+        <a href="/mya-002/question-cooking"><strong class="task-draft">Draft</strong></a>
         {% endif %}
       </li>
       <li class="task-list-item">
-        <a class="task-name" href="/mya-001/question-walking" aria-describedby="walking-respond">
+        <a class="task-name" href="/mya-002/question-walking" aria-describedby="walking-respond">
          What pain do you have when walking?
        </a>
        {% if data['walkingCompletedOrDraft'] === 'completed' %}
        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
        {% elif data['walkingCompletedOrDraft'] === 'draft' %}
-       <a href="/mya-001/question-walking"><strong class="task-draft">Draft</strong></a>
+       <a href="/mya-002/question-walking"><strong class="task-draft">Draft</strong></a>
        {% endif %}
      </li>
    </ul>

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Confirm change hearing type  - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="#">Back</a>
+        <fieldset class="form-group">
+            <h1 class="heading-large">
+              Are you sure you do not want to attend your hearing?
+            </h1>
+       <p>If you have a hearing booked then it will be cancelled. A new hearing will take place, probably on a different day. You will not be able to attend it.</p>
+             <p>  <a href="hearing-type-change-confirmed" class="button">Continue</a><span style="padding-left: 30px; "><a href="appeal-hearing#hearing">Cancel</a></span></p>
+
+    <br/>
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="#">Representatives</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

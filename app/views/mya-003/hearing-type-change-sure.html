@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Sure not attending hearing 
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="appeal-hearing#hearing">Back</a>        
+      <form action="/mya-002/hearing-type-change-sure" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-large">The hearing for your appeal</h1>
+            </legend>
+            <p>You have chosen to come to the hearing for your benefit appeal. If you do not want to come anymore then your appeal will be decided on the information you and Department for Work and Pensions submit. You will not be able to explain your appeal in person.</p>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="stillattend">
+              <label for="radio-1">I still want to come to my hearing</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="notattend">
+              <label for="radio-2">I do not want to come to my hearing</label>
+            </div>
+            
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          
+         
+        </div>
+      </form>
+    <br/>
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="#">Representatives</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

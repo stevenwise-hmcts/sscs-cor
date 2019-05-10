@@ -1,0 +1,68 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your address - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="form-group">
+        <fieldset>
+          <legend>  <h1 class="heading-large">
+            Text message updates
+          </h1>
+          <p>You’ll only get them when something important happens on your appeal. You will not be charged to receive them.
+          </p></legend>
+
+          <form>
+           
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No" checked>
+              <label for="example-contact-by-text">On</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+              <label class="form-label" for="contact-text-message">Mobile phone number<span class="form-hint" >You will receive text messages about your appeal to this number </span>
+              </label>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message" value="07972 438178">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-email">
+              <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+              <label for="example-contact-by-email">Off</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <br/>
+  <div class="grid-row">
+    <div class="column-one-quarter">
+      <a class="button" href="your-details-text-message-updates">Update</a>
+      <a class="link-secondary" href="your-details-text-message-updates">Cancel</a>  
+    </div>
+  </div>
+
+</div>            
+</div><br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Representatives</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

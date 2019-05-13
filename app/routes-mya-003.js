@@ -403,3 +403,39 @@ router.post('/mya-003/hearing-date-change-sure', function (req, res) {
 	} 
 
 })
+
+// Update text message number
+
+router.get('/mya-003/your-text-messsage-updates-new-number', function (req, res) {
+	console.log(req.query);
+	res.render('mya-003/your-text-messsage-updates-new-number');
+})
+
+router.post('/mya-003/your-text-messsage-updates-new-number', function (req, res) {
+
+	if (req.body['radio-group'] === 'yesnewnumber') {
+		res.redirect('/mya-003/your-details-text-message-updates')
+	} else if (req.body['radio-group'] === 'nonewnumber') {
+		res.redirect('/mya-003/your-details-text-message')
+	} 
+
+})
+
+
+// Update contact number number
+
+router.get('/mya-003/your-contact-phone-new', function (req, res) {
+	console.log(req.query);
+	res.render('mya-003/your-contact-phone-new');
+})
+
+router.post('/mya-003/your-contact-phone-new', function (req, res) {
+
+	if (req.body['radio-group'] === 'yescontactnew') {
+		res.redirect('/mya-003/your-details-contact-phone-text-yes')
+	} else if (req.body['radio-group'] === 'nocontactnew') {
+		res.redirect('/mya-003/your-details-contact-phone-text-no')
+	} 
+
+})
+

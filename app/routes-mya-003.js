@@ -439,3 +439,38 @@ router.post('/mya-003/your-contact-phone-new', function (req, res) {
 
 })
 
+
+
+// Sign up rep to texts
+
+router.get('/mya-003/your-rep-text-message-sign-up', function (req, res) {
+	console.log(req.query);
+	res.render('mya-003/your-rep-text-message-sign-up');
+})
+
+router.post('/mya-003/your-rep-text-message-sign-up', function (req, res) {
+
+	if (req.body['radio-group'] === 'yessignuprep') {
+		res.redirect('/mya-003/your-rep-text-same-number')
+	} else if (req.body['radio-group'] === 'nosignuprep') {
+		res.redirect('/mya-003/your-representative-text-message-updates-no')
+	} 
+
+})
+
+// Sign up rep to texts
+
+router.get('/mya-003/your-rep-text-same-number', function (req, res) {
+	console.log(req.query);
+	res.render('mya-003/your-rep-text-same-number');
+})
+
+router.post('/mya-003/your-rep-text-same-number', function (req, res) {
+
+	if (req.body['radio-group'] === 'yessamenumber') {
+		res.redirect('/mya-003/your-representative-text-message-updates')
+	} else if (req.body['radio-group'] === 'nosamenumber') {
+		res.redirect('/mya-003/your-rep-text-number')
+	} 
+
+})

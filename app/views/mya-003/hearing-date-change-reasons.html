@@ -15,7 +15,9 @@ Hearing location change reasons
             <h1 class="heading-large">
              Explain why you want to change the date of your hearing
             </h1>
- <p>Your reason will be reviewed by the tribunal.</p>
+ <p>Your reasons for wanting to change the date will be reviewed by a judge. They will decide whether your hearing will go ahead or not. </p>
+<p>If it is very close to the date of your hearing then the judge may decide on the day whether the hearing can still go ahead without you.
+</p>
 
 
           </legend>
@@ -23,14 +25,25 @@ Hearing location change reasons
         </fieldset>
         <div class="form-group">
           <div class="form-group">
-            <a href="https://track-your-appeal.herokuapp.com/mya-hearing-02/hearing-type/006-hearing-dates-postponement" class="button">Continue</a>
+            <a href="https://track-your-appeal.herokuapp.com/mya-hearing-02/hearing-type-3/006-hearing-dates-postponement" class="button">Continue</a>
             <!-- <input class="button" type="submit" value="Submit statement"> -->
 
           </div>
         </form>
-            {% include "includes/help-contact.html" %}
+          <!-- Two thirds -->
+<br/>
+<div class="grid-row">
+ 
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="#">Representatives</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
 
-      </div>
-    </div>
-  </main>
-  {% endblock %}
+{% endblock %}

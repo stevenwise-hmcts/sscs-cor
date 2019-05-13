@@ -44,8 +44,6 @@ router.post('/mya-003/evidence-options', function (req, res) {
 
 // Change hearing type 
 
-
-
 router.get('/mya-003/hearing-type-change-sure', function (req, res) {
 	console.log(req.query);
 	res.render('mya-003/hearing-type-change-sure');
@@ -385,5 +383,23 @@ router.post('/mya-003/hearing-location-change-sure', function (req, res) {
 	} else if (req.body['radio-group'] === 'locationkeep') {
 		res.redirect('/mya-003/appeal-hearing')
 	}
+
+})
+
+
+// Change hearing date change
+
+router.get('/mya-003/hearing-date-change-sure', function (req, res) {
+	console.log(req.query);
+	res.render('mya-003/hearing-date-change-sure');
+})
+
+router.post('/mya-003/hearing-date-change-sure', function (req, res) {
+
+	if (req.body['radio-group'] === 'datekeep') {
+		res.redirect('/mya-003/appeal-hearing')
+	} else if (req.body['radio-group'] === 'datechange') {
+		res.redirect('/mya-003/hearing-date-change-reasons')
+	} 
 
 })

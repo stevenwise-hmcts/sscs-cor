@@ -1134,3 +1134,13 @@ img { float: left;
   vertical-align: top;
   margin-left: 30px;
 }
+
+
+
+
+.updated-tag {
+  @include phase-tag;
+
+  float: right;
+  padding-top: 64px;
+}

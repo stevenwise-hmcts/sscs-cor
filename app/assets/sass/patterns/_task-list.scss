@@ -68,8 +68,8 @@ $task-list-indent: 0px;
   @include phase-tag;
 
   float: right;
-  margin-right: 0;
-  padding-top: 3px;
+  margin-right: 60px;
+  padding-top: 4px;
 }
 
 .task-draft {
@@ -77,5 +77,5 @@ $task-list-indent: 0px;
 
   float: right;
   margin-right: 0;
-  padding-top: 3px;
+  padding-top: 4px;
 }

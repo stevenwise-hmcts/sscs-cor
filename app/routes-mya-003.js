@@ -416,7 +416,7 @@ router.post('/mya-003/your-text-messsage-updates-new-number', function (req, res
 	if (req.body['radio-group'] === 'yesnewnumber') {
 		res.redirect('/mya-003/your-details-text-message-updates')
 	} else if (req.body['radio-group'] === 'nonewnumber') {
-		res.redirect('/mya-003/your-details-text-message')
+		res.redirect('/mya-003/your-details-update-text-number-no')
 	} 
 
 })

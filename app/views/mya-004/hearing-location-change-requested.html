@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Jearing location change reasons
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+         <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <form class="form">
+        <fieldset class="form-group">
+          <legend>
+            <h1 class="heading-large">
+             Your request has been received
+            </h1>
+
+            <p>Your request to change your hearing venue has been received. You will be notified by email within 7 days to let you know whether your request has been granted. </p>
+
+ 
+            <a href="appeal-hearing-location-change-requested#hearing" class="button">Continue</a>
+
+
+          
+        </form>
+          
+
+      </div>
+    </div>
+      {% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

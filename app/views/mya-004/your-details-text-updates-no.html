@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your details - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+ {% include "includes/account-nav-your-details.html" %}   
+
+ <div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-xlarge">
+      Your details 
+    </h1>
+
+    <!-- Address -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+           <h2 class="heading-small">Address</h2>
+        </dt>
+        <dd class="cya-answer">
+         31 Cambridge Street<br/>
+         Bethnal Green<br/>
+         London<br/>
+         EC1 7TW<br/>
+       </dd>
+       <dd class="cya-change">
+        
+        <a href="#">
+         Change<span class="visually-hidden"> your address</span></a>
+       </dd>
+     </div>
+   </dl>
+
+      <!-- Email address -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <h2 class="heading-small"> Email address</h2>
+        </dt>
+        <dd class="cya-answer">
+         manish.sharma1234@hotmail.com
+       </dd>
+       <dd class="cya-change">
+        
+        <a href="#">
+         Change<span class="visually-hidden"> your email address</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+     <!-- Contact phone number -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          <h2 class="heading-small"> Contact phone number</h2>
+        </dt>
+        <dd class="cya-answer">
+         07991 234567
+       </dd>
+       <dd class="cya-change">
+        
+        <a href="#">
+         Change<span class="visually-hidden"> contact phone number</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+
+        <!-- Text message updates -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+           <h2 class="heading-small">Text message updates</h2>
+        </dt>
+        <dd class="cya-answer">
+         Off
+       </dd>
+         <dd class="updated-tag" >
+         UPDATED
+       </dd>
+       <dd class="cya-change">
+        
+        <a href="#">
+         Change<span class="visually-hidden"> text message updates</span></a>
+       </dd>
+     </div>
+   </dl> 
+
+     <!-- Empty -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+         
+        </dt>
+        <dd class="cya-answer">
+         
+       </dd>
+       <dd class="cya-change">
+        
+       </dd>
+     </div>
+   </dl> 
+<br/><br/>
+<div class="grid-row">
+ 
+  <div class="column-two-thirds">
+        <div class="updates-border"></div>
+
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+{% endblock %}

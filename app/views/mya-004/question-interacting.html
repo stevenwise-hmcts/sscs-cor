@@ -1,0 +1,210 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Interacting
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+     <a id="back-to-tasks" class="link-back" href="/mya-004//appeal-q1">Back to your PIP benefit appeal</a>
+     <form class="form" action="/mya-004/question-interacting" method="POST">
+
+      <!-- Question and answer -->
+      <fieldset class="form-group">
+        <legend>
+          <h1 class="heading-large">
+           How do you interact with people?  
+         </h1>
+         <p class="body-text">
+         You said you avoid interacting with people if possible. We’d like to know more about the times when you see friends and family.</p>
+         <p>Tell us about three separate occasions in 2017 that you have met with friends and family. </p>
+         <p>Tell us: </p>
+         <ul class="list list-bullet">
+          <li>who you met</li>
+          <li>when</li>
+          <li>where</li>
+          <li>how it made you feel</li>
+        </ul>
+      </legend>
+      {% if data['interactingCompletedOrDraft'] === 'completed' %}
+      <div class="appellants-answer">
+        <h2 class="bold-small">Your answer</h2>
+        {% if data['textareainteracting'] %}
+        <p>{{ data['textareainteracting'] }}</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% if data['interactingFileUploads'] %}
+                {% for file in data['interactingFileUploads'] %}
+                    <tr>
+                        <td>{{ file.originalname }}</td>
+                        <td></td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+            {% endif %}
+          </tbody>
+        </table>
+        <br/>
+        {% else %}
+        <p>[Answer goes here]</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Evidence</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[filenameone.jpg]</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
+        {% endif %}
+        <p class="font-xsmall">Submitted: 22 March 2018</p>
+      </div>
+      {% else %}
+      <textarea class="form-control form-control-3-4 autoExpand" name="textareainteracting" id="textarea" placeholder="You can write as much as you want " rows='6'
+      data-min-rows='6'>{{ data['textareainteracting'] }}</textarea>
+      <br/>
+
+
+      <!-- Record video or audio reveal -->   
+      <details>
+        <summary><span class="summary">You can record your answer by video or audio</span></summary>
+        <div class="panel panel-border-narrow">
+        You can record yourself speaking the answer on a mobile phone, laptop or other recording device.</p> 
+        <p>The recording should be clear and understandable. You could ask someone to help you by holding the mobile phone while you talk.</p> 
+        <p>You can upload the recording by selecting ‘I want to provide additional evidence to support my answer’ below. </p>
+      </div>
+    </details>
+  </fieldset>
+
+
+  <!-- File upload -->
+  <div class="multiple-choice" data-target="evidence-upload">
+    <input id="evidence" name="evidence-upload" type="checkbox" value="provide-evidence">
+    <label for="evidence">I want to provide evidence to support my answer</label>
+  </div>
+  <div style="padding-top: 60px:"
+  <div class="panel panel-border-narrow js-hidden" id="evidence-upload">
+    <p>You can upload evidence to support your answer such as letters, photos, video or audio. If you are taking a picture of a letter, place it on a flat surface and take the picture from above. </p>
+    <div id="actions" class="row">
+     <div class="col-lg-7">
+       <!-- The fileinput-button span is used to style the file input field as button -->
+       <span class="btn btn-success fileinput-button button-secondary">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Choose file</span>
+      </span>
+    </div>
+    <div class="col-lg-5">
+     <!-- The global file processing state -->
+     <span class="fileupload-process">
+      <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="display:none;3">
+        <div class="progress-bar progress-bar-success" style="width:0%;color:red;" data-dz-uploadprogress></div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div>
+  <h2 class="heading-small" id="uploads">Uploaded files</h2>
+  <div class="c-uploads" id="upload-documents" role="upload-documents" role="region" aria-labelledby="uploads" aria-live="polite">
+    <div class="c-uploads-item">
+      <p class="c-uploads-empty">No files uploaded</p>
+    </div>
+  </div>
+  <div class="table table-striped files" id="previews">
+    <div id="template" class="file-row">
+      <div id="file-name">
+        <span class="name" data-dz-name></span>
+        <strong class="error text-danger" data-dz-errormessage></strong>
+      </div>
+      <div id="p-bar">
+        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+        </div>
+      </div>
+      <div id="file-size">
+        <p class="size" data-dz-size></p>
+      </div>
+      <div id="file-buttons">
+        <a data-dz-remove class="btn btn-warning cancel">
+          <span class="link">Cancel</span>
+        </a>
+        <a class="btn preview-file">
+          <span class="link">Preview</span>
+        </a>
+        <a class="btn btn-danger delete">
+          <span class="link">Delete</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Post evidence reveal -->
+<div style="padding-top: 40px;">
+  <details>
+    <summary><span class="summary">You can also post evidence to the tribunal</span></summary>
+    <p class="body-text">You can post evidence to the address below.</p>
+    <p> Make sure it’s clearly marked with your appeal reference number: <span class="bold">SC242/16/03435</span></p>
+    <p>Birmingham ASC<br/>
+      HM Courts and Tribunals Service<br/>
+      Administrative Support Centre (ASC)<br/>
+      P O Box 14620<br/>
+      Birmingham<br/>
+    B16 6FR</p>
+    <p>You'll need to print an <a href="/public/images/evidence-cover-sheet.pdf">evidence cover sheet</a> and send it with your evidence.</p>
+    <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+  </details>
+</div>
+</div>
+
+<!-- Modal window for image preview -->
+<div id="imageModal" class="">
+ <div id="modal-container">
+   <a class="link close">Close</a>
+   <div id="modal-content" class="modal-content"></div>
+   <div id="image-name"></div>
+ </div>
+</div>
+
+{% endif %}
+
+
+<!-- Submit -->
+
+{% if data['interactingCompletedOrDraft'] !== 'completed' %}
+
+<div style="padding-top: 80px; padding-bottom: 40px;">
+  <a class="button" href="/mya-004/question-interacting-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+            <input class="button-secondary" type="submit" value="Save for later"> 
+
+  {% endif %}
+
+
+</form>
+
+
+</div>
+{% include "includes/help-contact.html" %}
+
+</div>
+</main>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block page_title %}
+COR prototype
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-full">
+			<h1 class="heading-xlarge">Manage your appeal
+				<span class="heading-secondary">Prototype</span></h1>
+				<strong class="bold">Test date:</strong> tbc <br/>
+				<strong class="bold">Location:</strong> tbc<br/>
+				<strong class="bold">Focus:</strong> Iterations from round 2<br/>
+				<strong class="bold">Iteration:</strong> 3.0<br/>
+				<h2 class="heading-medium">Design tickets</h2>
+				<ul class="list list-bullet">
+					<li>Change contact details - address, phone and email (SSCS-4876)</li>
+					<li>Change appellant SMS notification preferences (SSCS-4877)</li>
+					<li>Register a representative (SSCS-4890)</li>
+					<li>Edit representative details (SSCS-4891)</li>
+					<li>Change representative (SSCS-4892)</li>
+					<li>Remove representative (SSCS-4893)</li>
+				</ul>
+				<h2 class="heading-medium">Journeys for testing</h2>
+				<ul class="list list-bullet">
+					<h3 class="heading-small">Your details</h3>	
+					<li><a href="email-appeal-lodged">Change your address</a></li>
+					<li><a href="your-details-address">Change your email address</a></li>
+					<li><a href="your-details-email">Change your contact phone number (and text message mobile number)</a></li>
+					<li><a href="your-details-text-message-updates">Change your text message mobile number (and contact number)</a></li>
+					<li><a href="your-details-contact-phone">Update text message options (turn off)</a></li>
+					<h3 class="heading-small">Representative</h3>	
+					<li><a href="email-appeal-lodged-rep">Register a representative</a></li>
+					<li><a href="your-representative">Change representative text message update options</a></li>
+					<h3 class="heading-small">Hearing</h3>				
+					<li><a href="email-hearing-reminder-1wk-mvp">Postpone hearing less than 2 weeks before</a></li>
+					<li><a href="email-hearing-reminder-1wk-mvp">Change hearing to on the papers</a></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+	{% endblock %}

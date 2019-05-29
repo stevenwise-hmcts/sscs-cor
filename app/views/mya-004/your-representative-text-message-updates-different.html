@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your representative - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}    
+  
+
+ <div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-xlarge">
+      Your representative 
+    </h1>
+
+    <dl class="govuk-check-your-answers cya-questions-long">
+      <div>
+        <dt>
+          <h2 class="heading-small">Contact details</h2>
+        </dt>
+
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> contact details</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div style="padding-top: 120px;">
+        <dt class="cya-question">
+          <br/>
+          <p>Name</p>
+          <p>Organisation</p>
+          <p>Address</p>
+          <p><br/> </p>
+          <p> </p>
+          <p> </p>
+           <br/>
+          <p>Phone number</p>
+          <p>Email address</p>
+        </dt>
+        <dd class="cya-answer">
+          <br/>
+          <p>Mr David Smith</p>
+          <p>Citizens Advice</p>
+          <p>22 Hackney Road<br/>
+            Bethnal Green<br/>
+            London<br/>
+          EC1 GT3</p>
+          <p>07796 443321</p>
+          <p>dave.smith@citizensadvice.org.uk</p>
+        </dd>
+        <dd class="cya-change">
+
+        </dd>
+      </div>
+    </dl>
+
+    <!-- Text message updates -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+
+         <h2 class="heading-small">Text message updates</h2>
+       </dt>
+       <dd class="cya-answer">
+
+        07794 9876543
+      </dd>
+      <dd class="cya-change"><a href=""> Change<span class="visually-hidden"> text message updates</span></a>
+
+      </dd>
+    </div>
+  </dl>
+
+  <!-- Empty -->
+  <dl class="govuk-check-your-answers cya-questions-short">
+    <div>
+      <dt class="cya-question"></dt>
+      <dd class="cya-answer"> </dd>
+      <dd class="cya-change"></dd>
+    </div>
+  </dl> 
+<br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+      </div>
+</div>
+</main>
+
+{% endblock %}

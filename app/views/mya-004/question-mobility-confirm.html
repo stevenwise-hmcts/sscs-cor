@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Question - Mobility - Confirm
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-medium">
+        You will not be able to change your answer after you submit it.  
+      </h1>
+     <a class="button" href="/mya-004/questions-submitted-confirm-r2?mobilityCompletedOrDraft=completed" type="submit" value="Submit answer">Confirm</a><br/><br/>
+      <a href="question-mobility" style="padding-left:0px;">Back to question</a>
+      <br/><br/>
+  {% include "includes/help-contact.html" %}
+    </div>
+  </div>
+
+</main>
+{% endblock %}

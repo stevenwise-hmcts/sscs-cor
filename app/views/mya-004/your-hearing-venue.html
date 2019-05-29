@@ -1,0 +1,52 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your hearing venue - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Your hearing venue
+      </h1>
+      <p>Your hearing will take place at the venue below which is closer to your new address. You will receive more details when it has been booked.</p> 
+
+<p>HM Courts and Tribunals<br/>
+14 Grays Inn Rd <br/>
+Holborn <br/>
+London EC1N 7WS</p>
+
+      
+  </div>
+</div>
+
+      <div class="grid-row">
+        <div class="column-one-half">
+          <a class="button" href="your-details-address">Continue</a>  
+      
+        <a  href="your-details" class="link-secondary" >Do not change my hearing venue</a> 
+        </div>
+      </div>
+
+
+        </div>            
+      </div>
+   <br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

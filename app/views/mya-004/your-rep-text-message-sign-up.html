@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Sign up representatives for text message updates
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <form action="/mya-004/your-rep-text-message-sign-up" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-large">Do you want your representative to receive text message updates?</h1>
+            </legend>
+         <p>Text message updates provide your representative with short updates about your appeal. You should check with them first to make sure they are happy to receive them.</p>
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="yessignuprep">
+              <label for="radio-1">Yes, sign them up for text message updates</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="nosignuprep">
+              <label for="radio-2">No, do not sign them up for text message updates</label>
+            </div>
+            
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          
+         
+        </div>
+      </form>
+<!-- Two thirds -->
+<br/>
+<div class="grid-row">
+ 
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

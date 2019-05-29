@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence confirmed
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        You have another week to answer the questions
+      </h1>
+      <p class="body-text">You now have until [Deadline date + 7 days] to answer the questions. </p>
+      <p>The tribunal will review your answers if you submit them before then.</p>
+      <a href="appeal-manage-questions-r1#questions">Return to your PIP benefit appeal</a>
+    </div>
+  </div>
+  <br/>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

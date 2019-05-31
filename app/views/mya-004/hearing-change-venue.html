@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Change venue
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+    {% include "includes/account-nav.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back</a>        
+      <form action="/mya-004/hearing-change" method="post" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h1 class="heading-large">Do you want to change your hearing venue?</h1>
+            </legend>
+            <p>The hearing venue below is closer to your new address.</p>
+<p class="bold">HM Courts and Tribunals<br/>
+14 Grays Inn Rd <br/>
+Holborn <br/>
+London EC1N 7WS</p>
+
+         <div class="panel panel-border-wide">Changing the venue may delay your appeal because your hearing will need to be arranged at the new venue.[Display only if hearing booked]</div>
+<br/>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="yeschangevenue">
+              <label for="radio-1">Change my hearing to the venue above</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="nochangevenue">
+              <label for="radio-2">Keep my hearing where is it is</label>
+            </div>
+           
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          
+         
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

@@ -64,6 +64,49 @@ router.get('/appeal-q1', function (req, res) {
 });
 
 
+// Change hearing venue
+
+router.get('/mya-004/hearing-change', function (req, res) {
+	console.log(req.query);
+	res.render('mya-004/hearing-change');
+})
+
+router.post('/mya-004/hearing-change', function (req, res) {
+
+	if (req.body['radio-group'] === 'yeschangevenue') {
+		res.redirect('/mya-004/hearing-venue-updated')
+	} else if (req.body['radio-group'] === 'nochangevenue') {
+		res.redirect('/mya-004/your-details-address')
+	} 
+
+})
+
+router.get('/appeal-q1', function (req, res) {
+    res.render('appeal-q1');
+});
+
+// Withdraw
+
+router.get('/mya-004/withdraw-appeal-sure', function (req, res) {
+	console.log(req.query);
+	res.render('mya-004/withdraw-appeal-sure');
+})
+
+router.post('/mya-004/withdraw-appeal-sure', function (req, res) {
+
+	if (req.body['radio-group'] === 'yeswithdraw') {
+		res.redirect('/mya-004/withdraw-reasons')
+	} else if (req.body['radio-group'] === 'nowithdraw') {
+		res.redirect('/mya-004/service-guide#withdraw')
+	} 
+
+})
+
+router.get('/appeal-q1', function (req, res) {
+    res.render('appeal-q1');
+});
+
+
 
 // Question - DWP response
 

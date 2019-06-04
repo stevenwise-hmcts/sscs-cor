@@ -8,21 +8,21 @@ Location change check
   {% include "includes/account-nav.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a id="back-to-tasks" class="link-back" href="">Back to Your benefit appeal</a>        
-      <form action="/mya-004/hearing-location-change-sure" method="post" class="form">
+      <a id="back-to-tasks" class="link-back" href="">Back</a>        
+      <form action="/mya-004/hearing-location-change-why" method="post" class="form">
         <div class="form-group">
           <fieldset>
             <legend>
-              <h1 class="heading-large">Why do you want to change hearing venue?</h1>
+              <h1 class="heading-large">Why do you want to change the hearing venue?</h1>
             </legend>
             <p>You can usually only change hearing venue if you have moved to a different area. Your reason will be reviewed by the tribunal. 
 </p>
             <div class="multiple-choice">
-              <input id="radio-1" type="radio" name="radio-group" value="locationchange">
+              <input id="radio-1" type="radio" name="radio-group" value="newarea">
               <label for="radio-1">I have moved to a different area  </label>
             </div>
             <div class="multiple-choice">
-              <input id="radio-2" type="radio" name="radio-group" value="locationkeep">
+              <input id="radio-2" type="radio" name="radio-group" value="notnewarea">
               <label for="radio-2">I have a different reason for wanting to change hearing venue</label>
             </div>
             
@@ -36,7 +36,18 @@ Location change check
       </form>
     </div>
   </div>
- 
-  {% include "includes/help-contact.html" %}
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+
+  </div>
+</div>
 </main>
 {% endblock %}

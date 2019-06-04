@@ -64,7 +64,7 @@ router.get('/appeal-q1', function (req, res) {
 });
 
 
-// Change hearing venue
+// Change hearing location
 
 router.get('/mya-004/hearing-change', function (req, res) {
 	console.log(req.query);
@@ -77,6 +77,40 @@ router.post('/mya-004/hearing-change', function (req, res) {
 		res.redirect('/mya-004/hearing-venue-updated')
 	} else if (req.body['radio-group'] === 'nochangevenue') {
 		res.redirect('/mya-004/your-details-address')
+	} 
+
+})
+
+// Change hearing location request
+
+router.get('/mya-004/hearing-change-request', function (req, res) {
+	console.log(req.query);
+	res.render('mya-004/hearing-change-request');
+})
+
+router.post('/mya-004/hearing-change-request', function (req, res) {
+
+	if (req.body['radio-group'] === 'yeschangevenuerequest') {
+		res.redirect('/mya-004/hearing-venue-updated')
+	} else if (req.body['radio-group'] === 'nochangevenuerequest') {
+		res.redirect('/mya-004/your-details-address')
+	} 
+
+})
+
+// Change hearing location why
+
+router.get('/mya-004/hearing-location-change-why', function (req, res) {
+	console.log(req.query);
+	res.render('mya-004/hearing-location-change-why');
+})
+
+router.post('/mya-004/hearing-location-change-why', function (req, res) {
+
+	if (req.body['radio-group'] === 'newarea') {
+		res.redirect('/mya-004/your-address-venue-change')
+	} else if (req.body['radio-group'] === 'notnewarea') {
+		res.redirect('/mya-004/hearing-location-change-reasons')
 	} 
 
 })

@@ -8,7 +8,6 @@ Jearing location change reasons
   {% include "includes/account-nav.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-         <a id="back-to-tasks" class="link-back" href="">Back</a>
       <form class="form">
         <fieldset class="form-group">
           <legend>
@@ -18,6 +17,7 @@ Jearing location change reasons
 
             <p>Your request to change your hearing venue has been received. You will be notified by email within 7 days to let you know whether your request has been granted. </p>
 
+
  
             <a href="appeal-hearing-location-change-requested#hearing" class="button">Continue</a>
 
@@ -26,8 +26,19 @@ Jearing location change reasons
         </form>
           
 
-      </div>
-    </div>
-      {% include "includes/help-contact.html" %}
-  </main>
+  
+      <br/><br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
   {% endblock %}

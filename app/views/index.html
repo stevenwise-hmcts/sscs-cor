@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 {% block page_title %}
 COR prototype
 {% endblock %}
@@ -6,227 +6,31 @@ COR prototype
 <main id="content" role="main">
 	<div class="grid-row">
 		<div class="column-full">
-			<h1 class="heading-xlarge">Manage your appeal
-				<span class="heading-secondary">Prototype</span></h1>
+			<h1 class="heading-xlarge">Manage your appeal and Online Resolution
+				<span class="heading-secondary">Prototypes</span></h1>
 
-				<h2 class="heading-small">Product owner review</h3>
-					<p>Date: 5 June 2019</p>
+				<ol class="list list-number">
+					<li><a href="/mya-004/index">Manage your appeal - Product owner review</a></li>
+					<li><a href="/mya-003/index">Manage your appeal - Your details and Representatives v2.0</a></li>
+					<li><a href="/mya-002/index">Manage your appeal - Your details and Representatives v1.0</a></li>
+					<li><a href="/mya-hearing-002/index">Manage your appeal - hearing journeys v2.0</a></li>	
+					<li><a href="/mya-hearing-001/index">Manage your appeal - hearing journeys v1.0</a></li>					
+				</ol>
 
-					<h3 class="heading-medium">Access multiple appeals</h3>
+<h3 class="heading-small">Online resolution</h3>
+<ol class="list list-number">
+				<li><a href="/mvp">Private beta</a> | Online resolution MVP</li>
+				</ol>
 
+				<h3 class="heading-small">Archive</h3>
+				<ol class="list list-number">
+					<li><a href="/mya-001/index">Manage your appeal including online resolution</a></li>
+					<li><a href="/s1pi12/index">Future state</a> | Sprint 1 / PI12</li>
+					<li><a href="/s5pi11/index">Future state</a> | Sprint 5 / PI11</li>
+				</ol>
 
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-
-
-						</tr>
-						<tr>
-							<td><a href="access-multiple-appeals-appellant">Appellant</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-4874</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/XwGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="access-multiple-appeals-appellant">Appointee and representative</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-4874</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/XwGJP">UX docs</a></td>
-						</tr>
-
-					</table>
-
-					<br/>
-					<h3 class="heading-medium">Your details</h3>
-
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-
-						</tr>
-						<tr>
-							<td><a href="email-appeal-lodged">Change your address</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-????</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/XwGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="your-details-address">Change your email address</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4876">SSCS-4876</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/CITlP">UX docs</a></td>
-						</tr>
-
-
-						<tr>
-							<td><a href="your-details-email">Change your contact phone number</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4876">SSCS-4876</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/CITlP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="your-details-text-message-updates">Change your text message mobile number</a></td>
-							<td><a href="">SSCS-4877</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/DoTlP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="your-details-contact-phone">Update text message options (turn off)</a></td>
-							<td><a href="">SSCS-4877</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/DoTlP">UX docs</a></td>
-						</tr>
-					</table>
-
-					<br/>
-					<h3 class="heading-medium">Representative</h3>
-
-
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-
-
-						</tr>
-						<tr>
-							<td><a href="email-appeal-lodged-rep">Register a representative</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-5440">SSCS-4890</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/dITlP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="your-representative">Change/edit representatives details</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4891">SSCS-4891</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/NIH1Pw">UX docs</a></td>
-						</tr>
-
-
-
-						<tr>
-							<td><a href="your-representative">Change representative text message updates</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4894">SSCS-4894</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/VIH1Pw">UX docs</a></td>
-						</tr>
-
-
-						<tr>
-							<td>Remove representative - TBC</td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4893">SSCS-4893</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/ToH1Pw">UX docs</a></td>
-						</tr>
-
-					</table>
-
-					<br/>
-
-					<h3 class="heading-medium">Hearing</h3>
-
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-
-						</tr>
-						<tr>
-							<td><a href="email-hearing-reminder-1wk-mvp">Change to not attending the hearing</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4871">SSCS-4871</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/GAGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="appeal-hearing-not-attending#hearing">Change to attending the hearing</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4871">SSCS-4871</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/GAGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="appeal-manage-received#hearing">Change hearing availability</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4875">SSCS-4875</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/ZQGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="appeal-manage-received#hearing">Change hearing arrangments</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-4874</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/x/XwGJP">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td>Change of venue request (Proposed)</td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4873">SSCS-4873</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/display/SSCS/Change+hearing+venue+request++%7C++MYA++%7C++Design">UX docs</a></td>
-						</tr>
-
-						<tr>
-							<td><a href="email-hearing-reminder-1wk-mvp">Postpone hearing</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4870">SSCS-4870</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/display/SSCS/Postponement+request++%7C++MYA++%7C++Design">UX docs</a></td>
-						</tr>
-
-					</table>
-
-					<br/>
-
-					<h3 class="heading-medium">Hearing < 2 weeks</h3>
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-
-
-						</tr>
-						<tr>
-							<td><a href="appeal-hearing#hearing">Change hearing arrangments (Contact)</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-4874</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/display/SSCS/Hearing+arrangements+update++%7C++MYA++%7C++Design">UX docs</a></td>
-						</tr>
-
-					</table>
-
-					<br/>
-
-					<h3 class="heading-medium">Withdrawn</h3>
-					<table>
-						<col width="600">
-						<col width="150">
-						<col width="150">
-						<tr>
-							<th class="bold font-xsmall">Prototype</th>
-							<th class="bold font-xsmall">JIRA</th>
-							<th class="bold font-xsmall">Confluence</th>
-						</tr>
-						<tr>
-							<td><a href="appeal-manage-received">Withdrawn</a></td>
-							<td><a href="https://tools.hmcts.net/jira/browse/SSCS-4879">SSCS-4879</a></td>
-							<td><a href="https://tools.hmcts.net/confluence/display/SSCS/Withdraw+an+appeal++%7C++MYA++%7C++Design">UX docs</a></td>
-						</tr>
-
-					</table>
-
-					<br/>
-
-
-				</div>
 			</div>
-		</main>
-		{% endblock %}
+		</div>
+		
+	</main>
+	{% endblock %}

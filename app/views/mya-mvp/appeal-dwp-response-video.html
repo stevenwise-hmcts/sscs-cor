@@ -36,13 +36,13 @@ Task list - Round 1
               <ul class="appeal-manage-items">
                  <!-- DWP response -->
     <li class="task-list-item">
-     <a class="task-name" href="/mya-004/question-dwp-response" aria-describedby="dwp-response">
+     <a class="task-name" href="/mya-mvp/question-dwp-response" aria-describedby="dwp-response">
       Any comments on DWP’s response? 
     </a>
     {% if data['dwpresponseCompletedOrDraft'] === 'completed' %}
     <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
     {% elif data['dwpresponseCompletedOrDraft'] === 'draft' %}
-    <a href="/mya-004/question-dwp-response"><strong class="task-draft">Draft</strong></a>
+    <a href="/mya-mvp/question-dwp-response"><strong class="task-draft">Draft</strong></a>
     {% endif %}
   </li>
   <details>
@@ -66,7 +66,7 @@ Task list - Round 1
 
         <!-- Tab 2 -->
         <div id="evidence" class="tab-content">
-          <form action="/mya-004/evidence-options" method="post" class="form">
+          <form action="/mya-mvp/evidence-options" method="post" class="form">
           <h3 class="heading-medium">How do you want to provide additional evidence?</h3><p>Providing evidence is optional. Only send or upload evidence which shows how your condition affects your life at the time of the decision by DWP. <br/><a href="about-evidence">Find out what evidence the tribunal finds useful. </a></p>
         <div class="form-group">
           <fieldset>

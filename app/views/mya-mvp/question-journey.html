@@ -8,8 +8,8 @@ Question - journey
   {% include "includes/account-nav.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-     <a class="link-back" href="/mya-004/appeal-manage-questions-r1#questions">Back to questions</a>
-     <form class="form" action="/mya-004/question-journey" method="POST">
+     <a class="link-back" href="/mya-mvp/appeal-manage-questions-r1#questions">Back to questions</a>
+     <form class="form" action="/mya-mvp/question-journey" method="POST">
       <!-- Question and answer -->
       <fieldset class="form-group">
         <legend>
@@ -102,7 +102,7 @@ Question - journey
 <!-- Submit -->
 {% if data['journeyCompletedOrDraft'] !== 'completed' %}
 <div style="padding-top: 30px; padding-bottom: 20px;">
-  <a class="button" href="/mya-004/question-journey-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+  <a class="button" href="/mya-mvp/question-journey-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
   <input class="button-secondary" type="submit" value="Save for later"></div>
   {% endif %}
 </form>

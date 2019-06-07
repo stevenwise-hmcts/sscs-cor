@@ -8,8 +8,8 @@ Question - cooking
   {% include "includes/account-nav.html" %}
   <div class="grid-row">
     <div class="column-two-thirds">
-     <a id="back-to-tasks" class="link-back" href="/mya-004/appeal-manage">Back to questions</a>
-     <form class="form" action="/mya-004/question-cooking" method="POST">
+     <a id="back-to-tasks" class="link-back" href="/mya-mvp/appeal-manage">Back to questions</a>
+     <form class="form" action="/mya-mvp/question-cooking" method="POST">
       <!-- Question and answer -->
       <fieldset class="form-group">
         <legend>
@@ -86,7 +86,7 @@ Question - cooking
 <!-- Submit -->
 {% if data['cookingCompletedOrDraft'] !== 'completed' %}
  <div class="form-group">
-  <a class="button" href="/mya-004/question-cooking-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
+  <a class="button" href="/mya-mvp/question-cooking-confirm" type="submit" value="Submit answer">Submit answer to the tribunal</a>
   <input class="button-secondary" type="submit" value="Save for later"></div>
   {% endif %}
 </form>

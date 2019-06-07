@@ -1,0 +1,45 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your email - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Updates will be sent to your new email address
+      </h1>
+     <br/>
+<div class="panel panel-border-wide">
+
+          <p>You still need to use your old email address to sign into this appeal.</p>
+
+        </div>
+  </div>
+</div>
+<br/>
+      
+          <a class="button" href="your-details-email">Continue</a>
+        
+
+        </div>            
+      </div>
+   <br/><br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

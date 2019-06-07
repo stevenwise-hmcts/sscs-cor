@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Submit evidence - Statement
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+    {% include "includes/account-nav.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a id="back-to-tasks" class="link-back" href="">Back</a>
+      <form class="form">
+        <legend>
+          <h1 class="heading-large">
+            Upload additional evidence
+          </h1>
+          <p>You can upload letters, documents or photos. For example, you could take a photo of a letter from your doctor and upload it. If you do take a photo, make sure the letter or document is on a flat surface and the photo is taken from above. </p>
+          <p>Useful evidence describes or shows how your condition affects your life.<br/><a href="about-evidence">Read more about what evidence the tribunal finds useful</a></p>
+          <h2 class="govuk-heading-m evidence-upload-nojs" style="display: none;">Provide evidence to support your answer</h2>
+
+        <p>
+        <div id="uploadFileButton">
+            <div class="govuk-form-group">
+                <label class="first-button button-secondary" for="file-upload-1">
+                    Choose file
+                </label>
+                <input class="govuk-file-upload evidence-upload-js" id="file-upload-1" name="file-upload-1" type="file" accept=".jpg, .jpeg, .bmp, .tif, .tiff, .png, .pdf, .txt, .doc, .dot, .docx, .dotx, .xls, .xlt, .xla, .xlsx, .xltx, .xlsb, .ppt, .pot, .pps, .ppa, .pptx, .potx, .ppsx" style="display: none;">
+            </div>
+        </div>
+        <div id="upload-spinner">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div class="govuk-heading-m spinner-text">File uploading</div>
+        </div>
+        </p>
+        <p>
+        <table class="govuk-table" id="files-uploaded">
+            <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" colspan="2">Uploaded files</th>
+            </tr>
+            </thead>
+            <tbody id="evidence-list" class="govuk-table__body">
+            <tr id="row_no_files" class="govuk-table__row">
+                <td class="govuk-table__cell">No files uploaded</td>
+                <td class="govuk-table__cell">&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+        <input id="add-file" name="add-file" type="submit" value="Add file" class="govuk-button secondary-button evidence-upload-nojs" style="display: none;">
+        </p>
+      
+       <!-- <details id="sending-evidence-guide" class="govuk-details" role="group">
+            <summary class="govuk-details__summary" role="button" aria-controls="details-content-fed0c208-5781-4c7e-8765-2ccfa006e17b" aria-expanded="false">
+                <span class="govuk-details__summary-text summary">
+                  You can also post evidence to the tribunal
+                </span>
+            </summary>
+            <div class="panel panel-border-narrow">
+                <p>You can post evidence to the address below.</p>
+                <p>Make sure it’s clearly marked with your Appeal reference:<br>
+                    <strong id="evidence-case-reference">SC245/16/03435</strong>
+                </p>
+                <p>Birmingham ASC<br>HM Courts and Tribunals Service<br>Administrative Support Centre (ASC)<br>P O Box 14620<br>Birmingham<br>B16 6FR</p>
+                <p>Try to post it as soon as possible to avoid delaying your appeal.</p>
+                <p>Tell the tribunal in your answer if you plan on posting evidence. Briefly describe what you are posting and say when you think it will arrive.</p>
+            </div>
+        </details>-->
+    </div>
+    </div>
+    
+              <a href="evidence-confirm" class="button">Submit evidence to the tribunal</a>
+
+  </div>
+  <br/>  <br/>
+  {% include "includes/help-contact.html" %}
+</main>
+{% endblock %}

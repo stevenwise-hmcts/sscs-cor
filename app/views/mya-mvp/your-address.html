@@ -1,0 +1,86 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your address - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Enter your new address
+      </h1>
+      <p>You will receive letters about your appeal to this address.
+      </p>
+
+      <form>
+
+        <!-- Address line 1--> 
+        <div class="form-group">
+          <label class="form-label" for="addressLine1">
+            Address line 1
+          </label>
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text" value="14 Oxford Road">
+       </div>
+
+       <!-- Address line 2--> 
+       <div class="form-group">
+        <label class="form-label" for="addressLine2">
+          Address line 2 (optional)
+        </label>
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text">
+      </div>
+      
+      <!-- Town --> 
+      <div class="form-group">
+        <label class="form-label" for="town">
+          Town/City
+        </label>
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text" value="Hastings">
+      </div>
+
+      <!-- County --> 
+      <div class="form-group">
+        <label class="form-label" for="county">
+          County
+        </label>
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text" value="East Sussex">
+      </div>
+
+      <!-- Postcode --> 
+      <div class="form-group">
+        <label class="form-label" for="postcode">
+          Postcode
+        </label>
+        <input class="form-control form-control-1-4" id="form-control-1-4" type="text" value="TN38 6EW">
+      </div>
+    </form>
+  </div>
+</div>
+      <div class="grid-row">
+        <div class="column-one-third">
+          <a class="button" href="hearing-change-venue">Update</a>
+
+           <a href="your-details" class="link-secondary">Cancel</a>
+        <!--<a  href="your-details">Cancel</a> --> 
+        </div>
+      </div>
+
+      <br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

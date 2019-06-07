@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your representative - Your benefit appeal
+{% endblock %}
+{% block content %}
+<main id="content"  role="main">
+ {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}    
+  
+
+ <div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">
+      Your representative 
+    </h1>
+
+
+
+<dl class="govuk-check-your-answers cya-questions-long">
+      <div>
+        <dt>
+
+          <p style="font-weight: bold;">Name</p>
+          <p style="font-weight: bold;">Organisation</p>
+          <p style="font-weight: bold;">Address</p>
+          <p style="font-weight: bold;"><br/> </p>
+          <p> </p>
+          <p> </p>
+           <br/>
+          <p style="font-weight: bold;">Phone number</p>
+          <p style="font-weight: bold;">Email address</p>
+        </dt>
+
+<dd class="cya-answer">
+          <p>Mr David Smith</p>
+          <p>Citizens Advice</p>
+          <p>22 Hackney Road<br/>
+            Bethnal Green<br/>
+            London<br/>
+          EC1 GT3</p>
+          <p>020 3201 3457</p>
+          <p>dave.smith@citizensadvice.org.uk</p>
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> contact details</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <!-- Text message updates -->
+    <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+
+         <h2 class="heading-small">Text message updates</h2>
+       </dt>
+       <dd class="cya-answer">
+
+        07794 9876543
+      </dd>
+      <dd class="cya-change"><a href=""> Change<span class="visually-hidden"> text message updates</span></a>
+
+      </dd>
+    </div>
+  </dl>
+
+
+<br/><br/>
+
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+      </div>
+</div>
+</main>
+
+{% endblock %}

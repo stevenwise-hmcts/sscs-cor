@@ -1,0 +1,406 @@
+{% extends "layout_unbranded.html" %}
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+  <div style="margin: 0px 45px 0px 45px;">
+    <div class="grid-row">
+      <div class="column-one-half">
+        <div style="margin: 60px 0px 30px 0px;"> <img src="/public/images/hmcts-logo-black.png" height="100" ></div>
+      </div>
+      <div class="column-one-half">
+        <aside style="margin-top: 60px; text-align: right;">
+          <span style="font-weight: bold; font-size: 36pt">SSCS1</span> 
+          <!--<span style="color: red;">[Date the online form was submitted]</span>-->
+        </aside>
+      </div>  
+    </div>
+    <div class="grid-row">
+      <div class="column-full">
+        <h1 class="heading-large"><!--<span style="color: red;">[Benefit type abbreviation if exists e.g. PIP otherwise long format]</span> -->Tribunal questions</h1>
+        <!-- Benefit type-->
+        <h2 class="heading-medium"></h2>
+        <dl class="govuk-check-your-answers cya-questions-short">
+          <div>
+            <dt class="cya-question">
+              Benefit name
+            </dt>
+            <dd class="cya-answer">
+              Personal Independence Payment (PIP) <!--<span style="color: red;">[Display long format and benefit abbreviation (if there is one)]</span>-->
+            </dd>
+          </div>
+
+
+          <div>
+            <dt class="cya-question">
+              NINO
+            </dt>
+            <dd class="cya-answer">
+              QA681274 [Always appellant NINO]
+            </dd>
+          </div>
+
+
+        </dl>
+        <!-- Appointee -->
+        <h2 class="heading-medium">Appointee [Display section if appointee 'Yes']</h2>
+        <dl class="govuk-check-your-answers cya-questions-short">
+          <div>
+            <dt class="cya-question">
+             Title
+           </dt>
+           <dd class="cya-answer">
+            Mr<!--<span style="color: red;">[Title_Name_Last name]</span>-->
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+           First name
+         </dt>
+         <dd class="cya-answer">
+          Alex<!--<span style="color: red;">[Title_Name_Last name]</span>-->
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+         Surname
+       </dt>
+       <dd class="cya-answer">
+        Smith<!--<span style="color: red;">[Title_Name_Last name]</span>-->
+      </dd>
+    </div>
+    <div>
+      <dt class="cya-question">
+        Date of birth
+      </dt>
+      <dd class="cya-answer">
+        1 December 2002
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Address<br/><br/>
+      </dt>
+      <dd class="cya-answer">
+       Address line 1<br/>
+       Address line 2<br/>
+       Town<br/>
+       County<br/>
+       Postcode
+     </dd>
+   </div>
+   <div>
+    <dt class="cya-question">
+     Phone number
+   </dt>
+   <dd class="cya-answer">
+    077 99 88 4521
+  </dd>
+</div>
+<div>
+  <dt class="cya-question">
+    Email
+  </dt>
+  <dd class="cya-answer">
+    alex.smith@gmail.com
+  </dd>
+</div>
+</dl>       
+<!-- Appellant details -->
+<h2 class="heading-medium">Appellant</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Title
+    </dt>
+    <dd class="cya-answer">
+      Mr <!--<span style="color: red;">[Title_Name_Last name]</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      First name
+    </dt>
+    <dd class="cya-answer">
+      James <!--<span style="color: red;">[Title_Name_Last name]</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Surname
+    </dt>
+    <dd class="cya-answer">
+      Smith <!--<span style="color: red;">[Title_Name_Last name]</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Date of birth
+    </dt>
+    <dd class="cya-answer">
+      12 March 1971
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Address<br/><br/>
+    </dt>
+    <dd class="cya-answer">
+     Address line 1<br/>
+     Address line 2<br/>
+     Town<br/>
+     County<br/>
+     Postcode
+   </dd>
+ </div>
+ <div>
+  <dt class="cya-question">
+   Phone number
+ </dt>
+ <dd class="cya-answer">
+  0797 243 8179 [don't display if there's an appointee]<!--<span style="color: red;">[If not entered display 'Not provided']</span>-->
+</dd>
+</div>
+<div>
+  <dt class="cya-question">
+   Email
+ </dt>
+ <dd class="cya-answer">
+  james.smith@gmail.com [don't display if there's an appointee]<!--<span style="color: red;">[If not entered display 'Not provided']</span>-->
+</dd>
+</div>
+</dl>
+<!-- Representative -->
+<h2 class="heading-medium">Representative</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+   <!-- <div>
+  <dt class="cya-question">
+      Have a representative
+    </dt>
+    <dd class="cya-answer">
+      Yes <!--<span style="color: red;">['Yes' or 'No']</span>
+    </dd>
+  </div>-->
+  <div>
+    <dt class="cya-question">
+      Name
+    </dt>
+    <dd class="cya-answer">
+      Peter Brown<!-- <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Organisation
+    </dt>
+    <dd class="cya-answer">
+      Citizens Advice<!-- <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Address<br/><br/>
+    </dt>
+    <dd class="cya-answer">
+     Address line 1<br/>
+     Address line 2<br/>
+     Town<br/>
+     County<br/>
+     Postcode
+   </dd>
+ </div>
+ <div>
+  <dt class="cya-question">
+    Phone number
+  </dt>
+  <dd class="cya-answer">
+    03444 77 1010<!-- <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>-->
+  </dd>
+</div>
+<div>
+  <dt class="cya-question">
+    Email
+  </dt>
+  <dd class="cya-answer">
+    peter.smith@cab.org.uk<!-- <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>-->
+  </dd>
+</div>
+</dl>
+<!-- Mandatory Reconsideration Notice (MRN) -->
+<h2 class="heading-medium">MRN and appeal submission</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+
+  <div>
+    <dt class="cya-question">
+      MRN originating office
+    </dt>
+    <dd class="cya-answer">
+      6 
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Date of decision
+    </dt>
+    <dd class="cya-answer">
+      22 September 2017
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Date appeal submitted
+    </dt>
+    <dd class="cya-answer">
+      12 October 2017
+    </dd>
+  </div>
+
+  <div>
+    <dt class="cya-question">
+      Why appeal is late
+    </dt>
+    <dd class="cya-answer">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ <!--<span style="color: red;">[Reason for late appeal. Display if appeal is late and reason entered on either</span>
+  <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-3-why-appeal-late-1month">'Tell us why your appeal is late' (over 1 month)</a> or <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-4-why-appeal-late-13months">'Tell us why your appeal is late' (over 13 months)</a>]-->
+</dd>
+</div>
+<div>
+  <dt class="cya-question">
+    No MRN
+  </dt>
+  <dd class="cya-answer">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <!--<span style="color: red;">[Reason for no MRN as entered on <a href="https://track-your-appeal.herokuapp.com/prototype-beta-20/submit-your-appeal/003-1-no-mrn">'Tell us why you don’t have a Mandatory Reconsideration Notice'</a></span>-->
+  </dd>
+</div>
+</dl>
+<!-- Reasons for appealing -->
+<h2 class="heading-medium">Reasons for appealing</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  
+  <div>
+    <dt class="cya-question">
+     <p class="pbold"> What you disagree with and why</p>
+  
+   </dt>
+   <dd class="cya-answer">
+    <p>That i am able to cope with social situations. I have trouble remembering people’s names. I get very anxious before social situations. I try to avoid them because i don't want to offend people by forgetting their name. </p>
+  
+  </dd>
+</div>
+<div>
+  <dt class="cya-question">
+    Anything else you want to tell the tribunal<br/>
+  </dt>
+  <dd class="cya-answer">
+    I told the assessor about my condition but he did not listen to me.  
+  </dd>
+</div>
+</dl>
+<!-- The hearing -->
+<h2 class="heading-medium">The hearing</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Attending the hearing
+    </dt>
+    <dd class="cya-answer">
+      Yes/No <!--<span style="color: red;">['Yes' or 'No']</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+     Dates not available
+   </dt>
+   <dd class="cya-answer">
+     <!-- <span style="color: red;">[Only display 'Dates you're not available' if attending the hearing]</span> -->
+     <p>11 December 2017 <!-- <span style="color: red;">[If attending the hearing and no dates provided display 'None provided']</span>--></p>
+     <p>12 December 2017</p>
+     <p>13 December 2017</p>
+     <p>18 December 2017</p>
+   </dd>
+ </div>
+</dl>
+<!-- The hearing arrangements -->
+<h2 class="heading-medium">Hearing arrangements <!--<span style="color: red;">[Only display if attending the hearing]</span>--></h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Language interpreter
+    </dt>
+    <dd class="cya-answer">
+      Yes/No, [language/dialect] language interpreter required
+    </dd>
+  </div>
+   <div>
+    <dt class="cya-question">
+      Sign interpreter
+    </dt>
+    <dd class="cya-answer">
+      Yes/No, [language] language interpreter required
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Hearing loop
+    </dt>
+    <dd class="cya-answer">
+      Yes/No, hearing loop required
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Disabled access
+    </dt>
+    <dd class="cya-answer">
+      Yes/No, disabled access required
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Any other arrangements
+    </dt>
+    <dd class="cya-answer">
+      Free text or 'None' if no data
+    </dd>
+  </div>
+</dl>
+<!-- Text reminders -->
+<h2 class="heading-medium">Text message reminders</h2>
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Receive text message reminders
+    </dt>
+    <dd class="cya-answer">
+      Yes/No <!--<span style="color: red;">['Yes' or 'No']</span>-->
+    </dd>
+  </div>
+  <div>
+    <dt class="cya-question">
+      Mobile number
+    </dt>
+    <dd class="cya-answer">
+      0797 243 8179<!-- <span style="color: red;">[Display only if user has selected 'Yes' to receiving text reminders].</span>-->
+    </dd>
+  </div>
+</dl>
+<br/>
+<!-- <h2 class="heading-medium">Sign and submit </h2> -->
+<div class="grid-row">
+  <div class="column-full">
+    <br/>
+    <p>The information I have provided in this appeal is accurate, to the best of my knowledge. </p>
+    <p>[if chosen rep] I give permission for the tribunal to correspond with my named representative about my appeal.</p>
+    <p>I agree to the terms and conditions of using the ‘Appeal a benefit decision’ service.</p>
+    <div class="form-group">
+      <h3 class="heading-small">
+        Signed: <span style="font-weight: normal;">Alex Smith [Name entered in sign field on CYAS screen]</span> <!--<span style="font-weight: normal; color: red;">[Name as entered in the 'Enter your name' field on the 'Check your answers screen']</span>--></h3>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <span class="font-size: 12px">SSCS1 - Notice of appeal against a decision of the Department for Work and Pensions (09.13)</span>
+</main>
+{% endblock %}

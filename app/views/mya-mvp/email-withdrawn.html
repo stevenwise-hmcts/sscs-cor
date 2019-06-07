@@ -1,0 +1,41 @@
+{% extends "govuk_template_unbranded.html" %}
+
+{% block head %}
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<main id="content" role="main" >
+	
+	<p style="padding-top: 30px; font-size: 16px;">
+		<strong style="font-weight: bold;">Subject: </strong>Your PIP benefit appeal<br/>
+		<strong style="font-weight: bold;">From: </strong>PIP Benefit Appeals (pipappeals@justice.gov.uk)<br/>
+	<!--	<strong style="font-weight: bold;">Date: </strong>14/02/2018 <br/>
+	</p> -->
+	<div class="email-border">
+		
+		<div class="email-margin">
+			<div style="padding: 0px 0 80px 0px;"> <img src="/public/images/hmcts-logo.png" alt="Her Majesty's Court and Tribunal Service logo"></div>
+
+			<div class="panel panel-border-wide">
+				<p>Appeal reference: SC242/16/03435</p>
+			</div>
+			<br/>
+			<p>Dear Manish Sharma</p>
+	
+<p>You told the tribunal that you wanted to withdraw your appeal. Your appeal is now closed.</p> 
+
+<p>If you have any questions relating to your benefits, contact DWP. You can find their contact details on any correspondence you’ve received from them.</p>
+
+		
+			<p>PIP Benefit Appeals<br/>
+				HM Courts & Tribunals Service<br/>
+				Telephone: 0300 123 1142<br/>
+			</p>
+			<p>This message is automatically generated; please do not reply to this email.</p>
+			<!--<p>Change your email address:  <a href="../manage/manage-email-notifications">https://www.sscs.reform.hmcts.net/progress/fzpqcy/manage-<br/>email-notifications</a></p>-->
+		</div>
+		
+	</main>
+	  <a href="index">Index</a>
+
+	{% endblock %}

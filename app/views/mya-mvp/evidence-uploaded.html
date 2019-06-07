@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Evidence - statement submitted
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+         <a id="back-to-tasks" class="link-back" href="">Back to the history of your appeal</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+     
+      <h1 class="heading-large">
+        Documents you provided
+      </h1>
+      <p><span class="bold-small">Uploaded:</span> 14 February 2017<br />
+
+      <span class="bold-small">Number of items:</span> 9</p>
+      <br/>
+    <img src="/public/images/download_document_icon.png" width="50px" height="45px">
+<a href="#" class="follow bold-small">Download your documents</a>
+
+      </div>
+    </div>
+{% include "includes/help-contact.html" %}
+  </main>
+  {% endblock %}

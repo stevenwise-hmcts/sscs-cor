@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block page_title %}
+View - video
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 class="font-xsmall">Appeal reference:  SC242/16/03435  </h2>
+      </div>
+      <div class="divider"></div>
+
+      <h2 class="heading-small">Tribunal's view on your appeal</h2>
+
+      <video controls="controls" width="630" 
+      name="Video Name" src="/public/images/movies/pre-view.mov"></video>
+
+      <details>
+        <summary><span class="summary">Video transcript</span>
+
+        </summary>
+
+
+       <p>The tribunal panel have reviewed all the information you and DWP have provided.</p>
+      <p>They have reached a view on your appeal.</p>
+      <p>Please read their view and the reasons for it, and say whether you accept it. </p>
+      <p>If you do not accept it then you can come to a hearing and explain your appeal in person. </p>
+      <p>You can read their view after this video ends. </p>
+
+      </details>
+      <br/>
+
+
+    <a  href="decision-view" class="button">Continue</a>
+  </div>
+
+</div>
+</main>
+{% endblock %}

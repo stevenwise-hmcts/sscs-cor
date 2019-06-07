@@ -1,0 +1,52 @@
+ {% extends "layout.html" %}
+ {% block page_title %}
+ Your email - Your benefit appeal
+ {% endblock %}
+ {% block content %}
+ <main id="content"  role="main">
+   {% include "includes/phase_banner_beta.html" %}
+   {% include "includes/account-nav.html" %} 
+
+   <div class="grid-row">
+    <div class="column-two-thirds">
+    <label>  <h1 class="heading-xlarge">
+        Your email address
+      </h1>
+      <p>You will receive updates about your appeal to this email address. 
+      </p></label>
+
+      <form>
+
+
+        <input class="form-control form-control-3-4" id="form-control-3-4" type="text" value="manish.sharma@gmail.com">
+       </div>
+
+    </form>
+  </div>
+</div>
+<br/>
+      <div class="grid-row">
+        <div class="column-one-quarter">
+          <a class="button" href="your-email-confirm">Update</a>
+        <a class="link-secondary" href="your-details">Cancel</a>  
+        </div>
+      </div>
+
+        </div>            
+      </div>
+    <br/><br/>
+<!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}

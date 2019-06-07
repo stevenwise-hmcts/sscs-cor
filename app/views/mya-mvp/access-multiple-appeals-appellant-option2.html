@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your benefit appeals - Appeal a benefit decision
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav-home-mutlple-appeals.html" %} 
+  <div class="grid-row">
+   <div class="column-full">
+    <h1 class="heading-xlarge">
+      Your benefit appeals
+    </h1>
+    <div class="details">
+      <h2 class="heading-medium">Manish Sharma</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+
+    <br/>
+ <table>
+  <tr>
+    <th class="bold font-xsmall">Appeal reference</th>
+    <th class="bold font-xsmall">Benefit</th>
+    <th class="bold font-xsmall">Date submitted</th>
+    <th class="bold font-xsmall">Status</th>
+    <th class="bold font-xsmall"></th>
+  </tr>
+  <tr>
+    <td>SC242/16/03435</td>
+    <td>PIP</td>
+    <td>29 May 2019</td>
+    <td>Appeal received</td>
+    <td><a href="">View appeal</a></td>
+  </tr>
+
+  <tr>
+    <td>SC242/16/02923</td>
+    <td>ESA</td>
+    <td>2 April 2019</td>
+    <td>DWP response</td>
+    <td><a href="">View appeal</a></td>
+  </tr>
+
+    <tr>
+    <td>SC242/16/02535</td>
+    <td>PIP</td>
+    <td>12 March 2019</td>
+    <td>Decision made</td>
+    <td><a href="">View appeal</a></td>
+  </tr>
+
+      <tr>
+    <td>SC242/16/021675</td>
+    <td>ESA</td>
+    <td>2 March 2019</td>
+    <td>Closed</td>
+    <td><a href="">View appeal</a></td>
+  </tr>
+
+</table>
+<br/><br/>
+ <!-- Two thirds -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="service-guide">Service guide</a></li>
+      <li><a href="service-guide#rep">Your representative</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+</div>
+</div> 
+</main>
+{% endblock %}

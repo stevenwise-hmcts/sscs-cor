@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block page_title %}
+COR prototype
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-full">
+			<h1 class="heading-xlarge">Manage your appeal
+				<span class="heading-secondary">Prototype</span></h1>
+	
+				<h2 class="heading-medium">Product owner review</h3>
+					<p>Date: 5 June 2019</p>
+				<!--<h2 class="heading-medium">Design tickets</h2>
+				<ul class="list list-bullet">
+					<li>Change contact details - address, phone and email (SSCS-4876)</li>
+					<li>Change appellant SMS notification preferences (SSCS-4877)</li>
+					<li>Register a representative (SSCS-4890)</li>
+					<li>Edit representative details (SSCS-4891)</li>
+					<li>Change representative (SSCS-4892)</li>
+					<li>Remove representative (SSCS-4893)</li>
+				</ul>-->
+				<h2 class="heading-medium">Journeys</h2>
+				<ul class="list list-bullet">
+
+
+					<h3 class="heading-small">Access multiple appeals</h3>
+					<li><a href="access-multiple-appeals-appellant">Appellant</a> | <a href="https://tools.hmcts.net/jira/browse/SSCS-4874">SSCS-4874</a> | <a href="">UX doc</a></li>
+					<li><a href="access-multiple-appeals-rep-appointee">Appointee and representative</a></li>
+					
+					<h3 class="heading-small">Your details</h3>	
+					<li><a href="email-appeal-lodged">Change your address</a></li>
+					<li><a href="your-details-address">Change your email address</a></li>
+					<li><a href="your-details-email">Change your contact phone number (and text message mobile number)</a></li>
+					<li><a href="your-details-text-message-updates">Change your text message mobile number (and contact number)</a></li>
+					<li><a href="your-details-contact-phone">Update text message options (turn off)</a></li>
+					
+					<h3 class="heading-small">Representative</h3>	
+					<li><a href="email-appeal-lodged-rep">Register a representative</a></li>
+					<li><a href="your-representative">Change representative text message update options</a></li>
+					
+					<h3 class="heading-small">Hearing</h3>
+					<li><a href="email-hearing-reminder-1wk-mvp">Change to not attending the hearing</a></li>
+					<li><a href="appeal-hearing-not-attending#hearing">Change to attending the hearing</a></li>
+					<li><a href="appeal-manage-received#hearing">Change hearing availability</a></li>
+					<li><a href="appeal-manage-received#hearing">Change hearing arrangments</a></li>
+					<li><a href="https://tools.hmcts.net/confluence/x/PQGJP">Request to change hearing venue (see proposed journey diagram)</a></li>
+					<li><a href="email-hearing-reminder-1wk-mvp">Postpone hearing</a></li>
+
+					<h3 class="heading-small">Hearing < 2 weeks</h3>
+					<li><a href="appeal-hearing#hearing">Change hearing arrangments (Contact)</a></li>
+					<li>Change hearing arrangments (Online)</a></li>
+					
+					<h3 class="heading-small">Withdrawn</h3>
+					<li><a href="appeal-manage-received">Withdrawn</a></li>
+
+					
+				</ul>
+			</div>
+		</div>
+	</main>
+	{% endblock %}

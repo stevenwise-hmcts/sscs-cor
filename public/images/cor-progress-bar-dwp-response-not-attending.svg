@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="614px" height="69px" viewBox="0 0 614 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DWP-response-Copy" transform="translate(-12.000000, -15.000000)">
+            <g id="Group" transform="translate(-3.000000, 15.000000)">
+                <path d="M63.5,20.5 L581.000242,20.5" id="Line" stroke="#006435" stroke-width="6" stroke-linecap="square"></path>
+                <circle id="Oval-2" fill="#006435" cx="322.5" cy="20.5" r="20.5"></circle>
+                <polygon id="Path" fill="#FFFFFF" points="318.337407 23.5619753 314.11284 19.3374074 311 22.4502469 318.337407 30.01 333.234568 15.1128395 330.121728 12"></polygon>
+                <circle id="Oval-2" fill="#006435" cx="42.5" cy="20.5" r="20.5"></circle>
+                <polygon id="Path" fill="#FFFFFF" points="38.3374074 23.5619753 34.1128395 19.3374074 31 22.4502469 38.3374074 30.01 53.2345679 15.1128395 50.1217284 12"></polygon>
+                <circle id="Oval-2" stroke="#006435" stroke-width="6" fill="#FFFFFF" cx="595.5" cy="20.5" r="17.5"></circle>
+                <text id="Decision" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300" fill="#231F20">
+                    <tspan x="558.875" y="65">Decision</tspan>
+                </text>
+                <text id="DWP-response" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="19" font-weight="bold" fill="#231F20">
+                    <tspan x="260.702637" y="65">DWP response</tspan>
+                </text>
+                <text id="Appeal" font-family="GDSTransportWebsite, GDS Transport Website" font-size="19" font-weight="300" fill="#231F20">
+                    <tspan x="15.1660156" y="66">Appeal</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

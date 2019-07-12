@@ -3,10 +3,10 @@
 Benefit appeal evidence - GOV.UK
 {% endblock %}
 {% block content %}
-<main id="content" class="prototype-8" role="main">
+<main id="content" role="main">
  {% include "includes/phase_banner_beta.html" %}
-  {% include "includes/account-nav.html" %} 
-  <a href="#" class="link-back">Back</a> 
+ {% include "includes/account-nav.html" %} 
+ <a href="#" class="link-back">Back</a> 
  <div class="grid-row">
   <div class="column-two-thirds">
     <h1 class="heading-xlarge">
@@ -17,50 +17,46 @@ Benefit appeal evidence - GOV.UK
 <div class="grid-row">
   <div class="column-two-thirds">
     <p class="lede">Evidence is any information that supports your appeal, such as a letter, written statement or medical report. It all helps the tribunal understand the facts of your appeal.</p>
-
     <p>You should provide evidence as soon as you can, if you have any. This is so the tribunal have time to consider it before making a decision on your benefit appeal. </p>
-
     <p>You can provide evidence online or by post. Find out more about how to provide it at the bottom of this page.</p>
-
     <h2 class="heading-medium">Medical evidence </h2>
     <p>This type of evidence helps the tribunal understand your condition from the perspective of a medical professional. For example, letters you have from your hospital consultant, doctor, physiotherapist or social worker. A useful letter explains how your condition affects your life at the time of the decision by DWP. Appointment letters are not useful. </p>
-
     <p>If you don’t have any letters and you think one will help your appeal, you could ask the medical professional who has been treating your condition to write one. Please be aware they may charge you for this and they can take a long time to organise. The tribunal can’t pay for these. </p>
-
     <h2 class="heading-medium">Written statement</h2>  
     <p>Someone who lives with you or knows you well could write a statement. A useful statement describes how your condition affects your life and includes the types of activities you can and can’t do. It should be their own view. </p>
-
     <p>It can written by hand or on a computer but it should be signed by the person who wrote it. It should also say what their relationship is to you. </p>
-
     <h2 class="heading-medium">Photographic evidence</h2> 
     <p>A useful photo will show how your condition affects your life, for example you could take a picture of any aids you use to help you move. Don’t send in photos of your body. </p>
-
     <h2 class="heading-medium">Oral evidence </h2>
     <p>What you or anyone else says at a hearing (if you have one) is called ‘oral evidence’. The tribunal will use what is said to help them make a decision on your appeal. 
     </p>
-
     <p>If you have a hearing then you could invite someone who knows you well to come and tell the tribunal about your condition. You should check that they are willing to come and they are available on the day.</p>
-
     <h2 class="heading-medium">How to provide evidence to the tribunal</h2>
-    
-      <p>You can provide evidence to the tribunal by:
-</p>
-
-<ul class="list list-bullet">
-<li>writing a message online</li> 
-<li>uploading files, documents or photos </li> 
-<li>sending it by post</li> 
-</ul> 
-
-<a href="evidence-additional">Provide evidence to the tribunal</a>
-
-
-
-
+    <p>You can provide evidence to the tribunal by:
+    </p>
+    <ul class="list list-bullet">
+      <li>writing a message online</li> 
+      <li>uploading files, documents or photos </li> 
+      <li>sending it by post</li> 
+    </ul> 
+    <a href="evidence-options">Provide evidence to the tribunal</a>
+    <br/>
   </div>
-  
-  </div>
-
+  <div class="column-third">
+    <aside class="govuk-related-items" role="complementary">
+      <h2 class="heading-small" id="subsection-title">About your appeal</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="font-xsmall">
+         <li><a href="support-representatives">Registering a representative</a></li>
+         <li><a href="support-hearing">What to expect at your hearing</a></li>
+         <li><a href="support-hearing-expenses">Claiming hearing expenses</a></li>
+         <li><a href="support-withdraw-appeal">Withdrawing your appeal</a></li>    
+       </ul>
+     </nav>
+   </aside>
+   
+ </div>
+</div>
+{% include "includes/help-contact-full.html" %}
 </main>
-
 {% endblock %}

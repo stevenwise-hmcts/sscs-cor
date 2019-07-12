@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Your postcode - Appeal a benefit decision - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" class="prototype-8" role="main">
+ {% include "includes/phase_banner_beta.html" %} 
+
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form>
+      <div class="form-group">
+          <legend class="visually-hidden">Enter your details</legend>
+         
+            <h1 class="heading-large">
+              Enter your details
+            </h1>
+        
+          <p>This is so we can check it's your appeal.</p>
+
+          <div class='form-group'>
+                    <label class=" form-label">Your mobile phone number</label>
+                    <input class="optional form-control form-control-2-4" />
+                </div> 
+
+                          <div class='form-group'>
+                    <label class=" form-label">Postcode<span class="form-hint">This should be the person whose appeal it is.</span></label>
+                    <input class="optional form-control form-control-2-4" />
+                </div>   
+
+      </div>
+      <a class="button" href="appeal-manage-appeal-received">Continue</a>
+    </form>
+    <br/>
+    <br/>
+   
+  </div>
+</div>
+</main>
+{% endblock %}
+
+

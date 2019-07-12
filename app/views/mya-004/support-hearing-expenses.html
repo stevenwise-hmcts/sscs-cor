@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Claiming hearing expenses - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav-home.html" %}
+
+             <a id="back-to-tasks" class="link-back" href="">Back</a>        
+
+ <div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-xlarge">
+      Claiming expenses to attend your hearing 
+    </h1>
+    </div>
+  </div>
+   <div class="grid-row">
+    <div class="column-two-thirds">
+    <p class="lede">You may be able to claim back some of the money you spend on attending your hearing.</p>
+  
+    <p>You should use public transport where possible. Keep your travel tickets and bring them with you to your hearing. You’ll be given a claim form to fill out by the tribunal clerk.</p>
+    <p>If you have a health condition or disability which means you can’t get yourself to the hearing then you might be able to claim for a taxi. You’ll need to get authorisation first by phoning 0300 123 1142.</p>
+ 
+    <br/>
+  </div>
+  <div class="column-third">
+    <aside class="govuk-related-items" role="complementary">
+      <h2 class="heading-small" id="subsection-title">About your appeal</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="font-xsmall">
+         <li><a href="support-representatives">Registering a representative</a></li>
+         <li><a href="support-evidence">Providing evidence to support your appeal</a></li>
+         <li><a href="support-hearing">What to expect at your hearing</a></li>
+         <li><a href="support-withdraw-appeal">Withdrawing your appeal</a></li>    
+       </ul>
+     </nav>
+   </aside>
+   {% include "includes/help-contact-full.html" %}
+ </div>
+</div>
+</main>
+{% endblock %}

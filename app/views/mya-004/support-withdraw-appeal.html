@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Withdrawing your appeal - GOV.UK
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav-home.html" %}
+  <a id="back-to-tasks" class="link-back" href="">Back</a>        
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        Withdrawing your appeal 
+      </h1>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p class="lede">You can withdraw your appeal at any time. DWP will be notified that you no longer want to appeal against their decision and the hearing for your appeal will be cancelled, if one has been arranged.</p>
+      <p>You need to provide reasons if you want to withdraw your appeal. These might be reviewed by a judge. Sometimes the judge may decide that your appeal should go ahead.</p>
+      <p>If you decided you do not want to continue with your appeal then you should <a href="withdraw-appeal-sure">tell the tribunal</a> as soon as possible. This is so the tribunal can stop working on it.</p> 
+      <br/>
+ 
+  </div>
+  <div class="column-third">
+    <aside class="govuk-related-items" role="complementary">
+      <h2 class="heading-small" id="subsection-title">About your appeal</h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="font-xsmall">
+         <li><a href="support-representatives">Registering a representative</a></li>
+         <li><a href="support-evidence">Providing evidence to support your appeal</a></li>
+           <li><a href="support-hearing-expenses">Claiming hearing expenses</a></li>
+
+         <li><a href="support-hearing">What to expect at your hearing</a></li>
+       </ul>
+     </nav>
+   </aside>
+ </div>
+</div>
+   {% include "includes/help-contact-full.html" %}
+
+</main>
+{% endblock %}

@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Manage your appeal
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  {% include "includes/account-nav-home.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Your PIP benefit appeal
+      </h1>
+      <div class="details">
+        <h2 class="heading-medium">Manish Sharma</h2>
+        <h2 class="font-xsmall">Appeal reference:  SC242/16/03435  </h2>
+        <!--<h2>Representative: <a href="">None registered</a></h2>-->
+      </div>
+      <div class="divider"></div>
+      <br/>
+      <!-- JS will add .tabs class -->
+      <div class="js-tabs"> 
+        <ul class="list list-bullet">
+          <li><a class="tabs__link" href="#status">Status</a></li>
+          <li><a class="tabs__link" href="#questions">Provide evidence</a></li>
+          <li><a class="tabs__link" href="#hearing">Hearing</a></li>
+          <li><a class="tabs__link" href="#history">History</a></li>
+        </ul>
+        <!-- Status -->
+        <div id="status" class="tab-content">
+          <h2 class="heading-medium">Status of your appeal</h2>
+          <div style="padding: 20px 20px 120px 10px;"><img src="/public/images/progress-bar-hearing-booked.svg"></div>
+          <div class="panel-blue">
+           <h2 class="heading-small">Latest update</h2>
+          <p>A hearing has been booked for your appeal.</p>
+            <p> <a href="hearing-tab-redirect">Check the details of your hearing</a></p>
+           
+         </div>
+         <br/>
+       </div>
+       <!-- Provide information -->
+       <div id="questions" class="tab-content">
+        <h2 class="heading-medium">Provide evidence to the tribunal</h2>
+         <h3 class="heading-small">Information requested by the tribunal</h3>
+      <p>Provide the information below by 10 March 2019. <span class="font-xsmall"><a href="/mya-004/extend-are-sure">Extend the deadline</a></span></p>
+        <ul class="appeal-manage-items">
+         <!-- factory-->
+         <li class="task-list-item">
+
+        <a class="task-name" href="/mya-004/question-factory" aria-describedby="factory-respond">Your work in a factory
+          </a> 
+          {% if data['factoryCompletedOrDraft'] === 'completed' %}
+          <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+          {% elif data['factoryCompletedOrDraft'] === 'draft' %}
+          <a href="/mya-004/question-factory"><strong class="task-draft">Draft</strong></a>
+          {% endif %}
+        </li> 
+        <!-- cooking -->
+        <li class="task-list-item">
+        <a class="task-name" href="/mya-004/question-cooking" aria-describedby="cooking-respond">
+          Preparing food
+        </a>
+        {% if data['cookingCompletedOrDraft'] === 'completed' %}
+        <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+        {% elif data['cookingCompletedOrDraft'] === 'draft' %}
+        <a href="/mya-004/question-cooking"><strong class="task-draft">Draft</strong></a>
+        {% endif %}
+      </li>
+      <!-- Walking -->
+      <li class="task-list-item">
+       <a class="task-name" href="/mya-004/question-walking" aria-describedby="walking-respond">Pain when walking
+       
+       </a>
+       {% if data['walkingCompletedOrDraft'] === 'completed' %}
+       <strong href="" class="task-completed" id="eligibility-respond">Completed</strong>
+       {% elif data['walkingCompletedOrDraft'] === 'draft' %}
+       <a href="/mya-004/question-walking"><strong class="task-draft">Draft</strong></a>
+       {% endif %}
+     </li>
+   </ul>
+     <br/>
+      <h3 class="heading-small">Send evidence to the tribunal</h3>
+      
+        <p>If you have any more information that you want the tribunal to consider as part of your appeal, then you can <a  href="evidence-options">submit it here</a>. </p>
+
+       <p><a href="support-evidence">Find out about providing evidence to support your appeal</a></p>
+       <br/>
+     </div>
+
+     <!-- Hearing -->
+     <div id="hearing" class="tab-content">
+      <h2 class="heading-medium">The hearing for your appeal</h2>
+
+
+<br/>
+      <dl class="govuk-check-your-answers cya-questions-short">
+
+        <div>
+          <dt class="cya-question-bold">
+             <br/>
+            Attending
+          </dt>
+          <dd class="cya-answer">
+              <br/>
+            Yes
+          </dd>
+          <dd class="cya-change">
+        <a href="hearing-type-change-sure">
+          <br/>
+          Change<span class="visually-hidden"> attendence</span>
+
+        </a>
+      </dd>
+    </div>
+        <div>
+          <dt class="cya-question-bold">
+             <br/>
+            Date and time
+          </dt>
+          <dd class="cya-answer">
+              <br/>
+            Monday, 9 September 2019<br/>
+            10:00am
+          </dd>
+          <dd class="cya-change">
+        <a href="hearing-date-change-sure.html">
+          <br/>
+          Request change<span class="visually-hidden"> date and time</span>
+        </a>
+      </dd>
+    </div>
+
+    
+
+    <div>
+      <dt class="cya-question-bold">
+       <br/>Location
+      </dt>
+      <dd class="cya-answer">
+      <br/>   Fox Court<br/>
+       14 Gray’s Inn Road<br/>
+       EC1N 7WS<br/>
+       <a class="maps-and-directions" href="https://www.google.com/maps/dir/Current+Location/Fox+Court,115+14+Grays+Inn+Road,+London+EC1N+7WS,+UK">Maps and directions</a>
+     </dd>
+     <dd class="cya-change">
+       <!-- <a href="hearing-date-change-sure">
+        
+          Request change<span class="visually-hidden"> location</span></a> -->
+      </dd>
+    </div>
+
+  </dl>
+<br/>
+
+ <!-- The hearing arrangements -->
+        <dl class="govuk-check-your-answers cya-questions-long">
+          <div>
+           <dt class="cya-question-bold">
+              <br/>Hearing arrangements
+            </dt>
+            
+            <dd class="cya-change">
+              <br/> 
+              <a href="phone-tribunal">
+                Request change<span class="visually-hidden"> to hearing arrangements</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+
+        <dl class="govuk-check-your-answers cya-questions-short">
+          <div>
+            <dt class="cya-question">
+              <br/>
+              <p>Language interpreter</p>
+              <p>Sign interpreter</p>
+              <p>Hearing loop</p>
+              <p>Disabled access</p>
+              <p>Any other arrangements</p>
+            </dt>
+            <dd class="cya-answer">
+              <br/>
+              <p>Not required<br/><br/></p>
+              <p>Not required</p>
+              <p>Not required</p>
+              <p>Required</p>
+              <p>Not required</p>
+            </dd>
+            <dd class="cya-change">
+
+            </dd>
+          </div>
+        </dl>
+  
+         <br/>
+      <p><a href="support-hearing">Find out what a tribunal hearing is like</a> </p>
+      <br/>
+     <!--  <div class="panel panel-border-wide">
+      <p>You have chosen to attend your hearing.  
+        <a href="hearing-type-change-sure">Change<span class="visually-hidden"> attending the hearing</span></a>  </p> -->
+      </div>
+
+    </div>
+
+
+
+<!-- History -->
+<div id="history" class="tab-content">
+  <h2 class="heading-medium">History of your appeal</h2>
+  <table>
+
+   <tr> 
+  
+      <td><details><summary><span class="summary">Hearing booked</span>
+
+  </summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit, purus at dapibus scelerisque, leo ligula venenatis dolor, ac lacinia metus elit ac metus. Proin sed pellentesque sapien, non hendrerit ligula. 
+</details></td>
+      <td class="date">15 May 2019</td>
+    </details>
+    </tr>
+        <tr>
+      <td><details><summary><span class="summary">Evidence submitted</span>
+
+  </summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit, purus at dapibus scelerisque, leo ligula venenatis dolor, ac lacinia metus elit ac metus. Proin sed pellentesque sapien, non hendrerit ligula. 
+</details></td>
+      <td class="date">12 January 2019</td>
+    </tr>
+        <tr>
+        <td><details><summary><span class="summary">Evidence submitted</span>
+
+  </summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit, purus at dapibus scelerisque, leo ligula venenatis dolor, ac lacinia metus elit ac metus. Proin sed pellentesque sapien, non hendrerit ligula. 
+</details></td>
+      <td class="date">6 December 2018</td>
+    </tr> 
+    <tr>
+      <td><details><summary><span class="summary">Appeal submitted</span>
+
+  </summary>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit, purus at dapibus scelerisque, leo ligula venenatis dolor, ac lacinia metus elit ac metus. Proin sed pellentesque sapien, non hendrerit ligula. 
+</details></td>
+      <td class="date">15 May 2019</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<br/>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Two thirds -->
+
+<div class="grid-row">
+ 
+  <div class="column-two-thirds">
+  <div class="updates-border"></div>
+    <h4 class="heading-small">Help and support</h4>
+    <ul class="list">
+      <li><a href="support-representatives">Representatives</a></li>
+      <li><a href="support-withdraw-appeal">Withdrawing an appeal</a></li>
+      <li>{% include "includes/help-contact-full.html" %}</li>
+    </ul> 
+  </div>
+</div>
+</main>
+
+{% endblock %}
